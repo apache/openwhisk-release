@@ -1,0 +1,24 @@
+sudo: required
+
+group: deprecated-2017Q3
+
+language: scala
+
+scala:
+   - 2.11.8
+
+services:
+  - docker
+
+jobs:
+  include:
+    - stage: verify source code
+      script: ./tools/travis/verify_source_code.sh
+    - stage: deploy
+      script: ./tools/travis/setup.sh
+    - stage: package
+      script: ./tools/travis/package_source_code.sh
+
+after_failure:
+  - echo "failed build"
+  - ./tools/travis/cleanup.sh
