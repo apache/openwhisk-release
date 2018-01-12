@@ -1,0 +1,10 @@
+global:
+  debug: yes
+  verbose: no
+  debugging:
+    detailed: "no"
+    header: "debugging started"
+
+## output
+output:
+  file: "yes"
