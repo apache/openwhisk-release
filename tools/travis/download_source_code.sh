@@ -8,7 +8,7 @@ HOMEDIR="$(dirname "$TRAVIS_BUILD_DIR")"
 OPENWHISKDIR="$HOMEDIR/openwhisk"
 source "$TRAVIS_BUILD_DIR/tools/travis/util.sh"
 
-clone_depth=${1:-"10"}
+clone_depth=${1:-"100"}
 
 function git_clone_repo() {
     PROJECT_NAME=$1
