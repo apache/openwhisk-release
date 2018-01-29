@@ -21,7 +21,7 @@ Please click on the work items listed as belows to access the detailed informati
 - [5. Add NOTICE, LICENSE, and CHANGELOG to each OpenWhisk project](work_items.md#5-add-notice-license-and-changelog-to-each-openwhisk-project-open-issue) ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/13))
 - [6. Package the artifacts](work_items.md#6-package-the-artifacts-open-issue) ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/20))
 - [7. Upload the artifacts to staging repository](work_items.md#7-upload-the-artifacts-into-staging-repository-for-release-vote-open-issue) ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/21))
-    - After the above 7 steps, note will be sent out to the commonuty for vote. Before we reach enough votes, Step 1 to 7
+    - After the above 7 steps, note will be sent out to the community for vote. Before we reach enough votes, Step 1 to 7
     can be re-iterated to update the artifacts in staging repository.
 
 - [8. Release the artifacts](work_items.md#8-release-the-artifacts-open-issue) ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/22))
