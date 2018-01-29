@@ -34,6 +34,13 @@ repository and the release package, and adding Licensing headers to each source 
 ## Release distribution
 We need to upload all artifacts to project’s subdirectory in Apache channel. This step needs to be implemented in Travis build.
 
+# Specifications to implement the above release process
+
+To find the specifications about how to implement the Apache Release process for OpenWhisk project set, please visit the
+following page.
+
+- [General Specification](docs/general_spec.md)
+
 # Reference
 [Apache release policy](http://www.apache.org/legal/release-policy.html)
 
