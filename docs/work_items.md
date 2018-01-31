@@ -83,14 +83,19 @@ we need to figure out how to package the artifacts differently for different lan
 consistent build environment. OpenWhisk core is based on Scala, CLI is based on Go, wskdeploy is based on Go, api gateway
 is based on lua, runtime project may be based on its native runtime language, etc. 
 
+Another important item in this step is to sign the artifacts cryptographically for the release. We need to figure out
+how to do it, either in Travis CI, Jenkins pipeline, or any other building tools.
+
 **Work bulletins**:
 - Investigate how to package the artifacts with existing tools, like Gradle, Maven, any other building plugins, etc.
 - Investigate how the tools works on the source code differently, according to different languages
 - Implement the script to package the artifacts
+- Sign the artifacts cryptographically for the staging and release
 
 ## 7. Upload the artifacts into staging repository for release vote ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/21))
 
 Upload the artifacts including source code, compiled packages, etc into the staging repository for vote.
+This is the [staging directory of Apache projects](https://dist.apache.org/repos/dist/dev/incubator/openwhisk/) for OpenWhisk.
 
 **Work bulletins**:
 - Investigate how to upload the artifacts to a staging repository with existing tools, like Gradle, Maven, any other
@@ -101,7 +106,7 @@ building plugins, etc
 ## 8. Release the artifacts ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/22))
 
 When we reach an agreement on the candidate located in the staging repository, the artifacts need to be move to the Apache\
-directory for release.
+directory for release. This is the [release directory of Apache](https://dist.apache.org/repos/dist/release/incubator/openwhisk/) for OpenWhisk.
 
 **Work bulletins**:
 - Migrate artifacts from the staging repository to Apache directory
