@@ -1,0 +1,27 @@
+{
+  "stage_url": "https://dist.apache.org/repos/dist/dev/incubator/openwhisk",
+  "version": {
+    "major": "incubator",
+    "minor": "rc1"
+  },
+  "RepoList": [
+    "incubator-openwhisk",
+    "incubator-openwhisk-wskdeploy",
+    "incubator-openwhisk-cli"
+  ],
+  "incubator_openwhisk": {
+    "hash": "a891e06",
+    "repository": "https://github.com/apache/incubator-openwhisk.git",
+    "branch": "master"
+  },
+  "incubator_openwhisk_wskdeploy": {
+    "hash": "1425456",
+    "repository": "https://github.com/apache/incubator-openwhisk-wskdeploy.git",
+    "branch": "master"
+  },
+  "incubator_openwhisk_cli": {
+    "hash": "90db37e",
+    "repository": "https://github.com/houshengbo/incubator-openwhisk-cli.git",
+    "branch": "add-zip-source"
+  }
+}

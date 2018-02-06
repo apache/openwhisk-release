@@ -5,8 +5,11 @@ set -e
 echo "hello openwhisk release"
 
 # Define the parent directory of TRAVIS_BUILD_DIR(the directory of the current repository) as HOMEDIR
-HOMEDIR="$(dirname "$TRAVIS_BUILD_DIR")"
-OPENWHISKDIR="$HOMEDIR/openwhisk"
+WORK_DIR=${1:-"$(dirname "$TRAVIS_BUILD_DIR")"}
+OPENWHISKDIR="$WORK_DIR/openwhisk_sources"
+SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
+PARENTDIR="$(dirname "$SCRIPTDIR")"
+
 SUFFIX="$TRAVIS_BUILD_NUMBER"
 PR_NUM="$TRAVIS_PULL_REQUEST"
 PREFIX="build_testing"
@@ -19,8 +22,7 @@ cd $OPENWHISKDIR
 echo "list images in setup before build"
 docker images
 
-cd $TRAVIS_BUILD_DIR
-./tools/travis/download_source_code.sh
+"$PARENTDIR/download_source_code.sh" $WORK_DIR
 
 cd $OPENWHISKDIR/incubator-openwhisk
 ./tools/travis/setup.sh
@@ -38,8 +40,8 @@ $ANSIBLE_CMD openwhisk.yml
 
 # Build the binaries for CLI
 cd $OPENWHISKDIR/incubator-openwhisk-cli
-./gradlew buildBinaries -PcrossCompileCLI=true
+#./gradlew buildBinaries -PcrossCompileCLI=true
 
 # Build the binaries for wskdeploy
 cd $OPENWHISKDIR/incubator-openwhisk-wskdeploy
-./gradlew distDocker -PcrossCompileWSKDEPLOY=true
+#./gradlew distDocker -PcrossCompileWSKDEPLOY=true
