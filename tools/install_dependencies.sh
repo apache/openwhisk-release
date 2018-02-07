@@ -6,6 +6,8 @@ sysOS=`uname -s`
 if [ $sysOS == "Darwin" ];then
 	echo "This is MacOS."
 	brew install jq
+	brew install gpg
+	brew install md5sha1sum
 elif [ $sysOS == "Linux" ];then
 	echo "This is Linux."
     if [ -f /etc/lsb-release -o -d /etc/lsb-release.d ]; then
@@ -16,6 +18,7 @@ elif [ $sysOS == "Linux" ];then
     if [ $DISTRO == "Ubuntu" ];then
         echo "This is Ubuntu."
         sudo apt-get install jq
+        sudo apt-get install gnupg
     fi
 else
 	echo "Other OS: $sysOS. Please manually install jq library."
