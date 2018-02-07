@@ -5,14 +5,19 @@ group: deprecated-2017Q3
 services:
   - docker
 
+env:
+  global:
+  - secure: S4eRZSGj/pfsicg50UXrTmwRurzgUrd0idQH5nKvc+O+lwAYv3SIhbsufUHseQEUSfoO0jFCyoCbWDtFMdsW3t2eGPdciViek/LaocxxG2Br539VDVXhS+NAwqiRGbCqKHCe2aNqIdo8vCvUaj/BfFJNUK4Fhpw6iBix0pvlnRkYBX7hHphU88N69gmnMOo1oZwEwaobaQeXOc/8OwH2aPD8lCmNk41IvvLFAwIhXrP4Thb+xBh4+oSlqcJyDCUouIfYFd4B1pHQehAVu0kBoUiKZHfKUyT+Q/V8hzBR3nJ/IzzSLNOYcTTYXBbL5x/SKe/LiBio4yLdPuRMTZl/xKarhShHJg3JKRvfushaMJDKJfLrbcCPUDnSCK1v0D4zZc0DceOBawhipSPkam3kNER/ImZcpTj79u/VKBrlwbVwjKTyZ4d/4/N2cP4jyvjmwW6fM4N3kM/V+S+EoGR5EiFTKAiPBzKaRi+/+VUO8ha9TsdTu+vkDRUjDFuYLSod0aj8XHUoZiL7NF8qS1PK6AFfTRpet1NM6BDOWYh15GmuZ/noyXTZ5eJv/8/ecfLMEp+DXAZ+YVI6a9/xhxE1klI88zHIoVMmhwd76jcvHVLolKa8fX9Dv5rZeOcPLoR2/jiteoApOGD0ehnkJH76gUMyBQO+q3yzRzz1VQvjOyA=
+  - secure: zqevjGa1iX3I6ZM1upNvNhEVBRq5sYpfK1pAzj6t7nTyCNvZoftTeMtDpP6eo6xAo+PatycEubwZ/pwac3V142AAgYrLXwqlojWWMQmx11BoTa3n1uJTtQyBr/5qjOLYs8VE5eDFKcXvXLQ5IDtLSZiYFGxmWQGInUNQlBaP9MQIRb2w+UgZBrp+1jRuaFs9I0+eLz3XLsyp9DeUa70lm49QiniKEktJdcUEQpQR0906k9DaRsvA3BIVsLtBwmUSg5+v8tsy13yKsPZgWNYfAjLU2DZHUQBQVj22FeSTMGOiCFSdRejhhFu9HpR7eJGoKMQGRzdTDLWZechVcVim849eVBjS6VfNBLAHOlyxIxy1Qf530610BYW2bBcaU3PhDjIcW8B+Z7EFZmYdpJRaT4CT7metLKTszy6W/splqG+3XP2XH4KmN8YPSikNiPagGP4beFIHxmCcNopHtJGhD4R8w6xqCKvNbtjq3GiUyU3ju+kA1JL0IxAttHTFF1WVTHjcXstopfXw+9HIUETm++OoKN6fxZ7Ysq7RvetkeJabL9Sqi1IsMJ3oDUdLoktTxYcE8A0gTpnLZRa2IdMJZ0ee2ZsMGieeAqfcJQ+61BMjxBTfrC9k+9gAj3zjgWsXOBMqePuQ8SwIT0H7/QgH5V/tP1wYvRUaJdJJoVoXJ2I=
+
 jobs:
   include:
-    - stage: verify source code
-      script: ./tools/travis/verify_source_code.sh
-    - stage: deploy
-      script: ./tools/travis/setup.sh
+    #- stage: verify source code
+     # script: ./tools/travis/verify_source_code.sh
+    #- stage: deploy
+    #  script: ./tools/travis/setup.sh
     - stage: package
-      script: ./tools/travis/package_source_code.sh
+      script: ./tools/travis/package_source_code.sh $(dirname "$TRAVIS_BUILD_DIR") $SVN_USERNAME $SVN_PASSWORD
 
 after_failure:
   - echo "failed build"
