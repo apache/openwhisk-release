@@ -19,6 +19,9 @@ if [ "$TRAVIS_EVENT_TYPE" == "push" ] ; then
 fi
 
 "$PARENTDIR/package_source_code.sh" $WORK_DIR $SVN_USERNAME $SVN_PASSWORD
+"$PARENTDIR/generate_pgp_key.sh"
+"$PARENTDIR/export_pgp_key.sh" $WORK_DIR
+"$PARENTDIR/sign_artifacts.sh" $WORK_DIR
 
 if [ "$TRAVIS_EVENT_TYPE" == "push" ] ; then
     "$PARENTDIR/upload_artifacts.sh" $WORK_DIR $SVN_USERNAME $SVN_PASSWORD
