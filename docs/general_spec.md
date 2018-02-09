@@ -26,6 +26,32 @@ Please click on the work items listed as belows to access the detailed informati
 
 - [8. Release the artifacts](work_items.md#8-release-the-artifacts-open-issue) ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/22))
 
+## Different phases of implementations
+
+We plan to implement the specification in three phases:
+- **Phase 1: release of source code packages**: the source code of each OpenWhisk repositories is packaged into tar.gz
+file, and uploaded into the staging repository. This is the phase we are currently working on.
+- **Phase 2: release of binary packages**: the binary of each OpenWhisk repositories is packaged into tar.gz file, and uploaded into the staging repository.
+- **Phase 3: release of Docker image packages**: the Docker images of each OpenWhisk repositories are packaged into tar.gz files, if available, and uploaded into the staging repository.
+
+## List of OpenWhisk repositories to be released
+
+We plan to release the following OpenWhisk repositories:
+- OpenWhisk core: [incubator-openwhisk](https://github.com/apache/incubator-openwhisk)
+- OpenWhisk runtimes:
+    - [incubator-openwhisk-runtime-nodejs](https://github.com/apache/incubator-openwhisk-runtime-nodejs)
+    - [incubator-openwhisk-runtime-swift](https://github.com/apache/incubator-openwhisk-runtime-swift)
+    - [incubator-openwhisk-runtime-php](https://github.com/apache/incubator-openwhisk-runtime-php)
+    - [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python)
+    - [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java)
+    - [incubator-openwhisk-runtime-docker](https://github.com/apache/incubator-openwhisk-runtime-docker)
+- OpenWhisk catalog: [incubator-openwhisk-catalog](https://github.com/apache/incubator-openwhisk-catalog)
+- OpenWhisk API gateway: [incubator-openwhisk-apigateway](https://github.com/apache/incubator-openwhisk-apigateway)
+- OpenWhisk clients:
+    - [incubator-openwhisk-client-go](https://github.com/apache/incubator-openwhisk-client-go)
+    - [incubator-openwhisk-cli](https://github.com/apache/incubator-openwhisk-cli)
+    - [incubator-openwhisk-wskdeploy](https://github.com/apache/incubator-openwhisk-wskdeploy)
+
 # Proposed implementation
 ## How to automate the release process for OpenWhisk?
 
