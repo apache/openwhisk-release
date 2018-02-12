@@ -35,6 +35,7 @@ cd $CURRENT_VERSION_DIR
 for artifact in *.tar.gz; do
     gpg --print-md MD5 ${artifact} > ${artifact}.md5
     gpg --print-md SHA512 ${artifact} > ${artifact}.sha512
+
     if [ $sysOS == "Darwin" ];then
         # The option --passphrase-fd does not work on Mac.
         `gpg --yes --armor --output ${artifact}.asc --detach-sig ${artifact}`
