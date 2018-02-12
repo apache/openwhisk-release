@@ -37,7 +37,7 @@ if [[ `wget -S --spider $CURRENT_VERSION_URL  2>&1 | grep 'HTTP/1.1 200 OK'` ]];
 fi
 
 # Create an empty folder named ${REMOTE_PATH} in the remote staging folder
-svn mkdir -m "Create the directory for ${version} in staging." $CURRENT_VERSION_URL
+svn mkdir -m "Create the directory for ${version} in staging." $CURRENT_VERSION_URL $CREDENTIALS
 
 cd $OPENWHISK_SVN
 
