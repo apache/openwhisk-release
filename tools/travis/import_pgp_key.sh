@@ -13,3 +13,5 @@ gpg --import $PARENTDIR/key_pub.gpg
 
 echo "Load the private key."
 gpg --allow-secret-key-import --import $PARENTDIR/key_sec.gpg
+
+gpg --list-keys

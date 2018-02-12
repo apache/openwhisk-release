@@ -12,9 +12,6 @@ function json_by_key() {
 
 function import_key_verify_signature() {
     key_url=$1
-    dir=$2
-    cd $dir
-
     echo "Importing PGP keys"
     curl $key_url | gpg --import && \
     echo "[✓] GPG keys imported" \
