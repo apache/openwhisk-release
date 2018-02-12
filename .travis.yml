@@ -19,6 +19,11 @@ jobs:
     - stage: package
       script: ./tools/travis/package_source_code.sh $(dirname "$TRAVIS_BUILD_DIR") $SVN_USERNAME $SVN_PASSWORD
 
+before_install:
+  - if [ "$TRAVIS_PULL_REQUEST" == "false" ] ; then
+      openssl aes-256-cbc -K $encrypted_2030e681f34a_key -iv $encrypted_2030e681f34a_iv -in tools/key_sec.gpg.enc -out tools/key_sec.gpg -d;
+    fi
+
 after_failure:
   - echo "failed build"
   - ./tools/travis/cleanup.sh

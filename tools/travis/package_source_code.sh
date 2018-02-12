@@ -21,7 +21,6 @@ fi
 "$PARENTDIR/package_source_code.sh" $WORK_DIR $SVN_USERNAME $SVN_PASSWORD
 
 if [ "$TRAVIS_EVENT_TYPE" == "push" ] ; then
-    openssl aes-256-cbc -K $encrypted_2030e681f34a_key -iv $encrypted_2030e681f34a_iv -in $PARENTDIR/key_sec.gpg.enc -out $PARENTDIR/key_sec.gpg -d
     "$SCRIPTDIR/import_pgp_key.sh"
     "$PARENTDIR/sign_artifacts.sh" $WORK_DIR
     "$PARENTDIR/upload_artifacts.sh" $WORK_DIR $SVN_USERNAME $SVN_PASSWORD
