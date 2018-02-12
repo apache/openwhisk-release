@@ -11,13 +11,14 @@ function json_by_key() {
 }
 
 function import_key_verify_signature() {
-    dir=$1
+    key_url=$1
+    dir=$2
     cd $dir
 
     echo "Importing PGP keys"
-    gpg --import KEYS && \
-    echo "[✓] GPG keys imported from the file KEYS" \
-      || { echo "[x] Failed to import GPG keys from the file KEYS"; exit 1; }
+    curl $key_url | gpg --import && \
+    echo "[✓] GPG keys imported" \
+      || { echo "[x] Failed to import GPG keys"; exit 1; }
 
     echo "Checking signatures and hashes of artifacts"
     for artifact in $(find * -type f \( -name '*.tar.gz' \) ); do

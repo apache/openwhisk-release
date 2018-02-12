@@ -7,7 +7,6 @@ if [ $sysOS == "Darwin" ];then
 	echo "This is MacOS."
 	brew install jq
 	brew install gpg
-	brew install md5sha256sum
 elif [ $sysOS == "Linux" ];then
 	echo "This is Linux."
     if [ -f /etc/lsb-release -o -d /etc/lsb-release.d ]; then

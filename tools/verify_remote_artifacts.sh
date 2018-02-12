@@ -18,4 +18,4 @@ svn co $CURRENT_VERSION_URL $REMOTE_PATH
 
 cd $REMOTE_PATH
 
-import_key_verify_signature $OPENWHISK_SVN/$REMOTE_PATH
+import_key_verify_signature $STAGE_URL/KEYS $OPENWHISK_SVN/$REMOTE_PATH
