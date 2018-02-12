@@ -7,7 +7,6 @@ echo "Verify the local artifacts with the KEYS"
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
 source "$SCRIPTDIR/load_config.sh" $1 $2 $3
 
-mkdir -p $OPENWHISK_SVN
 cd $OPENWHISK_SVN/$REMOTE_PATH
 
-import_key_verify_signature $STAGE_URL/KEYS $OPENWHISK_SVN/$REMOTE_PATH
+import_key_verify_signature $STAGE_URL/KEYS
