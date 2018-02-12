@@ -35,10 +35,6 @@ echo $STAGE_URL
 
 # Create a subversion directory for openwhisk to stage all the packages
 rm -rf $OPENWHISK_SVN
-
-mkdir -p $OPENWHISK_SOURCE_DIR
-cd $OPENWHISK_SOURCE_DIR
-svn co $STAGE_URL $OPENWHISK_SVN $CREDENTIALS
 mkdir -p $CURRENT_VERSION_DIR
 rm -rf $CURRENT_VERSION_DIR/*
 
@@ -56,4 +52,3 @@ do
         cp -a build/. $CURRENT_VERSION_DIR
     fi
 done
-
