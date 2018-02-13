@@ -12,6 +12,10 @@ We use Travis CI as the automated integration build tool to streamline the relea
 applied to build different jobs, which are able to run either in sequential or parallel. Artifacts can be shared across
 different jobs by using cache in Travis, as different jobs run on different virtual machines.
 
+# Instruction to use OpenWhisk Release
+
+As a release manger of OpenWhisk, please visit [OpenWhisk Release tutorial](docs/tutorial.md).
+
 # How to release an Apache project
 
 ## Release Approval
