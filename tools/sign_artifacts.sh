@@ -40,8 +40,7 @@ for artifact in *.tar.gz; do
         # The option --passphrase-fd does not work on Mac.
         `gpg --yes --armor --output ${artifact}.asc --detach-sig ${artifact}`
     elif [ $sysOS == "Linux" ];then
-        echo "started to sign it"
-        `echo $passphrase | gpg -c -q --passphrase-fd 0 --yes --armor --output ${artifact}.asc --detach-sig ${artifact}`
+        `echo $passphrase | gpg --passphrase-fd 0 --yes --armor --output ${artifact}.asc --detach-sig ${artifact}`
     fi
 done
 
