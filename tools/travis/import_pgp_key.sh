@@ -14,4 +14,4 @@ gpg --import $PARENTDIR/key_pub.gpg
 echo "Load the private key."
 gpg --allow-secret-key-import --import $PARENTDIR/key_sec.gpg
 
-gpg --list-keys
+expect -c "spawn gpg --edit-key shou@us.ibm.com trust quit; send \"5\ry\r\"; expect eof"

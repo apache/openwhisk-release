@@ -16,8 +16,7 @@ elif [ $sysOS == "Linux" ];then
     fi
     if [ $DISTRO == "Ubuntu" ];then
         echo "This is Ubuntu."
-        sudo apt-get install jq
-        sudo apt-get install gnupg
+        sudo apt-get install jq gnupg expect
     fi
 else
 	echo "Other OS: $sysOS. Please manually install jq library."
