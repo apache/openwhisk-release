@@ -12,17 +12,15 @@ rm -rf $OPENWHISK_SVN
 mkdir -p $CURRENT_VERSION_DIR
 rm -rf $CURRENT_VERSION_DIR/*
 
+# Clean up all the source code by excluding unnecessary files and folders
+# Remove all the hidden files and folder
+# Remove bin and build folders
+mkdir -p $OPENWHISK_CLEANED_SOURCE_DIR
+rm -rf $OPENWHISK_CLEANED_SOURCE_DIR/*
+rsync -rtp --exclude .*\* --exclude bin\* --exclude build\* $OPENWHISK_SOURCE_DIR/. $OPENWHISK_CLEANED_SOURCE_DIR
+
 for repo in $(echo $repos | sed "s/,/ /g")
 do
     repo_name=$(echo "$repo" | sed -e 's/^"//' -e 's/"$//')
-    echo $repo_name
-    if [ $repo_name != "incubator-openwhisk" ]; then
-    # Only wskdeploy has both the gradle tasks implemented: cleanBuild to clean the build folder, and taredSources
-    # to package the source code.
-        cd $OPENWHISK_SOURCE_DIR/$repo_name
-        ./gradlew cleanBuild
-        ./gradlew taredSources -PprojectVersion=$version
-        # Copy all the source code packages into $CURRENT_VERSION_DIR
-        cp -a build/. $CURRENT_VERSION_DIR
-    fi
+    cd $OPENWHISK_CLEANED_SOURCE_DIR/$repo_name && tar czf ${CURRENT_VERSION_DIR}/${repo_name}-${version}-sources.tar.gz .
 done
