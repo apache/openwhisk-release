@@ -11,8 +11,10 @@ if [ ! -z "$SVN_USERNAME" ] && [ ! -z "$SVN_PASSWORD" ];then
     CREDENTIALS="--username $SVN_USERNAME --password $SVN_PASSWORD --non-interactive"
 fi
 
-OPENWHISK_SOURCE_DIR="$WORK_DIR/openwhisk_sources"
-OPENWHISK_SVN="$OPENWHISK_SOURCE_DIR/openwhisk"
+OPENWHISK_RELEASE_DIR="$WORK_DIR/openwhisk_release"
+OPENWHISK_SOURCE_DIR="$OPENWHISK_RELEASE_DIR/openwhisk_sources"
+OPENWHISK_CLEANED_SOURCE_DIR="$OPENWHISK_RELEASE_DIR/openwhisk_cleaned_sources"
+OPENWHISK_SVN="$OPENWHISK_RELEASE_DIR/openwhisk"
 
 source "$SCRIPTDIR/util.sh"
 

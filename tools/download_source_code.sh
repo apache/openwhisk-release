@@ -3,10 +3,9 @@
 set -e
 
 WORK_DIR=${1:-"$HOME"}
-OPENWHISK_SOURCE_DIR="$WORK_DIR/openwhisk_sources"
 
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
-source "$SCRIPTDIR/util.sh"
+source "$SCRIPTDIR/load_config.sh" $1
 
 clone_depth=${2:-"100"}
 
