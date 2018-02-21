@@ -7,11 +7,6 @@ echo "Package the artifacts."
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
 source "$SCRIPTDIR/load_config.sh" $1 $2 $3
 
-# Create a subversion directory for openwhisk to stage all the packages
-rm -rf $OPENWHISK_SVN
-mkdir -p $CURRENT_VERSION_DIR
-rm -rf $CURRENT_VERSION_DIR/*
-
 # Clean up all the source code by excluding unnecessary files and folders
 # Remove all the hidden files and folder
 # Remove bin and build folders
