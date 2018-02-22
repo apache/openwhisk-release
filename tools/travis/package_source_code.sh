@@ -25,3 +25,5 @@ if [ "$TRAVIS_EVENT_TYPE" == "push" ] ; then
     "$PARENTDIR/sign_artifacts.sh" $WORK_DIR
     "$PARENTDIR/upload_artifacts.sh" $WORK_DIR $SVN_USERNAME $SVN_PASSWORD
 fi
+
+"$PARENTDIR/verify_source_code.sh" $WORK_DIR
