@@ -13,10 +13,7 @@ SVN_PASSWORD=$3
 
 "$PARENTDIR/install_dependencies.sh"
 "$PARENTDIR/download_source_code.sh" $WORK_DIR
-
-if [ "$TRAVIS_EVENT_TYPE" == "push" ] ; then
-    "$PARENTDIR/clean_remote_stage_artifacts.sh" $SVN_USERNAME $SVN_PASSWORD
-fi
+"$PARENTDIR/checkout_svn.sh" $WORK_DIR $SVN_USERNAME $SVN_PASSWORD
 
 "$PARENTDIR/package_source_code.sh" $WORK_DIR $SVN_USERNAME $SVN_PASSWORD
 
