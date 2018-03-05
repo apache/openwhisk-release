@@ -23,6 +23,7 @@ if [ $sysOS == "Darwin" ];then
 	echo "This is MacOS."
 	brew install jq
 	brew install gpg
+	brew install maven
 elif [ $sysOS == "Linux" ];then
 	echo "This is Linux."
     if [ -f /etc/lsb-release -o -d /etc/lsb-release.d ]; then
@@ -32,7 +33,7 @@ elif [ $sysOS == "Linux" ];then
     fi
     if [ $DISTRO == "Ubuntu" ];then
         echo "This is Ubuntu."
-        sudo apt-get install jq gnupg expect
+        sudo apt-get install jq gnupg expect maven
     fi
 else
 	echo "Other OS: $sysOS. Please manually install jq library."
