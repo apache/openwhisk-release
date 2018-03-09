@@ -38,7 +38,7 @@ jobs:
 
 before_install:
   - if [ "$TRAVIS_PULL_REQUEST" == "false" ] ; then
-      openssl aes-256-cbc -K $encrypted_c52b332e1d8f_key -iv $encrypted_c52b332e1d8f_iv -in tools/key_sec.gpg.enc -out tools/key_sec.gpg -d;
+      openssl aes-256-cbc -K $encrypted_e049e279fb54_key -iv $encrypted_e049e279fb54_iv -in tools/key_sec.gpg.enc -out tools/key_sec.gpg -d;
     fi
 
 after_failure:
