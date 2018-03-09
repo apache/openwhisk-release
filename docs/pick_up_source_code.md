@@ -75,3 +75,17 @@ $ ./download_source_code.sh <WORK_DIR>
 ```
 You may specify where to download all the source code with <WORK_DIR>. If you specify the <WORK_DIR> here, you need to
 specify the same value as well to the sequential scripts as well. It will take $HOME by default.
+
+## Checkout the subversion repository
+
+We need to checkout the subversion repository for OpenWhisk to stage the artifacts with the following command:
+```
+$ ./checkout_svn.sh <WORK_DIR> <SVN_USERNAME> <SVN_PASSWORD>
+```
+
+The <WORK_DIR> should be the same one used to download the source code. If you have already configured your local
+svn command with a pair of username and password, there is no need to provide the values for the arguments <SVN_USERNAME>
+and <SVN_PASSWORD>. With this command, a remote folder named openwhisk-$version will be created in the subversion
+repository if necessary, and checked out to the local folder <WORK_DIR>/openwhisk_release/openwhisk/openwhisk-$version.
+The value of $version is $major-$minor, as defined in config.json. This command can also be used to sync-up your local
+folder with the remote subversion folder.
