@@ -33,5 +33,7 @@ rsync -rtp --exclude .*\* --exclude bin\* --exclude build\* $OPENWHISK_SOURCE_DI
 for repo in $(echo $repos | sed "s/,/ /g")
 do
     repo_name=$(echo "$repo" | sed -e 's/^"//' -e 's/"$//')
-    cd $OPENWHISK_CLEANED_SOURCE_DIR/$repo_name && tar czf ${CURRENT_VERSION_DIR}/${repo_name}-${version}-sources.tar.gz .
+    cd $OPENWHISK_CLEANED_SOURCE_DIR/$repo_name
+    rm -rf .git
+    tar czf ${CURRENT_VERSION_DIR}/${repo_name}-${version}-sources.tar.gz .
 done
