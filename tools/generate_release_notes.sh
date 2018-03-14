@@ -24,7 +24,7 @@ SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
 source "$SCRIPTDIR/load_config.sh" $1
 PARENTDIR="$(dirname "$SCRIPTDIR")"
 
-FILE="$WORK_DIR/releaseNotes.md"
+FILE="$OPENWHISK_SOURCE_DIR/releaseNotes.md"
 TEMPLATE="$SCRIPTDIR/lib/release_template.md"
 
 # Remove file if exists
