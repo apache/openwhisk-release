@@ -16,7 +16,22 @@
 #
 -->
 
-# Making the release artifacts
+# Package the artifacts
+
+## Verify the source code
+
+Before generating any release artifacts, it is recommended to verify the source code by checking the license headers and
+the existence of LICENSE and NOTICE files under each repository. This step can be done by running the following script
+under the directory _tools_:
+```
+$ ./verify_source_code.sh <WORK_DIR>
+```
+The <WORK_DIR> should be the same one used to download the source code. This script will generate a RAT report called
+rat.txt under the directory <WORK_DIR>/openwhisk_release/openwhisk_sources/target. You can find the status of license
+header in this RAT report. In addition, you can check the existence of LICENSE and NOTICE from the terminal, after
+running this script.
+
+## Making the release artifacts
 
 The artifacts to be made in this step consists of the source code packages, binary packages and docker image packages.
 As the deliverable of the [first phase](general_spec.md#different-phases-of-implementations), we currently only build the

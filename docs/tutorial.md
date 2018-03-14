@@ -36,7 +36,8 @@ the artifacts in the staging directory and the Apache release directory.
   8. Vote on the dev@openwhisk.apache.org list
   9. If the vote fails - configure the file config.json and resume from step 3
   10. [Publish the release artifacts to Apache release directory](publish_apache_directory.md)
-  11. Announce the release
+  11. [Generate the release notes](generate_release_notes.md)
+  12. Announce the release
 
 ## Automated mode of Release Process
 
