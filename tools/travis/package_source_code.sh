@@ -27,16 +27,19 @@ PARENTDIR="$(dirname "$SCRIPTDIR")"
 SVN_USERNAME=$2
 SVN_PASSWORD=$3
 
+source "$PARENTDIR/load_config.sh" "$WORK_DIR" "$SVN_USERNAME" "$SVN_PASSWORD" "$PARENTDIR"
+
 "$PARENTDIR/install_dependencies.sh"
-"$PARENTDIR/download_source_code.sh" $WORK_DIR
-"$PARENTDIR/checkout_svn.sh" $WORK_DIR $SVN_USERNAME $SVN_PASSWORD
+"$PARENTDIR/download_source_code.sh" "$WORK_DIR"
+"$PARENTDIR/checkout_svn.sh" "$WORK_DIR" "$SVN_USERNAME" "$SVN_PASSWORD"
 
-"$PARENTDIR/package_source_code.sh" $WORK_DIR $SVN_USERNAME $SVN_PASSWORD
 
-if [ "$TRAVIS_EVENT_TYPE" == "push" ] ; then
+"$PARENTDIR/package_source_code.sh" "$WORK_DIR" "$SVN_USERNAME" "$SVN_PASSWORD"
+
+if [ "$TRAVIS_EVENT_TYPE" == "push" ] && [ "$PUBLISH_STAGE" == "true" ] ; then
     "$SCRIPTDIR/import_pgp_key.sh"
-    "$PARENTDIR/sign_artifacts.sh" $WORK_DIR
-    "$PARENTDIR/upload_artifacts.sh" $WORK_DIR $SVN_USERNAME $SVN_PASSWORD
+    "$PARENTDIR/sign_artifacts.sh" "$WORK_DIR"
+    "$PARENTDIR/upload_artifacts.sh" "$WORK_DIR" "$SVN_USERNAME" "$SVN_PASSWORD"
 fi
 
-"$PARENTDIR/verify_source_code.sh" $WORK_DIR
+"$PARENTDIR/verify_source_code.sh" "$WORK_DIR"
