@@ -21,10 +21,10 @@ set -e
 echo "Sign the artifacts with PGP."
 
 WORK_DIR=${1:-"$HOME"}
-passphrase=${2:-"openwhisk"}
 
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
-source "$SCRIPTDIR/load_config.sh" $1
+#source "$SCRIPTDIR/load_config.sh" $1 $2 $3
+passphrase="openwhisk"
 
 # Sign all the artifacts with the PGP key.
 export GPG_TTY=$(tty)
