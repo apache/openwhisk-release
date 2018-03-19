@@ -17,10 +17,14 @@
 #
 
 WORK_DIR=${1:-"$HOME"}
-SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
+DIR="$(cd $(dirname "$0")/ && pwd)"
 
 SVN_USERNAME=$2
 SVN_PASSWORD=$3
+
+
+SCRIPTDIR=${4:-"$DIR"}
+echo "4 is $4"
 CREDENTIALS=""
 
 if [ ! -z "$SVN_USERNAME" ] && [ ! -z "$SVN_PASSWORD" ];then
@@ -32,6 +36,7 @@ OPENWHISK_SOURCE_DIR="$OPENWHISK_RELEASE_DIR/openwhisk_sources"
 OPENWHISK_CLEANED_SOURCE_DIR="$OPENWHISK_RELEASE_DIR/openwhisk_cleaned_sources"
 OPENWHISK_SVN="$OPENWHISK_RELEASE_DIR/openwhisk"
 
+echo "SCRIPTDIR is $SCRIPTDIR"
 source "$SCRIPTDIR/util.sh"
 
 CONFIG=$(read_file $SCRIPTDIR/config.json)
@@ -47,3 +52,5 @@ REMOTE_PATH="openwhisk-$version"
 
 CURRENT_VERSION_URL="$STAGE_URL/${REMOTE_PATH}/"
 CURRENT_VERSION_DIR="$OPENWHISK_SVN/openwhisk-$version"
+
+CONFIG_LOADED="true"

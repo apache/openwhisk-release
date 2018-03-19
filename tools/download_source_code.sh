@@ -21,7 +21,15 @@ set -e
 WORK_DIR=${1:-"$HOME"}
 
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
-source "$SCRIPTDIR/load_config.sh" $1
+
+if [[ "$CONFIG_LOADED" != "true" ]]; then
+    echo "reload config."
+    echo "$CONFIG_LOADED"
+    source "$SCRIPTDIR/load_config.sh" $1 $2 $3
+else
+    echo "already loaded config."
+    echo "$CONFIG_LOADED"
+fi
 
 clone_depth=${2:-"100"}
 

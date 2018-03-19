@@ -21,8 +21,7 @@ echo "Generate the report regarding the source code headers."
 WORK_DIR=${1:-"$HOME"}
 
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
-source "$SCRIPTDIR/load_config.sh" $1
-PARENTDIR="$(dirname "$SCRIPTDIR")"
+#source "$SCRIPTDIR/load_config.sh" $1
 
 # run Apache rat to check headers
 cd $OPENWHISK_SOURCE_DIR
