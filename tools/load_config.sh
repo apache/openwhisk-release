@@ -17,10 +17,10 @@
 #
 
 WORK_DIR=${1:-"$HOME"}
-SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
-
+DIR="$(cd $(dirname "$0")/ && pwd)"
 SVN_USERNAME=$2
 SVN_PASSWORD=$3
+SCRIPTDIR=${4:-"$DIR"}
 CREDENTIALS=""
 
 if [ ! -z "$SVN_USERNAME" ] && [ ! -z "$SVN_PASSWORD" ];then
@@ -35,6 +35,7 @@ OPENWHISK_SVN="$OPENWHISK_RELEASE_DIR/openwhisk"
 source "$SCRIPTDIR/util.sh"
 
 CONFIG=$(read_file $SCRIPTDIR/config.json)
+PUBLISH_STAGE=$(json_by_key "$CONFIG" "publish_stage")
 repos=$(echo $(json_by_key "$CONFIG" "RepoList") | sed 's/[][]//g')
 STAGE_URL=$(json_by_key "$CONFIG" "stage_url")
 
