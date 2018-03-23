@@ -37,6 +37,7 @@ fi
 
 
 "$PARENTDIR/package_source_code.sh" "$WORK_DIR" "$SVN_USERNAME" "$SVN_PASSWORD"
+"$PARENTDIR/package_binaries.sh" "$WORK_DIR" "$SVN_USERNAME" "$SVN_PASSWORD"
 
 if [ "$TRAVIS_EVENT_TYPE" == "push" ] && [ "$PUBLISH_STAGE" == "true" ] ; then
     "$CURRENTDIR/import_pgp_key.sh"
