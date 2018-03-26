@@ -30,9 +30,9 @@ Template of [_config.json_](../tools/config.json):
 {
   "stage_url": "https://dist.apache.org/repos/dist/dev/incubator/openwhisk",
   "release_url": "https://dist.apache.org/repos/dist/release/incubator/openwhisk",
-  "version": {
-    "major": "incubator",
-    "minor": "rc1"
+  "versioning": {
+    "version": "incubator",
+    "pre_release_version": "rc1"
   },
   "RepoList": [
     "incubator-openwhisk",
@@ -58,7 +58,7 @@ Template of [_config.json_](../tools/config.json):
 ```
   - **stage_url**: the field to specify the staging url, where to upload the artifacts.
   - **release_url**: the field to specify the Apache release directory url, where to finally release the artifacts.
-  - **version**: the key to define the release name, with both a major and a minor name.
+  - **versioning**: the key to define the release name, with both a version and a pre-release version name.
   - **RepoList**: the key to define the list of OpenWhisk projects to be released. Based on this key, we need to add other
   keys below with each of them matching each project name. For example, we define three projects in _RepoList_, so we
   have three other keys below to match each project.
@@ -86,6 +86,6 @@ $ ./checkout_svn.sh <WORK_DIR> <SVN_USERNAME> <SVN_PASSWORD>
 The <WORK_DIR> should be the same one used to download the source code. If you have already configured your local
 svn command with a pair of username and password, there is no need to provide the values for the arguments <SVN_USERNAME>
 and <SVN_PASSWORD>. With this command, a remote folder named openwhisk-$version will be created in the subversion
-repository if necessary, and checked out to the local folder <WORK_DIR>/openwhisk_release/openwhisk/openwhisk-$version.
-The value of $version is $major-$minor, as defined in config.json. This command can also be used to sync-up your local
-folder with the remote subversion folder.
+repository if necessary, and checked out to the local folder <WORK_DIR>/openwhisk_release/openwhisk/openwhisk-$full_version.
+The value of $full_version is $version-$pre_release_version, as defined in config.json. This command can also be used to
+sync-up your local folder with the remote subversion folder.

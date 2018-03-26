@@ -31,7 +31,9 @@ source "$PARENTDIR/load_config.sh" "$WORK_DIR" "$SVN_USERNAME" "$SVN_PASSWORD" "
 
 "$PARENTDIR/install_dependencies.sh"
 "$PARENTDIR/download_source_code.sh" "$WORK_DIR"
-"$PARENTDIR/checkout_svn.sh" "$WORK_DIR" "$SVN_USERNAME" "$SVN_PASSWORD"
+if [ "$TRAVIS_EVENT_TYPE" == "push" ] && [ "$PUBLISH_STAGE" == "true" ] ; then
+    "$PARENTDIR/checkout_svn.sh" "$WORK_DIR" "$SVN_USERNAME" "$SVN_PASSWORD"
+fi
 
 
 "$PARENTDIR/package_source_code.sh" "$WORK_DIR" "$SVN_USERNAME" "$SVN_PASSWORD"

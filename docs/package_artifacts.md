@@ -42,5 +42,5 @@ After downloading the source code, we can run the following script under _tools_
 $ ./package_source_code.sh <WORK_DIR>
 ```
 The <WORK_DIR> should be the same one used to download the source code. This script will create a source code package file
-of source code suffixed with tar.gz for each project, under <WORK_DIR>/openwhisk_sources/openwhisk/openwhisk-\<major\>-\<minor\>.
-The keys major and minor are defined in _config.json_.
+of source code suffixed with tar.gz for each project, under <WORK_DIR>/openwhisk_sources/openwhisk/openwhisk-\<version\>.
+The key version is defined in _config.json_.

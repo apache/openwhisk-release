@@ -28,7 +28,7 @@ source "$SCRIPTDIR/load_config.sh" $1 $2 $3
 cd $OPENWHISK_SVN/$REMOTE_PATH
 
 svn add --force * $CREDENTIALS
-svn commit -m "Staging Apache OpenWhisk release ${version}." $CREDENTIALS
+svn commit -m "Staging Apache OpenWhisk release ${full_version}." $CREDENTIALS
 
 # Disconnect $REMOTE_PATH with the remote staging server.
 rm -rf .svn

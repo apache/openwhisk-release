@@ -27,7 +27,7 @@ source "$SCRIPTDIR/load_config.sh" $1 $2 $3
 
 if [[ `wget -S --spider $CURRENT_VERSION_URL  2>&1 | grep 'HTTP/1.1 404 Not Found'` ]]; then
     # Create an empty folder named ${REMOTE_PATH} in the remote staging folder
-    svn mkdir -m "Create the directory for ${version} in staging." $CURRENT_VERSION_URL $CREDENTIALS
+    svn mkdir -m "Create the directory for ${full_version} in staging." $CURRENT_VERSION_URL $CREDENTIALS
 fi
 
 # Create a subversion directory for openwhisk to stage all the packages
