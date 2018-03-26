@@ -29,4 +29,4 @@ $ ./move_stage_to_release.sh
 ## Tag the release in git
 
 All the hash values are available in the configuration file config.json for each OpenWhisk project. We need to tag them
-with the name of the release, e.g: \<major\>-\<minor\>.
+with the name of the release, e.g: \<version\>-\<pre_release_version\>.

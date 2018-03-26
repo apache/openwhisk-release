@@ -26,5 +26,5 @@ $ ./upload_artifacts.sh <WORK_DIR>
 ```
 
 The <WORK_DIR> should be the same one used to download the source code. This script will create a remote directory named
-openwhisk-\<major\>-\<minor\> under the staging directory, and push all the files available locally under openwhisk-\<major\>-\<minor\>
-upstream. It will overwrite the old files or directories, if the directory openwhisk-\<major\>-\<minor\> is available as a svn folder.
+openwhisk-\<version\>-\<pre_release_version\> under the staging directory, and push all the files available locally under openwhisk-\<version\>-\<pre_release_version\>
+upstream. It will overwrite the old files or directories, if the directory openwhisk-\<version\>-\<pre_release_version\> is available as a svn folder.

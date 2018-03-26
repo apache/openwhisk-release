@@ -23,6 +23,8 @@ echo "Package the artifacts."
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
 source "$SCRIPTDIR/load_config.sh" $1 $2 $3
 
+mkdir -p $CURRENT_VERSION_DIR
+
 # Clean up all the source code by excluding unnecessary files and folders
 # Remove all the hidden files and folder
 # Remove bin and build folders
