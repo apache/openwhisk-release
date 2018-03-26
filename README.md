@@ -51,7 +51,7 @@ We target to implement this step in Travis build.
 
 ## Licensing
 All the source code has to be compliant with Apache Licensing Policy, by adding the LICENSE file, NOTICE file to each
-repository and the release package, and adding Licensing headers to each source code file.
+repository and the release package, and adding Licensing headers to each source code file. Please visit [License_Compliance](docs/license_compliance.md) for detailed information.
 
 ## Release distribution
 We need to upload all artifacts to project’s subdirectory in Apache channel. This step needs to be implemented in Travis build.

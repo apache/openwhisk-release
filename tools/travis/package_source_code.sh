@@ -21,8 +21,8 @@ set -e
 WORK_DIR=${1:-"$(dirname "$TRAVIS_BUILD_DIR")"}
 OPENWHISK_SOURCE_DIR="$WORK_DIR/openwhisk_sources"
 
-SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
-PARENTDIR="$(dirname "$SCRIPTDIR")"
+CURRENTDIR="$(cd $(dirname "$0")/ && pwd)"
+PARENTDIR="$(dirname "$CURRENTDIR")"
 
 SVN_USERNAME=$2
 SVN_PASSWORD=$3
@@ -39,7 +39,7 @@ fi
 "$PARENTDIR/package_source_code.sh" "$WORK_DIR" "$SVN_USERNAME" "$SVN_PASSWORD"
 
 if [ "$TRAVIS_EVENT_TYPE" == "push" ] && [ "$PUBLISH_STAGE" == "true" ] ; then
-    "$SCRIPTDIR/import_pgp_key.sh"
+    "$CURRENTDIR/import_pgp_key.sh"
     "$PARENTDIR/sign_artifacts.sh" "$WORK_DIR"
     "$PARENTDIR/upload_artifacts.sh" "$WORK_DIR" "$SVN_USERNAME" "$SVN_PASSWORD"
 fi
