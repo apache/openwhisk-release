@@ -36,7 +36,7 @@ fi
 
 cd $CURRENT_VERSION_DIR
 echo "Sign the artifacts with the private key."
-for artifact in *.tar.gz; do
+for artifact in *.tar.gz *.zip *.tgz; do
     gpg --print-md MD5 ${artifact} > ${artifact}.md5
     gpg --print-md SHA512 ${artifact} > ${artifact}.sha512
 

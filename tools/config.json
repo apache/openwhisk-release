@@ -26,14 +26,16 @@
     "branch": "master"
   },
   "openwhisk_wskdeploy": {
-    "hash": "c08d805",
+    "hash": "063263c",
     "repository": "https://github.com/apache/incubator-openwhisk-wskdeploy.git",
-    "branch": "master"
+    "branch": "master",
+    "binaries": "yes"
   },
   "openwhisk_cli": {
-    "hash": "ff385df",
+    "hash": "ba08720",
     "repository": "https://github.com/apache/incubator-openwhisk-cli.git",
-    "branch": "master"
+    "branch": "master",
+    "binaries": "yes"
   },
   "openwhisk_client_go": {
     "hash": "012fd0f",

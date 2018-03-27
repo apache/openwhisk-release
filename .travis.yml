@@ -34,7 +34,7 @@ jobs:
     #- stage: deploy
     #  script: ./tools/travis/setup.sh
     - stage: package
-      script: ./tools/travis/package_source_code.sh $(dirname "$TRAVIS_BUILD_DIR") $SVN_USERNAME $SVN_PASSWORD
+      script: ./tools/travis/package_project.sh $(dirname "$TRAVIS_BUILD_DIR") $SVN_USERNAME $SVN_PASSWORD
 
 before_install:
   - if [ "$TRAVIS_PULL_REQUEST" == "false" ] ; then
