@@ -35,9 +35,12 @@ the artifacts in the staging directory and the Apache release directory.
   7. [Publish the release artifacts to the staging directory](push_stage_url.md)
   8. Vote on the dev@openwhisk.apache.org list
   9. If the vote fails - configure the file config.json and resume from step 3
-  10. [Publish the release artifacts to Apache release directory](publish_apache_directory.md)
-  11. [Generate the release notes](generate_release_notes.md)
-  12. Announce the release
+  10. If the vote passes - send Vote on the general@incubator.apache.org list (cc dev list)
+  11. if the vote fails - configure the file config.json and resume from step 3
+  12. if the vote passes - close the vote with final email to incubator list (cc dev list)
+  13. [Publish the release artifacts to Apache release directory](publish_apache_directory.md)
+  14. [Generate the release notes](generate_release_notes.md)
+  15. Announce the release
 
 ## Automated mode of Release Process
 
