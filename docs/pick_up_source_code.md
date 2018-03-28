@@ -28,6 +28,7 @@ Template of [_config.json_](../tools/config.json):
 
 ```
 {
+  "publish_stage": "false",
   "stage_url": "https://dist.apache.org/repos/dist/dev/incubator/openwhisk",
   "release_url": "https://dist.apache.org/repos/dist/release/incubator/openwhisk",
   "versioning": {
@@ -56,6 +57,9 @@ Template of [_config.json_](../tools/config.json):
   }
 }
 ```
+  - **publish_stage**: the field to specify whether the Travis build in master will upload the new artifacts to the staging
+  URL or not. If it is set to false, the Travis build in master will not upload the artifacts. If it is set to true, the
+  Travis build in master will upload the artifacts.
   - **stage_url**: the field to specify the staging url, where to upload the artifacts.
   - **release_url**: the field to specify the Apache release directory url, where to finally release the artifacts.
   - **versioning**: the key to define the release name, with both a version and a pre-release version name.
