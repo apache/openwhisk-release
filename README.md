@@ -50,39 +50,142 @@ Once candidates are approved, in accordance with required release processes and 
 ## Release Manager Tutorial
 As a release manger of OpenWhisk, please visit [OpenWhisk Release tutorial](docs/tutorial.md).
 
-## How to release an Apache project
-
-## Release Approval
-
-Apache requires a minimum of three positive votes and more positive than negative votes MUST be cast, in order to release.
-Release manager of OpenWhisk sends a release note to the OpenWhisk mailing for votes, and opens the mail for 72 hours.
-We can create JIRA issue for this release and close it when the requirement is met and ready for release. This step can
-be done manually by the release manager, beyond the scope of this project.
-
-An example of the release note can be found at the following link: [example of release note](https://github.com/apache/cordova-coho/blob/master/docs/coho-release-process.md).
-
-## Artifact requirements
-Artifacts for project repository source code and any compiled binaries are packaged separately with each artifact being signed cryptographically.
-
-Source code needs to provide the installation script for users to deploy a full OpenWhisk environment. We target to implement this step in Travis build.
-
-## Licensing requirements
-
-All the source code has to be compliant with Apache Licensing Policy, by adding the LICENSE file, NOTICE file to each
-repository and the release package, and adding Licensing headers to each source code file. Please visit [License_Compliance](docs/license_compliance.md) for detailed information.
-
-## Release distribution requirements
-We need to upload all artifacts to project’s subdirectory in Apache channel. This step needs to be implemented in Travis build.
 
 # Specifications to implement the above release process
 
-To find the specifications about how to implement the Apache Release process for OpenWhisk project set, please visit the
-following page.
+To find the specifications about how to implement the Apache Release process for OpenWhisk project set, please visit the following page.
 
 - [General Specification](docs/general_spec.md)
 
+# Project status
+
+The following table can be used by Release Managers to get quickly check the status of all project repositories that are currently included the current release plan:
+
+<table width="100%" cellpadding="8">
+<tbody>
+<tr>
+<th width="260">Repository</th>
+<th>Travis<small> (master)</small></th>
+<th>ASF Licenses</th>
+<th>Slack Channel</th>
+<th><a href="https://github.com/apache/incubator-openwhisk-utilities/tree/master/scancode">ScanCode</a> Enabled</th>
+</tr>
+<tr>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk">incubator-openwhisk</a></p>
+</td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk.svg?branch=master"><img src="https://travis-ci.org/apache/incubator-openwhisk.svg?branch=master" alt="" /></a></td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></p>
+</td>
+<td><a href="https://openwhisk-team.slack.com/messages/C3TPCAQG1/"><img src="https://img.shields.io/badge/channel-Slack-800080.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/incubator-openwhisk/blob/master/tools/travis/build.sh">Yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/apache/incubator-openwhisk-catalog">incubator-openwhisk-catalog</a></td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk-catalog"><img src="https://travis-ci.org/apache/incubator-openwhisk-catalog.svg?branch=master" alt="" /></a></td>
+<td>
+<p><a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></p>
+</td>
+<td>&nbsp;</td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-catalog/blob/master/tools/travis/build.sh">Yes</a></p>
+</td>
+</tr>
+<tr>
+<td>i<a href="https://github.com/apache/incubator-openwhisk-apigateway">ncubator-openwhisk-apigateway</a></td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk-apigateway"><img src="https://travis-ci.org/apache/incubator-openwhisk-apigateway.svg?branch=master" alt="" /></a></td>
+<td>
+<p><a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></p>
+</td>
+<td><a href="https://openwhisk-team.slack.com/messages/C3TP33Y2U/"><img src="https://img.shields.io/badge/channel-Slack-800080.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tools/travis/build.sh">Yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/apache/incubator-openwhisk-cli">incubator-openwhisk-cli</a></td>
+<td>
+<p><a href="https://travis-ci.org/apache/incubator-openwhisk-cli"><img src="https://travis-ci.org/apache/incubator-openwhisk-cli.svg?branch=master" alt="" /></a></p>
+</td>
+<td><a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td>&nbsp;</td>
+<td><a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/tools/travis/scancode.sh">Yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/apache/incubator-openwhisk-client-go">incubator-openwhisk-client-go</a></td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk-client-go"><img src="https://travis-ci.org/apache/incubator-openwhisk-client-go.svg?branch=master" alt="" /></a></td>
+<td><a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td>&nbsp;</td>
+<td><a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/tools/travis/build.sh">Yes</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/apache/incubator-openwhisk-wskdeploy">incubator-openwhisk-wskdeploy</a></td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk-wskdeploy/builds"><img src="https://travis-ci.org/apache/incubator-openwhisk-wskdeploy.svg?branch=master" alt="" /></a></td>
+<td><a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td><a href="https://openwhisk-team.slack.com/messages/C3TP33Y2U/"><img src="https://img.shields.io/badge/channel-Slack-800080.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/tools/travis/scancode.sh">Yes</a></td>
+</tr>
+<tr>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs">incubator-openwhisk-runtime-nodejs</a></p>
+</td>
+<td>
+<p><img src="https://travis-ci.org/apache/incubator-openwhisk-runtime-nodejs.svg?branch=master" alt="" /></p>
+</td>
+<td><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/LICENSE.txt"><img src="https://camo.githubusercontent.com/3a4d3bc039085cffdfecbe3077ffe49c5fe23286/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4170616368652d2d322e302d626c75652e737667" alt="" /></a></td>
+<td>&nbsp;</td>
+<td>No</td>
+</tr>
+<tr>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-runtime-swift"> incubator-openwhisk-runtime-swift</a></p>
+</td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk-runtime-swift/builds"><img src="https://travis-ci.org/apache/incubator-openwhisk-runtime-swift.svg?branch=master" alt="" /></a></td>
+<td><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/LICENSE.txt"><img src="https://camo.githubusercontent.com/3a4d3bc039085cffdfecbe3077ffe49c5fe23286/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4170616368652d2d322e302d626c75652e737667" alt="" /></a></td>
+<td>&nbsp;</td>
+<td>No</td>
+</tr>
+<tr>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-runtime-docker">incubator-openwhisk-runtime-docker</a></p>
+</td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk-runtime-docker/builds"><img src="https://travis-ci.org/apache/incubator-openwhisk-runtime-docker.svg?branch=master" alt="" /></a></td>
+<td><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/LICENSE.txt"><img src="https://camo.githubusercontent.com/3a4d3bc039085cffdfecbe3077ffe49c5fe23286/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4170616368652d2d322e302d626c75652e737667" alt="" /></a></td>
+<td>&nbsp;</td>
+<td>No</td>
+</tr>
+<tr>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-runtime-java">incubator-openwhisk-runtime-java</a></p>
+</td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk-runtime-java/builds"><img src="https://travis-ci.org/apache/incubator-openwhisk-runtime-java.svg?branch=master" alt="" /></a></td>
+<td><a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/LICENSE.txt"><img src="https://camo.githubusercontent.com/3a4d3bc039085cffdfecbe3077ffe49c5fe23286/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4170616368652d2d322e302d626c75652e737667" alt="" /></a></td>
+<td>&nbsp;</td>
+<td>No</td>
+</tr>
+<tr>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-runtime-php">incubator-openwhisk-runtime-php</a></p>
+</td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk-runtime-php/builds"><img src="https://travis-ci.org/apache/incubator-openwhisk-runtime-php.svg?branch=master" alt="" /></a></td>
+<td><a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/LICENSE.txt"><img src="https://camo.githubusercontent.com/3a4d3bc039085cffdfecbe3077ffe49c5fe23286/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4170616368652d2d322e302d626c75652e737667" alt="" /></a></td>
+<td>&nbsp;</td>
+<td>No</td>
+</tr>
+<tr>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-runtime-python">incubator-openwhisk-runtime-python</a></p>
+</td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk-runtime-python/builds"><img src="https://travis-ci.org/apache/incubator-openwhisk-runtime-python.svg?branch=master" alt="" /></a></td>
+<td><a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/LICENSE.txt"><img src="https://camo.githubusercontent.com/3a4d3bc039085cffdfecbe3077ffe49c5fe23286/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4170616368652d2d322e302d626c75652e737667" alt="" /></a></td>
+<td>&nbsp;</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+
 # References
-[Apache release policy](http://www.apache.org/legal/release-policy.html)
+- [Apache Release Creation Process](http://www.apache.org/dev/release-publishing.html)
+- [Apache Release Policy](http://www.apache.org/legal/release-policy.html)
 
 # Notes
-This projecy is still "in development" with many steps still in the process of being automated and brought into compliance. We welcome any reviews, comments or contributions to help us complete and improve any part of the process.
+This project is still "in development" with many steps still in the process of being automated and brought into compliance. We welcome any reviews, comments or contributions to help us complete and improve any part of the process.
