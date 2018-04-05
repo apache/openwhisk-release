@@ -171,8 +171,11 @@ The following table can be used by Release Managers to get quickly check the sta
 </table>
 
 Note:
-- The Travis build status icon is hyperlinked to the corresponding repository's Travis CI dashboard's  "branches" page.
-- The ASF License icon is hyperlinked to the corresponding repository's LICENSE file.
+- The Travis build status badge is hyperlinked to the corresponding repository's Travis CI dashboard's  "branches" page.
+- The ASF License badge is hyperlinked to the corresponding repository's LICENSE file.
+- The ASF NOTICE column text links to the corresponding repository's NOTICE file.
+- The ScanCode column text is hyperlinked to the corresponding repository's build file that executes the utility.
+- The Slack badge is hyperlinked to the corresponding repository's public Slack channel.
 
 # References
 - [Apache Release Creation Process](http://www.apache.org/dev/release-publishing.html)
