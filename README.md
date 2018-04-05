@@ -79,7 +79,7 @@ The following table can be used by Release Managers to get quickly check the sta
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></p>
 </td>
-<td>&nbsp;</td>
+<td><a href="https://github.com/apache/incubator-openwhisk/blob/master/NOTICE.txt">NOTICE</a></td>
 <td><a href="https://openwhisk-team.slack.com/messages/C3TPCAQG1/"><img src="https://img.shields.io/badge/channel-Slack-800080.svg" alt="" /></a></td>
 <td><a href="https://github.com/apache/incubator-openwhisk/blob/master/tools/travis/build.sh">Yes</a></td>
 </tr>
