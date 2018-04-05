@@ -99,8 +99,7 @@ The following table can be used by Release Managers to get quickly check the sta
 <td>i<a href="https://github.com/apache/incubator-openwhisk-apigateway">ncubator-openwhisk-apigateway</a></td>
 <td><a href="https://travis-ci.org/apache/incubator-openwhisk-apigateway/branches"><img src="https://travis-ci.org/apache/incubator-openwhisk-apigateway.svg?branch=master" alt="" /></a></td>
 <td>
-<p><a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></p>
-</td>
+<p><a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></p></td>
 <td>&nbsp;</td>
 <td><a href="https://openwhisk-team.slack.com/messages/C3TP33Y2U/"><img src="https://img.shields.io/badge/channel-Slack-800080.svg" alt="" /></a></td>
 <td><a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tools/travis/build.sh">Yes</a></td>
