@@ -101,7 +101,7 @@ The following table can be used by Release Managers to get quickly check the sta
 <td><a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
 <td><a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/NOTICE.txt">NOTICE</a></td>
 <td>&nbsp;</td>
-<td><a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/tools/travis/scancode.sh">Yes</a></td>
+<td><a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/tools/travis/test_openwhisk.sh">Yes</a></td>
 </tr>
 <tr align="center">
 <td align="left"><a href="https://github.com/apache/incubator-openwhisk-client-go">incubator-openwhisk-client-go</a></td>
