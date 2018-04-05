@@ -66,7 +66,7 @@ The following table can be used by Release Managers to get quickly check the sta
 <tr>
 <th width="300">Repository</th>
 <th width="120">Travis <sub>(Master)</sub></th>
-<th width="120">ASF License</th>
+<th width="120">ASF LICENSE</th>
 <th width="120">Slack Channel</th>
 <th><a href="https://github.com/apache/incubator-openwhisk-utilities/tree/master/scancode">ScanCode</a></th>
 </tr>
