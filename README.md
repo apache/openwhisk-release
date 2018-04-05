@@ -137,7 +137,7 @@ The following table can be used by Release Managers to get quickly check the sta
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk-runtime-swift"> incubator-openwhisk-runtime-swift</a></p>
 </td>
-<td><a href="https://travis-ci.org/apache/incubator-openwhisk-runtime-swift/builds"><img src="https://travis-ci.org/apache/incubator-openwhisk-runtime-swift.svg?branch=master" alt="" /></a></td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk-runtime-swift/branches"><img src="https://travis-ci.org/apache/incubator-openwhisk-runtime-swift.svg?branch=master" alt="" /></a></td>
 <td><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/LICENSE.txt"><img src="https://camo.githubusercontent.com/3a4d3bc039085cffdfecbe3077ffe49c5fe23286/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4170616368652d2d322e302d626c75652e737667" alt="" /></a></td>
 <td>&nbsp;</td>
 <td>No</td>
@@ -146,7 +146,7 @@ The following table can be used by Release Managers to get quickly check the sta
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk-runtime-docker">incubator-openwhisk-runtime-docker</a></p>
 </td>
-<td><a href="https://travis-ci.org/apache/incubator-openwhisk-runtime-docker/builds"><img src="https://travis-ci.org/apache/incubator-openwhisk-runtime-docker.svg?branch=master" alt="" /></a></td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk-runtime-docker/branches"><img src="https://travis-ci.org/apache/incubator-openwhisk-runtime-docker.svg?branch=master" alt="" /></a></td>
 <td><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/LICENSE.txt"><img src="https://camo.githubusercontent.com/3a4d3bc039085cffdfecbe3077ffe49c5fe23286/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4170616368652d2d322e302d626c75652e737667" alt="" /></a></td>
 <td>&nbsp;</td>
 <td>No</td>
@@ -155,7 +155,7 @@ The following table can be used by Release Managers to get quickly check the sta
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk-runtime-java">incubator-openwhisk-runtime-java</a></p>
 </td>
-<td><a href="https://travis-ci.org/apache/incubator-openwhisk-runtime-java/builds"><img src="https://travis-ci.org/apache/incubator-openwhisk-runtime-java.svg?branch=master" alt="" /></a></td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk-runtime-java/branches"><img src="https://travis-ci.org/apache/incubator-openwhisk-runtime-java.svg?branch=master" alt="" /></a></td>
 <td><a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/LICENSE.txt"><img src="https://camo.githubusercontent.com/3a4d3bc039085cffdfecbe3077ffe49c5fe23286/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4170616368652d2d322e302d626c75652e737667" alt="" /></a></td>
 <td>&nbsp;</td>
 <td>No</td>
@@ -164,7 +164,7 @@ The following table can be used by Release Managers to get quickly check the sta
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk-runtime-php">incubator-openwhisk-runtime-php</a></p>
 </td>
-<td><a href="https://travis-ci.org/apache/incubator-openwhisk-runtime-php/builds"><img src="https://travis-ci.org/apache/incubator-openwhisk-runtime-php.svg?branch=master" alt="" /></a></td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk-runtime-php/branches"><img src="https://travis-ci.org/apache/incubator-openwhisk-runtime-php.svg?branch=master" alt="" /></a></td>
 <td><a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/LICENSE.txt"><img src="https://camo.githubusercontent.com/3a4d3bc039085cffdfecbe3077ffe49c5fe23286/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4170616368652d2d322e302d626c75652e737667" alt="" /></a></td>
 <td>&nbsp;</td>
 <td>No</td>
@@ -173,7 +173,7 @@ The following table can be used by Release Managers to get quickly check the sta
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk-runtime-python">incubator-openwhisk-runtime-python</a></p>
 </td>
-<td><a href="https://travis-ci.org/apache/incubator-openwhisk-runtime-python/builds"><img src="https://travis-ci.org/apache/incubator-openwhisk-runtime-python.svg?branch=master" alt="" /></a></td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk-runtime-python/branches"><img src="https://travis-ci.org/apache/incubator-openwhisk-runtime-python.svg?branch=master" alt="" /></a></td>
 <td><a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/LICENSE.txt"><img src="https://camo.githubusercontent.com/3a4d3bc039085cffdfecbe3077ffe49c5fe23286/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4170616368652d2d322e302d626c75652e737667" alt="" /></a></td>
 <td>&nbsp;</td>
 <td>No</td>
