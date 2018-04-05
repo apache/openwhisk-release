@@ -85,7 +85,7 @@ The following table can be used by Release Managers to get quickly check the sta
 <td><a href="https://github.com/apache/incubator-openwhisk-catalog">incubator-openwhisk-catalog</a></td>
 <td><a href="https://travis-ci.org/apache/incubator-openwhisk-catalog/branches"><img src="https://travis-ci.org/apache/incubator-openwhisk-catalog.svg?branch=master" alt="" /></a></td>
 <td>
-<p><a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></p>
+<p><a href="https://github.com/apache/incubator-openwhisk-catalog/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></p>
 </td>
 <td>&nbsp;</td>
 <td>
@@ -96,7 +96,7 @@ The following table can be used by Release Managers to get quickly check the sta
 <td>i<a href="https://github.com/apache/incubator-openwhisk-apigateway">ncubator-openwhisk-apigateway</a></td>
 <td><a href="https://travis-ci.org/apache/incubator-openwhisk-apigateway/branches"><img src="https://travis-ci.org/apache/incubator-openwhisk-apigateway.svg?branch=master" alt="" /></a></td>
 <td>
-<p><a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></p>
+<p><a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></p>
 </td>
 <td><a href="https://openwhisk-team.slack.com/messages/C3TP33Y2U/"><img src="https://img.shields.io/badge/channel-Slack-800080.svg" alt="" /></a></td>
 <td><a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tools/travis/build.sh">Yes</a></td>
@@ -106,21 +106,21 @@ The following table can be used by Release Managers to get quickly check the sta
 <td>
 <p><a href="https://travis-ci.org/apache/incubator-openwhisk-cli/branches"><img src="https://travis-ci.org/apache/incubator-openwhisk-cli.svg?branch=master" alt="" /></a></p>
 </td>
-<td><a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
 <td>&nbsp;</td>
 <td><a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/tools/travis/scancode.sh">Yes</a></td>
 </tr>
 <tr>
 <td><a href="https://github.com/apache/incubator-openwhisk-client-go">incubator-openwhisk-client-go</a></td>
 <td><a href="https://travis-ci.org/apache/incubator-openwhisk-client-go/branches"><img src="https://travis-ci.org/apache/incubator-openwhisk-client-go.svg?branch=master" alt="" /></a></td>
-<td><a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
 <td>&nbsp;</td>
 <td><a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/tools/travis/build.sh">Yes</a></td>
 </tr>
 <tr>
 <td><a href="https://github.com/apache/incubator-openwhisk-wskdeploy">incubator-openwhisk-wskdeploy</a></td>
 <td><a href="https://travis-ci.org/apache/incubator-openwhisk-wskdeploy/branches"><img src="https://travis-ci.org/apache/incubator-openwhisk-wskdeploy.svg?branch=master" alt="" /></a></td>
-<td><a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
 <td><a href="https://openwhisk-team.slack.com/messages/C3TP33Y2U/"><img src="https://img.shields.io/badge/channel-Slack-800080.svg" alt="" /></a></td>
 <td><a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/tools/travis/scancode.sh">Yes</a></td>
 </tr>
