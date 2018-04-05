@@ -61,13 +61,13 @@ To find the specifications about how to implement the Apache Release process for
 
 The following table can be used by Release Managers to get quickly check the status of all project repositories that are currently included the current release plan:
 
-<table width="640" cellpadding="8">
+<table cellpadding="8">
 <tbody>
 <tr>
-<th width="260">Repository</th>
-<th width="120">Travis Master</br><small>(branches)</small></th>
-<th width="120">ASF License</br><small>link</small></th>
-<th width="120">Slack Channel</br><small>link</small></th>
+<th width="300">Repository</th>
+<th width="120">Travis <sub>(Master)</sub></th>
+<th width="120">ASF License</th>
+<th width="120">Slack Channel</th>
 <th><a href="https://github.com/apache/incubator-openwhisk-utilities/tree/master/scancode">ScanCode</a></th>
 </tr>
 <tr>
