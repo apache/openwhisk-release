@@ -181,6 +181,10 @@ The following table can be used by Release Managers to get quickly check the sta
 </tbody>
 </table>
 
+Note:
+- The Travis build status icon is hyperlinked to the corresponding repository's Travis CI dashboard's  "branches" page.
+- The ASF License icon is hyperlinked to the corresponding repository's LICENSE file.
+
 # References
 - [Apache Release Creation Process](http://www.apache.org/dev/release-publishing.html)
 - [Apache Release Policy](http://www.apache.org/legal/release-policy.html)
