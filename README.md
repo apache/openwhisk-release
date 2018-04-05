@@ -65,7 +65,7 @@ The following table can be used by Release Managers to get quickly check the sta
 <tbody>
 <tr>
 <th width="260">Repository</th>
-<th>Travis<small> (master)</small></th>
+<th>Travis<small> (branches)</small></th>
 <th>ASF Licenses</th>
 <th>Slack Channel</th>
 <th><a href="https://github.com/apache/incubator-openwhisk-utilities/tree/master/scancode">ScanCode</a> Enabled</th>
@@ -74,7 +74,7 @@ The following table can be used by Release Managers to get quickly check the sta
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk">incubator-openwhisk</a></p>
 </td>
-<td><a href="https://travis-ci.org/apache/incubator-openwhisk.svg?branch=master"><img src="https://travis-ci.org/apache/incubator-openwhisk.svg?branch=master" alt="" /></a></td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk/branches"><img src="https://travis-ci.org/apache/incubator-openwhisk.svg?branch=master" alt="" /></a></td>
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></p>
 </td>
@@ -83,7 +83,7 @@ The following table can be used by Release Managers to get quickly check the sta
 </tr>
 <tr>
 <td><a href="https://github.com/apache/incubator-openwhisk-catalog">incubator-openwhisk-catalog</a></td>
-<td><a href="https://travis-ci.org/apache/incubator-openwhisk-catalog"><img src="https://travis-ci.org/apache/incubator-openwhisk-catalog.svg?branch=master" alt="" /></a></td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk-catalog/branches"><img src="https://travis-ci.org/apache/incubator-openwhisk-catalog.svg?branch=master" alt="" /></a></td>
 <td>
 <p><a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></p>
 </td>
@@ -94,7 +94,7 @@ The following table can be used by Release Managers to get quickly check the sta
 </tr>
 <tr>
 <td>i<a href="https://github.com/apache/incubator-openwhisk-apigateway">ncubator-openwhisk-apigateway</a></td>
-<td><a href="https://travis-ci.org/apache/incubator-openwhisk-apigateway"><img src="https://travis-ci.org/apache/incubator-openwhisk-apigateway.svg?branch=master" alt="" /></a></td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk-apigateway/branches"><img src="https://travis-ci.org/apache/incubator-openwhisk-apigateway.svg?branch=master" alt="" /></a></td>
 <td>
 <p><a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></p>
 </td>
@@ -104,7 +104,7 @@ The following table can be used by Release Managers to get quickly check the sta
 <tr>
 <td><a href="https://github.com/apache/incubator-openwhisk-cli">incubator-openwhisk-cli</a></td>
 <td>
-<p><a href="https://travis-ci.org/apache/incubator-openwhisk-cli"><img src="https://travis-ci.org/apache/incubator-openwhisk-cli.svg?branch=master" alt="" /></a></p>
+<p><a href="https://travis-ci.org/apache/incubator-openwhisk-cli/branches"><img src="https://travis-ci.org/apache/incubator-openwhisk-cli.svg?branch=master" alt="" /></a></p>
 </td>
 <td><a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
 <td>&nbsp;</td>
@@ -112,14 +112,14 @@ The following table can be used by Release Managers to get quickly check the sta
 </tr>
 <tr>
 <td><a href="https://github.com/apache/incubator-openwhisk-client-go">incubator-openwhisk-client-go</a></td>
-<td><a href="https://travis-ci.org/apache/incubator-openwhisk-client-go"><img src="https://travis-ci.org/apache/incubator-openwhisk-client-go.svg?branch=master" alt="" /></a></td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk-client-go/branches"><img src="https://travis-ci.org/apache/incubator-openwhisk-client-go.svg?branch=master" alt="" /></a></td>
 <td><a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
 <td>&nbsp;</td>
 <td><a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/tools/travis/build.sh">Yes</a></td>
 </tr>
 <tr>
 <td><a href="https://github.com/apache/incubator-openwhisk-wskdeploy">incubator-openwhisk-wskdeploy</a></td>
-<td><a href="https://travis-ci.org/apache/incubator-openwhisk-wskdeploy/builds"><img src="https://travis-ci.org/apache/incubator-openwhisk-wskdeploy.svg?branch=master" alt="" /></a></td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk-wskdeploy/branches"><img src="https://travis-ci.org/apache/incubator-openwhisk-wskdeploy.svg?branch=master" alt="" /></a></td>
 <td><a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
 <td><a href="https://openwhisk-team.slack.com/messages/C3TP33Y2U/"><img src="https://img.shields.io/badge/channel-Slack-800080.svg" alt="" /></a></td>
 <td><a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/tools/travis/scancode.sh">Yes</a></td>
@@ -128,9 +128,7 @@ The following table can be used by Release Managers to get quickly check the sta
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs">incubator-openwhisk-runtime-nodejs</a></p>
 </td>
-<td>
-<p><img src="https://travis-ci.org/apache/incubator-openwhisk-runtime-nodejs.svg?branch=master" alt="" /></p>
-</td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk-runtime-nodejs/branches"><img src="https://travis-ci.org/apache/incubator-openwhisk-runtime-nodejs.svg?branch=master" alt="" /></a></td>
 <td><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/LICENSE.txt"><img src="https://camo.githubusercontent.com/3a4d3bc039085cffdfecbe3077ffe49c5fe23286/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4170616368652d2d322e302d626c75652e737667" alt="" /></a></td>
 <td>&nbsp;</td>
 <td>No</td>
