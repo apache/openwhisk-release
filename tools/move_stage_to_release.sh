@@ -33,4 +33,7 @@ fi
 
 if [[ `wget -S --spider $CURRENT_VERSION_URL  2>&1 | grep 'HTTP/1.1 200 OK'` ]]; then
     svn copy $CURRENT_VERSION_URL $RELEASE_URL -m "Releasing Apache OpenWhisk release ${full_version}." $CREDENTIALS
+    if [ "$full_version" != "$version" ]; then
+        svn mv $RELEASE_VERSION_URL_STAGE $RELEASE_VERSION_URL -m "Remaning the directory from ${full_version} to ${version}." $CREDENTIALS
+    fi
 fi

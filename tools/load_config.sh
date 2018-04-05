@@ -38,6 +38,7 @@ CONFIG=$(read_file $SCRIPTDIR/config.json)
 PUBLISH_STAGE=$(json_by_key "$CONFIG" "publish_stage")
 repos=$(echo $(json_by_key "$CONFIG" "RepoList") | sed 's/[][]//g')
 STAGE_URL=$(json_by_key "$CONFIG" "stage_url")
+RELEASE_URL=$(json_by_key "$CONFIG" "release_url")
 
 version_key="versioning"
 version=$(json_by_key "$CONFIG" ${version_key}.version)
@@ -52,6 +53,10 @@ if [ ! -z "$pre_release_version" ]; then
 fi
 
 REMOTE_PATH="openwhisk-$full_version"
+REMOTE_PATH_RELEASE="openwhisk-$version"
 
 CURRENT_VERSION_URL="$STAGE_URL/${REMOTE_PATH}/"
 CURRENT_VERSION_DIR="$OPENWHISK_SVN/$REMOTE_PATH"
+
+RELEASE_VERSION_URL_STAGE="$RELEASE_URL/${REMOTE_PATH}/"
+RELEASE_VERSION_URL="$RELEASE_URL/${REMOTE_PATH_RELEASE}/"
