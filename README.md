@@ -175,6 +175,7 @@ Note:
 - The ASF License badge is hyperlinked to the corresponding repository's LICENSE file.
 - The ASF NOTICE column text links to the corresponding repository's NOTICE file.
 - The ScanCode column text is hyperlinked to the corresponding repository's build file that executes the utility.
+  - The ASF scan configuration for all repos. can be found here: [ASF-Release.cfg](https://github.com/apache/incubator-openwhisk-utilities/blob/master/scancode/ASF-Release.cfg).
 - The Slack badge is hyperlinked to the corresponding repository's public Slack channel.
 
 # References
