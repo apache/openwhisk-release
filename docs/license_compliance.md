@@ -37,21 +37,19 @@ In OpenWhisk project, we will exclude below type of files from license header ve
 In OpenWhisk project, we decided to apply short form of header to minified OpenWhisk action source files in order to get better performance.
 
 | File type | Included or Excluded | Header type | Justifications |
-| Documentation (*.md) | Included | Full Apache license header | |
-| Json files (*.json) | Excluded | - | Json files don't support comments officially |
-| YAML files (*.yaml, *.yml) | Included | Full Apache license header | |
-| Docker file (dockerfile) | Included | Full Apache license header | |
-| Installation script files (*.sh) | Included | Full Apache license header | |
-| Travis files (*.sh) | Included | Full Apache license header | |
+| --- | --- | --- | --- |
+| Documentation (`*.md`) | Included | Full Apache license header | |
+| YAML files (`*.yaml`, `*.yml`) | Included | Full Apache license header | |
+| Docker file (`dockerfile`) | Included | Full Apache license header | |
+| Installation script files (`*.sh`) | Included | Full Apache license header | |
+| Travis files (`*.sh`) | Included | Full Apache license header | |
+| Makefile | Included | Full Apache license header | |
+| Test data files | Included | Short Apache license header | <ul><li>Is it intellectual property? YES</li><li>Does it impact performance? YES (NOTE: these tests MAY be used for perf. testing, but mostly for unit/function testing)</li><li>Will it break Travis builds? MAYBE (we can address this later if needed)</li></ul>|
+| Action files in catalog | Included | Short Apache license header | with much creativity so need IP protection; also need to take care of the performance |
 | Gradle files | Excluded | - | Not much creativity |
 | IDE configuration files | Excluded | - | Not much creativity |
-| Template files (*.j2) | Excluded | - | Not much creativity |
-| Makefile | Included | Full Apache license header | |
-| Test data files | Included | Short Apache license header | Decision rests on:
-        * Is it intellectual property? YES (primary factor)
-        * Does it impact performance? YES (not as important as protecting Intellectual property)
-            * NOTE: these tests MAY be used for perf. testing, but mostly for unit/function testing
-        * Will it break Travis builds? MAYBE (we can address this later if needed)|
+| Template files (`*.j2`) | Excluded | - | Not much creativity |
+| Json files (`*.json`) | Excluded | - | Json files don't support comments officially |
 
 ## Tools and scripts
 
