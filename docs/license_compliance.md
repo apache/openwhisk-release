@@ -36,6 +36,22 @@ In OpenWhisk project, we will exclude below type of files from license header ve
 
 In OpenWhisk project, we decided to apply short form of header to minified OpenWhisk action source files in order to get better performance.
 
+| File type | Included or Excluded | Header type | Justifications |
+| --- | --- | --- | --- |
+| Documentation (`*.md`) | Included | Full Apache license header | |
+| YAML files (`*.yaml`, `*.yml`) | Included | Full Apache license header | |
+| Docker file (`dockerfile`) | Included | Full Apache license header | |
+| Installation script files (`*.sh`) | Included | Full Apache license header | |
+| Travis files (`*.sh`) | Included | Full Apache license header | |
+| Makefile | Included | Full Apache license header | |
+| Test data files | Included | Short Apache license header | <ul><li>Is it intellectual property? YES</li><li>Does it impact performance? YES (NOTE: these tests MAY be used for perf. testing, but mostly for unit/function testing)</li><li>Will it break Travis builds? MAYBE (we can address this later if needed)</li></ul>|
+| Action files in catalog | Included | Short Apache license header | with much creativity so need IP protection; also need to take care of the performance |
+| Gradle files | Excluded | - | Not much creativity |
+| IDE configuration files | Excluded | - | Not much creativity |
+| Template files (`*.j2`) | Excluded | - | Not much creativity |
+| Json files (`*.json`) | Excluded | - | Json files don't support comments officially |
+| `i18n_resources.go` | Excluded | - | Not much creativity. The file is auto created. Not able to add header |
+
 ## Tools and scripts
 
 [verify_source_code.sh](../tools/verify_source_code.sh) in the `tools` folder is to verify license compliance. [Apache Rat](https://creadur.apache.org/rat/) is used to verify license headers. Files excluded license header verification following the previous rules are configured in the file [pom.xml](../tools/travis/pom.xml).
