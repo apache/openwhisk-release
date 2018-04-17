@@ -26,24 +26,36 @@ The following table provides a single view, with links, of all project repositor
 <th width="310">Repository</th>
 <th width="220">LICENSE Notes</th>
 <th width="220">NOTICE Notes</th>
-<th width="220">Work items</th>
+<th width="220">Work items / Issues</th>
 </tr>
 <tr align="left" valign="top">
 <td><a href="https://github.com/apache/incubator-openwhisk">incubator-openwhisk</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk/blob/master/LICENSE.txt">LICENSE</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk/blob/master/NOTICE.txt">NOTICE</a></td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk/blob/master/LICENSE.txt">LICENSE</a></p>
+<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/93">#93</a></p>
+</td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk/blob/master/NOTICE.txt">NOTICE</a></p>
+<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/75">#75</a></p>
+</td>
 <td>
 <ul>
 <li>ASF Licenses: <a class="external-link" href="https://github.com/apache/incubator-openwhisk/issues/3264" rel="nofollow">PR#3264</a> (246 files), need to identify which can be excluded.</li>
-<li>ScanCode: Need to use ASF-Release.cfg</li>
-<li>GitHub: "openwhisk" missing as Topic.</li>
+<li><strong>ScanCode</strong>: Need to use ASF-Release.cfg</li>
+<li><strong>GitHub</strong>: "openwhisk" missing as Topic.</li>
 </ul>
 </td>
 </tr>
 <tr align="left" valign="top">
 <td><a href="https://github.com/apache/incubator-openwhisk-catalog">incubator-openwhisk-catalog</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk-catalog/blob/master/LICENSE.txt">LICENSE</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk-catalog/blob/master/NOTICE.txt">NOTICE</a></td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-catalog/blob/master/LICENSE.txt">LICENSE</a></p>
+<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/96">#96</a></p>
+</td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-catalog/blob/master/NOTICE.txt">NOTICE</a></p>
+<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/79">#79</a></p>
+</td>
 <td align="left">
 <ul>
 <li>ASF Licenses: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-catalog/issues/256" rel="nofollow">PR256</a> (19 files), need to identify which can be excluded.</li>
@@ -51,22 +63,47 @@ The following table provides a single view, with links, of all project repositor
 </td>
 </tr>
 <tr align="left" valign="top">
-<td><a href="https://github.com/apache/incubator-openwhisk-apigateway">incubator-openwhisk-apigateway</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/LICENSE.txt">LICENSE</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/NOTICE.txt">NOTICE</a></td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-apigateway">incubator-openwhisk-apigateway</a></p>
+<p>&nbsp;</p>
+</td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/LICENSE.txt">LICENSE</a></p>
+<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/95">#95</a></p>
+<p><strong>Exclusions</strong>:</p>
+<ul>
+<li>lua_install</li>
+<li>tests/lua_modules</li>
+</ul>
+<p><strong>Known Exceptions</strong>:</p>
+<ul>
+<li>LUA License is an MIT derivative. It requires us to acknowledge copyright.</li>
+</ul>
+</td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/NOTICE.txt">NOTICE</a></p>
+<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/78">#78</a></p>
+</td>
 <td>
 <ul>
-<li>ASF Licenses: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-apigateway/pull/239" rel="nofollow">PR273</a> (15 files), need to identify which can be excluded.</li>
-<li>ScanCode: Need to use ASF-Release.cfg</li>
-<li>GitHub: No description in GitHub</li>
-<li>GitHub: No "openwhisk" topic in GitHub</li>
+<li><strong>Private Adobe/MIT license: </strong></li>
+<li>Issue: <a href="https://github.com/apache/incubator-openwhisk-release/issues/108">#108</a> (release)</li>
+<li>Issue <a href="https://github.com/apache/incubator-openwhisk-apigateway/issues/288">#288</a> (apigw)</li>
+<li><strong>GitHub</strong>: No description in GitHub</li>
+<li><strong>GitHub</strong>: No "openwhisk" topic in GitHub</li>
 </ul>
 </td>
 </tr>
 <tr align="left" valign="top">
 <td><a href="https://github.com/apache/incubator-openwhisk-cli">incubator-openwhisk-cli</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/LICENSE.txt">LICENSE</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/NOTICE.txt">NOTICE</a></td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/LICENSE.txt">LICENSE</a></p>
+<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/97">#97</a></p>
+</td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/NOTICE.txt">NOTICE</a></p>
+<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/76">#76</a></p>
+</td>
 <td>
 <ul>
 <li>ASF License: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-cli/issues/222" rel="nofollow">PR222</a> (54 files)</li>
@@ -75,8 +112,14 @@ The following table provides a single view, with links, of all project repositor
 </tr>
 <tr align="left" valign="top">
 <td><a href="https://github.com/apache/incubator-openwhisk-client-go">incubator-openwhisk-client-go</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/LICENSE.txt">LICENSE</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/NOTICE.txt">NOTICE</a></td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/LICENSE.txt">LICENSE</a></p>
+<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/98">#98</a></p>
+</td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/NOTICE.txt">NOTICE</a></p>
+<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/77">#77</a></p>
+</td>
 <td>
 <ul>
 <li>GitHub: No description in GitHub</li>
@@ -86,8 +129,14 @@ The following table provides a single view, with links, of all project repositor
 </tr>
 <tr align="left" valign="top">
 <td><a href="https://github.com/apache/incubator-openwhisk-wskdeploy">incubator-openwhisk-wskdeploy</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/LICENSE.txt">LICENSE</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/NOTICE.txt">NOTICE</a></td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/LICENSE.txt">LICENSE</a></p>
+<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/94">#94</a></p>
+</td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/NOTICE.txt">NOTICE</a></p>
+<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/86">#86</a></p>
+</td>
 <td>
 <ul>
 <li>ASF License: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-wskdeploy/issues/716" rel="nofollow">PR#716</a> (5 files)</li>
@@ -96,8 +145,14 @@ The following table provides a single view, with links, of all project repositor
 </tr>
 <tr align="left" valign="top">
 <td><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs">incubator-openwhisk-runtime-nodejs</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/LICENSE.txt">LICENSE</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/NOTICE.txt">NOTICE</a></td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/LICENSE.txt">LICENSE</a></p>
+<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/99">#99</a></p>
+</td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/NOTICE.txt">NOTICE</a></p>
+<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/82">#82</a></p>
+</td>
 <td>
 <ul>
 <li>ASF License: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/issues/25" rel="nofollow">PR#25</a> (14 files)</li>
@@ -106,8 +161,14 @@ The following table provides a single view, with links, of all project repositor
 </tr>
 <tr align="left" valign="top">
 <td><a href="https://github.com/apache/incubator-openwhisk-runtime-swift"> incubator-openwhisk-runtime-swift</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/LICENSE.txt">LICENSE</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/NOTICE.txt">NOTICE</a></td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/LICENSE.txt">LICENSE</a></p>
+<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/100">#100</a></p>
+</td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/NOTICE.txt">NOTICE</a></p>
+<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/85">#85</a></p>
+</td>
 <td>
 <ul>
 <li>ASF License: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-runtime-swift/issues/31" rel="nofollow">PR#31</a> (34 files)</li>
@@ -116,8 +177,14 @@ The following table provides a single view, with links, of all project repositor
 </tr>
 <tr align="left" valign="top">
 <td><a href="https://github.com/apache/incubator-openwhisk-runtime-docker">incubator-openwhisk-runtime-docker</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/LICENSE.txt">LICENSE</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/NOTICE.txt">NOTICE</a></td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/LICENSE.txt">LICENSE</a></p>
+<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/101">#101</a></p>
+</td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/NOTICE.txt">NOTICE</a></p>
+<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/80">#80</a></p>
+</td>
 <td>
 <ul>
 <li>ASF License: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-runtime-docker/issues/20" rel="nofollow">PR#20</a> (25 files)</li>
@@ -126,8 +193,14 @@ The following table provides a single view, with links, of all project repositor
 </tr>
 <tr align="left" valign="top">
 <td><a href="https://github.com/apache/incubator-openwhisk-runtime-java">incubator-openwhisk-runtime-java</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/LICENSE.txt">LICENSE</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/NOTICE.txt">NOTICE</a></td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/LICENSE.txt">LICENSE</a></p>
+<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/102">#102</a></p>
+</td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/NOTICE.txt">NOTICE</a></p>
+<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/81">#81</a></p>
+</td>
 <td>
 <ul>
 <li>ASF License: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-runtime-java/issues/25" rel="nofollow">PR#25</a> (12 files)</li>
@@ -136,8 +209,14 @@ The following table provides a single view, with links, of all project repositor
 </tr>
 <tr align="left" valign="top">
 <td><a href="https://github.com/apache/incubator-openwhisk-runtime-php">incubator-openwhisk-runtime-php</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/LICENSE.txt">LICENSE</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/NOTICE.txt">NOTICE</a></td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/LICENSE.txt">LICENSE</a></p>
+<p><strong>Tracking: </strong><a href="https://github.com/apache/incubator-openwhisk-release/issues/103">#103</a></p>
+</td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/NOTICE.txt">NOTICE</a></p>
+<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/83">#83</a></p>
+</td>
 <td>
 <ul>
 <li>ASF License: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-runtime-php/issues/8" rel="nofollow">PR#8</a> (10 files)</li>
@@ -146,8 +225,14 @@ The following table provides a single view, with links, of all project repositor
 </tr>
 <tr align="left" valign="top">
 <td><a href="https://github.com/apache/incubator-openwhisk-runtime-python">incubator-openwhisk-runtime-python</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/LICENSE.txt">LICENSE</a></td>
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/NOTICE.txt">NOTICE</a></td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/LICENSE.txt">LICENSE</a></p>
+<p><strong>Tracking</strong>:&nbsp;<a href="https://github.com/apache/incubator-openwhisk-release/issues/104">#104</a></p>
+</td>
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/NOTICE.txt">NOTICE</a></p>
+<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/84">#84</a></p>
+</td>
 <td>
 <ul>
 <li>ASF License: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-runtime-python/issues/10" rel="nofollow">PR#10</a> (13 files)&nbsp;</li>
