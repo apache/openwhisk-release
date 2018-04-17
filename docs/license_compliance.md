@@ -50,6 +50,7 @@ In OpenWhisk project, we decided to apply short form of header to minified OpenW
 | IDE configuration files | Excluded | - | Not much creativity |
 | Template files (`*.j2`) | Excluded | - | Not much creativity |
 | Json files (`*.json`) | Excluded | - | Json files don't support comments officially |
+| `i18n_resources.go` | Excluded | - | Not much creativity. The file is auto created. Not able to add header |
 
 ## Tools and scripts
 
