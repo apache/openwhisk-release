@@ -33,6 +33,17 @@ The following table provides a single view, with links, of all project repositor
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk/blob/master/LICENSE.txt">LICENSE</a></p>
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/93">#93</a></p>
+<p><strong>Copied licenses</strong>:</p>
+<ul>
+<li><a href="https://github.com/apache/incubator-openwhisk/tree/master/licenses">licenses</a></li>
+</ul>
+<p><strong>Non-bundled</strong>:</p>
+<ul>
+<li>Scala libraries: BSD 3-clause "New"</li>
+<li><span class="blob-code-inner">PureConfig: MPL 2.0</span></li>
+<li><span class="blob-code-inner">logback: Eclipse 1.0., </span><span class="blob-code-inner">GNU LPGL 2.1</span></li>
+<li><span class="blob-code-inner">jcl-over-slf4j: MIT</span></li>
+</ul>
 </td>
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk/blob/master/NOTICE.txt">NOTICE</a></p>
@@ -41,6 +52,8 @@ The following table provides a single view, with links, of all project repositor
 <td>
 <ul>
 <li>ASF Licenses: <a class="external-link" href="https://github.com/apache/incubator-openwhisk/issues/3264" rel="nofollow">PR#3264</a> (246 files), need to identify which can be excluded.</li>
+<li><strong>LICENSE: </strong><a href="https://github.com/apache/incubator-openwhisk/pull/3550">PR3550</a></li>
+<li><strong>Issue: </strong><a href="https://github.com/apache/incubator-openwhisk-release/issues/122">#122</a> (logback)</li>
 <li><strong>ScanCode</strong>: Need to use ASF-Release.cfg</li>
 <li><strong>GitHub</strong>: "openwhisk" missing as Topic.</li>
 </ul>
@@ -58,7 +71,7 @@ The following table provides a single view, with links, of all project repositor
 </td>
 <td align="left">
 <ul>
-<li>ASF Licenses: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-catalog/issues/256" rel="nofollow">PR256</a> (19 files), need to identify which can be excluded.</li>
+<li><strong>ASF Licenses</strong>: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-catalog/issues/256" rel="nofollow">PR256</a> (19 files), need to identify which can be excluded.</li>
 </ul>
 </td>
 </tr>
@@ -106,7 +119,8 @@ The following table provides a single view, with links, of all project repositor
 </td>
 <td>
 <ul>
-<li>ASF License: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-cli/issues/222" rel="nofollow">PR222</a> (54 files)</li>
+<li><strong>ASF License</strong>: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-cli/issues/222" rel="nofollow">PR222</a> (54 files)</li>
+<li><strong>LICENSE</strong>: <a href="https://github.com/apache/incubator-openwhisk-cli/pull/271">PR271</a></li>
 </ul>
 </td>
 </tr>
@@ -122,8 +136,9 @@ The following table provides a single view, with links, of all project repositor
 </td>
 <td>
 <ul>
-<li>GitHub: No description in GitHub</li>
-<li>ASF License: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-client-go/issues/68" rel="nofollow">PR68</a> (4 files)</li>
+<li><strong>GitHub</strong>: No description in GitHub</li>
+<li><strong>ASF License</strong>: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-client-go/issues/68" rel="nofollow">PR68</a> (4 files)</li>
+<li><strong>LICENSE</strong>: <a href="https://github.com/apache/incubator-openwhisk-client-go/pull/75">PR75</a></li>
 </ul>
 </td>
 </tr>
@@ -139,7 +154,8 @@ The following table provides a single view, with links, of all project repositor
 </td>
 <td>
 <ul>
-<li>ASF License: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-wskdeploy/issues/716" rel="nofollow">PR#716</a> (5 files)</li>
+<li><strong>ASF License</strong>: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-wskdeploy/issues/716" rel="nofollow">PR#716</a> (5 files)</li>
+<li><strong>LICENSE</strong>: <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/pull/868">PR868</a></li>
 </ul>
 </td>
 </tr>
@@ -155,7 +171,8 @@ The following table provides a single view, with links, of all project repositor
 </td>
 <td>
 <ul>
-<li>ASF License: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/issues/25" rel="nofollow">PR#25</a> (14 files)</li>
+<li><strong>ASF License</strong>: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/issues/25" rel="nofollow">PR#25</a> (14 files)</li>
+<li><strong>LICENSE</strong>: <a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/pull/38">PR38</a></li>
 </ul>
 </td>
 </tr>
@@ -171,7 +188,8 @@ The following table provides a single view, with links, of all project repositor
 </td>
 <td>
 <ul>
-<li>ASF License: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-runtime-swift/issues/31" rel="nofollow">PR#31</a> (34 files)</li>
+<li><strong>ASF License</strong>: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-runtime-swift/issues/31" rel="nofollow">PR#31</a> (34 files)</li>
+<li><strong>LICENSE</strong>: <a href="https://github.com/apache/incubator-openwhisk-runtime-swift/pull/44">PR44</a></li>
 </ul>
 </td>
 </tr>
@@ -187,7 +205,8 @@ The following table provides a single view, with links, of all project repositor
 </td>
 <td>
 <ul>
-<li>ASF License: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-runtime-docker/issues/20" rel="nofollow">PR#20</a> (25 files)</li>
+<li><strong>ASF License</strong>: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-runtime-docker/issues/20" rel="nofollow">PR#20</a> (25 files)</li>
+<li><strong>LICENSE</strong>: <a href="https://github.com/apache/incubator-openwhisk-runtime-docker/pull/28">PR28</a></li>
 </ul>
 </td>
 </tr>
@@ -203,7 +222,8 @@ The following table provides a single view, with links, of all project repositor
 </td>
 <td>
 <ul>
-<li>ASF License: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-runtime-java/issues/25" rel="nofollow">PR#25</a> (12 files)</li>
+<li><strong>ASF License</strong>: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-runtime-java/issues/25" rel="nofollow">PR#25</a> (12 files)</li>
+<li><strong>LICENSE</strong>: <a href="https://github.com/apache/incubator-openwhisk-runtime-java/pull/32">PR32</a></li>
 </ul>
 </td>
 </tr>
@@ -219,7 +239,8 @@ The following table provides a single view, with links, of all project repositor
 </td>
 <td>
 <ul>
-<li>ASF License: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-runtime-php/issues/8" rel="nofollow">PR#8</a> (10 files)</li>
+<li><strong>ASF License</strong>: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-runtime-php/issues/8" rel="nofollow">PR#8</a> (10 files)</li>
+<li><strong>LICENSE</strong>: <a href="https://github.com/apache/incubator-openwhisk-runtime-php/pull/14">PR14</a></li>
 </ul>
 </td>
 </tr>
@@ -235,16 +256,21 @@ The following table provides a single view, with links, of all project repositor
 </td>
 <td>
 <ul>
-<li>ASF License: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-runtime-python/issues/10" rel="nofollow">PR#10</a> (13 files)&nbsp;</li>
+<li><strong>ASF License</strong>: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-runtime-python/issues/10" rel="nofollow">PR#10</a> (13 files)</li>
+<li><strong>LICENSE</strong>: <a href="https://github.com/apache/incubator-openwhisk-runtime-python/pull/15">PR15</a></li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
 
+## Notes
+- The general requirements and tracking of all LICENSE related update for all repos. are in [Issue 109](https://github.com/apache/incubator-openwhisk-release/issues/109).
+
 ## References
 
 The following is a list of informative references that describe licenses that you may encounter in this project's along with their prescribed treatment by the owning entities.
 
-- **** [Mozilla, MPL 2.0 FAQ](https://www.mozilla.org/en-US/MPL/2.0/FAQ/)
+- **[Mozilla, MPL 2.0 FAQ](https://www.mozilla.org/en-US/MPL/2.0/FAQ/)**
+- **[Eclipse, EPL 1.0 FAQ](https://www.eclipse.org/legal/eplfaq.php)**
 
