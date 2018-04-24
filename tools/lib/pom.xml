@@ -66,6 +66,26 @@
             <exclude>**/i18n_resources.go</exclude>
             <!-- NOTICE files -->
             <exclude>**/NOTICE.md</exclude>
+            <!-- LICENSE files -->
+            <exclude>**/licenses/**</exclude>
+            <!-- LICENSE files -->
+            <exclude>**/CREDITS.txt</exclude>
+            <!-- configuration files -->
+            <exclude>**/group_vars/all</exclude>
+            <exclude>**/**.conf</exclude>
+            <exclude>**/**.env</exclude>
+            <exclude>**/**.cfg</exclude>
+            <exclude>**/**.ini</exclude>
+            <exclude>**/**.properties</exclude>
+            <exclude>**/post.lua</exclude>
+            <exclude>**/java.xml</exclude>
+            <exclude>**/logback.xml</exclude>
+            <exclude>**/post.lua</exclude>
+            <exclude>**/hosts</exclude>
+            <exclude>**/dockerhub.groovy</exclude>
+            <!-- None creative docker files -->
+            <exclude>openwhisk/actionRuntimes/**/Dockerfile</exclude>
+            <exclude>openwhisk/sdk/docker/Dockerfile</exclude>
             <!-- Test data / src files -->
             <!-- <exclude>*/tests/dat/**</exclude> -->
             <!-- <exclude>*/tests/src/**</exclude> -->
