@@ -52,9 +52,18 @@ In OpenWhisk project, we decided to apply short form of header to minified OpenW
 | Template files (`*.j2`) | Excluded | - | Not much creativity |
 | Json files (`*.json`) | Excluded | - | Json files don't support comments officially |
 | `i18n_resources.go` | Excluded | - | Not much creativity. The file is auto created. Not able to add header |
-| `application.conf` | Excluded | - | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/tests/src/test/resources/application.conf) |
+| `*.conf` | Excluded | - | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/tests/src/test/resources/application.conf) |
+| `*.env` | Excluded | - | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) |
+| `*.cfg` | Excluded | - | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/ansible/ansible.cfg) |
+| `*.ini` | Excluded | - | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/package-versions.ini) |
+| `*.properties` | Excluded | - | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/scala.properties) |
+| `post.lua` | Excluded | - | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/performance/wrk_tests/post.lua) |
+| `java.xml`,`logback.xml` | Excluded | - | Configuration file in XML format. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) |
 | `group_vars/all` | Excluded | - | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/group_vars/all) |
 | `hosts` | Excluded | - | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/hosts) |
+| `dockerhub.groovy` | Excluded | - | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/jenkins/apache/dockerhub.groovy) |
+| `openwhisk/actionRuntimes/*/Dockerfile` | Excluded | - | Very simple docker file without creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/python2Action/Dockerfile) |
+| `openwhisk/sdk/docker/Dockerfile` | Excluded | - | Very simple docker file without creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/sdk/docker/Dockerfile) |
 
 ## Tools and scripts
 
@@ -63,7 +72,7 @@ In OpenWhisk project, we decided to apply short form of header to minified OpenW
 ```
 cd $OPENWHISK_SOURCE_DIR
 cp $SCRIPTDIR/lib/pom.xml ./
-mvn clean apache-rat:check 
+mvn clean apache-rat:check
 ```
 Below script snippet is used to check LICENSE file and NOTICE file in every repository.
 ```
