@@ -51,10 +51,8 @@ The following table provides a single view, with links, of all project repositor
 </td>
 <td>
 <ul>
-<li>ASF Licenses: <a class="external-link" href="https://github.com/apache/incubator-openwhisk/issues/3264" rel="nofollow">PR#3264</a> (246 files), need to identify which can be excluded.</li>
-<li><strong>LICENSE: </strong><a href="https://github.com/apache/incubator-openwhisk/pull/3550">PR3550</a></li>
+<li><strong>ASF Licenses</strong>: <a class="external-link" href="https://github.com/apache/incubator-openwhisk/issues/3264" rel="nofollow">PR#3264</a> (track remaining files), need to identify which can be excluded.</li>
 <li><strong>Issue: </strong><a href="https://github.com/apache/incubator-openwhisk-release/issues/122">#122</a> (logback)</li>
-<li><strong>ScanCode</strong>: Need to use ASF-Release.cfg</li>
 <li><strong>GitHub</strong>: "openwhisk" missing as Topic.</li>
 </ul>
 </td>
@@ -119,7 +117,7 @@ The following table provides a single view, with links, of all project repositor
 </td>
 <td>
 <ul>
-<li><strong>ASF License</strong>: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-cli/issues/222" rel="nofollow">PR222</a> (54 files)</li>
+<li><strong>ASF License</strong>: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-cli/issues/222" rel="nofollow">PR222</a> (test files remain)</li>
 <li><strong>LICENSE</strong>: <a href="https://github.com/apache/incubator-openwhisk-cli/pull/271">PR271</a></li>
 </ul>
 </td>
@@ -138,7 +136,6 @@ The following table provides a single view, with links, of all project repositor
 <ul>
 <li><strong>GitHub</strong>: No description in GitHub</li>
 <li><strong>ASF License</strong>: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-client-go/issues/68" rel="nofollow">PR68</a> (4 files)</li>
-<li><strong>LICENSE</strong>: <a href="https://github.com/apache/incubator-openwhisk-client-go/pull/75">PR75</a></li>
 </ul>
 </td>
 </tr>
@@ -155,7 +152,6 @@ The following table provides a single view, with links, of all project repositor
 <td>
 <ul>
 <li><strong>ASF License</strong>: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-wskdeploy/issues/716" rel="nofollow">PR#716</a> (5 files)</li>
-<li><strong>LICENSE</strong>: <a href="https://github.com/apache/incubator-openwhisk-wskdeploy/pull/868">PR868</a></li>
 </ul>
 </td>
 </tr>
@@ -172,7 +168,6 @@ The following table provides a single view, with links, of all project repositor
 <td>
 <ul>
 <li><strong>ASF License</strong>: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/issues/25" rel="nofollow">PR#25</a> (14 files)</li>
-<li><strong>LICENSE</strong>: <a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/pull/38">PR38</a></li>
 </ul>
 </td>
 </tr>
@@ -272,7 +267,7 @@ The following table provides a single view, with links, of all project repositor
 We define a formal way for OpenWhisk projects to comply in order to produce the LICENSE files. Please follow the mechanism
 of syntax and wording narrated in the following paragraphs.
 
-The LICENSE file consists of two major sections: 
+The LICENSE file consists of two major sections:
 
 - The content of Apache license 2.0
 - Licenses of packages OpenWhisk project depends on
@@ -294,7 +289,7 @@ means packages can be listed under one statement, if they share the same license
 - **Source code dependency**: the packages, that OpenWhisk's source code depends on, and will be released together with OpenWhisk projects.
 
   For this type of dependency, we used the verb "bundle" to indicate the relationship and add the following narration to LICENSE file to describe it:
-   
+
       This distribution bundles the following components, which are available under a [license name] license ([link of the licese]).
       [package name] [version] ([codename] - [link of the package])
         License included at licenses/LICENSE-[package name].txt
@@ -308,7 +303,7 @@ means packages can be listed under one statement, if they share the same license
 - **Binary dependency**: the packages, that OpenWhisk's source code depends on, but will NOT be released together with OpenWhisk projects.
 
   For this type of dependency, we use the phrase "have binary dependencies on" to indicate the relationship and add the following narration to LICENSE file to describe it:
-   
+
       This distribution has binary dependencies on the following components, which are available under a [license name] license ([link of the licese]).
       [package name] [version] ([codename] - [link of the package])
         License included at licenses/LICENSE-[package name].txt
@@ -330,14 +325,14 @@ means packages can be listed under one statement, if they share the same license
         Go Homedir 1111e45 (mitchellh/go-homedir - https://github.com/mitchellh/go-homedir)
           License included at licenses/LICENSE-gohomedir.txt, or https://github.com/mitchellh/go-homedir/blob/master/LICENSE
           Copyright (c) 2013 Mitchell Hashimoto
-  
+
   The content of their licenses are included under licenses/LICENSE-goisatty.txt and licenses/LICENSE-gohomedir.txt.
-  
+
 - **Packages used by OpenWhisk with no alternative**: the components, that are necessary to deliver OpenWhisk services or tools,
 and currently are the only candidates used by OpenWhisk.
 
   For this type of dependency, we use the phrase "depend on" to indicate the relationship and add the following narration to LICENSE file to describe it:
-   
+
       This distribution depends on the following components, which are available under a [license name] license ([link of the licese]).
       [package name] [version] ([codename] - [link of the package])
         License included at licenses/LICENSE-[package name].txt
@@ -359,7 +354,7 @@ and currently are the only candidates used by OpenWhisk.
 but can be replaced with other packages by changing OpenWhisk configurations.
 
   For this type of dependency, we use the phrase "optionally depend on" to indicate the relationship and add the following narration to LICENSE file to describe it:
-   
+
       This distribution optionally depends on the following components, which are available under a [license name] license ([link of the licese]).
       [package name] [version] ([codename] - [link of the package])
         License included at licenses/LICENSE-[package name].txt
@@ -381,7 +376,7 @@ but can be replaced with other packages by changing OpenWhisk configurations.
         Apache CouchDB [CouchDb version] (CouchDB - https://github.com/apache/couchdb)
           License included at licenses/LICENSE-couchdb.txt
           Copyright 2009-2016 The Apache Software Foundation
-  
+
   The content of their licenses are included under licenses/LICENSE-kafka.txt and licenses/LICENSE-couchdb.txt.
 
 ## References
