@@ -36,7 +36,9 @@ The Apache OpenWhisk project repositories MUST follow [Apache Release Policy](ht
 
 In accordance with Apache LICENSE policies, the following tables lists the specific files, by type, that the community has discussed and have agreed MUST have a license or can be exlcuded.
 
-**Note**: These lists are not comprehensive and are intended to be informative only. Each project repository's respective LICENSE and NOTICE files should be considered the canonical source for their specific licensing declarations. See links to all project  LICENSE and NOTICE files from this repository's [README](https://github.com/apache/incubator-openwhisk-release/blob/master/README.md) file.
+**Note**: These lists are not comprehensive and are intended to be informative only. Each project repository's respective LICENSE and NOTICE files should be considered the canonical source for their specific licensing declarations.
+
+For convenience, we provide a summary listing of all project LICENSE and NOTICE files along with notable dependencies in  from this repository's [Apache OpenWhisk LICENSE and NOTICE Summary](project_licenses.md#apache-openWhisk-license-and-notice-summary) file.
 
 ### Known inclusions
 
@@ -46,14 +48,14 @@ In addition, the type of header used (i.e., "full" ASF header or ASF approved "m
 
 | File type | Header type | Rationale |
 | --- | --- | --- |
-| Documentation (`*.md`)             | Full ASF license header | |
-| YAML files (`*.yaml`, `*.yml`)     | Full ASF license header | |
-| XML files (`*.xml`)                | Full ASF license header | |
-| Docker file (`dockerfile`)         | Full ASF license header | |
-| Installation script files (`*.sh`) | Full ASF license header | |
-| Travis files (`*.sh`)              | Full ASF license header | |
-| Makefile                           | Full ASF license header | |
-| Test data files                    | Mini ASF license header | Needs IP protection; also need to take care of the performance |
+| Documentation (`*.md`)                                 | Full ASF license header | |
+| YAML files (`*.yaml`, `*.yml`)                         | Full ASF license header | |
+| XML files (`*.xml`)                                    | Full ASF license header | |
+| Docker file (`dockerfile`)                             | Full ASF license header | |
+| Installation script files (`*.sh`)                     | Full ASF license header | |
+| Travis files (`*.sh`)                                  | Full ASF license header | |
+| Makefile                                               | Full ASF license header | |
+| Test data files                                        | Mini ASF license header | Needs IP protection; also need to take care of the performance |
 | Action files in catalog (e.g., .js, .py, .swift, etc.) | Mini ASF license header | with much creativity so need IP protection; also need to take care of the performance |
 
 ### Known exclusions
@@ -62,23 +64,24 @@ In accordance with Apache LICENSE policies, the table below lists known exclusio
 
 | File type | Rationale |
 | --- | --- |
-| Gradle files            | Not much creativity |
-| IDE configuration files | Not much creativity |
-| Template files (`*.j2`) | Not much creativity |
-| JSON files (`*.json`)   | JSON files don't support comments |
-| `i18n_resources.go`     | Not much creativity. The file is auto created. Not able to add header |
-| `*.conf`                 | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/tests/src/test/resources/application.conf) |
-| `*.env`                  | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) |
-| `*.cfg`                  | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/ansible/ansible.cfg) |
-| `*.ini`                  | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/package-versions.ini) |
-| `*.properties`           | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/scala.properties) |
-| `post.lua` | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/performance/wrk_tests/post.lua) |
-| `java.xml`,`logback.xml` | Configuration file in XML format. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) |
-| `group_vars/all`         | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/group_vars/all) |
-| `hosts`                  | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/hosts) |
-| `dockerhub.groovy`       | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/jenkins/apache/dockerhub.groovy) |
-| `openwhisk/actionRuntimes/*/Dockerfile` | Very simple docker file without creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/python2Action/Dockerfile) |
-| `openwhisk/sdk/docker/Dockerfile` | Very simple docker file without creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/sdk/docker/Dockerfile) |
+| Git configuration files (`.gitattributes`, `.gitignore`) | Not much creativity |
+| Gradle files                                             | Not much creativity |
+| IDE configuration files (e.g., `.project`)               | Not much creativity |
+| Template files (`*.j2`)                                  | Not much creativity |
+| JSON files (`*.json`)                                    | JSON files don't support comments |
+| `i18n_resources.go`                                      | Not much creativity. The file is auto-generated; not able to add header |
+| `*.conf`                                                 | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/tests/src/test/resources/application.conf) |
+| `*.env`                                                  | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) |
+| `*.cfg`                                                  | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/ansible/ansible.cfg) |
+| `*.ini`                                                  | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/package-versions.ini) |
+| `*.properties`                                           | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/scala.properties) |
+| `post.lua`                                               | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/performance/wrk_tests/post.lua) |
+| `java.xml`,`logback.xml`                                 | Configuration file in XML format. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) |
+| `group_vars/all`                                         | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/group_vars/all) |
+| `hosts`                                                  | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/hosts) |
+| `dockerhub.groovy`                                       | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/jenkins/apache/dockerhub.groovy) |
+| `openwhisk/actionRuntimes/*/Dockerfile`                  | Simple docker file without creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/python2Action/Dockerfile) |
+| `openwhisk/sdk/docker/Dockerfile`                        | Simple docker file without creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/sdk/docker/Dockerfile) |
 
 ## Enforcement and verification
 
@@ -93,7 +96,7 @@ The scancode utility code and documentation are under the [OpenWhisk Utilities](
 - The Utility itself is here: [scancode](https://github.com/apache/incubator-openwhisk-utilities/tree/master/scancode)
 - The ASF Compliance configuration is here: [ASF-Release.cfg](https://github.com/apache/incubator-openwhisk-utilities/blob/master/scancode/ASF-Release.cfg)
 
-The README for this OpenWhisk release repository includes a table that indicates where the scancode utility is invoked, as part of the GitHub Travis CI process, per project repository.
+The [README](https://github.com/apache/incubator-openwhisk-release/blob/master/README.md) for this repository includes a table that indicates where the scancode utility is invoked, as part of the GitHub Travis CI process, per project repository.
 
 ### Apache Rat
 
