@@ -45,7 +45,7 @@ In accordance with Apache LICENSE policies, the table below lists files/file typ
 In addition, the type of header used (i.e., "full" ASF header or ASF approved "minified" header) is noted along with the justification as is allowed by Apache policy.
 
 | File type | Header type | Rationale |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | Documentation (`*.md`) | Full Apache license header | |
 | YAML files (`*.yaml`, `*.yml`) | Full Apache license header | |
 | XML files (`*.xml`) | Full Apache license header | |
@@ -61,7 +61,7 @@ In addition, the type of header used (i.e., "full" ASF header or ASF approved "m
 In accordance with Apache LICENSE policies, the table below lists known exclusions by file (type) as agreed to by the community along with the justification.
 
 | File type | Rationale |
-| --- | --- | --- | --- |
+| --- | --- |
 | Gradle files | Not much creativity |
 | IDE configuration files | Not much creativity |
 | Template files (`*.j2`) | Not much creativity |
