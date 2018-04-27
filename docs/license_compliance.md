@@ -36,7 +36,7 @@ The Apache OpenWhisk project repositories MUST follow [Apache Release Policy](ht
 
 In accordance with Apache LICENSE policies, the following tables lists the specific files, by type, that the community has discussed and have agreed MUST have a license or can be exlcuded.
 
-**Note**: These lists are not comprehensive and are intended to be informative only. Each project repository's respective LICENSE and NOTICE files (linked) should be considered the canonical source for their specific licensing declarations.
+**Note**: These lists are not comprehensive and are intended to be informative only. Each project repository's respective LICENSE and NOTICE files should be considered the canonical source for their specific licensing declarations. See links to all project  LICENSE and NOTICE files from this repository's [README](https://github.com/apache/incubator-openwhisk-release/blob/master/README.md) file.
 
 ### Known inclusions
 
@@ -44,41 +44,41 @@ In accordance with Apache LICENSE policies, the table below lists files/file typ
 
 In addition, the type of header used (i.e., "full" ASF header or ASF approved "minified" header) is noted along with the justification as is allowed by Apache policy.
 
-| File type | Included or Excluded | Header type | Justifications |
+| File type | Header type | Rationale |
 | --- | --- | --- | --- |
-| Documentation (`*.md`) | Included | Full Apache license header | |
-| YAML files (`*.yaml`, `*.yml`) | Included | Full Apache license header | |
-| XML files (`*.xml`) | Included | Full Apache license header | |
-| Docker file (`dockerfile`) | Included | Full Apache license header | |
-| Installation script files (`*.sh`) | Included | Full Apache license header | |
-| Travis files (`*.sh`) | Included | Full Apache license header | |
-| Makefile | Included | Full Apache license header | |
-| Test data files | Included | Short Apache license header | need IP protection; also need to take care of the performance |
-| Action files in catalog | Included | Short Apache license header | with much creativity so need IP protection; also need to take care of the performance |
+| Documentation (`*.md`) | Full Apache license header | |
+| YAML files (`*.yaml`, `*.yml`) | Full Apache license header | |
+| XML files (`*.xml`) | Full Apache license header | |
+| Docker file (`dockerfile`) | Full Apache license header | |
+| Installation script files (`*.sh`) | Full Apache license header | |
+| Travis files (`*.sh`) | Full Apache license header | |
+| Makefile | Full Apache license header | |
+| Test data files | Short Apache license header | need IP protection; also need to take care of the performance |
+| Action files in catalog | Short Apache license header | with much creativity so need IP protection; also need to take care of the performance |
 
 ### Known exclusions
 
 In accordance with Apache LICENSE policies, the table below lists known exclusions by file (type) as agreed to by the community along with the justification.
 
-| File type | Included or Excluded | Header type | Justifications |
+| File type | Rationale |
 | --- | --- | --- | --- |
-| Gradle files | Excluded | - | Not much creativity |
-| IDE configuration files | Excluded | - | Not much creativity |
-| Template files (`*.j2`) | Excluded | - | Not much creativity |
-| Json files (`*.json`) | Excluded | - | Json files don't support comments officially |
-| `i18n_resources.go` | Excluded | - | Not much creativity. The file is auto created. Not able to add header |
-| `*.conf` | Excluded | - | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/tests/src/test/resources/application.conf) |
-| `*.env` | Excluded | - | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) |
-| `*.cfg` | Excluded | - | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/ansible/ansible.cfg) |
-| `*.ini` | Excluded | - | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/package-versions.ini) |
-| `*.properties` | Excluded | - | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/scala.properties) |
-| `post.lua` | Excluded | - | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/performance/wrk_tests/post.lua) |
-| `java.xml`,`logback.xml` | Excluded | - | Configuration file in XML format. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) |
-| `group_vars/all` | Excluded | - | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/group_vars/all) |
-| `hosts` | Excluded | - | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/hosts) |
-| `dockerhub.groovy` | Excluded | - | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/jenkins/apache/dockerhub.groovy) |
-| `openwhisk/actionRuntimes/*/Dockerfile` | Excluded | - | Very simple docker file without creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/python2Action/Dockerfile) |
-| `openwhisk/sdk/docker/Dockerfile` | Excluded | - | Very simple docker file without creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/sdk/docker/Dockerfile) |
+| Gradle files | Not much creativity |
+| IDE configuration files | Not much creativity |
+| Template files (`*.j2`) | Not much creativity |
+| Json files (`*.json`) | Json files don't support comments officially |
+| `i18n_resources.go` | Not much creativity. The file is auto created. Not able to add header |
+| `*.conf` | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/tests/src/test/resources/application.conf) |
+| `*.env` | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) |
+| `*.cfg` | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/ansible/ansible.cfg) |
+| `*.ini` | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/package-versions.ini) |
+| `*.properties` | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/scala.properties) |
+| `post.lua` | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/performance/wrk_tests/post.lua) |
+| `java.xml`,`logback.xml` | Configuration file in XML format. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) |
+| `group_vars/all` | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/group_vars/all) |
+| `hosts` | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/hosts) |
+| `dockerhub.groovy` | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/jenkins/apache/dockerhub.groovy) |
+| `openwhisk/actionRuntimes/*/Dockerfile` | Very simple docker file without creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/python2Action/Dockerfile) |
+| `openwhisk/sdk/docker/Dockerfile` | Very simple docker file without creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/sdk/docker/Dockerfile) |
 
 ## Enforcement and verification
 
