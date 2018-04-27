@@ -18,7 +18,7 @@
 
 # License Compliance
 
-This document describes how the Apache OpenWhisk project's release artifacts maintain  compliance with ASF licensing policy in the following sections:
+This document describes how the Apache OpenWhisk project's source code and release artifacts maintain compliance with ASF licensing policy in the following sections:
 
 - [Policies and rules](#policies-and-rules)
 - [Project specific rules](#project-specific-rules)
