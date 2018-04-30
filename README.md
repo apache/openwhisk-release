@@ -170,7 +170,7 @@ The following table can be used by Release Managers to get quickly check the sta
 </tbody>
 </table>
 
-Note:
+### Status notes:
 - The Travis build status badge is hyperlinked to the corresponding repository's Travis CI dashboard's  "branches" page.
 - The ASF License badge is hyperlinked to the corresponding repository's LICENSE file.
 - The ASF NOTICE column text links to the corresponding repository's NOTICE file.
@@ -182,5 +182,5 @@ Note:
 - [Apache Release Creation Process](http://www.apache.org/dev/release-publishing.html)
 - [Apache Release Policy](http://www.apache.org/legal/release-policy.html)
 
-# Notes
+# Disclaimer
 This project is still "in development" with many steps still in the process of being automated and brought into compliance. We welcome any reviews, comments or contributions to help us complete and improve any part of the process.
