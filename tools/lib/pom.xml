@@ -48,6 +48,8 @@
           <excludes>
             <!-- JSON files -->
             <exclude>**/*.json</exclude>
+            <exclude>**/tests/dat/apigw/testswaggerdoc*</exclude>
+            <exclude>**/SwiftyRequest/Package.resolved</exclude>
             <!-- gradle files -->
             <exclude>**/**.gradle</exclude>
             <exclude>**/gradlew**</exclude>
@@ -57,7 +59,7 @@
             <!-- template files -->
             <exclude>**/templates/**</exclude>
             <!-- <exclude>**/*.j2.ini</exclude> -->
-            <exclude>**/*.j2.*</exclude>
+            <exclude>**/*.j2*</exclude>
             <exclude>**/.github/**</exclude>
             <!-- OpenWhisk auth data -->
             <exclude>**/auth.whisk.system</exclude>
@@ -86,9 +88,7 @@
             <!-- None creative docker files -->
             <exclude>openwhisk/actionRuntimes/**/Dockerfile</exclude>
             <exclude>openwhisk/sdk/docker/Dockerfile</exclude>
-            <!-- Test data / src files -->
-            <!-- <exclude>*/tests/dat/**</exclude> -->
-            <!-- <exclude>*/tests/src/**</exclude> -->
+            <exclude>openwhisk/tests/dat/actions/empty.js</exclude>
           </excludes>
         </configuration>
       </plugin>
