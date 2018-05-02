@@ -18,7 +18,19 @@
 
 # Apache OpenWhisk LICENSE and NOTICE Summary
 
-The following table provides a single view, with links, of all project repository LICENSE and NOTICE files. For convenience, we provide a summary of notable 3rd party and custom licenses that are included with each repository.  However, the LICENSE and NOTICE files themselves contain the full legal references.
+## License scanning exclusions
+
+The Apache OpenWhisk project enforces and verifies ASF License header conformance on all source files using the project's own scanCode utility (on all Travis CI builds) and Apache RAT tool (on all automated releases).
+
+In accordance with Apache policy, these utilities exclude specific files from the ASF license header requirement which are configured in the following files:
+- scanCode: [ASF-Release.cfg](https://github.com/apache/incubator-openwhisk-utilities/blob/master/scancode/ASF-Release.cfg)
+- Apache RAT:[pom.xml](https://github.com/apache/incubator-openwhisk-release/blob/master/tools/lib/pom.xml) (Apache Rat)
+
+## Bundled and non-Bundled dependencies
+
+In accordance with Apache policy, each of the Apache OpenWhisk project's repositories respective LICENSE and NOTICE files contain the full, canonical listing of all dependent software licenses.
+
+For convenience, the following table provides links to each project repository's LICENSE and NOTICE files, as well as an overview of notable software dependencies (non-canonical) and license scanning exclusions.
 
 <table border="1" cellpadding="8">
 <tbody>
@@ -37,25 +49,23 @@ The following table provides a single view, with links, of all project repositor
 <ul>
 <li><a href="https://github.com/apache/incubator-openwhisk/tree/master/licenses">licenses</a></li>
 </ul>
+<p><strong>Known Exceptions</strong>:</p>
+<ul>
+<li>tests/dat/actions/empty.js</li>
+</ul>
 <p><strong>Non-bundled</strong>:</p>
 <ul>
 <li>Scala libraries: BSD 3-clause "New"</li>
-<li><span class="blob-code-inner">PureConfig: MPL 2.0</span></li>
-<li><span class="blob-code-inner">logback: Eclipse 1.0., </span><span class="blob-code-inner">GNU LPGL 2.1</span></li>
-<li><span class="blob-code-inner">jcl-over-slf4j: MIT</span></li>
+<li>PureConfig: MPL 2.0</li>
+<li>logback: Eclipse 1.0., GNU LPGL 2.1</li>
+<li>jcl-over-slf4j: MIT</li>
 </ul>
 </td>
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk/blob/master/NOTICE.txt">NOTICE</a></p>
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/75">#75</a></p>
 </td>
-<td>
-<ul>
-<li><strong>ASF Licenses</strong>: Issue: <a class="external-link" href="https://github.com/apache/incubator-openwhisk/issues/3264" rel="nofollow">#3264</a> (track remaining files), need to identify which can be excluded.</li>
-<li><strong>Issue: </strong><a href="https://github.com/apache/incubator-openwhisk-release/issues/122">#122</a> (logback)</li>
-<li><strong>GitHub</strong>: "openwhisk" missing as Topic.</li>
-</ul>
-</td>
+<td>&nbsp;</td>
 </tr>
 <tr align="left" valign="top">
 <td><a href="https://github.com/apache/incubator-openwhisk-catalog">incubator-openwhisk-catalog</a></td>
@@ -64,7 +74,7 @@ The following table provides a single view, with links, of all project repositor
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/96">#96</a></p>
 <p><strong>Copied licenses</strong>:</p>
 <ul>
-<li>TBD, readme only?</li>
+<li><a href="https://github.com/apache/incubator-openwhisk-catalog/tree/master/licenses">licenses</a></li>
 </ul>
 <p><strong>Known Exceptions</strong>:</p>
 <ul>
@@ -75,13 +85,7 @@ The following table provides a single view, with links, of all project repositor
 <p><a href="https://github.com/apache/incubator-openwhisk-catalog/blob/master/NOTICE.txt">NOTICE</a></p>
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/79">#79</a></p>
 </td>
-<td align="left">
-<ul>
-<li><strong>ASF Licenses</strong>: Issue: #<a class="external-link" href="https://github.com/apache/incubator-openwhisk-catalog/issues/256" rel="nofollow">256</a> (19 files), need to identify which can be excluded.</li>
-<li><strong>Source</strong>: <a href="https://github.com/apache/incubator-openwhisk-catalog/pull/257/files">#257</a></li>
-<li><strong>Invoke.py</strong>: <a href="https://github.com/apache/incubator-openwhisk-catalog/pull/177">#177</a></li>
-</ul>
-</td>
+<td align="left">&nbsp;</td>
 </tr>
 <tr align="left" valign="top">
 <td>
@@ -109,15 +113,7 @@ The following table provides a single view, with links, of all project repositor
 <p><a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/NOTICE.txt">NOTICE</a></p>
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/78">#78</a></p>
 </td>
-<td>
-<ul>
-<li><strong>Private Adobe/MIT license: </strong></li>
-<li>Issue: <a href="https://github.com/apache/incubator-openwhisk-release/issues/108">#108</a> (release)</li>
-<li>Issue: <a href="https://github.com/apache/incubator-openwhisk-apigateway/issues/288">#288</a> (apigw)</li>
-<li><strong>GitHub</strong>: No description in GitHub</li>
-<li><strong>GitHub</strong>: No "openwhisk" topic in GitHub</li>
-</ul>
-</td>
+<td>&nbsp;</td>
 </tr>
 <tr align="left" valign="top">
 <td><a href="https://github.com/apache/incubator-openwhisk-cli">incubator-openwhisk-cli</a></td>
@@ -138,10 +134,7 @@ The following table provides a single view, with links, of all project repositor
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/76">#76</a></p>
 </td>
 <td>
-<ul>
-<li><strong>ASF License</strong>: Issue: #<a class="external-link" href="https://github.com/apache/incubator-openwhisk-cli/issues/222" rel="nofollow">222</a> (test files remain)</li>
-<li>Accidentally closed Issue from keyword usage.</li>
-</ul>
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr align="left" valign="top">
@@ -158,11 +151,7 @@ The following table provides a single view, with links, of all project repositor
 <p><a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/NOTICE.txt">NOTICE</a></p>
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/77">#77</a></p>
 </td>
-<td>
-<ul>
-<li><strong>GitHub</strong>: No description in GitHub</li>
-</ul>
-</td>
+<td>&nbsp;</td>
 </tr>
 <tr align="left" valign="top">
 <td><a href="https://github.com/apache/incubator-openwhisk-wskdeploy">incubator-openwhisk-wskdeploy</a></td>
@@ -508,4 +497,3 @@ The following is a list of informative references that describe licenses that yo
 
 - **[Mozilla, MPL 2.0 FAQ](https://www.mozilla.org/en-US/MPL/2.0/FAQ/)**
 - **[Eclipse, EPL 1.0 FAQ](https://www.eclipse.org/legal/eplfaq.php)**
-
