@@ -171,13 +171,7 @@ For convenience, the following table provides links to each project repository's
 <p><a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/NOTICE.txt">NOTICE</a></p>
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/86">#86</a></p>
 </td>
-<td>
-<ul>
-<li><strong>ASF License</strong>: Issue: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-wskdeploy/issues/716" rel="nofollow">#716</a> (5 files)</li>
-<li><strong>PR: </strong>#<a href="https://github.com/apache/incubator-openwhisk-wskdeploy/pull/882">882</a> (5 files)</li>
-<li><strong>Issue</strong>: Full+Mini: <a href="https://github.com/apache/incubator-openwhisk-release/issues/133">#133</a></li>
-</ul>
-</td>
+<td>&nbsp;</td>
 </tr>
 <tr align="left" valign="top">
 <td><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs">incubator-openwhisk-runtime-nodejs</a></td>
@@ -206,9 +200,7 @@ For convenience, the following table provides links to each project repository's
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/82">#82</a></p>
 </td>
 <td>
-<ul>
-<li><strong>ASF License</strong>: Issue: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/issues/25" rel="nofollow">#25</a> (14 files) - Close?</li>
-</ul>
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr align="left" valign="top">
@@ -218,7 +210,7 @@ For convenience, the following table provides links to each project repository's
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/100">#100</a></p>
 <p><strong>Copied licenses</strong>:</p>
 <ul>
-<li>TBD</li>
+<li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/tree/master/license">license *</a></li>
 </ul>
 <p><strong>Known exceptions</strong>:</p>
 <ul>
@@ -229,12 +221,7 @@ For convenience, the following table provides links to each project repository's
 <p><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/NOTICE.txt">NOTICE</a></p>
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/85">#85</a></p>
 </td>
-<td>
-<ul>
-<li><strong>ASF License</strong>: Issue: <a class="external-link" href="https://github.com/apache/incubator-openwhisk-runtime-swift/issues/31" rel="nofollow">#31</a> (34 files)</li>
-<li><strong>LICENSE</strong>: <a href="https://github.com/apache/incubator-openwhisk-runtime-swift/pull/44">PR44 </a>(failed Travis)</li>
-</ul>
-</td>
+<td>&nbsp;</td>
 </tr>
 <tr align="left" valign="top">
 <td><a href="https://github.com/apache/incubator-openwhisk-runtime-docker">incubator-openwhisk-runtime-docker</a></td>
@@ -243,7 +230,7 @@ For convenience, the following table provides links to each project repository's
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/101">#101</a></p>
 <p><strong>Copied licenses</strong>:</p>
 <ul>
-<li>TBD</li>
+<li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/tree/master/licenses">licenses</a></li>
 </ul>
 <p><strong>Known Exceptions</strong>:</p>
 <ul>
