@@ -32,7 +32,7 @@ This release of the source code packages need to have the following features imp
 
 All the source code OpenWhisk project is located at the Github website. If a configuration file is in place, we should
 be able to download the source code, based on the hash values or tags, defined for each specified repository. This
-feature can be implemented in a bash script, which is able to run both on a local machine or in Travis build. 
+feature can be implemented in a bash script, which is able to run both on a local machine or in Travis build.
 
 The script can be named "download_source_code.sh". When this repository is cloned, go to the home directory of this repository,
 and run ./download_source_code.sh in a terminal. The source code of OpenWhisk projects should be downloaded to either
@@ -94,12 +94,12 @@ the NOTICE and LICENSE, before we upload artifacts to any repository, like the s
 
 Each OpenWhisk project needs to have one compiled package, and one source code package. This is probably where the Maven
 release plugin can play out. As we have already downloaded the source code of each OpenWhisk repository, Maven command
-can be used to generate all the artifacts. 
+can be used to generate all the artifacts.
 
 One challenge we can think of is that OpenWhisk consists of projects based on different programming languages individually,
 we need to figure out how to package the artifacts differently for different languages, by using the similar or
 consistent build environment. OpenWhisk core is based on Scala, CLI is based on Go, wskdeploy is based on Go, api gateway
-is based on lua, runtime project may be based on its native runtime language, etc. 
+is based on lua, runtime project may be based on its native runtime language, etc.
 
 Another important item in this step is to sign the artifacts cryptographically for the release. We need to figure out
 how to do it, either in Travis CI, Jenkins pipeline, or any other building tools.

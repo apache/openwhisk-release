@@ -25,7 +25,7 @@ This project is only supported under Mac or Ununtu operating system.
 ## Software packages
 
 The following software packages are required for your operating system.
- 
+
  - git and svn
  - jq
  - gpg or gnupg and expect

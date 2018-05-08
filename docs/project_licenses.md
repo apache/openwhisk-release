@@ -38,6 +38,7 @@ For convenience, the following table provides links to each project repository's
 <th width="310">Repository</th>
 <th width="220">LICENSE Notes</th>
 <th width="220">NOTICE Notes</th>
+<th width="220">ASF Header Exclusions</th>
 </tr>
 <tr align="left" valign="top">
 <td><a href="https://github.com/apache/incubator-openwhisk">incubator-openwhisk</a></td>
@@ -48,21 +49,15 @@ For convenience, the following table provides links to each project repository's
 <ul>
 <li><a href="https://github.com/apache/incubator-openwhisk/tree/master/licenses">licenses</a></li>
 </ul>
-<p><strong>Known exclusions</strong>:</p>
-<ul>
-<li>tests/dat/actions/empty.js</li>
-</ul>
-<p><strong>Non-bundled</strong>:</p>
-<ul>
-<li>Scala libraries: BSD 3-clause "New"</li>
-<li>PureConfig: MPL 2.0</li>
-<li>logback: Eclipse 1.0., GNU LPGL 2.1</li>
-<li>jcl-over-slf4j: MIT</li>
-</ul>
 </td>
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk/blob/master/NOTICE.txt">NOTICE</a></p>
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/75">#75</a></p>
+</td>
+<td>
+<ul>
+<li>tests/dat/actions/empty.js</li>
+</ul>
 </td>
 </tr>
 <tr align="left" valign="top">
@@ -74,14 +69,15 @@ For convenience, the following table provides links to each project repository's
 <ul>
 <li><a href="https://github.com/apache/incubator-openwhisk-catalog/tree/master/licenses">licenses</a></li>
 </ul>
-<p><strong>Known exclusions</strong>:</p>
-<ul>
-<li><span style="color: #ff0000;">None ?</span></li>
-</ul>
 </td>
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk-catalog/blob/master/NOTICE.txt">NOTICE</a></p>
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/79">#79</a></p>
+</td>
+<td>
+<ul>
+<li><span style="color: #ff0000;">None ?</span></li>
+</ul>
 </td>
 </tr>
 <tr align="left" valign="top">
@@ -94,22 +90,18 @@ For convenience, the following table provides links to each project repository's
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/95">#95</a></p>
 <p><strong>Copied licenses:</strong></p>
 <ul>
-<li>TBD</li>
-</ul>
-<p><strong>Known exclusions</strong>:</p>
-<ul>
-<li>lua_install</li>
-<li>tests/lua_modules</li>
-</ul>
-<p><strong>Notes</strong>:</p>
-<ul>
-<li>LUA License is an MIT derivative. It requires us to acknowledge copyright.</li>
-<li>Adobe License (MIT derivative) requires acknowledgement.</li>
+<li><span style="color: #ff0000;">TBD</span></li>
 </ul>
 </td>
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/NOTICE.txt">NOTICE</a></p>
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/78">#78</a></p>
+</td>
+<td>
+<ul>
+<li>lua_install</li>
+<li>tests/lua_modules</li>
+</ul>
 </td>
 </tr>
 <tr align="left" valign="top">
@@ -121,14 +113,15 @@ For convenience, the following table provides links to each project repository's
 <ul>
 <li><a href="https://github.com/apache/incubator-openwhisk-cli/tree/master/licenses">licenses</a></li>
 </ul>
-<p><strong>Known exclusions</strong>:</p>
-<ul>
-<li><span style="color: #ff0000;">tests files ?</span></li>
-</ul>
 </td>
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/NOTICE.txt">NOTICE</a></p>
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/76">#76</a></p>
+</td>
+<td>
+<ul>
+<li><span style="color: #ff0000;">tests files ?</span></li>
+</ul>
 </td>
 </tr>
 <tr align="left" valign="top">
@@ -136,7 +129,7 @@ For convenience, the following table provides links to each project repository's
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/LICENSE.txt">LICENSE</a></p>
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/98">#98</a></p>
-<p><strong>Known exclusions</strong>:</p>
+<p>Copied Licenses:</p>
 <ul>
 <li><span style="color: #ff0000;">TBD</span></li>
 </ul>
@@ -144,6 +137,11 @@ For convenience, the following table provides links to each project repository's
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/NOTICE.txt">NOTICE</a></p>
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/77">#77</a></p>
+</td>
+<td>
+<ul>
+<li><span style="color: #ff0000;">TBD</span></li>
+</ul>
 </td>
 </tr>
 <tr align="left" valign="top">
@@ -153,16 +151,17 @@ For convenience, the following table provides links to each project repository's
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/94">#94</a></p>
 <p><strong>Copied licenses</strong>:</p>
 <ul>
-<li>TBD</li>
-</ul>
-<p><strong>Known exclusions</strong>:</p>
-<ul>
 <li><span style="color: #ff0000;">TBD</span></li>
 </ul>
 </td>
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/NOTICE.txt">NOTICE</a></p>
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/86">#86</a></p>
+</td>
+<td>
+<ul>
+<li><span style="color: #ff0000;">TBD</span></li>
+</ul>
 </td>
 </tr>
 <tr align="left" valign="top">
@@ -172,24 +171,19 @@ For convenience, the following table provides links to each project repository's
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/99">#99</a></p>
 <p><strong>Copied licenses</strong>:</p>
 <ul>
-<li>TBD</li>
-</ul>
-<p><strong>Known exclusions</strong>:</p>
-<ul>
-<li>
-<div style="-en-clipboard: true;">tests/src/test/resources/application.conf</div>
-</li>
-<li>
-<div>&nbsp;ansible/environments/local/group_vars/all</div>
-</li>
-<li>
-<div>ansible/environments/local/hosts</div>
-</li>
+<li><span style="color: #ff0000;">TBD</span></li>
 </ul>
 </td>
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/NOTICE.txt">NOTICE</a></p>
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/82">#82</a></p>
+</td>
+<td>
+<ul>
+<li>tests/src/test/resources/application.conf</li>
+<li>ansible/environments/local/group_vars/all</li>
+<li>ansible/environments/local/hosts</li>
+</ul>
 </td>
 </tr>
 <tr align="left" valign="top">
@@ -201,14 +195,15 @@ For convenience, the following table provides links to each project repository's
 <ul>
 <li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/tree/master/license">license *</a></li>
 </ul>
-<p><strong>Known exceptions</strong>:</p>
-<ul>
-<li>tests/dat/actions/SwiftyRequest/Package.resolved</li>
-</ul>
 </td>
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/NOTICE.txt">NOTICE</a></p>
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/85">#85</a></p>
+</td>
+<td>
+<ul>
+<li>tests/dat/actions/SwiftyRequest/Package.resolved</li>
+</ul>
 </td>
 </tr>
 <tr align="left" valign="top">
@@ -220,22 +215,18 @@ For convenience, the following table provides links to each project repository's
 <ul>
 <li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/tree/master/licenses">licenses</a></li>
 </ul>
-<p><strong>Known exceptions</strong>:</p>
-<ul>
-<li>
-<div style="-en-clipboard: true;">tests/src/test/resources/application.conf</div>
-</li>
-<li>
-<div>&nbsp;ansible/environments/local/group_vars/all</div>
-</li>
-<li>
-<div>ansible/environments/local/hosts</div>
-</li>
-</ul>
+<p>&nbsp;</p>
 </td>
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/NOTICE.txt">NOTICE</a></p>
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/80">#80</a></p>
+</td>
+<td>
+<ul>
+<li>tests/src/test/resources/application.conf</li>
+<li>ansible/environments/local/group_vars/all</li>
+<li>ansible/environments/local/hosts</li>
+</ul>
 </td>
 </tr>
 <tr align="left" valign="top">
@@ -247,22 +238,17 @@ For convenience, the following table provides links to each project repository's
 <ul>
 <li><a href="https://github.com/apache/incubator-openwhisk-runtime-java/tree/master/licenses">licenses</a></li>
 </ul>
-<p><strong>Known Exceptions</strong>:</p>
-<ul>
-<li>
-<div style="-en-clipboard: true;">tests/src/test/resources/application.conf</div>
-</li>
-<li>
-<div>ansible/environments/local/group_vars/all</div>
-</li>
-<li>
-<div>ansible/environments/local/hosts</div>
-</li>
-</ul>
 </td>
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/NOTICE.txt">NOTICE</a></p>
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/81">#81</a></p>
+</td>
+<td>
+<ul>
+<li>tests/src/test/resources/application.conf</li>
+<li>ansible/environments/local/group_vars/all</li>
+<li>ansible/environments/local/hosts</li>
+</ul>
 </td>
 </tr>
 <tr align="left" valign="top">
@@ -274,22 +260,17 @@ For convenience, the following table provides links to each project repository's
 <ul>
 <li><a href="https://github.com/apache/incubator-openwhisk-runtime-php/tree/master/licenses">licenses</a></li>
 </ul>
-<p><strong>Known Exceptions</strong>:</p>
-<ul>
-<li>
-<div>tests/src/test/resources/application.conf</div>
-</li>
-<li>
-<div>ansible/environments/local/group_vars/all</div>
-</li>
-<li>
-<div>ansible/environments/local/hosts</div>
-</li>
-</ul>
 </td>
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/NOTICE.txt">NOTICE</a></p>
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/83">#83</a></p>
+</td>
+<td>&nbsp;
+<ul>
+<li>tests/src/test/resources/application.conf</li>
+<li>ansible/environments/local/group_vars/all</li>
+<li>ansible/environments/local/hosts</li>
+</ul>
 </td>
 </tr>
 <tr align="left" valign="top">
@@ -301,22 +282,17 @@ For convenience, the following table provides links to each project repository's
 <ul>
 <li><a href="https://github.com/apache/incubator-openwhisk-runtime-python/tree/master/licenses">licenses</a></li>
 </ul>
-<p><strong>Known Exceptions</strong>:</p>
-<ul>
-<li>
-<div>tests/src/test/resources/application.conf</div>
-</li>
-<li>
-<div>ansible/environments/local/group_vars/all</div>
-</li>
-<li>
-<div>ansible/environments/local/hosts</div>
-</li>
-</ul>
 </td>
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/NOTICE.txt">NOTICE</a></p>
 <p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/84">#84</a></p>
+</td>
+<td>&nbsp;
+<ul>
+<li>tests/src/test/resources/application.conf</li>
+<li>ansible/environments/local/group_vars/all</li>
+<li>ansible/environments/local/hosts</li>
+</ul>
 </td>
 </tr>
 </tbody>

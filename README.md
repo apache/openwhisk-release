@@ -33,17 +33,26 @@ Specifically, this repository provides Release Management of all designated Apac
 
 all in accordance with Apache guidelines.
 
-## Release Process Methodology
+
+# Release Process
+
+## Methodology
 
 This project uses Travis CI as the automated integration build tool to streamline the release process of Apache OpenWhisk. Stages can be applied to build different jobs, which are able to run either in sequential or parallel. Artifacts can be shared across different jobs by using the cache feature in Travis, as different jobs run on different virtual machines.
 
-## Release publishing
+## Publishing
 
 Staged candidate releases of Apache OpenWhisk artifacts are published to the approved staging repository path under Apache with all required PGP singatures:
 - https://dist.apache.org/repos/dist/dev/incubator/openwhisk/
 
 Once candidates are approved, in accordance with required release processes and policies, their artifacts can be moved from the staging path to the approved release path:
 - https://dist.apache.org/repos/dist/release/incubator/openwhisk/.
+
+
+## Instructions
+
+Release managers can find the release process instructions and specifications here:
+- [Release Instructions for Release Managers](docs/release_instructions.md)
 
 # Instructions for Release Managers
 
@@ -56,6 +65,7 @@ As a release manger of OpenWhisk, please visit [OpenWhisk Release tutorial](docs
 To find the specifications about how to implement the Apache Release process for OpenWhisk project set, please visit the following page.
 
 - [General Specification](docs/general_spec.md)
+
 
 # Project status
 
