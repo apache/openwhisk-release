@@ -21,7 +21,7 @@
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 [![Build Status](https://travis-ci.org/apache/incubator-openwhisk-release.svg?branch=master)](https://travis-ci.org/apache/incubator-openwhisk-release)
 
-The primary goal of this project is to provide the Apache OpenWhisk project's Release Managers the automation needed to guarantee a release complies with both the Apache Software Foundation's (ASF) [Release Creation Process](http://www.apache.org/dev/release-publishing.html) and [Release Policy](http://www.apache.org/legal/release-policy.html).
+The primary goal of this project is to provide the Apache OpenWhisk project's Release Managers the instructions and automation needed to guarantee a release complies with both the Apache Software Foundation's (ASF) [Release Creation Process](http://www.apache.org/dev/release-publishing.html) and [Release Policy](http://www.apache.org/legal/release-policy.html).
 
 Specifically, this repository provides Release Management of all designated Apache OpenWhisk project repositories, by automating:
 - Verification of the source code LICENSE and NOTICE files
@@ -49,22 +49,9 @@ Once candidates are approved, in accordance with required release processes and 
 - https://dist.apache.org/repos/dist/release/incubator/openwhisk/.
 
 
-## Instructions
+# Instructions
 
-Release managers can find the release process instructions and specifications here:
-- [Release Instructions for Release Managers](docs/release_instructions.md)
-
-# Instructions for Release Managers
-
-## Release Manager Tutorial
-As a release manger of OpenWhisk, please visit [OpenWhisk Release tutorial](docs/tutorial.md).
-
-
-# Specifications to implement the above release process
-
-To find the specifications about how to implement the Apache Release process for OpenWhisk project set, please visit the following page.
-
-- [General Specification](docs/general_spec.md)
+Please follow the [Instructions for Release Managers](docs/release_instructions.md).
 
 
 # Project status

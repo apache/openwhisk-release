@@ -16,13 +16,15 @@
 #
 -->
 
-# General plan to implement the Apache release process for OpenWhisk
+# Release Process Specification
+
+## Goals and plans
 
 The purpose of this repository is to provide a one-stop entry tool to manage the release process of OpenWhisk in an automated way. 1,000 people will probably have 1,000 ideas about how to fulfill it, since we are living in such an innovative world.
+
 We believe they are all the valid routes, directing to our final destination, as long as they are compliant with the Apache release process. This specification just gives us one proposal, which may not be perfect, but will be proven to be capable of leading OpenWhisk team to the paradise, the release of shipped, packaged, Apache-compliant, able-to-run OpenWhisk source code and compiled artifacts.
 
-Long story short, Apache generally needs two type of packages to be publicly available after the declaration of the release:
-source code and the compiled artifacts. We would like to divide the work into two major phases: release of source code and release of compiled artifacts.
+Long story short, Apache generally needs two type of packages to be publicly available after the declaration of the release: _source code_ and the _compiled artifacts_. We would like to divide the work into two major phases: release of source code and release of compiled artifacts.
 
 ## Release of OpenWhisk artifacts
 
