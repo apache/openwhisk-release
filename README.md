@@ -21,7 +21,7 @@
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 [![Build Status](https://travis-ci.org/apache/incubator-openwhisk-release.svg?branch=master)](https://travis-ci.org/apache/incubator-openwhisk-release)
 
-The primary goal of this project is to provide the Apache OpenWhisk project's Release Managers the automation needed to guarantee a release complies with both the Apache Software Foundation's (ASF) [Release Creation Process](http://www.apache.org/dev/release-publishing.html) and [Release Policy](http://www.apache.org/legal/release-policy.html).
+The primary goal of this project is to provide the Apache OpenWhisk project's Release Managers the instructions and automation needed to guarantee a release complies with both the Apache Software Foundation's (ASF) [Release Creation Process](http://www.apache.org/dev/release-publishing.html) and [Release Policy](http://www.apache.org/legal/release-policy.html).
 
 Specifically, this repository provides Release Management of all designated Apache OpenWhisk project repositories, by automating:
 - Verification of the source code LICENSE and NOTICE files
@@ -33,11 +33,14 @@ Specifically, this repository provides Release Management of all designated Apac
 
 all in accordance with Apache guidelines.
 
-## Release Process Methodology
+
+# Release Process
+
+## Methodology
 
 This project uses Travis CI as the automated integration build tool to streamline the release process of Apache OpenWhisk. Stages can be applied to build different jobs, which are able to run either in sequential or parallel. Artifacts can be shared across different jobs by using the cache feature in Travis, as different jobs run on different virtual machines.
 
-## Release publishing
+## Publishing
 
 Staged candidate releases of Apache OpenWhisk artifacts are published to the approved staging repository path under Apache with all required PGP singatures:
 - https://dist.apache.org/repos/dist/dev/incubator/openwhisk/
@@ -45,17 +48,11 @@ Staged candidate releases of Apache OpenWhisk artifacts are published to the app
 Once candidates are approved, in accordance with required release processes and policies, their artifacts can be moved from the staging path to the approved release path:
 - https://dist.apache.org/repos/dist/release/incubator/openwhisk/.
 
-# Instructions for Release Managers
 
-## Release Manager Tutorial
-As a release manger of OpenWhisk, please visit [OpenWhisk Release tutorial](docs/tutorial.md).
+# Instructions
 
+Please follow the [Instructions for Release Managers](docs/release_instructions.md).
 
-# Specifications to implement the above release process
-
-To find the specifications about how to implement the Apache Release process for OpenWhisk project set, please visit the following page.
-
-- [General Specification](docs/general_spec.md)
 
 # Project status
 
@@ -177,6 +174,7 @@ The following table can be used by Release Managers to get quickly check the sta
 - The ScanCode column text is hyperlinked to the corresponding repository's build file that executes the scancode utility.
   - The ASF scan configuration for all repos. can be found here: [ASF-Release.cfg](https://github.com/apache/incubator-openwhisk-utilities/blob/master/scancode/ASF-Release.cfg).
 - The Slack badge is hyperlinked to the corresponding repository's public Slack channel (if one exists).
+- LICENSE and NOTICE file compliance tracking can be found here: [project_licenses.md](docs/project_licenses.md)
 
 # References
 - [Apache Release Creation Process](http://www.apache.org/dev/release-publishing.html)

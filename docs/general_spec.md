@@ -16,18 +16,15 @@
 #
 -->
 
-# General plan to implement the Apache release process for OpenWhisk
+# Release Process Specification
 
-The purpose of this repository is to provide a one-stop entry tool to manage the release process of OpenWhisk in an automated
-way. 1,000 people will probably have 1,000 ideas about how to fulfill it, since we are living in such an innovative world.
-We believe they are all the valid routes, directing to our final destination, as long as they are compliant with the Apache
-release process. This specification just gives us one proposal, which may not be perfect, but will be proven to be capable of
-leading OpenWhisk team to the paradise, the release of shipped, packaged, Apache-compliant, able-to-run OpenWhisk source
-code and compiled artifacts.
+## Goals and plans
 
-Long story short, Apache generally needs two type of packages to be publicly available after the declaration of the release:
-source code and the compiled artifacts. We would like to divide the work into two major phases: release of source code and
-release of compiled artifacts.
+The purpose of this repository is to provide a one-stop entry tool to manage the release process of OpenWhisk in an automated way. 1,000 people will probably have 1,000 ideas about how to fulfill it, since we are living in such an innovative world.
+
+We believe they are all the valid routes, directing to our final destination, as long as they are compliant with the Apache release process. This specification just gives us one proposal, which may not be perfect, but will be proven to be capable of leading OpenWhisk team to the paradise, the release of shipped, packaged, Apache-compliant, able-to-run OpenWhisk source code and compiled artifacts.
+
+Long story short, Apache generally needs two type of packages to be publicly available after the declaration of the release: _source code_ and the _compiled artifacts_. We would like to divide the work into two major phases: release of source code and release of compiled artifacts.
 
 ## Release of OpenWhisk artifacts
 
@@ -73,7 +70,7 @@ We plan to release the following OpenWhisk repositories:
 # Proposed implementation
 ## How to automate the release process for OpenWhisk?
 
-Travis CI is proposed as the pipeline to walk through the download, verify, build and publish processes. 
+Travis CI is proposed as the pipeline to walk through the download, verify, build and publish processes.
 
 As we can predict, OpenWhisk is going to release continuously in the future, so we propose to create directories in a
 hierarchical structure with configuration files inside to map different releases and sub-releases of OpenWhisk. One major
@@ -177,7 +174,7 @@ create a directory named _1.0_ under _releases_, and a directory _milestone-1_ u
 files under _releases_/_current_ (because the release manager has used this directory to develop a new groups of hashes or
 tags for the coming release) into _releases_/_1.0_/_milestone-1_, the release manager submit a PR with the changes. When
 the PR is merged, a new commit in master branch is generated. The new tag named _1.0_-_milestone-1_ needs to be created,
-to kick off the Travis build, which will run based on the configuration files under _releases_/_1.0_/_milestone-1_. 
+to kick off the Travis build, which will run based on the configuration files under _releases_/_1.0_/_milestone-1_.
 
 There are plenty of Travis built-in variables we can use to identify the type of Travis build. We pick up different source
 code of OpenWhisk as the input to the Travis build pipeline, according to the type.
