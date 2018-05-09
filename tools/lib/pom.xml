@@ -51,9 +51,7 @@
             <exclude>**/tests/dat/apigw/testswaggerdoc*</exclude>
             <exclude>**/SwiftyRequest/Package.resolved</exclude>
             <!-- gradle files -->
-            <exclude>**/**.gradle</exclude>
             <exclude>**/gradlew**</exclude>
-            <exclude>**/gradle/**</exclude>
             <!-- configuration files with dot as the prefix -->
             <exclude>**/.**</exclude>
             <!-- template files -->
@@ -74,7 +72,6 @@
             <exclude>**/CREDITS.txt</exclude>
             <!-- configuration files -->
             <exclude>**/group_vars/all</exclude>
-            <exclude>**/**.conf</exclude>
             <exclude>**/**.env</exclude>
             <exclude>**/**.cfg</exclude>
             <exclude>**/**.ini</exclude>
