@@ -35,7 +35,7 @@ The LICENSE file consists of two major sections:
 
 The content of the first section can be copied from the link [Apache license 2.0](http://www.apache.org/licenses/LICENSE-2.0.txt).
 
-If applicable replace the sentence "Copyright [yyyy] [name of copyright owner]" with "Copyright 2016-<present> The Apache Software Foundation".
+If applicable replace the sentence "Copyright [yyyy] [name of copyright owner]" with "Copyright 2016-[20xx] The Apache Software Foundation".
 
 ### Note and reference 3rd party licenses
 
@@ -136,4 +136,4 @@ but can be replaced with other packages by changing OpenWhisk configurations.
           License included at licenses/LICENSE-couchdb.txt
           Copyright 2009-2016 The Apache Software Foundation
 
-  The content of their licenses are included under licenses/LICENSE-kafka.txt and licenses/LICENSE-couchdb.txt.
+  The content of their licenses would be included under licenses/LICENSE-kafka.txt and licenses/LICENSE-couchdb.txt.
