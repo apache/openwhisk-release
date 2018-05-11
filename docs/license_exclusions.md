@@ -36,265 +36,227 @@ For convenience, the following table provides links to each project repository's
 <table border="1" cellpadding="8">
 <tbody>
 <tr align="left" valign="top">
-<th width="310">Repository</th>
-<th width="220">LICENSE Notes</th>
-<th width="220">NOTICE Notes</th>
-<th width="220">ASF Header Exclusions</th>
+<th width="250">Repository</th>
+<th width="320">Exclusion</th>
+<th width="220">Rationale</th>
 </tr>
+<!-- ====== openwhisk ===================================================  -->
 <tr align="left" valign="top">
-<td><a href="https://github.com/apache/incubator-openwhisk">incubator-openwhisk</a></td>
 <td>
-<p><a href="https://github.com/apache/incubator-openwhisk/blob/master/LICENSE.txt">LICENSE</a></p>
-<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/93">#93</a></p>
-<p><strong>Copied licenses</strong>:</p>
+<p><a href="https://github.com/apache/incubator-openwhisk">incubator-openwhisk</a></p>
 <ul>
-<li><a href="https://github.com/apache/incubator-openwhisk/tree/master/licenses">licenses</a></li>
+<li><a href="https://github.com/apache/incubator-openwhisk/blob/master/LICENSE.txt">LICENSE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/93">#93</a>)</li>
+<li><a href="https://github.com/apache/incubator-openwhisk/blob/master/NOTICE.txt">NOTICE (</a><a href="https://github.com/apache/incubator-openwhisk-release/issues/75">#75</a><a href="https://github.com/apache/incubator-openwhisk/blob/master/NOTICE.txt">)</a></li>
 </ul>
 </td>
 <td>
-<p><a href="https://github.com/apache/incubator-openwhisk/blob/master/NOTICE.txt">NOTICE</a></p>
-<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/75">#75</a></p>
+<p>tests/dat/actions/empty.js</p>
 </td>
-<td>
-<ul>
-<li>tests/dat/actions/empty.js</li>
-</ul>
-</td>
+<td>&nbsp;</td>
 </tr>
+<!-- ====== openwhis-catalog ===============================================  -->
 <tr align="left" valign="top">
-<td><a href="https://github.com/apache/incubator-openwhisk-catalog">incubator-openwhisk-catalog</a></td>
 <td>
-<p><a href="https://github.com/apache/incubator-openwhisk-catalog/blob/master/LICENSE.txt">LICENSE</a></p>
-<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/96">#96</a></p>
-<p><strong>Copied licenses</strong>:</p>
+<p><a href="https://github.com/apache/incubator-openwhisk-catalog">incubator-openwhisk-catalog</a></p>
 <ul>
-<li><a href="https://github.com/apache/incubator-openwhisk-catalog/tree/master/licenses">licenses</a></li>
+<li><a href="https://github.com/apache/incubator-openwhisk-catalog/blob/master/LICENSE.txt">LICENSE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/96">#96</a>)</li>
+<li><a href="https://github.com/apache/incubator-openwhisk-catalog/blob/master/NOTICE.txt">NOTICE </a>(<a href="https://github.com/apache/incubator-openwhisk-release/issues/79">#79</a>)</li>
 </ul>
 </td>
 <td>
-<p><a href="https://github.com/apache/incubator-openwhisk-catalog/blob/master/NOTICE.txt">NOTICE</a></p>
-<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/79">#79</a></p>
+<p><span style="color: #ff0000;">None ?</span></p>
 </td>
-<td>
-<ul>
-<li><span style="color: #ff0000;">None ?</span></li>
-</ul>
-</td>
+<td>&nbsp;</td>
 </tr>
+<!-- ====== openwhisk-apigateway ===============================================  -->
 <tr align="left" valign="top">
 <td>
 <p><a href="https://github.com/apache/incubator-openwhisk-apigateway">incubator-openwhisk-apigateway</a></p>
-<p>&nbsp;</p>
-</td>
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/LICENSE.txt">LICENSE</a></p>
-<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/95">#95</a></p>
-<p><strong>Copied licenses:</strong></p>
 <ul>
-<li><span style="color: #ff0000;">TBD</span></li>
+<li><a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/LICENSE.txt">LICENSE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/95">#95</a>)</li>
+<li><a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/NOTICE.txt">NOTICE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/78">#78</a>)</li>
 </ul>
 </td>
 <td>
-<p><a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/NOTICE.txt">NOTICE</a></p>
-<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/78">#78</a></p>
+<p>lua_install</p>
 </td>
-<td>
-<ul>
-<li>lua_install</li>
-<li>tests/lua_modules</li>
-</ul>
-</td>
+<td>&nbsp;</td>
 </tr>
 <tr align="left" valign="top">
-<td><a href="https://github.com/apache/incubator-openwhisk-cli">incubator-openwhisk-cli</a></td>
+<td>&nbsp;</td>
+<td>tests/lua_modules</td>
+<td>&nbsp;</td>
+</tr>
+<!-- ====== openwhisk-cli ===============================================  -->
+<tr align="left" valign="top">
 <td>
-<p><a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/LICENSE.txt">LICENSE</a></p>
-<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/97">#97</a></p>
-<p><strong>Copied</strong> <strong>Licenses</strong>:</p>
+<p><a href="https://github.com/apache/incubator-openwhisk-cli">incubator-openwhisk-cli</a></p>
 <ul>
-<li><a href="https://github.com/apache/incubator-openwhisk-cli/tree/master/licenses">licenses</a></li>
+<li><a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/LICENSE.txt">LICENSE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/97">#97</a>)</li>
+<li><a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/NOTICE.txt">NOTICE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/76">#76</a>)</li>
 </ul>
 </td>
 <td>
-<p><a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/NOTICE.txt">NOTICE</a></p>
-<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/76">#76</a></p>
+<p><span style="color: #ff0000;">tests files ?</span></p>
 </td>
+<td>&nbsp;</td>
+</tr>
+<!-- ====== openwhisk-client-go ===============================================  -->
+<tr align="left" valign="top">
 <td>
+<p><a href="https://github.com/apache/incubator-openwhisk-client-go">incubator-openwhisk-client-go</a></p>
 <ul>
-<li><span style="color: #ff0000;">tests files ?</span></li>
+<li><a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/LICENSE.txt">LICENSE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/98">#98</a>)</li>
+<li><a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/NOTICE.txt">NOTICE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/77">#77</a>)</li>
 </ul>
 </td>
+<td>
+<p><span style="color: #ff0000;">TBD</span></p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<!-- ====== openwhisk-wskdeploy ===============================================  -->
+<tr align="left" valign="top">
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-wskdeploy">incubator-openwhisk-wskdeploy</a></p>
+<ul>
+<li><a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/LICENSE.txt">LICENSE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/94">#94</a>)</li>
+<li><a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/NOTICE.txt">NOTICE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/86">#86</a>)</li>
+</ul>
+</td>
+<td>
+<p><span style="color: #ff0000;">TBD</span></p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<!-- ====== openwhisk-runtime-nodejs ===============================================  -->
+<tr align="left" valign="top">
+<td>
+<p><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs">incubator-openwhisk-runtime-nodejs</a></p>
+<ul>
+<li><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/LICENSE.txt">LICENSE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/99">#99</a>)</li>
+<li><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/NOTICE.txt">NOTICE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/82">#82</a>)</li>
+</ul>
+</td>
+<td>
+<p>tests/src/test/resources/application.conf</p>
+</td>
+<td>&nbsp;</td>
 </tr>
 <tr align="left" valign="top">
-<td><a href="https://github.com/apache/incubator-openwhisk-client-go">incubator-openwhisk-client-go</a></td>
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/LICENSE.txt">LICENSE</a></p>
-<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/98">#98</a></p>
-<p>Copied Licenses:</p>
-<ul>
-<li><span style="color: #ff0000;">TBD</span></li>
-</ul>
-</td>
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/NOTICE.txt">NOTICE</a></p>
-<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/77">#77</a></p>
-</td>
-<td>
-<ul>
-<li><span style="color: #ff0000;">TBD</span></li>
-</ul>
-</td>
+<td>&nbsp;</td>
+<td>ansible/environments/local/group_vars/all</td>
+<td>&nbsp;</td>
 </tr>
 <tr align="left" valign="top">
-<td><a href="https://github.com/apache/incubator-openwhisk-wskdeploy">incubator-openwhisk-wskdeploy</a></td>
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/LICENSE.txt">LICENSE</a></p>
-<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/94">#94</a></p>
-<p><strong>Copied licenses</strong>:</p>
+<td>&nbsp;</td>
+<td>ansible/environments/local/hosts</td>
+<td>&nbsp;</td>
+</tr>
+<!-- ====== openwhisk-runtime-swift ===============================================  -->
+<tr align="left" valign="top">
+<td><a href="https://github.com/apache/incubator-openwhisk-runtime-swift"> incubator-openwhisk-runtime-swift</a>
 <ul>
-<li><span style="color: #ff0000;">TBD</span></li>
+<li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/LICENSE.txt">LICENSE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/100">#100</a>)</li>
+<li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/NOTICE.txt">NOTICE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/85">#85</a>)</li>
 </ul>
 </td>
 <td>
-<p><a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/NOTICE.txt">NOTICE</a></p>
-<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/86">#86</a></p>
+<p>tests/dat/actions/SwiftyRequest/Package.resolved</p>
 </td>
-<td>
+<td>&nbsp;</td>
+</tr>
+<!-- ====== openwhisk-runtime-docker ===============================================  -->
+<tr align="left" valign="top">
+<td><a href="https://github.com/apache/incubator-openwhisk-runtime-docker">incubator-openwhisk-runtime-docker</a>
 <ul>
-<li><span style="color: #ff0000;">TBD</span></li>
+<li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/LICENSE.txt">LICENSE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/101">#101</a>)</li>
+<li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/NOTICE.txt">NOTICE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/80">#80</a>)</li>
 </ul>
 </td>
+<td>
+<p>tests/src/test/resources/application.conf</p>
+</td>
+<td>&nbsp;</td>
 </tr>
 <tr align="left" valign="top">
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs">incubator-openwhisk-runtime-nodejs</a></td>
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/LICENSE.txt">LICENSE</a></p>
-<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/99">#99</a></p>
-<p><strong>Copied licenses</strong>:</p>
-<ul>
-<li><span style="color: #ff0000;">TBD</span></li>
-</ul>
-</td>
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/NOTICE.txt">NOTICE</a></p>
-<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/82">#82</a></p>
-</td>
-<td>
-<ul>
-<li>tests/src/test/resources/application.conf</li>
-<li>ansible/environments/local/group_vars/all</li>
-<li>ansible/environments/local/hosts</li>
-</ul>
-</td>
+<td>&nbsp;</td>
+<td>ansible/environments/local/group_vars/all</td>
+<td>&nbsp;</td>
 </tr>
 <tr align="left" valign="top">
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-swift"> incubator-openwhisk-runtime-swift</a></td>
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/LICENSE.txt">LICENSE</a></p>
-<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/100">#100</a></p>
-<p><strong>Copied licenses</strong>:</p>
+<td>&nbsp;</td>
+<td>ansible/environments/local/hosts</td>
+<td>&nbsp;</td>
+</tr>
+<!-- ====== openwhisk-runtime-java ===============================================  -->
+<tr align="left" valign="top">
+<td><a href="https://github.com/apache/incubator-openwhisk-runtime-java">incubator-openwhisk-runtime-java</a>
 <ul>
-<li><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/tree/master/license">license *</a></li>
+<li><a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/LICENSE.txt">LICENSE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/102">#102</a>)</li>
+<li><a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/NOTICE.txt">NOTICE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/81">#81</a>)</li>
 </ul>
 </td>
 <td>
-<p><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/NOTICE.txt">NOTICE</a></p>
-<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/85">#85</a></p>
+<p>tests/src/test/resources/application.conf</p>
 </td>
-<td>
-<ul>
-<li>tests/dat/actions/SwiftyRequest/Package.resolved</li>
-</ul>
-</td>
+<td>&nbsp;</td>
 </tr>
 <tr align="left" valign="top">
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-docker">incubator-openwhisk-runtime-docker</a></td>
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/LICENSE.txt">LICENSE</a></p>
-<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/101">#101</a></p>
-<p><strong>Copied licenses</strong>:</p>
-<ul>
-<li><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/tree/master/licenses">licenses</a></li>
-</ul>
-<p>&nbsp;</p>
-</td>
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/NOTICE.txt">NOTICE</a></p>
-<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/80">#80</a></p>
-</td>
-<td>
-<ul>
-<li>tests/src/test/resources/application.conf</li>
-<li>ansible/environments/local/group_vars/all</li>
-<li>ansible/environments/local/hosts</li>
-</ul>
-</td>
+<td>&nbsp;</td>
+<td>ansible/environments/local/group_vars/all</td>
+<td>&nbsp;</td>
 </tr>
 <tr align="left" valign="top">
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-java">incubator-openwhisk-runtime-java</a></td>
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/LICENSE.txt">LICENSE</a></p>
-<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/102">#102</a></p>
-<p><strong>Copied licenses</strong>:</p>
+<td>&nbsp;</td>
+<td>ansible/environments/local/hosts</td>
+<td>&nbsp;</td>
+</tr>
+<!-- ====== openwhisk-runtime-php ===============================================  -->
+<tr align="left" valign="top">
+<td><a href="https://github.com/apache/incubator-openwhisk-runtime-php">incubator-openwhisk-runtime-php</a>
 <ul>
-<li><a href="https://github.com/apache/incubator-openwhisk-runtime-java/tree/master/licenses">licenses</a></li>
+<li><a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/LICENSE.txt">LICENSE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/103">#103</a>)</li>
+<li><a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/NOTICE.txt">NOTICE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/83">#83</a>)</li>
 </ul>
 </td>
 <td>
-<p><a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/NOTICE.txt">NOTICE</a></p>
-<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/81">#81</a></p>
+<p>tests/src/test/resources/application.conf</p>
 </td>
-<td>
-<ul>
-<li>tests/src/test/resources/application.conf</li>
-<li>ansible/environments/local/group_vars/all</li>
-<li>ansible/environments/local/hosts</li>
-</ul>
-</td>
+<td>&nbsp;</td>
 </tr>
 <tr align="left" valign="top">
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-php">incubator-openwhisk-runtime-php</a></td>
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/LICENSE.txt">LICENSE</a></p>
-<p><strong>Tracking: </strong><a href="https://github.com/apache/incubator-openwhisk-release/issues/103">#103</a></p>
-<p><strong>Copied licenses</strong>:</p>
-<ul>
-<li><a href="https://github.com/apache/incubator-openwhisk-runtime-php/tree/master/licenses">licenses</a></li>
-</ul>
-</td>
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/NOTICE.txt">NOTICE</a></p>
-<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/83">#83</a></p>
-</td>
-<td>&nbsp;
-<ul>
-<li>tests/src/test/resources/application.conf</li>
-<li>ansible/environments/local/group_vars/all</li>
-<li>ansible/environments/local/hosts</li>
-</ul>
-</td>
+<td>&nbsp;</td>
+<td>ansible/environments/local/group_vars/all</td>
+<td>&nbsp;</td>
 </tr>
 <tr align="left" valign="top">
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-python">incubator-openwhisk-runtime-python</a></td>
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/LICENSE.txt">LICENSE</a></p>
-<p><strong>Tracking</strong>:&nbsp;<a href="https://github.com/apache/incubator-openwhisk-release/issues/104">#104</a></p>
-<p><strong>Copied licenses</strong>:</p>
+<td>&nbsp;</td>
+<td>ansible/environments/local/hosts</td>
+<td>&nbsp;</td>
+</tr>
+<!-- ====== openwhisk-runtime-python ===============================================  -->
+<tr align="left" valign="top">
+<td><a href="https://github.com/apache/incubator-openwhisk-runtime-python">incubator-openwhisk-runtime-python</a>
 <ul>
-<li><a href="https://github.com/apache/incubator-openwhisk-runtime-python/tree/master/licenses">licenses</a></li>
+<li><a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/LICENSE.txt">LICENSE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/104">#104</a>)</li>
+<li><a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/NOTICE.txt">NOTICE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/84">#84</a>)</li>
 </ul>
 </td>
 <td>
-<p><a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/NOTICE.txt">NOTICE</a></p>
-<p><strong>Tracking</strong>: <a href="https://github.com/apache/incubator-openwhisk-release/issues/84">#84</a></p>
+<p>tests/src/test/resources/application.conf</p>
 </td>
-<td>&nbsp;
-<ul>
-<li>tests/src/test/resources/application.conf</li>
-<li>ansible/environments/local/group_vars/all</li>
-<li>ansible/environments/local/hosts</li>
-</ul>
-</td>
+<td>&nbsp;</td>
+</tr>
+<tr align="left" valign="top">
+<td>&nbsp;</td>
+<td>ansible/environments/local/group_vars/all</td>
+<td>&nbsp;</td>
+</tr>
+<tr align="left" valign="top">
+<td>&nbsp;</td>
+<td>ansible/environments/local/hosts</td>
+<td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
