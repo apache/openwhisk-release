@@ -17,8 +17,9 @@
 #
 -->
 
-Apache OpenWhisk Release
-Copyright 2016-2018 The Apache Software Foundation
+# Archives of Apache OpenWhisk binary dependencies
 
-This product includes software developed at
-The Apache Software Foundation (http://www.apache.org/).
+The directory contains all the legacy regarding OpenWhisk legal information, including but not limited to the LICENSE and
+NOTICE files. OpenWhisk depends on many other packages in order to deliver its services. All the dependencies are consolidated
+under this directory on a repository-to-repository basis. For any further changes of OpenWhisk dependencies, please update
+the legal files here for the related projects accordingly.
