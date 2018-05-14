@@ -147,6 +147,8 @@ For convenience, the following table provides links to each project repository's
 |               | ansible/environments/local/group_vars/all | Config. file, Not much creativity |
 |               | ansible/environments/local/hosts          | Config. file, Not much creativity |
 
+#### Note
+- Tracking issues for all prokect LICENSE and NOTICE files exclusions/exceptions/TODOs can he found [license_exclusions.md](license_exclusions.md).
 
 ## Enforcement and verification
 
