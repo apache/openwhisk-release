@@ -41,9 +41,10 @@ STAGE_URL=$(json_by_key "$CONFIG" "stage_url")
 RELEASE_URL=$(json_by_key "$CONFIG" "release_url")
 
 version_key="versioning"
-version=$(json_by_key "$CONFIG" ${version_key}.version)
+version_json=$(json_by_key "$CONFIG" ${version_key}.version)
+version=${5:-"$version_json"}
 pre_release_version=$(json_by_key "$CONFIG" ${version_key}.pre_release_version)
-full_version=$version
+full_version=$version_json
 
 if [ ! -z "$pre_release_version" ]; then
     pre_release_version_no_space="$(echo -e "${pre_release_version}" | tr -d '[[:space:]]')"
