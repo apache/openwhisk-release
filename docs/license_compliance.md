@@ -130,6 +130,22 @@ For convenience, the following table provides links to each project repository's
 | [incubator-openwhisk-runtime-nodejs](https://github.com/apache/incubator-openwhisk-runtime-nodejs) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
 |               | ansible/environments/local/group_vars/all | Config. file, Not much creativity |
 |               | ansible/environments/local/hosts          | Config. file, Not much creativity |
+| [incubator-openwhisk-runtime-swift](https://github.com/apache/incubator-openwhisk-runtime-swift)  | tests/src/test/resources/application.conf | Config. file, Not much creativity |
+|               | ansible/environments/local/group_vars/all | Config. file, Not much creativity |
+|               | ansible/environments/local/hosts          | Config. file, Not much creativity |
+|               | tests/dat/actions/SwiftyRequest/Package.resolved | **TBD?** |
+| [incubator-openwhisk-runtime-docker](https://github.com/apache/incubator-openwhisk-runtime-docker) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
+|               | ansible/environments/local/group_vars/all | Config. file, Not much creativity |
+|               | ansible/environments/local/hosts          | Config. file, Not much creativity |
+| [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java) | tests/src/test/resources/application.conf   | Config. file, Not much creativity |
+|               | ansible/environments/local/group_vars/all | Config. file, Not much creativity |
+|               | ansible/environments/local/hosts          | Config. file, Not much creativity |
+| [incubator-openwhisk-runtime-php](https://github.com/apache/incubator-openwhisk-runtime-php) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
+|               | ansible/environments/local/group_vars/all | Config. file, Not much creativity |
+|               | ansible/environments/local/hosts          | Config. file, Not much creativity |
+| [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
+|               | ansible/environments/local/group_vars/all | Config. file, Not much creativity |
+|               | ansible/environments/local/hosts          | Config. file, Not much creativity |
 
 
 ## Enforcement and verification
