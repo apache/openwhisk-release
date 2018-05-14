@@ -65,7 +65,7 @@ As a Release Manager, please know that most of these requirements are addressed 
 ### Licensing requirements
 
 All released source code has to be compliant with Apache Licensing Policy, by adding the LICENSE file, NOTICE file to each repository and the release package, and adding Licensing headers to each source code file.
-- Please visit [License_Compliance](license_compliance.md) for detailed information
+- Please see [License Compliance](license_compliance.md) for detailed information on Apache OpenWhisk project policies, rules and guidelines.
 
 ### Artifact requirements
 

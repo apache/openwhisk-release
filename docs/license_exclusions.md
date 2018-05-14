@@ -25,8 +25,8 @@ For convenience, the following table provides links to each project repository's
 <tbody>
 <tr align="left" valign="top">
 <th width="250">Repository</th>
-<th width="320">&nbsp;</th>
-<th width="320">&nbsp;</th>
+<th width="320">LICENSE link (Tracking issue)</th>
+<th width="320">NOTICE link (Tracking issue)</th>
 </tr>
 <!-- ====== openwhisk ===================================================  -->
 <tr align="left" valign="top">
