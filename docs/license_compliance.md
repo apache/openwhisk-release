@@ -49,18 +49,18 @@ In addition, the recommended type of approved ASF license header (i.e., "full" o
 
 | File type | ASF Header Type | Rationale |
 | --- | --- | --- |
-| Source Code (e.g., .scala, .go, .java, .py, etc.) | Full | |
+| Source Code (e.g., *.scala, *.go, *.java, *.py, etc.) | Full | |
 | Documentation (e.g., `*.md`) | Full | |
 | Web Content (e.g., `*.html`, `.css`) | Full | |
+| Scala Configurations (`*.conf`) | Full | Scala (Java)  configuration files may contain code or interfaces. |
+| Makefile | Full | May contain functional code |
 | Action Functions (source) (e.g., .js, .py, .swift, etc, particularly under `tests/dat` folder.) | Mini | Needs IP protection; Use "Mini" header as best practice for performance reasons. |
 | YAML files (`*.yaml`, `*.yml`) | Mini | |
 | XML files (`*.xml`) | Mini | |
 | Docker file (`dockerfile`) | Mini | |
-| Script files (`*.sh`) | Mini | |
-| Makefile | Full | |
-| `build.gradle` and `settings.gradle` | Full | build script and configuration for building with Gradle |
+| Script files (`*.sh`) | Mini | Contains functional scripting code |
+| `build.gradle` and `settings.gradle` | Full | Contains build script and configuration for building with Gradle |
 | `gradle/docker.gradle` | Full | build script to generate docker image using Gradle |
-| `*.conf` | Full or Mini | Configuration file |
 
 
 #### Notes
@@ -84,7 +84,7 @@ In accordance with Apache LICENSE policies, the table below lists general exclus
 | Ansible Configuration Files (`*.cfg`, `*.ini`) | Configuration files. Not much creativity. Examples:
 - [.cfg](https://github.com/apache/incubator-openwhisk/blob/master/ansible/ansible.cfg)
 - [.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/package-versions.ini) |
-| Scala Properties (`*.properties`)                                           | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/scala.properties) |
+| Scala Properties (`*.properties`) | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/scala.properties) |
 | `group_vars/all`                                         | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/group_vars/all) |
 | `hosts`                                                  | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/hosts) |
 | `dockerhub.groovy`                                       | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/jenkins/apache/dockerhub.groovy) |
