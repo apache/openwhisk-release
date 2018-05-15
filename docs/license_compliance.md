@@ -80,10 +80,11 @@ In accordance with Apache LICENSE policies, the table below lists general exclus
 | Template files (`*.j2`) | Not much creativity |
 | JSON files (`*.json`) | JSON files don't support comments |
 | `i18n_resources.go`                                      | Not much creativity. The file is auto-generated; not able to add header |
-| `*.env`                                                  | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) |
-| `*.cfg`                                                  | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/ansible/ansible.cfg) |
-| `*.ini`                                                  | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/package-versions.ini) |
-| `*.properties`                                           | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/scala.properties) |
+| Kubernetes Configurations (e.g., `*.env`) | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) |
+| Ansible Configuration Files (`*.cfg`, `*.ini`) | Configuration files. Not much creativity. Examples:
+- [.cfg](https://github.com/apache/incubator-openwhisk/blob/master/ansible/ansible.cfg)
+- [.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/package-versions.ini) |
+| Scala Properties (`*.properties`)                                           | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/scala.properties) |
 | `group_vars/all`                                         | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/group_vars/all) |
 | `hosts`                                                  | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/hosts) |
 | `dockerhub.groovy`                                       | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/jenkins/apache/dockerhub.groovy) |
