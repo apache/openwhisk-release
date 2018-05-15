@@ -74,12 +74,13 @@ In accordance with Apache LICENSE policies, the table below lists general exclus
 
 | File type | Rationale |
 | --- | --- |
-| Git configuration files (`.git`, `.gitattributes`, `.gitignore`) | Not much creativity |
+| Git tracking (`.git` subdirectory) | Git file tracking. Not part of project source. |
+| Git configuration (`.gitattributes`, `.gitignore`) | Configuration file. Not much creativity  |
 | PyDev configuration files (`.pydevproject`) | Not much creativity |
 | Gradle files (`.gogradle`) | Not much creativity |
 | IDE configuration files (e.g., `.project`) | Not much creativity |
 | Template files (`*.j2`) | Not much creativity |
-| JSON files (`*.json`) | JSON files don't support comments |
+| JSON files (`*.json`) | Configuration and test data files. JSON files don't support comments |
 | `i18n_resources.go`                                      | Not much creativity. The file is auto-generated; not able to add header |
 | Kubernetes Configurations (e.g., `*.env`) | Configuration file. Not much creativity.<br/>Example: [incubator-openwhisk//ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) |
 | Ansible Configuration Files (`*.cfg`, `*.ini`) | Configuration files. Not much creativity.<br/>Examples: [ incubator-openwhisk/ansible/ansible.cfg](https://github.com/apache/incubator-openwhisk/blob/master/ansible/ansible.cfg), [incubator-openwhisk/ansible/files/package-versions..ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/package-versions.ini) |
