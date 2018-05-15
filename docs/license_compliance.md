@@ -45,21 +45,22 @@ For convenience, we provide a summary listing of all project LICENSE and NOTICE 
 
 In accordance with Apache LICENSE policies, the table below lists files/file types that the community affirms MUST have an Apache LICENSE header since they are creating works representing Intellectual Property.
 
-In addition, the type of header used (i.e., "full" ASF header or ASF approved "minified" header) is noted along with the justification as is allowed by Apache policy.
+In addition, the recommended type of approved ASF license header (i.e., "full" or "minified" header) is noted although a Full header is always accepted.
 
 | File type | ASF Header Type | Rationale |
 | --- | --- | --- |
-| Source Code (e.g., .scala, .go, .java, .py, etc.) | Full ASF license header | |
-| Action Functions (source) (e.g., .js, .py, .swift, etc, particularly under `tests/dat` folder.) | Mini ASF license header | Needs IP protection; Use "Mini" header as best practice for performance reasons. |
-| Documentation (e.g., `*.md`, `.html`) | Full ASF license header | |
-| YAML files (`*.yaml`, `*.yml`) | Full or Mini ASF license header | |
-| XML files (`*.xml`) | Full or Mini ASF license header | |
-| Docker file (`dockerfile`) | Full ASF license header | |
-| Script files (`*.sh`) | Mini ASF license header | |
-| Makefile | Full ASF license header | |
-| `build.gradle` and `settings.gradle` | Full ASF license header | build script and configuration for building with Gradle |
-| `gradle/docker.gradle` | Full ASF license header | build script to generate docker image using Gradle |
-| `*.conf` | Full or Mini ASF license header | Configuration file |
+| Source Code (e.g., .scala, .go, .java, .py, etc.) | Full | |
+| Documentation (e.g., `*.md`) | Full | |
+| Web Content (e.g., `*.html`, `.css`) | Full | |
+| Action Functions (source) (e.g., .js, .py, .swift, etc, particularly under `tests/dat` folder.) | Mini | Needs IP protection; Use "Mini" header as best practice for performance reasons. |
+| YAML files (`*.yaml`, `*.yml`) | Mini | |
+| XML files (`*.xml`) | Mini | |
+| Docker file (`dockerfile`) | Mini | |
+| Script files (`*.sh`) | Mini | |
+| Makefile | Full | |
+| `build.gradle` and `settings.gradle` | Full | build script and configuration for building with Gradle |
+| `gradle/docker.gradle` | Full | build script to generate docker image using Gradle |
+| `*.conf` | Full or Mini | Configuration file |
 
 
 #### Notes
@@ -72,18 +73,17 @@ In accordance with Apache LICENSE policies, the table below lists general exclus
 
 | File type | Rationale |
 | --- | --- |
-| Git configuration files (`.gitattributes`, `.gitignore`) | Not much creativity |
-| Gradle files                                             | Not much creativity |
-| IDE configuration files (e.g., `.project`)               | Not much creativity |
-| Template files (`*.j2`)                                  | Not much creativity |
-| JSON files (`*.json`)                                    | JSON files don't support comments |
+| Git configuration files (`.git`, `.gitattributes`, `.gitignore`) | Not much creativity |
+| PyDev configuration files (`.pydevproject`) | Not much creativity |
+| Gradle files (`.gogradle`) | Not much creativity |
+| IDE configuration files (e.g., `.project`) | Not much creativity |
+| Template files (`*.j2`) | Not much creativity |
+| JSON files (`*.json`) | JSON files don't support comments |
 | `i18n_resources.go`                                      | Not much creativity. The file is auto-generated; not able to add header |
 | `*.env`                                                  | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) |
 | `*.cfg`                                                  | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/ansible/ansible.cfg) |
 | `*.ini`                                                  | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/package-versions.ini) |
 | `*.properties`                                           | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/scala.properties) |
-| `post.lua`                                               | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/performance/wrk_tests/post.lua) |
-| `java.xml`,`logback.xml`                                 | Configuration file in XML format. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) |
 | `group_vars/all`                                         | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/group_vars/all) |
 | `hosts`                                                  | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/hosts) |
 | `dockerhub.groovy`                                       | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/jenkins/apache/dockerhub.groovy) |
@@ -103,7 +103,7 @@ The Apache OpenWhisk project enforces and verifies ASF License header conformanc
 
 In accordance with Apache policy, these utilities exclude specific files from the ASF license header requirement which are configured in the following files:
 - scanCode: [ASF-Release.cfg](https://github.com/apache/incubator-openwhisk-utilities/blob/master/scancode/ASF-Release.cfg)
-- Apache RAT:[pom.xml](https://github.com/apache/incubator-openwhisk-release/blob/master/tools/lib/pom.xml) (Apache Rat)
+- Apache RAT: [pom.xml](https://github.com/apache/incubator-openwhisk-release/blob/master/tools/lib/pom.xml) (Apache Rat)
 
 ## Bundled and non-Bundled dependencies
 
