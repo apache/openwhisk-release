@@ -45,7 +45,7 @@ For convenience, we provide a summary listing of all project LICENSE and NOTICE 
 
 In accordance with Apache LICENSE policies, the table below lists files/file types that the community affirms MUST have an Apache LICENSE header since they are creating works representing Intellectual Property.
 
-In addition, the recommended type of approved ASF license header (i.e., "full" or "minified" header) is noted although a Full header is always accepted.
+In addition, the recommended type of approved ASF license header (i.e., "full" or "minified" header) is noted as best practice.
 
 | File type | ASF Header Type | Rationale |
 | --- | --- | --- |
@@ -53,17 +53,18 @@ In addition, the recommended type of approved ASF license header (i.e., "full" o
 | Documentation (e.g., `*.md`) | Full | |
 | Web Content (e.g., `*.html`, `.css`) | Full | |
 | Scala Configurations (`*.conf`) | Full | Scala (Java)  configuration files may contain code or interfaces. |
-| Makefile | Full | May contain functional code |
 | Action Functions (source) (e.g., .js, .py, .swift, etc, particularly under `tests/dat` folder.) | Mini | Needs IP protection; Use "Mini" header as best practice for performance reasons. |
-| YAML files (`*.yaml`, `*.yml`) | Mini | |
-| XML files (`*.xml`) | Mini | |
+| Makefile | Full | May contain functional code |
 | Docker file (`dockerfile`) | Mini | |
 | Script files (`*.sh`) | Mini | Contains functional scripting code |
+| YAML files (`*.yaml`, `*.yml`) | Mini | |
+| XML files (`*.xml`) | Mini | |
 | `build.gradle` and `settings.gradle` | Full | Contains build script and configuration for building with Gradle |
 | `gradle/docker.gradle` | Full | build script to generate docker image using Gradle |
 
 
 #### Notes
+- Full ASF License headers are always accepted regardless if a "Mini" header is recommended as best practice.
 - Action source files used in performance testing may be added to "[Known exclusions](#known-exclusions)" when justified.
 
 
