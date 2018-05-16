@@ -115,39 +115,167 @@ For convenience, the following table provides links to each project repository's
 
 | Repository | Exclusion | Rationale |
 | --- | --- | --- |
-| [incubator-openwhisk](https://github.com/apache/incubator-openwhisk) | [tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) | Empty (zero-length) file for testing |
-|          | [performance/wrk_tests/post.lua](https://github.com/apache/incubator-openwhisk/blob/master/performance/wrk_tests/post.lua) |  |
-|          | [tools/eclipse/java.xml](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) | Configuration file in XML format. Not much creativity. |
-|          | [common/scala/src/main/resources/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/common/scala/src/main/resources/logback.xml) | Configuration file in XML format. Not much creativity. |
+| [incubator-openwhisk](https://github.com/apache/incubator-openwhisk) | | |
+|               | [LICENSE.txt]() |  |
+|               | [NOTICE.txt]() |  |
+|               | [tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) | Empty (zero-length) file for testing |
+|               | [tests/dat/actions/SwiftyRequest/Package.resolved] | **TBD?** |
+|          | [.gitattributes]() |  |
+|          | [.gitignore]() |  |
+|          | [.pydevproject]() |  |
+|          | [actionRuntimes/actionProxy/build.gradle]() |  |
+|          | [actionRuntimes/javaAction/build.gradle]() |  |
+|          | [actionRuntimes/nodejs6Action/build.gradle]() |  |
+|          | [actionRuntimes/nodejs8Action/build.gradle]() |  |
+|          | [actionRuntimes/php7.1Action/build.gradle]() |  |
+|          | [actionRuntimes/python2Action/build.gradle]() |  |
+|          | [actionRuntimes/pythonAction/build.gradle]() |  |
+|          | [actionRuntimes/swift3.1.1Action/build.gradle]() |  |
+|          | [actionRuntimes/swift4.1Action/build.gradle]() |  |
+|          | [ansible/ansible.cfg]() |  |
+|          | [ansible/environments/distributed/files/openstack/openstack.env]() |  |
+|          | [ansible/environments/distributed/group_vars/all]() |  |
+|          | [ansible/environments/distributed/hosts]() |  |
+|          | [ansible/environments/docker-machine/group_vars/all]() |  |
+|          | [ansible/environments/docker-machine/hosts.j2.ini]() |  |
+|          | [ansible/environments/local/group_vars/all]() |  |
+|          | [ansible/environments/local/hosts.j2.ini]() |  |
+|          | [ansible/environments/vagrant/group_vars/all]() |  |
+|          | [ansible/environments/vagrant/hosts]() |  |
+|          | [ansible/files/activations_design_document_for_activations_db.json]() |  |
+|          | [ansible/files/auth.guest]() |  |
+|          | [ansible/files/auth.whisk.system]() |  |
+|          | [ansible/files/auth_index.json]() |  |
+|          | [ansible/files/filter_design_document.json]() |  |
+|          | [ansible/files/logCleanup_design_document_for_activations_db.json]() |  |
+|          | [ansible/files/namespace_throttlings_design_document_for_subjects_db.json]() |  |
+|          | [ansible/files/package-versions.ini]() |  |
+|          | [ansible/files/runtimes.json]() |  |
+|          | [ansible/files/whisks_design_document_for_activations_db_filters_v2.1.0.json]() |  |
+|          | [ansible/files/whisks_design_document_for_activations_db_v2.1.0.json]() |  |
+|          | [ansible/files/whisks_design_document_for_entities_db_v2.1.0.json]() |  |
+|          | [ansible/group_vars/all]() |  |
+|          | [ansible/roles/docker/templates/docker.j2]() |  |
+|          | [ansible/roles/nginx/files/openwhisk-server-key.pem]() |  |
+|          | [ansible/roles/nginx/templates/nginx.conf.j2]() |  |
+|          | [ansible/roles/registry/templates/recycle-registry.py.j2]() |  |
+|          | [ansible/templates/db_local.ini.j2]() |  |
+|          | [ansible/templates/jmxremote.access.j2]() |  |
+|          | [ansible/templates/jmxremote.password.j2]() |  |
+|          | [ansible/templates/whisk.properties.j2]() |  |
 |          | [bin/wskadmin](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskadmin) | Generated, symbolic link |
 |          | [bin/wskdev](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskdev) | Generated, symbolic link |
-| [incubator-openwhisk-catalog](https://github.com/apache/incubator-openwhisk-catalog) | _None_|  |
+|          | [build.gradle]() |  |
+|          | [common/scala/.dockerignore]() |  |
+|          | [common/scala/build.gradle]() |  |
+|          | [common/scala/src/main/resources/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/common/scala/src/main/resources/logback.xml) | Configuration file in XML format. Not much creativity. |
+|          | [core/controller/.dockerignore]() |  |
+|          | [core/controller/build.gradle]() |  |
+|          | [core/controller/src/main/resources/apiv1swagger.json]() |  |
+|          | [core/controller/src/main/resources/infoswagger.json]() |  |
+|          | [core/invoker/.dockerignore]() |  |
+|          | [core/invoker/build.gradle]() |  |
+|          | [core/routemgmt/createApi/package.json]() |  |
+|          | [core/routemgmt/deleteApi/package.json]() |  |
+|          | [core/routemgmt/getApi/package.json]() |  |
+|          | [CREDITS.txt]() |  |
+|          | [docs/images/components_to_repos.png]() |  |
+|          | [docs/images/IoT_solution_architecture_example.png]() |  |
+|          | [docs/images/OpenWhisk.png]() |  |
+|          | [docs/images/OpenWhisk_flow_of_processing.draw.io.xml]() |  |
+|          | [docs/images/OpenWhisk_flow_of_processing.png]() |  |
+|          | [docs/images/whisk_icon_full-color_with_tm_128x128-300dpi.png]() |  |
+|          | [docs/images/whisk_icon_full-color_with_tm_210x138-300dpi.png]() |  |
+|          | [docs/images/whisk_icon_full-color_with_tm_64x64-300dpi.png]() |  |
+|          | [docs/images/whisk_icon_full_color_with_tm.psd]() |  |
+|          | [docs/images/whisk_icon_full_color_with_tm_100x100-300dpi.png]() |  |
+|          | [docs/images/whisk_icon_full_color_with_tm_100x100-96dpi.png]() |  |
+|          | [docs/images/whisk_icon_full_color_with_tm_200x200-300dpi.png]() |  |
+|          | [gradle/docker.gradle]() |  |
+|          | [gradle/wrapper/gradle-wrapper.jar]() |  |
+|          | [gradle/wrapper/gradle-wrapper.properties]() |  |
+|          | [gradlew.bat]() |  |
+|          | [gradlew]() |  |
+|          | [performance/gatling_tests/build.gradle]() |  |
+|          | [performance/gatling_tests/src/gatling/resources/data/javaAction.jar]() |  |
+|          | [performance/wrk_tests/post.lua](https://github.com/apache/incubator-openwhisk/blob/master/performance/wrk_tests/post.lua) |  |
+|          | [sdk/docker/build.gradle]() |  |
+|          | [settings.gradle]() |  |
+|          | [tests/build.gradle]() |  |
+|          | [tests/dat/actions/blackbox.zip]() |  |
+|          | [tests/dat/actions/echo.json]() |  |
+|          | [tests/dat/actions/helloJava.jar]() |  |
+|          | [tests/dat/actions/helloJavaDefaultPackage.jar]() |  |
+|          | [tests/dat/actions/helloSwift311.zip]() |  |
+|          | [tests/dat/actions/invalidInput1.json]() |  |
+|          | [tests/dat/actions/invalidInput2.json]() |  |
+|          | [tests/dat/actions/invalidInput3.json]() |  |
+|          | [tests/dat/actions/invalidInput4.json]() |  |
+|          | [tests/dat/actions/multiSwift.zip]() |  |
+|          | [tests/dat/actions/python.zip]() |  |
+|          | [tests/dat/actions/python2_virtualenv.zip]() |  |
+|          | [tests/dat/actions/python3_virtualenv.zip]() |  |
+|          | [tests/dat/actions/python_virtualenv_dir.zip]() |  |
+|          | [tests/dat/actions/python_virtualenv_name.zip]() |  |
+|          | [tests/dat/actions/seq_echo_word_count.json]() |  |
+|          | [tests/dat/actions/seq_type_2.json]() |  |
+|          | [tests/dat/actions/sleep.jar]() |  |
+|          | [tests/dat/actions/unicode.jar]() |  |
+|          | [tests/dat/actions/unicode/build.gradle]() |  |
+|          | [tests/dat/actions/validInput1.json]() |  |
+|          | [tests/dat/actions/validInput2.json]() |  |
+|          | [tests/dat/actions/word_count.json]() |  |
+|          | [tests/dat/actions/zippedaction.zip]() |  |
+|          | [tests/dat/apigw/apigw_path_param_support_test_invalidActionType.json]() |  |
+|          | [tests/dat/apigw/apigw_path_param_support_test_invalidParamName1.json]() |  |
+|          | [tests/dat/apigw/apigw_path_param_support_test_invalidParamName2.json]() |  |
+|          | [tests/dat/apigw/apigw_path_param_support_test_invalidTargetUrl.json]() |  |
+|          | [tests/dat/apigw/apigw_path_param_support_test_withPathParameters1.json]() |  |
+|          | [tests/dat/apigw/apigw_path_param_support_test_withPathParameters2.json]() |  |
+|          | [tests/dat/apigw/endpoints.without.action.swagger.json]() | |
+|          | [tests/dat/apigw/testswaggerdoc1]() | |
+|          | [tests/dat/apigw/testswaggerdoc2]() | |
+|          | [tests/dat/apigw/testswaggerdocinvalid]() | |
+|          | [tests/dat/blackbox/badaction/build.gradle]() | |
+|          | [tests/dat/blackbox/badproxy/build.gradle]() | |
+|          | [tests/src/test/resources/application.conf.j2]() | |
+|          | [tools/dev/build.gradle]() | |
+|          | [tools/dev/src/main/groovy/couchdbViews.groovy]() | |
+|          | [tools/eclipse/java.xml](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) | Configuration file in XML format. Not much creativity. |
+|          | [tools/eclipse/scala.properties]() | |
+|          | [tools/jenkins/apache/dockerhub.groovy]() | |
+|          | [tools/vagrant/hello.cmd]() | |
+|          | [tools/vagrant/Vagrantfile]() | |
 | [incubator-openwhisk-apigateway](https://github.com/apache/incubator-openwhisk-apigateway) | [tests/scripts/lua/management/examples](https://github.com/apache/incubator-openwhisk-apigateway/tree/master/tests/scripts/lua/management/examples) | JSON data files |
+| [incubator-openwhisk-catalog](https://github.com/apache/incubator-openwhisk-catalog) | _None_|  |
 | [incubator-openwhisk-cli](https://github.com/apache/incubator-openwhisk-cli) | _None_ | _test files?_ |
-| [incubator-openwhisk-client-go](https://github.com/apache/incubator-openwhisk-client-go) | _None_ | _?_ |
+| [incubator-openwhisk-client-go](https://github.com/apache/incubator-openwhisk-client-go) | **TBD** | _?_ |
+|          | wski18n/i18n_resources.go | Generated, translation JSON data file. |
+|          | wski18n/README.md | **FIX!!!** |
+|          | wski18n/resources | JSON data files |
+| [incubator-openwhisk-runtime-docker](https://github.com/apache/incubator-openwhisk-runtime-docker) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
+|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
+|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
+| [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java) | tests/src/test/resources/application.conf   | Config. file, Not much creativity |
+|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
+|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
+| [incubator-openwhisk-runtime-nodejs](https://github.com/apache/incubator-openwhisk-runtime-nodejs) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
+|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
+|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
+| [incubator-openwhisk-runtime-php](https://github.com/apache/incubator-openwhisk-runtime-php) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
+|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
+|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
+| [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
+|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
+|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
+| [incubator-openwhisk-runtime-swift](https://github.com/apache/incubator-openwhisk-runtime-swift)  | tests/src/test/resources/application.conf | Config. file, Not much creativity |
+|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
+|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
 | [incubator-openwhisk-wskdeploy](https://github.com/apache/incubator-openwhisk-wskdeploy) | wski18n | **FIX!!!** Too broad, lots of .go files that SHOULD be scanned |
 |          | wski18n/i18n_resources.go | Generated, translation JSON data file. |
 |          | wski18n/README.md | **FIX!!!** |
 |          | wski18n/resources | JSON data files |
-| [incubator-openwhisk-runtime-nodejs](https://github.com/apache/incubator-openwhisk-runtime-nodejs) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
-|               | ansible/environments/local/group_vars/all | Config. file, Not much creativity |
-|               | ansible/environments/local/hosts          | Config. file, Not much creativity |
-| [incubator-openwhisk-runtime-swift](https://github.com/apache/incubator-openwhisk-runtime-swift)  | tests/src/test/resources/application.conf | Config. file, Not much creativity |
-|               | ansible/environments/local/group_vars/all | Config. file, Not much creativity |
-|               | ansible/environments/local/hosts          | Config. file, Not much creativity |
-|               | tests/dat/actions/SwiftyRequest/Package.resolved | **TBD?** |
-| [incubator-openwhisk-runtime-docker](https://github.com/apache/incubator-openwhisk-runtime-docker) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
-|               | ansible/environments/local/group_vars/all | Config. file, Not much creativity |
-|               | ansible/environments/local/hosts          | Config. file, Not much creativity |
-| [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java) | tests/src/test/resources/application.conf   | Config. file, Not much creativity |
-|               | ansible/environments/local/group_vars/all | Config. file, Not much creativity |
-|               | ansible/environments/local/hosts          | Config. file, Not much creativity |
-| [incubator-openwhisk-runtime-php](https://github.com/apache/incubator-openwhisk-runtime-php) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
-|               | ansible/environments/local/group_vars/all | Config. file, Not much creativity |
-|               | ansible/environments/local/hosts          | Config. file, Not much creativity |
-| [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
-|               | ansible/environments/local/group_vars/all | Config. file, Not much creativity |
-|               | ansible/environments/local/hosts          | Config. file, Not much creativity |
+
 
 #### Note
 - Tracking issues for all prokect LICENSE and NOTICE files exclusions/exceptions/TODOs can he found [license_exclusions.md](license_exclusions.md).
