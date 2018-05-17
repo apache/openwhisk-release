@@ -83,10 +83,10 @@ In accordance with Apache LICENSE policies, the table below lists general exclus
 | | JSON files (`*.json`) | Configuration and test data files. </br> - Note: _JSON files don't support comments_ |
 | | Golang Internationalization resource files (`i18n_resources.go`) | Not much creativity. The file is auto-generated; not able to add header |
 | | Kubernetes Configurations (e.g., `*.env`) | Configuration file. Not much creativity.<br/>Example: [incubator-openwhisk//ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) |
-| | Ansible Configuration Files (`*.cfg`, `*.ini`) | Configuration files. Not much creativity.<br/>Examples: [ incubator-openwhisk/ansible/ansible.cfg](https://github.com/apache/incubator-openwhisk/blob/master/ansible/ansible.cfg), [incubator-openwhisk/ansible/files/package-versions..ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/package-versions.ini) |
+| | Ansible Configuration Files (`*.cfg`, `*.ini`) | Configuration files. Not much creativity.<br/>Examples: [ incubator-openwhisk/ansible/ansible.cfg](https://github.com/apache/incubator-openwhisk/blob/master/ansible/ansible.cfg), [incubator-openwhisk/ansible/files/package-versions.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/package-versions.ini) |
 | | Scala Properties (`*.properties`) | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/scala.properties) |
-| | `group_vars/all`                                         | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/group_vars/all) |
-| | `hosts`                                                  | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/hosts) |
+| | Ansible Group Variables (YAML) `group_vars/all` | Configuration file. Example [ansible/environments/local/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/group_vars/all) |
+| | Ansible hosts file (`hosts`)                                                  | Not much creativity. Example: [TBD]() |
 | | `dockerhub.groovy`                                       | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/jenkins/apache/dockerhub.groovy) |
 | | `openwhisk/actionRuntimes/*/Dockerfile`                  | Simple docker file without creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/python2Action/Dockerfile) |
 | | `openwhisk/sdk/docker/Dockerfile`                        | Simple docker file without creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/sdk/docker/Dockerfile) |
@@ -112,16 +112,10 @@ In accordance with Apache policy, each of the Apache OpenWhisk project's reposit
 
 For convenience, the following table provides links to each project repository's LICENSE and NOTICE files, as well as an overview of notable software dependencies (non-canonical) and license scanning exclusions.
 
-<!-- |          | [LICENSE.txt]() |  |
-|          | [NOTICE.txt]() |  |
-|          | [.gitattributes]() |  |
-|          | [.gitignore]() |  |
-|          | [.pydevproject]() |  | -->
-
 | Repository | Exclusion | Rationale |
 |:---|:---|:---|
 | [incubator-openwhisk](https://github.com/apache/incubator-openwhisk) |||
-|          | [actionRuntimes/\<runtime name\>/build.gradle](https://github.com/apache/incubator-openwhisk/tree/master/actionRuntimes) | [actionProxy](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/actionProxy/build.gradle), [javaAction](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/javaAction/build.gradle), [nodejs6Action](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/nodejs6Action/build.gradle), [nodejs8Action](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/nodejs8Action/build.gradle), [php7.1Action](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/php7.1Action/build.gradle), [python2Action](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/python2Action/build.gradle), [pythonAction](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/pythonAction/build.gradle), [swift3.1.1Action](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/swift3.1.1Action/build.gradle), [swift4.1Action](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/swift4.1Action/build.gradle) |
+|          | [actionRuntimes/\<runtime name\>/build.gradle](https://github.com/apache/incubator-openwhisk/tree/master/actionRuntimes) | Including: [actionProxy](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/actionProxy/build.gradle), [javaAction](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/javaAction/build.gradle), [nodejs6Action](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/nodejs6Action/build.gradle), [nodejs8Action](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/nodejs8Action/build.gradle), [php7.1Action](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/php7.1Action/build.gradle), [python2Action](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/python2Action/build.gradle), [pythonAction](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/pythonAction/build.gradle), [swift3.1.1Action](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/swift3.1.1Action/build.gradle), [swift4.1Action](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/swift4.1Action/build.gradle) |
 |          | [ansible/ansible.cfg]() |  |
 |          | [ansible/environments/distributed/files/openstack/openstack.env]() |  |
 |          | [ansible/environments/distributed/group_vars/all]() |  |
