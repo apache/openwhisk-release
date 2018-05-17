@@ -58,8 +58,8 @@ In addition, the recommended type of approved ASF license header (i.e., "full" o
 | Makefile | Full | May contain functional (script) code |
 | Docker image build file (`dockerfile`) | Mini | May contain functional (script) code |
 | Script files (`*.sh`) | Mini | May contain functional (script) code |
-| YAML files (`*.yaml`, `*.yml`) | Mini | |
-| XML files (`*.xml`) | Mini | |
+| YAML files (`*.yaml`, `*.yml`) | Mini | May contain functional code. |
+| XML files (`*.xml`) | Mini | May contain functional code. |
 | `build.gradle` and `settings.gradle` | Full | Contains build script and configuration for building with Gradle |
 | `gradle/docker.gradle` | Full | build script to generate docker image using Gradle |
 
