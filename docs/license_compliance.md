@@ -48,7 +48,7 @@ In accordance with Apache LICENSE policies, the table below lists files/file typ
 In addition, the recommended type of approved ASF license header (i.e., "full" or "minified" header) is noted as best practice.
 
 | File type | ASF Header Type | Rationale |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Source Code (e.g., `*.scala`, `*.go`, `*.java`, `*.py`, etc.) | Full | |
 | Documentation (e.g., `*.md`) | Full | |
 | Web Content (e.g., `*.html`, `.css`) | Full | |
@@ -73,7 +73,7 @@ In addition, the recommended type of approved ASF license header (i.e., "full" o
 In accordance with Apache LICENSE policies, the table below lists general exclusions by file (type) as agreed to by the project community along with the justification.
 
 | # | File type | Rationale |
-| --- | --- | --- |
+|:---|:---|:---|
 | | Git tracking (`.git` subdirectory) | Git file tracking. Not part of project source. |
 | | Git configuration (`.gitattributes`, `.gitignore`) | Configuration file. Not much creativity  |
 | | PyDev configuration files (`.pydevproject`) | Not much creativity |
@@ -119,7 +119,7 @@ For convenience, the following table provides links to each project repository's
 |          | [.pydevproject]() |  | -->
 
 | Repository | Exclusion | Rationale |
-| --- | --- | --- |
+|:---|:---|:---|
 | [incubator-openwhisk](https://github.com/apache/incubator-openwhisk) | | |
 |          | [actionRuntimes/actionProxy/build.gradle]() |  |
 |          | [actionRuntimes/javaAction/build.gradle]() |  |
