@@ -314,3 +314,6 @@ $ ./tools/travis/verify_source_code.sh <WORK_DIR>
 ### Apache Tentacles
 
 Although [Apache Tentacles](https://creadur.apache.org/tentacles/) is a tool to check LICENSE file and NOTICE file in artifacts uploading to a staging repository, it is not usable for the Apache OpenWhisk project because it doesn't support the unpacking of tar.gz files.### Known exclusions
+
+
+Google Calendar link: <a target="_blank" href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=NXE5ajZxMmI2NW90czVxb3ZpaTZtcXZpMHBfMjAxODA1MjNUMTUwMDAwWiBhcGFjaGVvcGVud2hpc2tAbQ&amp;tmsrc=apacheopenwhisk%40gmail.com&amp;scp=ALL"><img border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif"></a>
