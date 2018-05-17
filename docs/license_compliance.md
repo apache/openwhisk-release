@@ -49,11 +49,11 @@ In addition, the recommended type of approved ASF license header (i.e., "full" o
 
 | File type | ASF Header Type | Rationale |
 | --- | --- | --- |
-| Source Code (e.g., *.scala, *.go, *.java, *.py, etc.) | Full | |
+| Source Code (e.g., `*.scala`, `*.go`, `*.java`, `*.py`, etc.) | Full | |
 | Documentation (e.g., `*.md`) | Full | |
 | Web Content (e.g., `*.html`, `.css`) | Full | |
 | Scala Configurations (`*.conf`) | Full | Scala (Java)  configuration files may contain code or interfaces. |
-| Action Functions (source) (e.g., .js, .py, .swift, etc, particularly under `tests/dat` folder.) | Mini | Needs IP protection; Use "Mini" header as best practice for performance reasons. |
+| Action Functions (source) (e.g., `.js`, `.py`, `.swift`, etc, particularly under `tests/dat` folder.) | Mini | Needs IP protection; Use "Mini" header as best practice for performance reasons. |
 | Makefile | Full | May contain functional code |
 | Docker file (`dockerfile`) | Mini | |
 | Script files (`*.sh`) | Mini | Contains functional scripting code |
@@ -72,28 +72,28 @@ In addition, the recommended type of approved ASF license header (i.e., "full" o
 
 In accordance with Apache LICENSE policies, the table below lists general exclusions by file (type) as agreed to by the project community along with the justification.
 
-| File type | Rationale |
-| --- | --- |
-| Git tracking (`.git` subdirectory) | Git file tracking. Not part of project source. |
-| Git configuration (`.gitattributes`, `.gitignore`) | Configuration file. Not much creativity  |
-| PyDev configuration files (`.pydevproject`) | Not much creativity |
-| Gradle files (`.gogradle`) | Not much creativity |
-| IDE configuration files (e.g., `.project`) | Not much creativity |
-| Template files (`*.j2`) | Not much creativity |
-| JSON files (`*.json`) | Configuration and test data files. JSON files don't support comments |
-| Golang Internationalization resource files (`i18n_resources.go`) | Not much creativity. The file is auto-generated; not able to add header |
+| # | File type | Rationale |
+| --- | --- | --- |
+| | Git tracking (`.git` subdirectory) | Git file tracking. Not part of project source. |
+| | Git configuration (`.gitattributes`, `.gitignore`) | Configuration file. Not much creativity  |
+| | PyDev configuration files (`.pydevproject`) | Not much creativity |
+| | Gradle files (`.gogradle`) | Not much creativity |
+| | IDE configuration files (e.g., `.project`) | Not much creativity |
+| | Template files (`*.j2`) | Not much creativity |
+| | JSON files (`*.json`) | Configuration and test data files. JSON files don't support comments |
+| | Golang Internationalization resource files (`i18n_resources.go`) | Not much creativity. The file is auto-generated; not able to add header |
 | Kubernetes Configurations (e.g., `*.env`) | Configuration file. Not much creativity.<br/>Example: [incubator-openwhisk//ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) |
-| Ansible Configuration Files (`*.cfg`, `*.ini`) | Configuration files. Not much creativity.<br/>Examples: [ incubator-openwhisk/ansible/ansible.cfg](https://github.com/apache/incubator-openwhisk/blob/master/ansible/ansible.cfg), [incubator-openwhisk/ansible/files/package-versions..ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/package-versions.ini) |
-| Scala Properties (`*.properties`) | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/scala.properties) |
-| `group_vars/all`                                         | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/group_vars/all) |
-| `hosts`                                                  | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/hosts) |
-| `dockerhub.groovy`                                       | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/jenkins/apache/dockerhub.groovy) |
-| `openwhisk/actionRuntimes/*/Dockerfile`                  | Simple docker file without creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/python2Action/Dockerfile) |
-| `openwhisk/sdk/docker/Dockerfile`                        | Simple docker file without creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/sdk/docker/Dockerfile) |
-| `openwhisk/tests/dat/apigw/testswaggerdoc*`                        | JSON files as test input data. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/apigw/testswaggerdoc2) |
-| `openwhisk/tests/dat/actions/empty.js`                        | Empty file. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) |
-| `gradlew.bat` and `gradlew`                     | Generated by Gradle wrapper. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/gradlew.bat) |
-| Travis Config. (`.travis.yml`) | **TBD** - Should we add ASF header? |
+| | Ansible Configuration Files (`*.cfg`, `*.ini`) | Configuration files. Not much creativity.<br/>Examples: [ incubator-openwhisk/ansible/ansible.cfg](https://github.com/apache/incubator-openwhisk/blob/master/ansible/ansible.cfg), [incubator-openwhisk/ansible/files/package-versions..ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/files/package-versions.ini) |
+| | Scala Properties (`*.properties`) | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/scala.properties) |
+| | `group_vars/all`                                         | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/group_vars/all) |
+| | `hosts`                                                  | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/hosts) |
+| | `dockerhub.groovy`                                       | Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/jenkins/apache/dockerhub.groovy) |
+| | `openwhisk/actionRuntimes/*/Dockerfile`                  | Simple docker file without creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/python2Action/Dockerfile) |
+| | `openwhisk/sdk/docker/Dockerfile`                        | Simple docker file without creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/sdk/docker/Dockerfile) |
+| | `openwhisk/tests/dat/apigw/testswaggerdoc*`                        | JSON files as test input data. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/apigw/testswaggerdoc2) |
+| | `openwhisk/tests/dat/actions/empty.js`                        | Empty file. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) |
+| | `gradlew.bat` and `gradlew`                     | Generated by Gradle wrapper. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/gradlew.bat) |
+| | Travis Config. (`.travis.yml`) | **TBD** - Should we add ASF header? |
 
 
 # Known exclusions
