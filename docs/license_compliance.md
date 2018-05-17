@@ -50,12 +50,12 @@ In addition, the recommended type of approved ASF license header (i.e., "full" o
 | File type | ASF Header Type | Rationale |
 | :--- | :--- | :--- |
 | Source Code (e.g., `*.scala`, `*.go`, `*.java`, `*.py`, etc.) | Full | Source code |
+| Action Functions (source) (e.g., `.js`, `.py`, `.swift`, etc, particularly under `tests/dat` folder.) | Mini | Source code. Use "Mini" header as best practice for performance reasons. |
 | Groovy source code (`*.groovy`) | Full | Source code |
 | Documentation (e.g., `*.md`) | Full | Intellectual property |
 | Web Content (e.g., `*.html`, `.css`) | Full | Source code |
 | Scala Configurations (`*.conf`) | Full | Scala (Java)  configuration files may contain code or interfaces. |
-| Action Functions (source) (e.g., `.js`, `.py`, `.swift`, etc, particularly under `tests/dat` folder.) | Mini | Source code. Use "Mini" header as best practice for performance reasons. |
-| Makefile | Full | May contain functional code |
+| Makefile | Full | May contain functional (script) code |
 | Docker image build file (`dockerfile`) | Mini | May contain functional (script) code |
 | Script files (`*.sh`) | Mini | May contain functional (script) code |
 | YAML files (`*.yaml`, `*.yml`) | Mini | |
