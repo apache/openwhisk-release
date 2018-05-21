@@ -56,12 +56,12 @@ In addition, the recommended type of approved ASF license header (i.e., "full" o
 | Web Content (e.g., `*.html`, `.css`) | Full | Source code |
 | Scala Configurations (`*.conf`) | Full | Scala (Java)  configuration files may contain code or interfaces. |
 | Makefile | Full | May contain functional (script) code. |
-| Gradle build files (`build.gradle`) | Full |  May contain functional code (e.g., Groovy, Kotlin). |
+| Gradle build files (`build.gradle`, `*.gradle`) | Full |  May contain functional code (e.g., Groovy, Kotlin). |
 | Gradle settings files (`settings.gradle`) | Full | May ccontain functional *script) code. |
 | `docker.gradle` | Full | build script to generate docker image using Gradle. |
 | Docker image build file (`dockerfile`) | Mini | May contain functional (script) code. |
 | Script files (`*.sh`) | Mini | May contain functional (script) code. |
-| YAML files (`*.yaml`, `*.yml`) | Mini | May contain functional code. |
+| YAML files (`*.yaml`, `*.yml`) | Mini | May contain functional code.<br/>Note: Includes (`.travis.yml`)|
 | XML files (`*.xml`) | Mini | May contain functional code. |
 
 
@@ -94,7 +94,7 @@ In accordance with Apache LICENSE policies, the table below lists general exclus
 | | Kubernetes Configurations (e.g., `*.env`) | Configuration file. Not much creativity.<br/>Example: [incubator-openwhisk//ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) |
 | | PyDev configuration files (`.pydevproject`) | Not much creativity |
 | | Scala Properties (`*.properties`) | Configuration file. Not much creativity. See a sample [here](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/scala.properties) |
-| | Travis Config. (`.travis.yml`) | **TBD** - Should we add ASF header? |
+| | Privacy Enhanced Mail (PEM) files (`*.pem`) | Contains base64-encoded x509 keys. |
 
 
 # Known exclusions
