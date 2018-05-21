@@ -49,17 +49,19 @@ In addition, the recommended type of approved ASF license header (i.e., "full" o
 
 | File type | ASF Header Type | Rationale |
 | :--- | :--- | :--- |
-| Source code (e.g., `*.scala`, `*.go`, `*.java`, `*.py`, etc.) | Full | Source code |
+| Source code (e.g., `*.scala`, `*.go`, `*.java`, `*.py`, etc.) | Full | Source code. |
 | Action functions (source) (e.g., `.js`, `.py`, `.swift`, etc, particularly under `tests/dat` folder.) | Mini | Source code</br>Use "Mini" header as best practice for performance reasons. |
 | Docker image build file (`dockerfile`) | Mini | May contain functional (script) code. |
-| Documentation (e.g., `*.md`) | Full | Intellectual property |
+| Documentation (e.g., `*.md`) | Full | Intellectual property. |
 | Gradle files (`build.gradle`, `*.gradle`) | Full |  May contain functional scripts and code (e.g., Groovy, Kotlin).</br>Includes build (`build.gradle`) and settings (`settings.gradle`)files. |
-| Gradle properties files (`*.properties`) | Mini | Project convention |
-| Groovy code (`*.groovy`) | Full | Source code |
+| Gradle properties files (`*.properties`) | Mini | Project convention. |
+| Groovy code (`*.groovy`) | Full | Source code. |
 | Makefile | Full | May contain functional (script) code. |
 | Scala Configurations (`*.conf`) | Full | Scala (Java)  configuration files may contain code or interfaces. |
+| Scala Properties (`*.properties`) | Mini | Project convention.</br>Example: [incubator-openwhisk/blob/master/tools/eclipse/scala.properties](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/scala.properties) |
 | Script files (`*.sh`) | Mini | May contain functional (script) code. |
-| Web Content (e.g., `*.html`, `.css`) | Full | Source code |
+| Vagrantfile configuration file (`Vagrantfile`)| Full | Project convention. |
+| Web Content (e.g., `*.html`, `.css`) | Full | Source code. |
 | XML files (`*.xml`) | Mini | May contain functional code. |
 | YAML files (`*.yaml`, `*.yml`) | Mini | May contain functional code.<br/>Note: Includes (`.travis.yml`)|
 
@@ -93,7 +95,7 @@ In accordance with Apache LICENSE policies, the table below lists general exclus
 | OAPI | Open API (Swagger) documents | JSON files describing API input data.</br>Example: [incubator-openwhisk/blob/master/tests/dat/apigw/testswaggerdoc2](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/apigw/testswaggerdoc2) for test input data |
 | PEM | Privacy Enhanced Mail (PEM) files (`*.pem`) | Contains generated, base64-encoded x509 keys.</br>Example: [incubator-openwhisk/ansible/roles/nginx/files/openwhisk-server-key.pem](https://github.com/apache/incubator-openwhisk/blob/master/ansible/roles/nginx/files/openwhisk-server-key.pem)|
 | PYDEV | PyDev configuration files (`.pydevproject`) | Not much creativity |
-| SCALA.1 | Scala Properties (`*.properties`) | Configuration file. Not much creativity.</br>Example: [incubator-openwhisk/blob/master/tools/eclipse/scala.properties](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/scala.properties) |
+| IGNORE | Tooling "ignore" files (e.g., `.gitignore`, `.dockerignore`) | Not included in source release. |
 
 
 # Known exclusions
@@ -150,8 +152,6 @@ For convenience, the following table provides links to each project repository's
 |          | [bin/wskdev](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskdev) | Generated, symbolic link |
 |          | [common/scala/.dockerignore]() |  |
 |          | [common/scala/src/main/resources/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/common/scala/src/main/resources/logback.xml) | Configuration file in XML format. Not much creativity. |
-|          | [core/controller/.dockerignore]() |  |
-|          | [core/invoker/.dockerignore]() |  |
 |          | [gradle/wrapper/gradle-wrapper.jar]() |  |
 |          | [gradle/wrapper/gradle-wrapper.properties]() |  |
 |          | [gradlew.bat]() |  |
@@ -174,28 +174,22 @@ For convenience, the following table provides links to each project repository's
 |          | [tests/dat/actions/sleep.jar]() |  |
 |          | [tests/dat/actions/unicode.jar]() |  |
 |          | [tests/dat/actions/unicode/build.gradle]() | **FIX!!!** |
-|          | [tests/dat/actions/validInput1.json]() |  |
-|          | [tests/dat/actions/validInput2.json]() |  |
-|          | [tests/dat/actions/word_count.json]() |  |
+|          | [tests/dat/actions/validInput1.json]() | JSON |
+|          | [tests/dat/actions/validInput2.json]() | JSON |
+|          | [tests/dat/actions/word_count.json]() | JSON |
 |          | [tests/dat/actions/zippedaction.zip]() |  |
-|          | [tests/dat/apigw/apigw_path_param_support_test_invalidActionType.json]() |  |
-|          | [tests/dat/apigw/apigw_path_param_support_test_invalidParamName1.json]() |  |
-|          | [tests/dat/apigw/apigw_path_param_support_test_invalidParamName2.json]() |  |
-|          | [tests/dat/apigw/apigw_path_param_support_test_invalidTargetUrl.json]() |  |
-|          | [tests/dat/apigw/apigw_path_param_support_test_withPathParameters1.json]() |  |
-|          | [tests/dat/apigw/apigw_path_param_support_test_withPathParameters2.json]() |  |
-|          | [tests/dat/apigw/endpoints.without.action.swagger.json]() | |
-|          | [tests/dat/apigw/testswaggerdoc1]() | |
-|          | [tests/dat/apigw/testswaggerdoc2]() | |
-|          | [tests/dat/apigw/testswaggerdocinvalid]() | |
-|          | [tests/dat/blackbox/badaction/build.gradle]() | |
-|          | [tests/dat/blackbox/badproxy/build.gradle]() | |
-|          | [tests/src/test/resources/application.conf.j2]() | |
-|          | [tools/dev/build.gradle]() | |
-|          | [tools/dev/src/main/groovy/couchdbViews.groovy]() | |
+|          | [tests/dat/apigw/apigw_path_param_support_test_invalidActionType.json]() | JSON |
+|          | [tests/dat/apigw/apigw_path_param_support_test_invalidParamName1.json]() | JSON |
+|          | [tests/dat/apigw/apigw_path_param_support_test_invalidParamName2.json]() | JSON |
+|          | [tests/dat/apigw/apigw_path_param_support_test_invalidTargetUrl.json]() | JSON |
+|          | [tests/dat/apigw/apigw_path_param_support_test_withPathParameters1.json]() | JSON |
+|          | [tests/dat/apigw/apigw_path_param_support_test_withPathParameters2.json]() | JSON |
+|          | [tests/dat/apigw/endpoints.without.action.swagger.json]() | JSON |
+|          | [tests/dat/apigw/testswaggerdoc1]() | OAPI. Test data. |
+|          | [tests/dat/apigw/testswaggerdoc2]() | OAPI. Test data. |
+|          | [tests/dat/apigw/testswaggerdocinvalid]() OAPI. Test data. | |
+|          | [tests/src/test/resources/application.conf.j2]() | J2 |
 |          | [tools/eclipse/java.xml](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) | Configuration file in XML format. Not much creativity. |
-|          | [tools/eclipse/scala.properties]() | |
-|          | [tools/jenkins/apache/dockerhub.groovy]() | |
 |          | [tools/vagrant/hello.cmd]() | |
 |          | [tools/vagrant/Vagrantfile]() | |
 | [incubator-openwhisk-apigateway](https://github.com/apache/incubator-openwhisk-apigateway) | [tests/scripts/lua/management/examples](https://github.com/apache/incubator-openwhisk-apigateway/tree/master/tests/scripts/lua/management/examples) | JSON data files |
