@@ -119,8 +119,7 @@ For convenience, the following table provides links to each project repository's
 
 | Repository | Exclusion | Rationale [TAG] |
 |:---|:---|:---|
-| [incubator-openwhisk](https://github.com/apache/incubator-openwhisk) |||
-|          | [ansible/ansible.cfg]() | ANS.2 |
+| [incubator-openwhisk](https://github.com/apache/incubator-openwhisk) | [ansible/ansible.cfg]() | ANS.2 |
 |          | [ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) | **TBD** |
 |          | [ansible/environments/distributed/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/group_vars/all) | ANS.3 |
 |          | [ansible/environments/distributed/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/hosts) | ANS.4 |
