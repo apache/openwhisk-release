@@ -57,7 +57,7 @@ In addition, the recommended type of approved ASF license header (i.e., "full" o
 | Scala Configurations (`*.conf`) | Full | Scala (Java)  configuration files may contain code or interfaces. |
 | Makefile | Full | May contain functional (script) code. |
 | Gradle files (`build.gradle`, `*.gradle`) | Full |  May contain functional code (e.g., Groovy, Kotlin).</br>Includes build (`build.gradle`) and settings (`settings.gradle`)files. |
-| Gradle properties files (`*.properties`) | Mini |  |
+| Gradle properties files (`*.properties`) | Mini | Project convention |
 | `docker.gradle` | Full | build script to generate docker image using Gradle. |
 | Docker image build file (`dockerfile`) | Mini | May contain functional (script) code. |
 | Script files (`*.sh`) | Mini | May contain functional (script) code. |
@@ -80,7 +80,7 @@ In accordance with Apache LICENSE policies, the table below lists general exclus
 | | Ansible Configuration Files (`*.cfg`) | Configuration files. Not much creativity.<br/>Example: [incubator-openwhisk/ansible/ansible.cfg](https://github.com/apache/incubator-openwhisk/blob/master/ansible/ansible.cfg) |
 | | Ansible Group Variable (YAML) files (`group_vars/all`) | Configuration file. Example [ansible/environments/local/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/group_vars/all) |
 | | Ansible hosts files (`hosts`) | Not much creativity. Example: [incubator-openwhisk/ansible/environments/distributed/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/hosts) |
-| | Binary Image files (e.g., `.png`, `.ico`) | |
+| | Binary Image files (e.g., `.png`, `.ico`) | Binary files. |
 | | Empty (zero-length) test files | Empty test data file. Example: [incubator-openwhisk/tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) |
 | | Git configuration (`.gitattributes`, `.gitignore`) | Configuration file. Not much creativity  |
 | | Git tracking (`.git` subdirectory) | Git file tracking. Not part of project source. |
