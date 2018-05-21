@@ -168,7 +168,6 @@ For convenience, the following table provides links to each project repository's
 |          | [tests/dat/actions/helloJava.jar]() |  |
 |          | [tests/dat/actions/helloJavaDefaultPackage.jar]() |  |
 |          | [tests/dat/actions/helloSwift311.zip]() |  |
-
 |          | [tests/dat/actions/multiSwift.zip]() |  |
 |          | [tests/dat/actions/python.zip]() |  |
 |          | [tests/dat/actions/python2_virtualenv.zip]() |  |
