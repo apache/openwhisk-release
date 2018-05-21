@@ -21,131 +21,109 @@
 
 For convenience, the following table provides links to each project repository's LICENSE and NOTICE files, as well as links to tracking issues where we discuss exclusions, exceptions and open issues:
 
-<table border="1" cellpadding="8">
-<tbody>
-<tr align="left" valign="top">
-<th width="250">Repository</th>
-<th width="320">LICENSE link (Tracking issue)</th>
-<th width="320">NOTICE link (Tracking issue)</th>
-</tr>
-<!-- ====== openwhisk ===================================================  -->
-<tr align="left" valign="top">
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk">incubator-openwhisk</a></p>
-</td>
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk/blob/master/LICENSE.txt">LICENSE </a>(<a href="https://github.com/apache/incubator-openwhisk-release/issues/93">#93</a>)</p>
-</td>
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk/blob/master/NOTICE.txt">NOTICE </a>(<a href="https://github.com/apache/incubator-openwhisk-release/issues/75">#75</a>)</p>
-<p>&nbsp;</p>
-</td>
-</tr>
-<!-- ====== openwhis-catalog ===============================================  -->
-<tr align="left" valign="top">
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-catalog">incubator-openwhisk-catalog</a></p>
-</td>
-<td>
-<p>&nbsp;<a href="https://github.com/apache/incubator-openwhisk-catalog/blob/master/LICENSE.txt">LICENSE </a>(<a href="https://github.com/apache/incubator-openwhisk-release/issues/96">#96</a>)</p>
-</td>
-<td>
-<p>&nbsp;<a href="https://github.com/apache/incubator-openwhisk-catalog/blob/master/NOTICE.txt">NOTICE </a>(<a href="https://github.com/apache/incubator-openwhisk-release/issues/79">#79</a>)</p>
-</td>
-</tr>
-<!-- ====== openwhisk-apigateway ===============================================  -->
-<tr align="left" valign="top">
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-apigateway">incubator-openwhisk-apigateway</a></p>
-</td>
-<td>
-<p>&nbsp;<a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/LICENSE.txt">LICENSE </a>(<a href="https://github.com/apache/incubator-openwhisk-release/issues/95">#95</a>)</p>
-</td>
-<td>
-<p>&nbsp;<a href="https://github.com/apache/incubator-openwhisk-apigateway/blob/master/NOTICE.txt">NOTICE </a>(<a href="https://github.com/apache/incubator-openwhisk-release/issues/78">#78</a>)</p>
-</td>
-</tr>
-<!-- ====== openwhisk-cli ===============================================  -->
-<tr align="left" valign="top">
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-cli">incubator-openwhisk-cli</a></p>
-</td>
-<td>&nbsp;<a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/LICENSE.txt">LICENSE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/97">#97</a>)</td>
-<td>&nbsp;<a href="https://github.com/apache/incubator-openwhisk-cli/blob/master/NOTICE.txt">NOTICE </a>(<a href="https://github.com/apache/incubator-openwhisk-release/issues/76">#76</a>)</td>
-</tr>
-<!-- ====== openwhisk-client-go ===============================================  -->
-<tr align="left" valign="top">
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-client-go">incubator-openwhisk-client-go</a></p>
-</td>
-<td>&nbsp;<a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/LICENSE.txt">LICENSE </a>(<a href="https://github.com/apache/incubator-openwhisk-release/issues/98">#98</a>)</td>
-<td>&nbsp;<a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/NOTICE.txt">NOTICE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/77">#77</a>)</td>
-</tr>
-<!-- ====== openwhisk-wskdeploy ===============================================  -->
-<tr align="left" valign="top">
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-wskdeploy">incubator-openwhisk-wskdeploy</a></p>
-</td>
-<td>&nbsp;<a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/LICENSE.txt">LICENSE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/94">#94</a>)</td>
-<td>&nbsp;<a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/NOTICE.txt">NOTICE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/86">#86</a>)</td>
-</tr>
-<!-- ====== openwhisk-runtime-nodejs ===============================================  -->
-<tr align="left" valign="top">
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs">incubator-openwhisk-runtime-nodejs</a></p>
-</td>
-<td>&nbsp;<a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/LICENSE.txt">LICENSE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/99">#99</a>)</td>
-<td>&nbsp;<a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/NOTICE.txt">NOTICE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/82">#82</a>)</td>
-</tr>
-<!-- ====== openwhisk-runtime-swift ===============================================  -->
-<tr align="left" valign="top">
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-swift"> incubator-openwhisk-runtime-swift</a></td>
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/LICENSE.txt">LICENSE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/100">#100</a>)</p>
-</td>
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/NOTICE.txt">NOTICE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/85">#85</a>)</p>
-</td>
-</tr>
-<!-- ====== openwhisk-runtime-docker ===============================================  -->
-<tr align="left" valign="top">
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-docker">incubator-openwhisk-runtime-docker</a></td>
-<td>
-<p>&nbsp;<a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/LICENSE.txt">LICENSE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/101">#101</a>)</p>
-</td>
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/NOTICE.txt">NOTICE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/80">#80</a>)</p>
-</td>
-</tr>
-<!-- ====== openwhisk-runtime-java ===============================================  -->
-<tr align="left" valign="top">
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-java">incubator-openwhisk-runtime-java</a></td>
-<td>
-<p>&nbsp;<a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/LICENSE.txt">LICENSE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/102">#102</a>)</p>
-</td>
-<td>
-<p>&nbsp;<a href="https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/NOTICE.txt">NOTICE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/81">#81</a>)</p>
-</td>
-</tr>
-<!-- ====== openwhisk-runtime-php ===============================================  -->
-<tr align="left" valign="top">
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-php">incubator-openwhisk-runtime-php</a></td>
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/LICENSE.txt">LICENSE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/103">#103</a>)</p>
-</td>
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/NOTICE.txt">NOTICE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/83">#83</a>)</p>
-</td>
-</tr>
-<!-- ====== openwhisk-runtime-python ===============================================  -->
-<tr align="left" valign="top">
-<td><a href="https://github.com/apache/incubator-openwhisk-runtime-python">incubator-openwhisk-runtime-python</a></td>
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/LICENSE.txt">LICENSE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/104">#104</a>)</p>
-</td>
-<td>
-<p><a href="https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/NOTICE.txt">NOTICE</a> (<a href="https://github.com/apache/incubator-openwhisk-release/issues/84">#84</a>)</p>
-</td>
-</tr>
-</tbody>
-</table>
+<For convenience, the following table provides links to each project repository's LICENSE and NOTICE files, as well as an overview of notable software dependencies (non-canonical) and license scanning exclusions.
+
+| Repository | Exclusion | Rationale [TAG] |
+|:---|:---|:---|
+| [incubator-openwhisk](https://github.com/apache/incubator-openwhisk) | [ansible/ansible.cfg]() | ANS.2 |
+|          | [ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) | **TBD** |
+|          | [ansible/environments/distributed/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/group_vars/all) | ANS.3 |
+|          | [ansible/environments/distributed/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/hosts) | ANS.4 |
+|          | [ansible/environments/docker-machine/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/docker-machine/group_vars/all) | ANS.3 **TBD** We added a header to this one!!! |
+|          | [ansible/environments/docker-machine/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/docker-machine/hosts.j2.ini) | **TBD** |
+|          | [ansible/environments/local/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/group_vars/all) | ANS.3 **TBD** We added a header to this one!!! |
+|          | [ansible/environments/local/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/hosts.j2.ini) | **TBD** |
+|          | [ansible/environments/vagrant/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/vagrant/group_vars/all) | ANS.3 **TBD** We added a header to this one!!! |
+|          | [ansible/environments/vagrant/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/vagrant/hosts) | ANS.4 |
+|          | [ansible/files/activations_design_document_for_activations_db.json]() | JSON |
+|          | [ansible/files/auth.guest]() | **TBD** |
+|          | [ansible/files/auth.whisk.system]() |  **TBD** |
+|          | [ansible/files/auth_index.json]() | JSON |
+|          | [ansible/files/filter_design_document.json]() | JSON |
+|          | [ansible/files/logCleanup_design_document_for_activations_db.json]() | JSON |
+|          | [ansible/files/namespace_throttlings_design_document_for_subjects_db.json]() | JSON |
+|          | [ansible/files/package-versions.ini]() |  **TBD** |
+|          | [ansible/files/runtimes.json]() | JSON |
+|          | [ansible/files/whisks_design_document_for_activations_db_filters_v2.1.0.json]() | JSON |
+|          | [ansible/files/whisks_design_document_for_activations_db_v2.1.0.json]() | JSON |
+|          | [ansible/files/whisks_design_document_for_entities_db_v2.1.0.json]() | JSON |
+|          | [ansible/group_vars/all]() | ANS.3 |
+|          | [ansible/roles/docker/templates/docker.j2]() | J2 |
+|          | [ansible/roles/nginx/files/openwhisk-server-key.pem]() | PEM |
+|          | [ansible/roles/nginx/templates/nginx.conf.j2]() | J2 |
+|          | [ansible/roles/registry/templates/recycle-registry.py.j2]() | J2 |
+|          | [ansible/templates/db_local.ini.j2]() | J2 |
+|          | [ansible/templates/jmxremote.access.j2]() | J2 |
+|          | [ansible/templates/jmxremote.password.j2]() | J2 |
+|          | [ansible/templates/whisk.properties.j2]() | J2 |
+|          | [bin/wskadmin](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskadmin) | Generated, symbolic link |
+|          | [bin/wskdev](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskdev) | Generated, symbolic link |
+|          | [common/scala/src/main/resources/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/common/scala/src/main/resources/logback.xml) | Configuration file in XML format. Not much creativity. |
+|          | [gradle/wrapper/gradle-wrapper.jar]() |  |
+|          | [gradle/wrapper/gradle-wrapper.properties]() |  |
+|          | [gradlew.bat]() |  |
+|          | [gradlew]() |  |
+|          | [performance/gatling_tests/src/gatling/resources/data/javaAction.jar]() |  |
+|          | [performance/wrk_tests/post.lua](https://github.com/apache/incubator-openwhisk/blob/master/performance/wrk_tests/post.lua) | Perf. test file. Not much creativity. |
+|          | [tests/dat/actions/blackbox.zip]() |  |
+|          | [tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) | Empty (zero-length) file for testing. Not much creativity. |
+|          | [tests/dat/actions/helloJava.jar]() |  |
+|          | [tests/dat/actions/helloJavaDefaultPackage.jar]() |  |
+|          | [tests/dat/actions/helloSwift311.zip]() |  |
+|          | [tests/dat/actions/multiSwift.zip]() |  |
+|          | [tests/dat/actions/python.zip]() |  |
+|          | [tests/dat/actions/python2_virtualenv.zip]() |  |
+|          | [tests/dat/actions/python3_virtualenv.zip]() |  |
+|          | [tests/dat/actions/python_virtualenv_dir.zip]() |  |
+|          | [tests/dat/actions/python_virtualenv_name.zip]() |  |
+|          | [tests/dat/actions/seq_echo_word_count.json]() |  |
+|          | [tests/dat/actions/seq_type_2.json]() | JSON |
+|          | [tests/dat/actions/sleep.jar]() |  |
+|          | [tests/dat/actions/unicode.jar]() |  |
+|          | [tests/dat/actions/unicode/build.gradle]() | **FIX!!!** |
+|          | [tests/dat/actions/validInput1.json]() | JSON |
+|          | [tests/dat/actions/validInput2.json]() | JSON |
+|          | [tests/dat/actions/word_count.json]() | JSON |
+|          | [tests/dat/actions/zippedaction.zip]() |  |
+|          | [tests/dat/apigw/apigw_path_param_support_test_invalidActionType.json]() | JSON |
+|          | [tests/dat/apigw/apigw_path_param_support_test_invalidParamName1.json]() | JSON |
+|          | [tests/dat/apigw/apigw_path_param_support_test_invalidParamName2.json]() | JSON |
+|          | [tests/dat/apigw/apigw_path_param_support_test_invalidTargetUrl.json]() | JSON |
+|          | [tests/dat/apigw/apigw_path_param_support_test_withPathParameters1.json]() | JSON |
+|          | [tests/dat/apigw/apigw_path_param_support_test_withPathParameters2.json]() | JSON |
+|          | [tests/dat/apigw/endpoints.without.action.swagger.json]() | JSON |
+|          | [tests/dat/apigw/testswaggerdoc1]() | OAPI. Test data. |
+|          | [tests/dat/apigw/testswaggerdoc2]() | OAPI. Test data. |
+|          | [tests/dat/apigw/testswaggerdocinvalid]() | OAPI. Test data. |
+|          | [tests/src/test/resources/application.conf.j2]() | J2 |
+|          | [tools/eclipse/java.xml](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) | Configuration file in XML format. Not much creativity. |
+| [incubator-openwhisk-apigateway](https://github.com/apache/incubator-openwhisk-apigateway) | [tests/scripts/lua/management/examples](https://github.com/apache/incubator-openwhisk-apigateway/tree/master/tests/scripts/lua/management/examples) | JSON |
+| [incubator-openwhisk-catalog](https://github.com/apache/incubator-openwhisk-catalog) | _None_|  |
+| [incubator-openwhisk-cli](https://github.com/apache/incubator-openwhisk-cli) | _None_ | _test files?_ |
+| [incubator-openwhisk-client-go](https://github.com/apache/incubator-openwhisk-client-go) | **TBD** | _?_ |
+|          | wski18n/i18n_resources.go | Generated, translation JSON data file. |
+|          | wski18n/README.md | **FIX!!!** |
+|          | wski18n/resources | JSON data files |
+| [incubator-openwhisk-runtime-docker](https://github.com/apache/incubator-openwhisk-runtime-docker) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
+|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
+|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
+| [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java) | tests/src/test/resources/application.conf   | Config. file, Not much creativity |
+|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
+|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
+| [incubator-openwhisk-runtime-nodejs](https://github.com/apache/incubator-openwhisk-runtime-nodejs) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
+|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
+|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
+| [incubator-openwhisk-runtime-php](https://github.com/apache/incubator-openwhisk-runtime-php) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
+|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
+|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
+| [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
+|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
+|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
+| [incubator-openwhisk-runtime-swift](https://github.com/apache/incubator-openwhisk-runtime-swift)  | tests/src/test/resources/application.conf | Config. file, Not much creativity |
+|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
+|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
+|               | [SwiftyRequest/Package.resolved](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/tests/dat/actions/SwiftyRequest/Package.resolved) | |
+| [incubator-openwhisk-wskdeploy](https://github.com/apache/incubator-openwhisk-wskdeploy) | wski18n | **FIX!!!** Too broad, lots of .go files that SHOULD be scanned |
+|          | wski18n/i18n_resources.go | Generated, translation JSON data file. |
+|          | wski18n/README.md | **FIX!!!** |
+|          | wski18n/resources | JSON data files |

@@ -28,18 +28,16 @@ This document describes how the Apache OpenWhisk project's source code and relea
 ## Policies and rules
 
 The Apache OpenWhisk project repositories MUST follow [Apache Release Policy](http://www.apache.org/legal/release-policy.html#licensing). every artifact distributed MUST contain only appropriately licensed code per Apache Licensing Policy. It includes two check points:
-- Each package MUST provide a LICENSE file and a NOTICE file.
+- Each project repository MUST provide a LICENSE file and a NOTICE file.
 - With a few exceptions, source files consisting of works submitted directly to the ASF by the copyright owner or owner's agent must contain the appropriate ASF license header. Here are the exceptions:
   + Files without any degree of creativity don't require a license header.
   + Sometimes shorter form of ASF license header can be used if the recommended Apache source header is not appropriate.
 
 ## Project specific rules
 
-In accordance with Apache LICENSE policies, the following tables lists the specific files, by type, that the community has discussed and have agreed MUST have a license or can be exlcuded.
+In accordance with Apache LICENSE policies, the following tables lists the specific files, by type, that the community has discussed and have agreed MUST have an ASF approved Apache 2 license or can be excluded for a valid approved reason.
 
 **Note**: These lists are not comprehensive and are intended to be informative only. Each project repository's respective LICENSE and NOTICE files should be considered the canonical source for their specific licensing declarations.
-
-For convenience, we provide a summary listing of all project LICENSE and NOTICE files along with notable dependencies in  from this repository's [Apache OpenWhisk LICENSE and NOTICE Summary](project_licenses.md#apache-openWhisk-license-and-notice-summary) file.
 
 ### Project ASF License header policy
 
@@ -100,7 +98,6 @@ In accordance with Apache LICENSE policies, the table below lists general exclus
 | TEST.JAR | Java Application Resource (JAR) (`*.jar`) | Binary JAR files used for testing (Actions). |
 | TEST.ZIP | ZIP compressed archive files (`*.zip`) | Binary ZIP files used for testing (Actions). |
 
-
 # Known exclusions
 
 ## License scanning exclusions
@@ -111,120 +108,8 @@ In accordance with Apache policy, these utilities exclude specific files from th
 - scanCode: [ASF-Release.cfg](https://github.com/apache/incubator-openwhisk-utilities/blob/master/scancode/ASF-Release.cfg)
 - Apache RAT: [pom.xml](https://github.com/apache/incubator-openwhisk-release/blob/master/tools/lib/pom.xml) (Apache Rat)
 
-## Bundled and non-Bundled dependencies
-
-In accordance with Apache policy, each of the Apache OpenWhisk project's repositories respective LICENSE and NOTICE files contain the full, canonical listing of all dependent software licenses.
-
-For convenience, the following table provides links to each project repository's LICENSE and NOTICE files, as well as an overview of notable software dependencies (non-canonical) and license scanning exclusions.
-
-| Repository | Exclusion | Rationale [TAG] |
-|:---|:---|:---|
-| [incubator-openwhisk](https://github.com/apache/incubator-openwhisk) | [ansible/ansible.cfg]() | ANS.2 |
-|          | [ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) | **TBD** |
-|          | [ansible/environments/distributed/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/group_vars/all) | ANS.3 |
-|          | [ansible/environments/distributed/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/hosts) | ANS.4 |
-|          | [ansible/environments/docker-machine/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/docker-machine/group_vars/all) | ANS.3 **TBD** We added a header to this one!!! |
-|          | [ansible/environments/docker-machine/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/docker-machine/hosts.j2.ini) | **TBD** |
-|          | [ansible/environments/local/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/group_vars/all) | ANS.3 **TBD** We added a header to this one!!! |
-|          | [ansible/environments/local/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/hosts.j2.ini) | **TBD** |
-|          | [ansible/environments/vagrant/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/vagrant/group_vars/all) | ANS.3 **TBD** We added a header to this one!!! |
-|          | [ansible/environments/vagrant/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/vagrant/hosts) | ANS.4 |
-|          | [ansible/files/activations_design_document_for_activations_db.json]() | JSON |
-|          | [ansible/files/auth.guest]() | **TBD** |
-|          | [ansible/files/auth.whisk.system]() |  **TBD** |
-|          | [ansible/files/auth_index.json]() | JSON |
-|          | [ansible/files/filter_design_document.json]() | JSON |
-|          | [ansible/files/logCleanup_design_document_for_activations_db.json]() | JSON |
-|          | [ansible/files/namespace_throttlings_design_document_for_subjects_db.json]() | JSON |
-|          | [ansible/files/package-versions.ini]() |  **TBD** |
-|          | [ansible/files/runtimes.json]() | JSON |
-|          | [ansible/files/whisks_design_document_for_activations_db_filters_v2.1.0.json]() | JSON |
-|          | [ansible/files/whisks_design_document_for_activations_db_v2.1.0.json]() | JSON |
-|          | [ansible/files/whisks_design_document_for_entities_db_v2.1.0.json]() | JSON |
-|          | [ansible/group_vars/all]() | ANS.3 |
-|          | [ansible/roles/docker/templates/docker.j2]() | J2 |
-|          | [ansible/roles/nginx/files/openwhisk-server-key.pem]() | PEM |
-|          | [ansible/roles/nginx/templates/nginx.conf.j2]() | J2 |
-|          | [ansible/roles/registry/templates/recycle-registry.py.j2]() | J2 |
-|          | [ansible/templates/db_local.ini.j2]() | J2 |
-|          | [ansible/templates/jmxremote.access.j2]() | J2 |
-|          | [ansible/templates/jmxremote.password.j2]() | J2 |
-|          | [ansible/templates/whisk.properties.j2]() | J2 |
-|          | [bin/wskadmin](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskadmin) | Generated, symbolic link |
-|          | [bin/wskdev](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskdev) | Generated, symbolic link |
-|          | [common/scala/src/main/resources/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/common/scala/src/main/resources/logback.xml) | Configuration file in XML format. Not much creativity. |
-|          | [gradle/wrapper/gradle-wrapper.jar]() |  |
-|          | [gradle/wrapper/gradle-wrapper.properties]() |  |
-|          | [gradlew.bat]() |  |
-|          | [gradlew]() |  |
-|          | [performance/gatling_tests/src/gatling/resources/data/javaAction.jar]() |  |
-|          | [performance/wrk_tests/post.lua](https://github.com/apache/incubator-openwhisk/blob/master/performance/wrk_tests/post.lua) | Perf. test file. Not much creativity. |
-|          | [tests/dat/actions/blackbox.zip]() |  |
-|          | [tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) | Empty (zero-length) file for testing. Not much creativity. |
-|          | [tests/dat/actions/helloJava.jar]() |  |
-|          | [tests/dat/actions/helloJavaDefaultPackage.jar]() |  |
-|          | [tests/dat/actions/helloSwift311.zip]() |  |
-|          | [tests/dat/actions/multiSwift.zip]() |  |
-|          | [tests/dat/actions/python.zip]() |  |
-|          | [tests/dat/actions/python2_virtualenv.zip]() |  |
-|          | [tests/dat/actions/python3_virtualenv.zip]() |  |
-|          | [tests/dat/actions/python_virtualenv_dir.zip]() |  |
-|          | [tests/dat/actions/python_virtualenv_name.zip]() |  |
-|          | [tests/dat/actions/seq_echo_word_count.json]() |  |
-|          | [tests/dat/actions/seq_type_2.json]() | JSON |
-|          | [tests/dat/actions/sleep.jar]() |  |
-|          | [tests/dat/actions/unicode.jar]() |  |
-|          | [tests/dat/actions/unicode/build.gradle]() | **FIX!!!** |
-|          | [tests/dat/actions/validInput1.json]() | JSON |
-|          | [tests/dat/actions/validInput2.json]() | JSON |
-|          | [tests/dat/actions/word_count.json]() | JSON |
-|          | [tests/dat/actions/zippedaction.zip]() |  |
-|          | [tests/dat/apigw/apigw_path_param_support_test_invalidActionType.json]() | JSON |
-|          | [tests/dat/apigw/apigw_path_param_support_test_invalidParamName1.json]() | JSON |
-|          | [tests/dat/apigw/apigw_path_param_support_test_invalidParamName2.json]() | JSON |
-|          | [tests/dat/apigw/apigw_path_param_support_test_invalidTargetUrl.json]() | JSON |
-|          | [tests/dat/apigw/apigw_path_param_support_test_withPathParameters1.json]() | JSON |
-|          | [tests/dat/apigw/apigw_path_param_support_test_withPathParameters2.json]() | JSON |
-|          | [tests/dat/apigw/endpoints.without.action.swagger.json]() | JSON |
-|          | [tests/dat/apigw/testswaggerdoc1]() | OAPI. Test data. |
-|          | [tests/dat/apigw/testswaggerdoc2]() | OAPI. Test data. |
-|          | [tests/dat/apigw/testswaggerdocinvalid]() | OAPI. Test data. |
-|          | [tests/src/test/resources/application.conf.j2]() | J2 |
-|          | [tools/eclipse/java.xml](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) | Configuration file in XML format. Not much creativity. |
-| [incubator-openwhisk-apigateway](https://github.com/apache/incubator-openwhisk-apigateway) | [tests/scripts/lua/management/examples](https://github.com/apache/incubator-openwhisk-apigateway/tree/master/tests/scripts/lua/management/examples) | JSON |
-| [incubator-openwhisk-catalog](https://github.com/apache/incubator-openwhisk-catalog) | _None_|  |
-| [incubator-openwhisk-cli](https://github.com/apache/incubator-openwhisk-cli) | _None_ | _test files?_ |
-| [incubator-openwhisk-client-go](https://github.com/apache/incubator-openwhisk-client-go) | **TBD** | _?_ |
-|          | wski18n/i18n_resources.go | Generated, translation JSON data file. |
-|          | wski18n/README.md | **FIX!!!** |
-|          | wski18n/resources | JSON data files |
-| [incubator-openwhisk-runtime-docker](https://github.com/apache/incubator-openwhisk-runtime-docker) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
-|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
-|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
-| [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java) | tests/src/test/resources/application.conf   | Config. file, Not much creativity |
-|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
-|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
-| [incubator-openwhisk-runtime-nodejs](https://github.com/apache/incubator-openwhisk-runtime-nodejs) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
-|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
-|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
-| [incubator-openwhisk-runtime-php](https://github.com/apache/incubator-openwhisk-runtime-php) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
-|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
-|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
-| [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
-|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
-|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
-| [incubator-openwhisk-runtime-swift](https://github.com/apache/incubator-openwhisk-runtime-swift)  | tests/src/test/resources/application.conf | Config. file, Not much creativity |
-|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
-|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
-|               | [SwiftyRequest/Package.resolved](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/tests/dat/actions/SwiftyRequest/Package.resolved) | |
-| [incubator-openwhisk-wskdeploy](https://github.com/apache/incubator-openwhisk-wskdeploy) | wski18n | **FIX!!!** Too broad, lots of .go files that SHOULD be scanned |
-|          | wski18n/i18n_resources.go | Generated, translation JSON data file. |
-|          | wski18n/README.md | **FIX!!!** |
-|          | wski18n/resources | JSON data files |
-
-
-#### Note
-- Tracking issues for all prokect LICENSE and NOTICE files exclusions/exceptions/TODOs can he found [license_exclusions.md](license_exclusions.md).
+### ASF License header exclusions
+The following page contains a non-comprehenisve listing of all project files, by repositiry that are known to not have ASF license headers along with the policy tag indicating the justification against the table above: [license_exclusions.md](license_exclusions.md)
 
 ## Enforcement and verification
 
