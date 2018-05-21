@@ -115,7 +115,6 @@ For convenience, the following table provides links to each project repository's
 | Repository | Exclusion | Rationale |
 |:---|:---|:---|
 | [incubator-openwhisk](https://github.com/apache/incubator-openwhisk) |||
-|          | [actionRuntimes/\<runtime name\>/build.gradle](https://github.com/apache/incubator-openwhisk/tree/master/actionRuntimes) | Including: [actionProxy](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/actionProxy/build.gradle), [javaAction](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/javaAction/build.gradle), [nodejs6Action](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/nodejs6Action/build.gradle), [nodejs8Action](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/nodejs8Action/build.gradle), [php7.1Action](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/php7.1Action/build.gradle), [python2Action](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/python2Action/build.gradle), [pythonAction](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/pythonAction/build.gradle), [swift3.1.1Action](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/swift3.1.1Action/build.gradle), [swift4.1Action](https://github.com/apache/incubator-openwhisk/blob/master/actionRuntimes/swift4.1Action/build.gradle) |
 |          | [ansible/ansible.cfg]() |  |
 |          | [ansible/environments/distributed/files/openstack/openstack.env]() |  |
 |          | [ansible/environments/distributed/group_vars/all]() |  |
@@ -154,28 +153,8 @@ For convenience, the following table provides links to each project repository's
 |          | [common/scala/build.gradle]() |  |
 |          | [common/scala/src/main/resources/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/common/scala/src/main/resources/logback.xml) | Configuration file in XML format. Not much creativity. |
 |          | [core/controller/.dockerignore]() |  |
-|          | [core/controller/build.gradle]() |  |
-|          | [core/controller/src/main/resources/apiv1swagger.json]() |  |
-|          | [core/controller/src/main/resources/infoswagger.json]() |  |
 |          | [core/invoker/.dockerignore]() |  |
 |          | [core/invoker/build.gradle]() |  |
-|          | [core/routemgmt/createApi/package.json]() |  |
-|          | [core/routemgmt/deleteApi/package.json]() |  |
-|          | [core/routemgmt/getApi/package.json]() |  |
-|          | [CREDITS.txt]() |  |
-|          | [docs/images/components_to_repos.png]() |  |
-|          | [docs/images/IoT_solution_architecture_example.png]() |  |
-|          | [docs/images/OpenWhisk.png]() |  |
-|          | [docs/images/OpenWhisk_flow_of_processing.draw.io.xml]() |  |
-|          | [docs/images/OpenWhisk_flow_of_processing.png]() |  |
-|          | [docs/images/whisk_icon_full-color_with_tm_128x128-300dpi.png]() |  |
-|          | [docs/images/whisk_icon_full-color_with_tm_210x138-300dpi.png]() |  |
-|          | [docs/images/whisk_icon_full-color_with_tm_64x64-300dpi.png]() |  |
-|          | [docs/images/whisk_icon_full_color_with_tm.psd]() |  |
-|          | [docs/images/whisk_icon_full_color_with_tm_100x100-300dpi.png]() |  |
-|          | [docs/images/whisk_icon_full_color_with_tm_100x100-96dpi.png]() |  |
-|          | [docs/images/whisk_icon_full_color_with_tm_200x200-300dpi.png]() |  |
-|          | [gradle/docker.gradle]() |  |
 |          | [gradle/wrapper/gradle-wrapper.jar]() |  |
 |          | [gradle/wrapper/gradle-wrapper.properties]() |  |
 |          | [gradlew.bat]() |  |
@@ -183,19 +162,13 @@ For convenience, the following table provides links to each project repository's
 |          | [performance/gatling_tests/build.gradle]() |  |
 |          | [performance/gatling_tests/src/gatling/resources/data/javaAction.jar]() |  |
 |          | [performance/wrk_tests/post.lua](https://github.com/apache/incubator-openwhisk/blob/master/performance/wrk_tests/post.lua) |  |
-|          | [sdk/docker/build.gradle]() |  |
-|          | [settings.gradle]() |  |
 |          | [tests/build.gradle]() |  |
 |          | [tests/dat/actions/blackbox.zip]() |  |
-|          | [tests/dat/actions/echo.json]() |  |
 |          | [tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) | Empty (zero-length) file for testing |
 |          | [tests/dat/actions/helloJava.jar]() |  |
 |          | [tests/dat/actions/helloJavaDefaultPackage.jar]() |  |
 |          | [tests/dat/actions/helloSwift311.zip]() |  |
-|          | [tests/dat/actions/invalidInput1.json]() |  |
-|          | [tests/dat/actions/invalidInput2.json]() |  |
-|          | [tests/dat/actions/invalidInput3.json]() |  |
-|          | [tests/dat/actions/invalidInput4.json]() |  |
+
 |          | [tests/dat/actions/multiSwift.zip]() |  |
 |          | [tests/dat/actions/python.zip]() |  |
 |          | [tests/dat/actions/python2_virtualenv.zip]() |  |
