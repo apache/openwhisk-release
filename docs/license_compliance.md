@@ -62,6 +62,7 @@ In addition, the recommended type of approved ASF license header (i.e., "full" o
 | Script files (`*.sh`) | Mini | May contain functional (script) code. |
 | Vagrantfile configuration file (`Vagrantfile`)| Full | Project convention. |
 | Web Content (e.g., `*.html`, `.css`) | Full | Source code. |
+| Windows Command file (`*.cmd`) | Mini | May contain functional code. |
 | XML files (`*.xml`) | Mini | May contain functional code. |
 | YAML files (`*.yaml`, `*.yml`) | Mini | May contain functional code.<br/>Note: Includes (`.travis.yml`)|
 
@@ -187,12 +188,10 @@ For convenience, the following table provides links to each project repository's
 |          | [tests/dat/apigw/endpoints.without.action.swagger.json]() | JSON |
 |          | [tests/dat/apigw/testswaggerdoc1]() | OAPI. Test data. |
 |          | [tests/dat/apigw/testswaggerdoc2]() | OAPI. Test data. |
-|          | [tests/dat/apigw/testswaggerdocinvalid]() OAPI. Test data. | |
+|          | [tests/dat/apigw/testswaggerdocinvalid]() | OAPI. Test data. |
 |          | [tests/src/test/resources/application.conf.j2]() | J2 |
 |          | [tools/eclipse/java.xml](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) | Configuration file in XML format. Not much creativity. |
-|          | [tools/vagrant/hello.cmd]() | |
-|          | [tools/vagrant/Vagrantfile]() | |
-| [incubator-openwhisk-apigateway](https://github.com/apache/incubator-openwhisk-apigateway) | [tests/scripts/lua/management/examples](https://github.com/apache/incubator-openwhisk-apigateway/tree/master/tests/scripts/lua/management/examples) | JSON data files |
+| [incubator-openwhisk-apigateway](https://github.com/apache/incubator-openwhisk-apigateway) | [tests/scripts/lua/management/examples](https://github.com/apache/incubator-openwhisk-apigateway/tree/master/tests/scripts/lua/management/examples) | JSON |
 | [incubator-openwhisk-catalog](https://github.com/apache/incubator-openwhisk-catalog) | _None_|  |
 | [incubator-openwhisk-cli](https://github.com/apache/incubator-openwhisk-cli) | _None_ | _test files?_ |
 | [incubator-openwhisk-client-go](https://github.com/apache/incubator-openwhisk-client-go) | **TBD** | _?_ |
