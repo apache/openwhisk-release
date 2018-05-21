@@ -56,14 +56,12 @@ In addition, the recommended type of approved ASF license header (i.e., "full" o
 | Web Content (e.g., `*.html`, `.css`) | Full | Source code |
 | Scala Configurations (`*.conf`) | Full | Scala (Java)  configuration files may contain code or interfaces. |
 | Makefile | Full | May contain functional (script) code. |
-| Gradle files (`build.gradle`, `*.gradle`) | Full |  May contain functional code (e.g., Groovy, Kotlin).</br>Includes build (`build.gradle`) and settings (`settings.gradle`)files. |
+| Gradle files (`build.gradle`, `*.gradle`) | Full |  May contain functional scripts and code (e.g., Groovy, Kotlin).</br>Includes build (`build.gradle`) and settings (`settings.gradle`)files. |
 | Gradle properties files (`*.properties`) | Mini | Project convention |
-| `docker.gradle` | Full | build script to generate docker image using Gradle. |
 | Docker image build file (`dockerfile`) | Mini | May contain functional (script) code. |
 | Script files (`*.sh`) | Mini | May contain functional (script) code. |
 | YAML files (`*.yaml`, `*.yml`) | Mini | May contain functional code.<br/>Note: Includes (`.travis.yml`)|
 | XML files (`*.xml`) | Mini | May contain functional code. |
-
 
 #### Notes
 - Full ASF License headers are always accepted regardless if a "Mini" header is recommended as best practice.
