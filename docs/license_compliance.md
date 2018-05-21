@@ -72,7 +72,7 @@ In addition, the recommended type of approved ASF license header (i.e., "full" o
 
 In accordance with Apache LICENSE policies, the table below lists general exclusions by file (type) as agreed to by the project community along with the justification.
 
-| # | File type | Rationale |
+| TAG | File type | Rationale |
 |:---|:---|:---|
 | ANS.1 | Ansible (host) Inventory Files (`*.ini`) | Configuration files. Not much creativity.<br/>Example: [incubator-openwhisk/ansible/environments/local/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/hosts.j2.ini) |
 | ANS.2| Ansible Configuration Files (`*.cfg`) | Configuration files. Not much creativity.<br/>Example: [incubator-openwhisk/ansible/ansible.cfg](https://github.com/apache/incubator-openwhisk/blob/master/ansible/ansible.cfg) |
@@ -112,59 +112,54 @@ In accordance with Apache policy, each of the Apache OpenWhisk project's reposit
 
 For convenience, the following table provides links to each project repository's LICENSE and NOTICE files, as well as an overview of notable software dependencies (non-canonical) and license scanning exclusions.
 
-| Repository | Exclusion | Rationale |
+| Repository | Exclusion | Rationale [TAG] |
 |:---|:---|:---|
 | [incubator-openwhisk](https://github.com/apache/incubator-openwhisk) |||
-|          | [ansible/ansible.cfg]() |  |
+|          | [ansible/ansible.cfg]() | ANS.2 |
 |          | [ansible/environments/distributed/files/openstack/openstack.env]() |  |
-|          | [ansible/environments/distributed/group_vars/all]() |  |
-|          | [ansible/environments/distributed/hosts]() |  |
-|          | [ansible/environments/docker-machine/group_vars/all]() |  |
+|          | [ansible/environments/distributed/group_vars/all]() | ANS.3 |
+|          | [ansible/environments/distributed/hosts]() | ANS.4 |
+|          | [ansible/environments/docker-machine/group_vars/all]() | ANS.3 |
 |          | [ansible/environments/docker-machine/hosts.j2.ini]() |  |
-|          | [ansible/environments/local/group_vars/all]() |  |
+|          | [ansible/environments/local/group_vars/all]() | ANS.3 |
 |          | [ansible/environments/local/hosts.j2.ini]() |  |
-|          | [ansible/environments/vagrant/group_vars/all]() |  |
-|          | [ansible/environments/vagrant/hosts]() |  |
-|          | [ansible/files/activations_design_document_for_activations_db.json]() |  |
+|          | [ansible/environments/vagrant/group_vars/all]() | ANS.3 |
+|          | [ansible/environments/vagrant/hosts]() | ANS.4 |
+|          | [ansible/files/activations_design_document_for_activations_db.json]() | JSON |
 |          | [ansible/files/auth.guest]() |  |
 |          | [ansible/files/auth.whisk.system]() |  |
-|          | [ansible/files/auth_index.json]() |  |
-|          | [ansible/files/filter_design_document.json]() |  |
-|          | [ansible/files/logCleanup_design_document_for_activations_db.json]() |  |
-|          | [ansible/files/namespace_throttlings_design_document_for_subjects_db.json]() |  |
+|          | [ansible/files/auth_index.json]() | JSON |
+|          | [ansible/files/filter_design_document.json]() | JSON |
+|          | [ansible/files/logCleanup_design_document_for_activations_db.json]() | JSON |
+|          | [ansible/files/namespace_throttlings_design_document_for_subjects_db.json]() | JSON |
 |          | [ansible/files/package-versions.ini]() |  |
-|          | [ansible/files/runtimes.json]() |  |
-|          | [ansible/files/whisks_design_document_for_activations_db_filters_v2.1.0.json]() |  |
-|          | [ansible/files/whisks_design_document_for_activations_db_v2.1.0.json]() |  |
-|          | [ansible/files/whisks_design_document_for_entities_db_v2.1.0.json]() |  |
-|          | [ansible/group_vars/all]() |  |
-|          | [ansible/roles/docker/templates/docker.j2]() |  |
+|          | [ansible/files/runtimes.json]() | JSON |
+|          | [ansible/files/whisks_design_document_for_activations_db_filters_v2.1.0.json]() | JSON |
+|          | [ansible/files/whisks_design_document_for_activations_db_v2.1.0.json]() | JSON |
+|          | [ansible/files/whisks_design_document_for_entities_db_v2.1.0.json]() | JSON |
+|          | [ansible/group_vars/all]() | ANS.3 |
+|          | [ansible/roles/docker/templates/docker.j2]() | J2 |
 |          | [ansible/roles/nginx/files/openwhisk-server-key.pem]() |  |
-|          | [ansible/roles/nginx/templates/nginx.conf.j2]() |  |
-|          | [ansible/roles/registry/templates/recycle-registry.py.j2]() |  |
-|          | [ansible/templates/db_local.ini.j2]() |  |
-|          | [ansible/templates/jmxremote.access.j2]() |  |
-|          | [ansible/templates/jmxremote.password.j2]() |  |
-|          | [ansible/templates/whisk.properties.j2]() |  |
+|          | [ansible/roles/nginx/templates/nginx.conf.j2]() | J2 |
+|          | [ansible/roles/registry/templates/recycle-registry.py.j2]() | J2 |
+|          | [ansible/templates/db_local.ini.j2]() | J2 |
+|          | [ansible/templates/jmxremote.access.j2]() | J2 |
+|          | [ansible/templates/jmxremote.password.j2]() | J2 |
+|          | [ansible/templates/whisk.properties.j2]() | J2 |
 |          | [bin/wskadmin](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskadmin) | Generated, symbolic link |
 |          | [bin/wskdev](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskdev) | Generated, symbolic link |
-|          | [build.gradle]() |  |
 |          | [common/scala/.dockerignore]() |  |
-|          | [common/scala/build.gradle]() |  |
 |          | [common/scala/src/main/resources/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/common/scala/src/main/resources/logback.xml) | Configuration file in XML format. Not much creativity. |
 |          | [core/controller/.dockerignore]() |  |
 |          | [core/invoker/.dockerignore]() |  |
-|          | [core/invoker/build.gradle]() |  |
 |          | [gradle/wrapper/gradle-wrapper.jar]() |  |
 |          | [gradle/wrapper/gradle-wrapper.properties]() |  |
 |          | [gradlew.bat]() |  |
 |          | [gradlew]() |  |
-|          | [performance/gatling_tests/build.gradle]() |  |
 |          | [performance/gatling_tests/src/gatling/resources/data/javaAction.jar]() |  |
-|          | [performance/wrk_tests/post.lua](https://github.com/apache/incubator-openwhisk/blob/master/performance/wrk_tests/post.lua) |  |
-|          | [tests/build.gradle]() |  |
+|          | [performance/wrk_tests/post.lua](https://github.com/apache/incubator-openwhisk/blob/master/performance/wrk_tests/post.lua) | Perf. test file. Not much creativity. |
 |          | [tests/dat/actions/blackbox.zip]() |  |
-|          | [tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) | Empty (zero-length) file for testing |
+|          | [tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) | Empty (zero-length) file for testing. Not much creativity. |
 |          | [tests/dat/actions/helloJava.jar]() |  |
 |          | [tests/dat/actions/helloJavaDefaultPackage.jar]() |  |
 |          | [tests/dat/actions/helloSwift311.zip]() |  |
@@ -175,10 +170,10 @@ For convenience, the following table provides links to each project repository's
 |          | [tests/dat/actions/python_virtualenv_dir.zip]() |  |
 |          | [tests/dat/actions/python_virtualenv_name.zip]() |  |
 |          | [tests/dat/actions/seq_echo_word_count.json]() |  |
-|          | [tests/dat/actions/seq_type_2.json]() |  |
+|          | [tests/dat/actions/seq_type_2.json]() | JSON |
 |          | [tests/dat/actions/sleep.jar]() |  |
 |          | [tests/dat/actions/unicode.jar]() |  |
-|          | [tests/dat/actions/unicode/build.gradle]() |  |
+|          | [tests/dat/actions/unicode/build.gradle]() | **FIX!!!** |
 |          | [tests/dat/actions/validInput1.json]() |  |
 |          | [tests/dat/actions/validInput2.json]() |  |
 |          | [tests/dat/actions/word_count.json]() |  |
