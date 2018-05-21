@@ -142,7 +142,7 @@ For convenience, the following table provides links to each project repository's
 |          | [ansible/files/whisks_design_document_for_entities_db_v2.1.0.json]() | JSON |
 |          | [ansible/group_vars/all]() | ANS.3 |
 |          | [ansible/roles/docker/templates/docker.j2]() | J2 |
-|          | [ansible/roles/nginx/files/openwhisk-server-key.pem]() |  |
+|          | [ansible/roles/nginx/files/openwhisk-server-key.pem]() | PEM |
 |          | [ansible/roles/nginx/templates/nginx.conf.j2]() | J2 |
 |          | [ansible/roles/registry/templates/recycle-registry.py.j2]() | J2 |
 |          | [ansible/templates/db_local.ini.j2]() | J2 |
@@ -151,7 +151,6 @@ For convenience, the following table provides links to each project repository's
 |          | [ansible/templates/whisk.properties.j2]() | J2 |
 |          | [bin/wskadmin](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskadmin) | Generated, symbolic link |
 |          | [bin/wskdev](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskdev) | Generated, symbolic link |
-|          | [common/scala/.dockerignore]() |  |
 |          | [common/scala/src/main/resources/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/common/scala/src/main/resources/logback.xml) | Configuration file in XML format. Not much creativity. |
 |          | [gradle/wrapper/gradle-wrapper.jar]() |  |
 |          | [gradle/wrapper/gradle-wrapper.properties]() |  |
