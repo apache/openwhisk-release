@@ -119,23 +119,23 @@ For convenience, the following table provides links to each project repository's
 |:---|:---|:---|
 | [incubator-openwhisk](https://github.com/apache/incubator-openwhisk) |||
 |          | [ansible/ansible.cfg]() | ANS.2 |
-|          | [ansible/environments/distributed/files/openstack/openstack.env]() |  |
-|          | [ansible/environments/distributed/group_vars/all]() | ANS.3 |
-|          | [ansible/environments/distributed/hosts]() | ANS.4 |
-|          | [ansible/environments/docker-machine/group_vars/all]() | ANS.3 |
-|          | [ansible/environments/docker-machine/hosts.j2.ini]() |  |
-|          | [ansible/environments/local/group_vars/all]() | ANS.3 |
-|          | [ansible/environments/local/hosts.j2.ini]() |  |
-|          | [ansible/environments/vagrant/group_vars/all]() | ANS.3 |
-|          | [ansible/environments/vagrant/hosts]() | ANS.4 |
+|          | [ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) | **TBD** |
+|          | [ansible/environments/distributed/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/group_vars/all) | ANS.3 |
+|          | [ansible/environments/distributed/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/hosts) | ANS.4 |
+|          | [ansible/environments/docker-machine/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/docker-machine/group_vars/all) | ANS.3 **TBD** We added a header to this one!!! |
+|          | [ansible/environments/docker-machine/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/docker-machine/hosts.j2.ini) | **TBD** |
+|          | [ansible/environments/local/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/group_vars/all) | ANS.3 **TBD** We added a header to this one!!! |
+|          | [ansible/environments/local/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/hosts.j2.ini) | **TBD** |
+|          | [ansible/environments/vagrant/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/vagrant/group_vars/all) | ANS.3 **TBD** We added a header to this one!!! |
+|          | [ansible/environments/vagrant/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/vagrant/hosts) | ANS.4 |
 |          | [ansible/files/activations_design_document_for_activations_db.json]() | JSON |
-|          | [ansible/files/auth.guest]() |  |
-|          | [ansible/files/auth.whisk.system]() |  |
+|          | [ansible/files/auth.guest]() | **TBD** |
+|          | [ansible/files/auth.whisk.system]() |  **TBD** |
 |          | [ansible/files/auth_index.json]() | JSON |
 |          | [ansible/files/filter_design_document.json]() | JSON |
 |          | [ansible/files/logCleanup_design_document_for_activations_db.json]() | JSON |
 |          | [ansible/files/namespace_throttlings_design_document_for_subjects_db.json]() | JSON |
-|          | [ansible/files/package-versions.ini]() |  |
+|          | [ansible/files/package-versions.ini]() |  **TBD** |
 |          | [ansible/files/runtimes.json]() | JSON |
 |          | [ansible/files/whisks_design_document_for_activations_db_filters_v2.1.0.json]() | JSON |
 |          | [ansible/files/whisks_design_document_for_activations_db_v2.1.0.json]() | JSON |
