@@ -25,12 +25,12 @@ This listing is not intended to be complete or canonical
 
 | Repository | Exclusion | Rationale [TAG] |
 |:---|:---|:---|
-| [incubator-openwhisk](https://github.com/apache/incubator-openwhisk) | [ansible/ansible.cfg]() | ANS.2 |
-|          | [ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) | ANS.5 |
-|          | [ansible/environments/distributed/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/hosts) | ANS.4 |
-|          | [ansible/environments/docker-machine/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/docker-machine/hosts.j2.ini) | ANS.1 |
-|          | [ansible/environments/local/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/hosts.j2.ini) | ANS.1 |
-|          | [ansible/environments/vagrant/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/vagrant/hosts) | ANS.4 |
+| [incubator-openwhisk](https://github.com/apache/incubator-openwhisk) | [ansible/ansible.cfg]() | ANS.CFG |
+|          | [ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) | ANS.ENV |
+|          | [ansible/environments/distributed/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/hosts) | ANS.HOSTS |
+|          | [ansible/environments/docker-machine/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/docker-machine/hosts.j2.ini) | ANS.INI |
+|          | [ansible/environments/local/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/hosts.j2.ini) | ANS.INI |
+|          | [ansible/environments/vagrant/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/vagrant/hosts) | ANS.HOSTS |
 |          | [ansible/files/activations_design_document_for_activations_db.json]() | JSON |
 |          | [ansible/files/auth.guest]() | DATA.AUTH |
 |          | [ansible/files/auth.whisk.system]() |  DATA.AUTH |
@@ -38,12 +38,11 @@ This listing is not intended to be complete or canonical
 |          | [ansible/files/filter_design_document.json]() | JSON |
 |          | [ansible/files/logCleanup_design_document_for_activations_db.json]() | JSON |
 |          | [ansible/files/namespace_throttlings_design_document_for_subjects_db.json]() | JSON |
-|          | [ansible/files/package-versions.ini]() |  ANS.1 |
+|          | [ansible/files/package-versions.ini]() |  ANS.INI |
 |          | [ansible/files/runtimes.json]() | JSON |
 |          | [ansible/files/whisks_design_document_for_activations_db_filters_v2.1.0.json]() | JSON |
 |          | [ansible/files/whisks_design_document_for_activations_db_v2.1.0.json]() | JSON |
 |          | [ansible/files/whisks_design_document_for_entities_db_v2.1.0.json]() | JSON |
-|          | [ansible/group_vars/all]() | ANS.3 |
 |          | [ansible/roles/docker/templates/docker.j2]() | J2 |
 |          | [ansible/roles/nginx/files/openwhisk-server-key.pem]() | PEM |
 |          | [ansible/roles/nginx/templates/nginx.conf.j2]() | J2 |
@@ -102,22 +101,22 @@ This listing is not intended to be complete or canonical
 |          | wski18n/README.md | **FIX!!!** |
 |          | wski18n/resources | JSON data files |
 | [incubator-openwhisk-runtime-docker](https://github.com/apache/incubator-openwhisk-runtime-docker) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
-|               | [ansible/environments/local/group_vars/all]() | ANS.3 **TODO: add ASF Mini header** |
+|               | [ansible/environments/local/group_vars/all]() | ANS.ALL **TODO: add ASF Mini header** |
 |               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
 | [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java) | tests/src/test/resources/application.conf   | Config. file, Not much creativity |
-|               | [ansible/environments/local/group_vars/all]() | ANS.3 **TODO: add ASF Mini header** |
+|               | [ansible/environments/local/group_vars/all]() | ANS.ALL **TODO: add ASF Mini header** |
 |               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
 | [incubator-openwhisk-runtime-nodejs](https://github.com/apache/incubator-openwhisk-runtime-nodejs) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
-|               | [ansible/environments/local/group_vars/all]() | ANS.3 **TODO: add ASF Mini header** |
+|               | [ansible/environments/local/group_vars/all]() | ANS.ALL **TODO: add ASF Mini header** |
 |               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
 | [incubator-openwhisk-runtime-php](https://github.com/apache/incubator-openwhisk-runtime-php) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
-|               | [ansible/environments/local/group_vars/all]() | ANS.3 **TODO: add ASF Mini header** |
+|               | [ansible/environments/local/group_vars/all]() | ANS.ALL **TODO: add ASF Mini header** |
 |               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
 | [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
-|               | [ansible/environments/local/group_vars/all]() | ANS.3 **TODO: add ASF Mini header** |
+|               | [ansible/environments/local/group_vars/all]() | ANS.ALL **TODO: add ASF Mini header** |
 |               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
 | [incubator-openwhisk-runtime-swift](https://github.com/apache/incubator-openwhisk-runtime-swift)  | tests/src/test/resources/application.conf | Config. file, Not much creativity |
-|               | [ansible/environments/local/group_vars/all]() | ANS.3 **TODO: add ASF Mini header** |
+|               | [ansible/environments/local/group_vars/all]() | ANS.ALL **TODO: add ASF Mini header** |
 |               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
 |               | [SwiftyRequest/Package.resolved](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/tests/dat/actions/SwiftyRequest/Package.resolved) | |
 | [incubator-openwhisk-wskdeploy](https://github.com/apache/incubator-openwhisk-wskdeploy) | wski18n | **FIX!!!** Too broad, lots of .go files that SHOULD be scanned |
