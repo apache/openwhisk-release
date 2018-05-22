@@ -29,9 +29,9 @@ This listing is not intended to be complete or canonical
 |          | [ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) | ANS.5 |
 |          | [ansible/environments/distributed/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/hosts) | ANS.4 |
 |          | [ansible/environments/docker-machine/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/docker-machine/group_vars/all) | ANS.3 **TBD** We added a header to this one!!! |
-|          | [ansible/environments/docker-machine/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/docker-machine/hosts.j2.ini) | **TBD** |
+|          | [ansible/environments/docker-machine/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/docker-machine/hosts.j2.ini) | ANS.1 |
 |          | [ansible/environments/local/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/group_vars/all) | ANS.3 **TBD** We added a header to this one!!! |
-|          | [ansible/environments/local/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/hosts.j2.ini) | **TBD** |
+|          | [ansible/environments/local/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/hosts.j2.ini) | ANS.1 |
 |          | [ansible/environments/vagrant/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/vagrant/hosts) | ANS.4 |
 |          | [ansible/files/activations_design_document_for_activations_db.json]() | JSON |
 |          | [ansible/files/auth.guest]() | **TBD** |
@@ -40,7 +40,7 @@ This listing is not intended to be complete or canonical
 |          | [ansible/files/filter_design_document.json]() | JSON |
 |          | [ansible/files/logCleanup_design_document_for_activations_db.json]() | JSON |
 |          | [ansible/files/namespace_throttlings_design_document_for_subjects_db.json]() | JSON |
-|          | [ansible/files/package-versions.ini]() |  **TBD** |
+|          | [ansible/files/package-versions.ini]() |  ANS.1 |
 |          | [ansible/files/runtimes.json]() | JSON |
 |          | [ansible/files/whisks_design_document_for_activations_db_filters_v2.1.0.json]() | JSON |
 |          | [ansible/files/whisks_design_document_for_activations_db_v2.1.0.json]() | JSON |
