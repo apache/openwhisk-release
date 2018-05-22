@@ -79,6 +79,7 @@ In accordance with Apache LICENSE policies, the table below lists general exclus
 | ANS.2| Ansible Configuration Files (`*.cfg`) | Configuration files. Not much creativity.<br/>Example: [incubator-openwhisk/ansible/ansible.cfg](https://github.com/apache/incubator-openwhisk/blob/master/ansible/ansible.cfg) |
 | ANS.3 | Ansible Group Variable (YAML) files (`group_vars/all`) | Configuration file.</br>Example [ansible/environments/local/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/group_vars/all) |
 | ANS.4 | Ansible hosts files (`hosts`) | Not much creativity.</br>Example: [incubator-openwhisk/ansible/environments/distributed/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/hosts) |
+| ANS.5 | Ansible environment files (`*.env`) | Not much creativity.</br>Example: [ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) |
 | DATA.1 | Empty (zero-length) test files | Empty test data file.</br>Example: [incubator-openwhisk/tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) |
 | GIT.1 | Git configuration (`.gitattributes`, `.gitignore`) | Configuration file. Not much creativity.  |
 | GIT.2 | Git tracking (`.git` subdirectory) | Git file tracking. Not part of project source. |
