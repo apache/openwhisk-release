@@ -32,8 +32,8 @@ This listing is not intended to be complete or canonical
 |          | [ansible/environments/local/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/hosts.j2.ini) | ANS.1 |
 |          | [ansible/environments/vagrant/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/vagrant/hosts) | ANS.4 |
 |          | [ansible/files/activations_design_document_for_activations_db.json]() | JSON |
-|          | [ansible/files/auth.guest]() | **TBD** |
-|          | [ansible/files/auth.whisk.system]() |  **TBD** |
+|          | [ansible/files/auth.guest]() | DATA.AUTH |
+|          | [ansible/files/auth.whisk.system]() |  DATA.AUTH |
 |          | [ansible/files/auth_index.json]() | JSON |
 |          | [ansible/files/filter_design_document.json]() | JSON |
 |          | [ansible/files/logCleanup_design_document_for_activations_db.json]() | JSON |
@@ -63,7 +63,7 @@ This listing is not intended to be complete or canonical
 |          | [performance/gatling_tests/src/gatling/resources/data/javaAction.jar]() | TEST.JAR |
 |          | [performance/wrk_tests/post.lua](https://github.com/apache/incubator-openwhisk/blob/master/performance/wrk_tests/post.lua) | Perf. test file. Not much creativity. |
 |          | [tests/dat/actions/blackbox.zip]() | TEST.ZIP |
-|          | [tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) | Empty (zero-length) file for testing. Not much creativity. |
+|          | [tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) | DATA.TEST, Empty (zero-length) file for testing. |
 |          | [tests/dat/actions/helloJava.jar]() | TEST.JAR |
 |          | [tests/dat/actions/helloJavaDefaultPackage.jar]() | TEST.JAR |
 |          | [tests/dat/actions/helloSwift311.zip]() | TEST.ZIP |
