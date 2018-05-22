@@ -26,7 +26,7 @@ This listing is not intended to be complete or canonical
 | Repository | Exclusion | Rationale [TAG] |
 |:---|:---|:---|
 | [incubator-openwhisk](https://github.com/apache/incubator-openwhisk) | [ansible/ansible.cfg]() | ANS.2 |
-|          | [ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) | **TBD** |
+|          | [ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) | ANS.5 |
 |          | [ansible/environments/distributed/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/hosts) | ANS.4 |
 |          | [ansible/environments/docker-machine/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/docker-machine/group_vars/all) | ANS.3 **TBD** We added a header to this one!!! |
 |          | [ansible/environments/docker-machine/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/docker-machine/hosts.j2.ini) | **TBD** |
