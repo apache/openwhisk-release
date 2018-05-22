@@ -77,9 +77,9 @@ In accordance with Apache LICENSE policies, the table below lists general exclus
 |:---|:---|:---|
 | ANS.1 | Ansible (host) Inventory Files (`*.ini`) | Configuration files. Not much creativity.<br/>Example: [incubator-openwhisk/ansible/environments/local/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/hosts.j2.ini) |
 | ANS.2| Ansible Configuration Files (`*.cfg`) | Configuration files. Not much creativity.<br/>Example: [incubator-openwhisk/ansible/ansible.cfg](https://github.com/apache/incubator-openwhisk/blob/master/ansible/ansible.cfg) |
-| ANS.3 | Ansible Group Variable (YAML) files (`group_vars/all`) | Configuration file.</br>Example [ansible/environments/local/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/group_vars/all) |
-| ANS.4 | Ansible hosts files (`hosts`) | Not much creativity.</br>Example: [incubator-openwhisk/ansible/environments/distributed/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/hosts) |
-| ANS.5 | Ansible environment files (`*.env`) | Not much creativity.</br>Example: [ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) |
+| ANS.3 | Ansible Group Variable (YAML) files (`group_vars/all`) | Configuration files. Not much creativity.</br>Example [ansible/environments/local/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/group_vars/all) |
+| ANS.4 | Ansible hosts files (`hosts`) | Configuration files. Not much creativity.</br>Example: [incubator-openwhisk/ansible/environments/distributed/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/hosts) |
+| ANS.5 | Ansible environment files (`*.env`) | Configuration files. Not much creativity.</br>Example: [ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) |
 | DATA.1 | Empty (zero-length) test files | Empty test data file.</br>Example: [incubator-openwhisk/tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) |
 | GIT.1 | Git configuration (`.gitattributes`, `.gitignore`) | Configuration file. Not much creativity.  |
 | GIT.2 | Git tracking (`.git` subdirectory) | Git file tracking. Not part of project source. |
@@ -95,7 +95,7 @@ In accordance with Apache LICENSE policies, the table below lists general exclus
 | KUBE.1 | Kubernetes Configurations (e.g., `*.env`) | Configuration file. Not much creativity.<br/>Example: [incubator-openwhisk//ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) |
 | OAPI | Open API (Swagger) documents | JSON files describing API input data.</br>Example: [incubator-openwhisk/blob/master/tests/dat/apigw/testswaggerdoc2](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/apigw/testswaggerdoc2) for test input data |
 | PEM | Privacy Enhanced Mail (PEM) files (`*.pem`) | Contains generated, base64-encoded x509 keys.</br>Example: [incubator-openwhisk/ansible/roles/nginx/files/openwhisk-server-key.pem](https://github.com/apache/incubator-openwhisk/blob/master/ansible/roles/nginx/files/openwhisk-server-key.pem)|
-| PYDEV | PyDev configuration files (`.pydevproject`) | Not much creativity |
+| PYDEV | PyDev configuration files (`.pydevproject`) | Not included in source release. |
 | TEST.JAR | Java Application Resource (JAR) files (`*.jar`) | Binary JAR files used for testing (Actions). |
 | TEST.ZIP | ZIP compressed archive files (`*.zip`) | Binary ZIP files used for testing (Actions). |
 | XML | XML files (`*.xml`) | Configuration and test data files.</br>Example: [incubator-openwhisk/tools/eclipse/java.xml](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) |
