@@ -49,6 +49,7 @@ In addition, the recommended type of approved ASF license header (i.e., "full" o
 | :--- | :--- | :--- |
 | Source code (e.g., `*.scala`, `*.go`, `*.java`, `*.py`, etc.) | Full | Source code. |
 | Action functions (source) (e.g., `.js`, `.py`, `.swift`, etc, particularly under `tests/dat` folder.) | Mini | Source code</br>Use "Mini" header as best practice for performance reasons. |
+| Ansible Group vars. (`*/group_vars/all`) | Mini | Project convention. |
 | Docker image build file (`dockerfile`) | Mini | May contain functional (script) code. |
 | Documentation (e.g., `*.md`) | Full | Intellectual property. |
 | Gradle files (`build.gradle`, `*.gradle`) | Full |  May contain functional scripts and code (e.g., Groovy, Kotlin).</br>Includes build (`build.gradle`) and settings (`settings.gradle`)files. |

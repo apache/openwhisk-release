@@ -27,13 +27,11 @@ This listing is not intended to be complete or canonical
 |:---|:---|:---|
 | [incubator-openwhisk](https://github.com/apache/incubator-openwhisk) | [ansible/ansible.cfg]() | ANS.2 |
 |          | [ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) | **TBD** |
-|          | [ansible/environments/distributed/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/group_vars/all) | ANS.3 |
 |          | [ansible/environments/distributed/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/hosts) | ANS.4 |
 |          | [ansible/environments/docker-machine/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/docker-machine/group_vars/all) | ANS.3 **TBD** We added a header to this one!!! |
 |          | [ansible/environments/docker-machine/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/docker-machine/hosts.j2.ini) | **TBD** |
 |          | [ansible/environments/local/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/group_vars/all) | ANS.3 **TBD** We added a header to this one!!! |
 |          | [ansible/environments/local/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/hosts.j2.ini) | **TBD** |
-|          | [ansible/environments/vagrant/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/vagrant/group_vars/all) | ANS.3 **TBD** We added a header to this one!!! |
 |          | [ansible/environments/vagrant/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/vagrant/hosts) | ANS.4 |
 |          | [ansible/files/activations_design_document_for_activations_db.json]() | JSON |
 |          | [ansible/files/auth.guest]() | **TBD** |
@@ -58,33 +56,34 @@ This listing is not intended to be complete or canonical
 |          | [ansible/templates/whisk.properties.j2]() | J2 |
 |          | [bin/wskadmin](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskadmin) | Generated, symbolic link |
 |          | [bin/wskdev](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskdev) | Generated, symbolic link |
-|          | [common/scala/src/main/resources/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/common/scala/src/main/resources/logback.xml) | Configuration file in XML format. Not much creativity. |
-|          | [gradle/wrapper/gradle-wrapper.jar]() |  |
-|          | [gradle/wrapper/gradle-wrapper.properties]() |  |
-|          | [gradlew.bat]() |  |
-|          | [gradlew]() |  |
-|          | [performance/gatling_tests/src/gatling/resources/data/javaAction.jar]() |  |
+|          | [common/scala/src/main/resources/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/common/scala/src/main/resources/logback.xml) | XML |
+|          | [incubator-openwhisk/docs/images/OpenWhisk_flow_of_processing.draw.io.xml](https://github.com/apache/incubator-openwhisk/blob/master/docs/images/OpenWhisk_flow_of_processing.draw.io.xml) | XML |
+|          | [gradle/wrapper/gradle-wrapper.jar]() | TEST.JAR |
+|          | [gradle/wrapper/gradle-wrapper.properties]() | **TBD** |
+|          | [gradlew.bat]() | GRDL.1 |
+|          | [gradlew]() | GRDL.3 |
+|          | [performance/gatling_tests/src/gatling/resources/data/javaAction.jar]() | TEST.JAR |
 |          | [performance/wrk_tests/post.lua](https://github.com/apache/incubator-openwhisk/blob/master/performance/wrk_tests/post.lua) | Perf. test file. Not much creativity. |
-|          | [tests/dat/actions/blackbox.zip]() |  |
+|          | [tests/dat/actions/blackbox.zip]() | TEST.ZIP |
 |          | [tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) | Empty (zero-length) file for testing. Not much creativity. |
-|          | [tests/dat/actions/helloJava.jar]() |  |
-|          | [tests/dat/actions/helloJavaDefaultPackage.jar]() |  |
-|          | [tests/dat/actions/helloSwift311.zip]() |  |
-|          | [tests/dat/actions/multiSwift.zip]() |  |
-|          | [tests/dat/actions/python.zip]() |  |
-|          | [tests/dat/actions/python2_virtualenv.zip]() |  |
-|          | [tests/dat/actions/python3_virtualenv.zip]() |  |
-|          | [tests/dat/actions/python_virtualenv_dir.zip]() |  |
-|          | [tests/dat/actions/python_virtualenv_name.zip]() |  |
-|          | [tests/dat/actions/seq_echo_word_count.json]() |  |
+|          | [tests/dat/actions/helloJava.jar]() | TEST.JAR |
+|          | [tests/dat/actions/helloJavaDefaultPackage.jar]() | TEST.JAR |
+|          | [tests/dat/actions/helloSwift311.zip]() | TEST.ZIP |
+|          | [tests/dat/actions/multiSwift.zip]() | TEST.ZIP |
+|          | [tests/dat/actions/python.zip]() | TEST.ZIP |
+|          | [tests/dat/actions/python2_virtualenv.zip]() | TEST.ZIP |
+|          | [tests/dat/actions/python3_virtualenv.zip]() | TEST.ZIP |
+|          | [tests/dat/actions/python_virtualenv_dir.zip]() | TEST.ZIP |
+|          | [tests/dat/actions/python_virtualenv_name.zip]() | TEST.ZIP |
+|          | [tests/dat/actions/seq_echo_word_count.json]() | JSON |
 |          | [tests/dat/actions/seq_type_2.json]() | JSON |
-|          | [tests/dat/actions/sleep.jar]() |  |
-|          | [tests/dat/actions/unicode.jar]() |  |
+|          | [tests/dat/actions/sleep.jar]() | TEST.JAR |
+|          | [tests/dat/actions/unicode.jar]() | TEST.JAR |
 |          | [tests/dat/actions/unicode/build.gradle]() | **FIX!!!** |
 |          | [tests/dat/actions/validInput1.json]() | JSON |
 |          | [tests/dat/actions/validInput2.json]() | JSON |
 |          | [tests/dat/actions/word_count.json]() | JSON |
-|          | [tests/dat/actions/zippedaction.zip]() |  |
+|          | [tests/dat/actions/zippedaction.zip]() | TEST.ZIP |
 |          | [tests/dat/apigw/apigw_path_param_support_test_invalidActionType.json]() | JSON |
 |          | [tests/dat/apigw/apigw_path_param_support_test_invalidParamName1.json]() | JSON |
 |          | [tests/dat/apigw/apigw_path_param_support_test_invalidParamName2.json]() | JSON |
@@ -105,22 +104,22 @@ This listing is not intended to be complete or canonical
 |          | wski18n/README.md | **FIX!!!** |
 |          | wski18n/resources | JSON data files |
 | [incubator-openwhisk-runtime-docker](https://github.com/apache/incubator-openwhisk-runtime-docker) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
-|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
+|               | [ansible/environments/local/group_vars/all]() | ANS.3 **TODO: add ASF Mini header** |
 |               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
 | [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java) | tests/src/test/resources/application.conf   | Config. file, Not much creativity |
-|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
+|               | [ansible/environments/local/group_vars/all]() | ANS.3 **TODO: add ASF Mini header** |
 |               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
 | [incubator-openwhisk-runtime-nodejs](https://github.com/apache/incubator-openwhisk-runtime-nodejs) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
-|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
+|               | [ansible/environments/local/group_vars/all]() | ANS.3 **TODO: add ASF Mini header** |
 |               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
 | [incubator-openwhisk-runtime-php](https://github.com/apache/incubator-openwhisk-runtime-php) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
-|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
+|               | [ansible/environments/local/group_vars/all]() | ANS.3 **TODO: add ASF Mini header** |
 |               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
 | [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
-|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
+|               | [ansible/environments/local/group_vars/all]() | ANS.3 **TODO: add ASF Mini header** |
 |               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
 | [incubator-openwhisk-runtime-swift](https://github.com/apache/incubator-openwhisk-runtime-swift)  | tests/src/test/resources/application.conf | Config. file, Not much creativity |
-|               | [ansible/environments/local/group_vars/all]() | Config. file, Not much creativity |
+|               | [ansible/environments/local/group_vars/all]() | ANS.3 **TODO: add ASF Mini header** |
 |               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
 |               | [SwiftyRequest/Package.resolved](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/tests/dat/actions/SwiftyRequest/Package.resolved) | |
 | [incubator-openwhisk-wskdeploy](https://github.com/apache/incubator-openwhisk-wskdeploy) | wski18n | **FIX!!!** Too broad, lots of .go files that SHOULD be scanned |
