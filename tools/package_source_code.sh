@@ -30,7 +30,7 @@ mkdir -p $CURRENT_VERSION_DIR
 # Remove bin and build folders
 mkdir -p $OPENWHISK_CLEANED_SOURCE_DIR
 rm -rf $OPENWHISK_CLEANED_SOURCE_DIR/*
-rsync -rtp --exclude .*\* --exclude bin\* --exclude build\* --exclude tests\* $OPENWHISK_SOURCE_DIR/. $OPENWHISK_CLEANED_SOURCE_DIR
+rsync -rtp --exclude .*\* --exclude bin\* --exclude build\* $OPENWHISK_SOURCE_DIR/. $OPENWHISK_CLEANED_SOURCE_DIR
 
 for repo in $(echo $repos | sed "s/,/ /g")
 do
