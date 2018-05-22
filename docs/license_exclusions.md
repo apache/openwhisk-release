@@ -28,9 +28,7 @@ This listing is not intended to be complete or canonical
 | [incubator-openwhisk](https://github.com/apache/incubator-openwhisk) | [ansible/ansible.cfg]() | ANS.2 |
 |          | [ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) | ANS.5 |
 |          | [ansible/environments/distributed/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/hosts) | ANS.4 |
-|          | [ansible/environments/docker-machine/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/docker-machine/group_vars/all) | ANS.3 **TBD** We added a header to this one!!! |
 |          | [ansible/environments/docker-machine/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/docker-machine/hosts.j2.ini) | ANS.1 |
-|          | [ansible/environments/local/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/group_vars/all) | ANS.3 **TBD** We added a header to this one!!! |
 |          | [ansible/environments/local/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/hosts.j2.ini) | ANS.1 |
 |          | [ansible/environments/vagrant/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/vagrant/hosts) | ANS.4 |
 |          | [ansible/files/activations_design_document_for_activations_db.json]() | JSON |
