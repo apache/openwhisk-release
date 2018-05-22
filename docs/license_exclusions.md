@@ -60,9 +60,9 @@ This listing is not intended to be complete or canonical
 |          | [gradlew.bat]() | GRDL.1 |
 |          | [gradlew]() | GRDL.3 |
 |          | [performance/gatling_tests/src/gatling/resources/data/javaAction.jar]() | TEST.JAR |
-|          | [performance/wrk_tests/post.lua](https://github.com/apache/incubator-openwhisk/blob/master/performance/wrk_tests/post.lua) | Perf. test file. Not much creativity. |
+|          | [performance/wrk_tests/post.lua](https://github.com/apache/incubator-openwhisk/blob/master/performance/wrk_tests/post.lua) | DATA.TEXT, Performance test data file. |
 |          | [tests/dat/actions/blackbox.zip]() | TEST.ZIP |
-|          | [tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) | DATA.TEST, Empty (zero-length) file for testing. |
+|          | [tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) | DATA.TEST, Empty (zero-length) test data file. |
 |          | [tests/dat/actions/helloJava.jar]() | TEST.JAR |
 |          | [tests/dat/actions/helloJavaDefaultPackage.jar]() | TEST.JAR |
 |          | [tests/dat/actions/helloSwift311.zip]() | TEST.ZIP |
