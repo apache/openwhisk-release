@@ -61,7 +61,6 @@ In addition, the recommended type of approved ASF license header (i.e., "full" o
 | Vagrantfile configuration file (`Vagrantfile`)| Full | Project convention. |
 | Web Content (e.g., `*.html`, `.css`) | Full | Source code. |
 | Windows Command file (`*.cmd`) | Mini | May contain functional code. |
-| XML files (`*.xml`) | Mini | May contain functional code. |
 | YAML files (`*.yaml`, `*.yml`) | Mini | May contain functional code.<br/>Note: Includes (`.travis.yml`)|
 
 #### Notes
@@ -95,8 +94,9 @@ In accordance with Apache LICENSE policies, the table below lists general exclus
 | OAPI | Open API (Swagger) documents | JSON files describing API input data.</br>Example: [incubator-openwhisk/blob/master/tests/dat/apigw/testswaggerdoc2](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/apigw/testswaggerdoc2) for test input data |
 | PEM | Privacy Enhanced Mail (PEM) files (`*.pem`) | Contains generated, base64-encoded x509 keys.</br>Example: [incubator-openwhisk/ansible/roles/nginx/files/openwhisk-server-key.pem](https://github.com/apache/incubator-openwhisk/blob/master/ansible/roles/nginx/files/openwhisk-server-key.pem)|
 | PYDEV | PyDev configuration files (`.pydevproject`) | Not much creativity |
-| TEST.JAR | Java Application Resource (JAR) (`*.jar`) | Binary JAR files used for testing (Actions). |
+| TEST.JAR | Java Application Resource (JAR) files (`*.jar`) | Binary JAR files used for testing (Actions). |
 | TEST.ZIP | ZIP compressed archive files (`*.zip`) | Binary ZIP files used for testing (Actions). |
+| XML | XML files (`*.xml`) | Configuration and test data files.</br>Example: [incubator-openwhisk/tools/eclipse/java.xml](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) |
 
 # Known exclusions
 
@@ -109,7 +109,7 @@ In accordance with Apache policy, these utilities exclude specific files from th
 - Apache RAT: [pom.xml](https://github.com/apache/incubator-openwhisk-release/blob/master/tools/lib/pom.xml) (Apache Rat)
 
 ### ASF License header exclusions
-The following page contains a non-comprehenisve listing of all project files, by repositiry that are known to not have ASF license headers along with the policy tag indicating the justification against the table above: [license_exclusions.md](license_exclusions.md)
+The following page contains a non-comprehensive listing of all project files, by repository that are known to not have ASF license headers along with the policy tag indicating the justification against the table above: [license_exclusions.md](license_exclusions.md)
 
 ## Enforcement and verification
 

@@ -17,11 +17,11 @@
 #
 -->
 
-# LICENSE and NOTICE file exception tracking
+# ASF License header exception tracking
 
-For convenience, the following table provides links to each project repository's LICENSE and NOTICE files, as well as links to tracking issues where we discuss exclusions, exceptions and open issues:
+For convenience, the following table provides links to each project repository's LICENSE and NOTICE files, as well as an overview of notable software dependencies (non-canonical) and license scanning exclusions.
 
-<For convenience, the following table provides links to each project repository's LICENSE and NOTICE files, as well as an overview of notable software dependencies (non-canonical) and license scanning exclusions.
+This listing is not intended to be complete or canonical
 
 | Repository | Exclusion | Rationale [TAG] |
 |:---|:---|:---|
@@ -96,7 +96,7 @@ For convenience, the following table provides links to each project repository's
 |          | [tests/dat/apigw/testswaggerdoc2]() | OAPI. Test data. |
 |          | [tests/dat/apigw/testswaggerdocinvalid]() | OAPI. Test data. |
 |          | [tests/src/test/resources/application.conf.j2]() | J2 |
-|          | [tools/eclipse/java.xml](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) | Configuration file in XML format. Not much creativity. |
+|          | [tools/eclipse/java.xml](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) | XML |
 | [incubator-openwhisk-apigateway](https://github.com/apache/incubator-openwhisk-apigateway) | [tests/scripts/lua/management/examples](https://github.com/apache/incubator-openwhisk-apigateway/tree/master/tests/scripts/lua/management/examples) | JSON |
 | [incubator-openwhisk-catalog](https://github.com/apache/incubator-openwhisk-catalog) | _None_|  |
 | [incubator-openwhisk-cli](https://github.com/apache/incubator-openwhisk-cli) | _None_ | _test files?_ |
