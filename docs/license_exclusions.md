@@ -87,18 +87,19 @@ For convenience, the following table provides links to each project repository's
 |               | [ansible/environments/local/group_vars/all]() | ANS.ALL **TODO: add ASF Mini header** |
 |               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
 |               | [SwiftyRequest/Package.resolved](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/tests/dat/actions/SwiftyRequest/Package.resolved) | |
-| [incubator-openwhisk-wskdeploy](https://github.com/apache/incubator-openwhisk-wskdeploy) | wski18n | **FIX!!!** Too broad, lots of .go files that SHOULD be scanned |
-|          | wski18n/i18n_resources.go | Generated, translation JSON data file. |
-|          | wski18n/README.md | **FIX!!!** |
-|          | wski18n/resources | JSON data files |
+| [incubator-openwhisk-wskdeploy](https://github.com/apache/incubator-openwhisk-wskdeploy) | [wski18n/i18n_resources.go](https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/wski18n/i18n_resources.go) | Generated, translated/encoded JSON data file. |
 
 
-The following test/dat files are excluded, but alse are NOT part of the project source code release:
+### Test files excluded from source release
+<!--
+ ======= Test file exclusions NOT part of Source code releases (yet) =========
+-->
+The following "tests" files are excluded from having ASF License headers, but alse are NOT part of the project source code release:
 
 | Repository | Exclusion | Rationale [TAG] |
 |:---|:---|:---|
 |          | [performance/gatling_tests/src/gatling/resources/data/javaAction.jar]() | TEST.JAR |
-|          | [performance/wrk_tests/post.lua](https://github.com/apache/incubator-openwhisk/blob/master/performance/wrk_tests/post.lua) | DATA.TEXT, Performance test data file. |
+|          | [performance/wrk_tests/post.lua](https://github.com/apache/incubator-openwhisk/blob/master/performance/wrk_tests/post.lua) | DATA.TEXT, Empy (Http POST) Performance test data file. |
 |          | [tests/dat/actions/blackbox.zip]() | TEST.ZIP |
 |          | [tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) | DATA.TEST, Empty (zero-length) test data file. |
 |          | [tests/dat/actions/helloJava.jar]() | TEST.JAR |
