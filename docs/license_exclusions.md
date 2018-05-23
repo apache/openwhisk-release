@@ -90,7 +90,6 @@ For convenience, the following table provides links to each project repository's
 | gradle/wrapper/gradle-wrapper.jar |  |
 | gradlew |  |
 | gradlew.bat |  |
-| incubator-openwhisk-wskdeploy | ??? |
 | specification/archive/*.pdf | e.g., specification/archive/openwhisk_v0.8.1.pdf |
 | specification/diagrams/*.jpg | e.g., specification/diagrams/OW-Programming-Model-Slides-Slide1.jpg |
 | specification/diagrams/*.pptx | e.g., OW-Programming-Model-Slides.pptx |
