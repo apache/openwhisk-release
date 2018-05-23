@@ -76,15 +76,47 @@ For convenience, the following table provides links to each project repository's
 | [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python) | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
 | [incubator-openwhisk-runtime-swift](https://github.com/apache/incubator-openwhisk-runtime-swift)| [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
 |          | [SwiftyRequest/Package.resolved](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/tests/dat/actions/SwiftyRequest/Package.resolved) | OAPI |
-| [incubator-openwhisk-wskdeploy](https://github.com/apache/incubator-openwhisk-wskdeploy) | [wski18n/i18n_resources.go](https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/wski18n/i18n_resources.go) | I18N.1 |
-|          | [wski18n/resources](https://github.com/apache/incubator-openwhisk-wskdeploy/tree/master/wski18n/resources) | JSON, Empty files (i.e., no translations yet) |
 
+### [incubator-openwhisk-wskdeploy](https://github.com/apache/incubator-openwhisk-wskdeploy)
 
-### Test files excluded from source release
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| [wski18n/i18n_resources.go](https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/wski18n/i18n_resources.go) | I18N.1 |
+| [wski18n/resources](https://github.com/apache/incubator-openwhisk-wskdeploy/tree/master/wski18n/resources) | JSON, Empty files (i.e., no translations yet) |
+| Godeps/Godeps.json |  |
+| Godeps/Readme |  |
+| ansible/environments/local/group_vars/all |  |
+| ansible/environments/local/hosts |  |
+| gradle/wrapper/gradle-wrapper.jar |  |
+| gradlew |  |
+| gradlew.bat |  |
+| incubator-openwhisk-wskdeploy | ??? |
+| specification/archive/*.pdf | e.g., specification/archive/openwhisk_v0.8.1.pdf |
+| specification/diagrams/*.jpg | e.g., specification/diagrams/OW-Programming-Model-Slides-Slide1.jpg |
+| specification/diagrams/*.pptx | e.g., OW-Programming-Model-Slides.pptx |
+| specification/*.pdf | e.g., specification/openwhisk_v0.9.1.pdf |
+| tests/apps/owbp-cloudant-trigger/manifest-bp.json |  |
+| tests/dat/wskprops |  |
+| tests/dat/wskpropsnokeycert |  |
+| tests/src/integration/docker/actions/exec.zip |  |
+| tests/src/integration/docker/actions/go/exec |  |
+| tests/src/integration/helloworld/actions/hello.jar |  |
+| tests/src/integration/jaraction/src/hello.jar |  |
+| tests/src/integration/message-hub/src/events.json |  |
+| tests/src/integration/runtimetests/src/hello.jar |  |
+| tests/src/integration/runtimetests/src/helloworld/helloworld.zip |  |
+| tests/src/integration/runtimetests/src/helloworld/node_modules/string-format/package.json |  |
+| tests/src/integration/runtimetests/src/helloworld/package.json |  |
+| tests/src/integration/validate-packages-in-manifest/actions/hello.jar |  |
+| tests/src/integration/zipaction/actions/cat/node_modules/cat/package.json |  |
+| tests/src/integration/zipaction/actions/cat/package.json |  |
+| tests/apps/owbp-cloudant-trigger/manifest-bp.json |  |
+
+## Test files excluded from source release
 <!--
  ======= Test file exclusions NOT part of Source code releases (yet) =========
 -->
-The following "tests" files are excluded from having ASF License headers, but alse are NOT part of the project source code release:
+The following "tests" files are excluded from having ASF License headers, but alse are NOT part of the project source code release archive when created.
 
 | Repository | Exclusion | Rationale [TAG] |
 |:---|:---|:---|
@@ -120,4 +152,3 @@ The following "tests" files are excluded from having ASF License headers, but al
 |          | [tests/dat/apigw/testswaggerdoc1]() | OAPI. Test data. |
 |          | [tests/dat/apigw/testswaggerdoc2]() | OAPI. Test data. |
 |          | [tests/dat/apigw/testswaggerdocinvalid]() | OAPI. Test data. |
-
