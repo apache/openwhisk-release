@@ -66,16 +66,49 @@ For convenience, the following table provides links to each project repository's
 |          | [credentials.json.enc](https://github.com/apache/incubator-openwhisk-catalog/blob/master/credentials.json.enc) | **TBD** |
 |          | [tests/credentials.json.enc](https://github.com/apache/incubator-openwhisk-catalog/blob/master/tests/credentials.json.enc) | **TBD** |
 |          | [gradle/wrapper/gradle-wrapper.jar](https://github.com/apache/incubator-openwhisk-catalog/blob/master/gradle/wrapper/gradle-wrapper.jar) | **TBD** |
-| [incubator-openwhisk-cli](https://github.com/apache/incubator-openwhisk-cli) | _None_ | _test files?_ |
-| [incubator-openwhisk-client-go](https://github.com/apache/incubator-openwhisk-client-go) | [wski18n/i18n_resources.go](https://github.com/apache/incubator-openwhisk-client-go/blob/master/wski18n/i18n_resources.go) | I18N.1, NOTE: ASF Header manually added after autogen. recently |
-|          | [wski18n/resources](https://github.com/apache/incubator-openwhisk-client-go/tree/master/wski18n/resources) | JSON, Empty files (i.e., no translations yet) |
-| [incubator-openwhisk-runtime-docker](https://github.com/apache/incubator-openwhisk-runtime-docker) | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
-| [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java) | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
-| [incubator-openwhisk-runtime-nodejs](https://github.com/apache/incubator-openwhisk-runtime-nodejs) | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
-| [incubator-openwhisk-runtime-php](https://github.com/apache/incubator-openwhisk-runtime-php) | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
-| [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python) | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
-| [incubator-openwhisk-runtime-swift](https://github.com/apache/incubator-openwhisk-runtime-swift)| [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
-|          | [SwiftyRequest/Package.resolved](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/tests/dat/actions/SwiftyRequest/Package.resolved) | OAPI |
+
+### [incubator-openwhisk-cli](https://github.com/apache/incubator-openwhisk-cli)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| _None_ | **_test files?_** |
+
+### [incubator-openwhisk-client-go](https://github.com/apache/incubator-openwhisk-client-go) |
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| [wski18n/i18n_resources.go](https://github.com/apache/incubator-openwhisk-client-go/blob/master/wski18n/i18n_resources.go) | I18N.1, NOTE: ASF Header manually added after autogen. recently |
+| [wski18n/resources](https://github.com/apache/incubator-openwhisk-client-go/tree/master/wski18n/resources) | JSON, Empty files (i.e., no translations yet) |
+
+### [incubator-openwhisk-runtime-docker](https://github.com/apache/incubator-openwhisk-runtime-docker)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
+
+### [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
+
+### [incubator-openwhisk-runtime-nodejs](https://github.com/apache/incubator-openwhisk-runtime-nodejs)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
+
+### [incubator-openwhisk-runtime-php](https://github.com/apache/incubator-openwhisk-runtime-php)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
+
+### [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
+
+### | [incubator-openwhisk-runtime-swift](https://github.com/apache/incubator-openwhisk-runtime-swift)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
+| [SwiftyRequest/Package.resolved](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/tests/dat/actions/SwiftyRequest/Package.resolved) | OAPI |
+
 
 ### [incubator-openwhisk-wskdeploy](https://github.com/apache/incubator-openwhisk-wskdeploy)
 
