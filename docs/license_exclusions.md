@@ -69,7 +69,7 @@ For convenience, the following table provides links to each project repository's
 |:---|:---|
 | [tests/scripts/lua/management/examples](https://github.com/apache/incubator-openwhisk-apigateway/tree/master/tests/scripts/lua/management/examples) | JSON |
 
-###[incubator-openwhisk-catalog](https://github.com/apache/incubator-openwhisk-catalog)
+### [incubator-openwhisk-catalog](https://github.com/apache/incubator-openwhisk-catalog)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [credentials.json.enc](https://github.com/apache/incubator-openwhisk-catalog/blob/master/credentials.json.enc) | **TBD** |
