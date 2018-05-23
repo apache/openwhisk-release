@@ -95,7 +95,7 @@ For convenience, the following table provides links to each project repository's
 | specification/diagrams/*.pptx | **TBD**, e.g., OW-Programming-Model-Slides.pptx |
 | specification/*.pdf | **TBD**, e.g., specification/openwhisk_v0.9.1.pdf |
 | tests/apps/owbp-cloudant-trigger/manifest-bp.json | JSON |
-| tests/dat/wskprops | **TBD** |
+| tests/dat/wskprops | API Client configuration data. |
 | tests/dat/wskpropsnokeycert | **TBD** |
 | tests/src/integration/docker/actions/exec.zip | TEST.ZIP |
 | tests/src/integration/docker/actions/go/exec | TEST.ZIP, renamed from exec.zip |
