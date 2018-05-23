@@ -85,7 +85,6 @@ For convenience, the following table provides links to each project repository's
 | [wski18n/resources](https://github.com/apache/incubator-openwhisk-wskdeploy/tree/master/wski18n/resources) | JSON, Empty files (i.e., no translations yet) |
 | Godeps/Godeps.json | GODEPS.1 |
 | Godeps/Readme | GODEPS.2 |
-| ansible/environments/local/group_vars/all | **FIXME** ANS.ALL |
 | ansible/environments/local/hosts | ANS.HOSTS |
 | **gradle/wrapper/gradle-wrapper.jar** | **TBD** |
 | gradlew | GRDL.3 |
@@ -96,7 +95,6 @@ For convenience, the following table provides links to each project repository's
 | specification/*.pdf | **TBD**, e.g., specification/openwhisk_v0.9.1.pdf |
 | tests/apps/owbp-cloudant-trigger/manifest-bp.json | JSON |
 | tests/dat/wskprops | API Client configuration data. |
-| tests/dat/wskpropsnokeycert | **TBD** |
 | tests/src/integration/docker/actions/exec.zip | TEST.ZIP |
 | tests/src/integration/docker/actions/go/exec | TEST.ZIP, renamed from exec.zip |
 | tests/src/integration/helloworld/actions/hello.jar | TEST.JAR |
