@@ -83,33 +83,33 @@ For convenience, the following table provides links to each project repository's
 |:---|:---|
 | [wski18n/i18n_resources.go](https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/wski18n/i18n_resources.go) | I18N.1 |
 | [wski18n/resources](https://github.com/apache/incubator-openwhisk-wskdeploy/tree/master/wski18n/resources) | JSON, Empty files (i.e., no translations yet) |
-| Godeps/Godeps.json |  |
-| Godeps/Readme |  |
-| ansible/environments/local/group_vars/all |  |
-| ansible/environments/local/hosts |  |
-| gradle/wrapper/gradle-wrapper.jar |  |
-| gradlew |  |
-| gradlew.bat |  |
-| specification/archive/*.pdf | e.g., specification/archive/openwhisk_v0.8.1.pdf |
-| specification/diagrams/*.jpg | e.g., specification/diagrams/OW-Programming-Model-Slides-Slide1.jpg |
-| specification/diagrams/*.pptx | e.g., OW-Programming-Model-Slides.pptx |
-| specification/*.pdf | e.g., specification/openwhisk_v0.9.1.pdf |
-| tests/apps/owbp-cloudant-trigger/manifest-bp.json |  |
-| tests/dat/wskprops |  |
-| tests/dat/wskpropsnokeycert |  |
-| tests/src/integration/docker/actions/exec.zip |  |
-| tests/src/integration/docker/actions/go/exec |  |
-| tests/src/integration/helloworld/actions/hello.jar |  |
-| tests/src/integration/jaraction/src/hello.jar |  |
-| tests/src/integration/message-hub/src/events.json |  |
-| tests/src/integration/runtimetests/src/hello.jar |  |
-| tests/src/integration/runtimetests/src/helloworld/helloworld.zip |  |
-| tests/src/integration/runtimetests/src/helloworld/node_modules/string-format/package.json |  |
-| tests/src/integration/runtimetests/src/helloworld/package.json |  |
-| tests/src/integration/validate-packages-in-manifest/actions/hello.jar |  |
-| tests/src/integration/zipaction/actions/cat/node_modules/cat/package.json |  |
-| tests/src/integration/zipaction/actions/cat/package.json |  |
-| tests/apps/owbp-cloudant-trigger/manifest-bp.json |  |
+| Godeps/Godeps.json | **TBD** |
+| Godeps/Readme | **TBD** |
+| ansible/environments/local/group_vars/all | **FIXME** ANS.ALL |
+| ansible/environments/local/hosts | ANS.HOSTS |
+| gradle/wrapper/gradle-wrapper.jar | **TBD** |
+| gradlew | GRDL.3 |
+| gradlew.bat | GRDL.1 |
+| specification/archive/*.pdf | **TBD**, e.g., specification/archive/openwhisk_v0.8.1.pdf |
+| specification/diagrams/*.jpg | ve.g., specification/diagrams/OW-Programming-Model-Slides-Slide1.jpg |
+| specification/diagrams/*.pptx | **TBD**, e.g., OW-Programming-Model-Slides.pptx |
+| specification/*.pdf | **TBD**, e.g., specification/openwhisk_v0.9.1.pdf |
+| tests/apps/owbp-cloudant-trigger/manifest-bp.json | JSON |
+| tests/dat/wskprops | **TBD** |
+| tests/dat/wskpropsnokeycert | **TBD** |
+| tests/src/integration/docker/actions/exec.zip | TEST.ZIP |
+| tests/src/integration/docker/actions/go/exec | TEST.ZIP, renamed from exec.zip |
+| tests/src/integration/helloworld/actions/hello.jar | TEST.JAR |
+| tests/src/integration/jaraction/src/hello.jar | TEST.JAR |
+| tests/src/integration/message-hub/src/events.json | JSON |
+| tests/src/integration/runtimetests/src/hello.jar | TEST.JAR |
+| tests/src/integration/runtimetests/src/helloworld/helloworld.zip | TEST.ZIP |
+| tests/src/integration/runtimetests/src/helloworld/node_modules/string-format/package.json | JSON |
+| tests/src/integration/runtimetests/src/helloworld/package.json | JSON |
+| tests/src/integration/validate-packages-in-manifest/actions/hello.jar | TEST.JAR |
+| tests/src/integration/zipaction/actions/cat/node_modules/cat/package.json | JSON |
+| tests/src/integration/zipaction/actions/cat/package.json | JSON |
+| tests/apps/owbp-cloudant-trigger/manifest-bp.json | JSON |
 
 ## Test files excluded from source release
 <!--
