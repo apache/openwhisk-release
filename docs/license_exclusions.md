@@ -62,7 +62,10 @@ For convenience, the following table provides links to each project repository's
 |          | [tests/src/test/resources/application.conf.j2]() | J2 |
 |          | [tools/eclipse/java.xml](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) | XML |
 | [incubator-openwhisk-apigateway](https://github.com/apache/incubator-openwhisk-apigateway) | [tests/scripts/lua/management/examples](https://github.com/apache/incubator-openwhisk-apigateway/tree/master/tests/scripts/lua/management/examples) | JSON |
-| [incubator-openwhisk-catalog](https://github.com/apache/incubator-openwhisk-catalog) | _None_|  |
+| [incubator-openwhisk-catalog](https://github.com/apache/incubator-openwhisk-catalog) |  |  |
+|          | [credentials.json.enc](https://github.com/apache/incubator-openwhisk-catalog/blob/master/credentials.json.enc) | **TBD** |
+|          | [tests/credentials.json.enc](https://github.com/apache/incubator-openwhisk-catalog/blob/master/tests/credentials.json.enc) | **TBD** |
+|          | [gradle/wrapper/gradle-wrapper.jar](https://github.com/apache/incubator-openwhisk-catalog/blob/master/gradle/wrapper/gradle-wrapper.jar) | **TBD** |
 | [incubator-openwhisk-cli](https://github.com/apache/incubator-openwhisk-cli) | _None_ | _test files?_ |
 | [incubator-openwhisk-client-go](https://github.com/apache/incubator-openwhisk-client-go) | [wski18n/i18n_resources.go](https://github.com/apache/incubator-openwhisk-client-go/blob/master/wski18n/i18n_resources.go) | I18N.1, NOTE: ASF Header manually added after autogen. recently |
 |          | [wski18n/resources](https://github.com/apache/incubator-openwhisk-client-go/tree/master/wski18n/resources) | JSON, Empty files (i.e., no translations yet) |
