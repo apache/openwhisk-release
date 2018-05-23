@@ -70,22 +70,18 @@ For convenience, the following table provides links to each project repository's
 |          | wski18n/resources | JSON data files |
 | [incubator-openwhisk-runtime-docker](https://github.com/apache/incubator-openwhisk-runtime-docker) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
 |               | [ansible/environments/local/group_vars/all]() | ANS.ALL **TODO: add ASF Mini header** |
-|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
+|               | [ansible/environments/local/hosts]() | ANS.HOSTS |
 | [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java) | tests/src/test/resources/application.conf   | Config. file, Not much creativity |
 |               | [ansible/environments/local/group_vars/all]() | ANS.ALL **TODO: add ASF Mini header** |
-|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
+|               | [ansible/environments/local/hosts]() | ANS.HOSTS |
 | [incubator-openwhisk-runtime-nodejs](https://github.com/apache/incubator-openwhisk-runtime-nodejs) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
 |               | [ansible/environments/local/group_vars/all]() | ANS.ALL **TODO: add ASF Mini header** |
-|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
+|               | [ansible/environments/local/hosts]() | ANS.HOSTS |
 | [incubator-openwhisk-runtime-php](https://github.com/apache/incubator-openwhisk-runtime-php) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
 |               | [ansible/environments/local/group_vars/all]() | ANS.ALL **TODO: add ASF Mini header** |
-|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
-| [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
-|               | [ansible/environments/local/group_vars/all]() | ANS.ALL **TODO: add ASF Mini header** |
-|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
-| [incubator-openwhisk-runtime-swift](https://github.com/apache/incubator-openwhisk-runtime-swift)  | tests/src/test/resources/application.conf | Config. file, Not much creativity |
-|               | [ansible/environments/local/group_vars/all]() | ANS.ALL **TODO: add ASF Mini header** |
-|               | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
+|               | [ansible/environments/local/hosts]() | ANS.HOSTS |
+| [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python) | tests/src/test/resources/application.conf | [ansible/environments/local/hosts]() | Config. file, Not much creativity |
+| [incubator-openwhisk-runtime-swift](https://github.com/apache/incubator-openwhisk-runtime-swift)| [ansible/environments/local/hosts]() | ANS.HOSTS |
 |               | [SwiftyRequest/Package.resolved](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/tests/dat/actions/SwiftyRequest/Package.resolved) | |
 | [incubator-openwhisk-wskdeploy](https://github.com/apache/incubator-openwhisk-wskdeploy) | [wski18n/i18n_resources.go](https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/wski18n/i18n_resources.go) | Generated, translated/encoded JSON data file. |
 
