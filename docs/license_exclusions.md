@@ -83,11 +83,11 @@ For convenience, the following table provides links to each project repository's
 |:---|:---|
 | [wski18n/i18n_resources.go](https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/wski18n/i18n_resources.go) | I18N.1 |
 | [wski18n/resources](https://github.com/apache/incubator-openwhisk-wskdeploy/tree/master/wski18n/resources) | JSON, Empty files (i.e., no translations yet) |
-| Godeps/Godeps.json | **TBD** |
-| Godeps/Readme | **TBD** |
+| Godeps/Godeps.json | GODEPS.1 |
+| Godeps/Readme | GODEPS.2 |
 | ansible/environments/local/group_vars/all | **FIXME** ANS.ALL |
 | ansible/environments/local/hosts | ANS.HOSTS |
-| gradle/wrapper/gradle-wrapper.jar | **TBD** |
+| **gradle/wrapper/gradle-wrapper.jar** | **TBD** |
 | gradlew | GRDL.3 |
 | gradlew.bat | GRDL.1 |
 | specification/archive/*.pdf | **TBD**, e.g., specification/archive/openwhisk_v0.8.1.pdf |
