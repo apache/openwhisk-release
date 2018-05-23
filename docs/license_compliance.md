@@ -49,7 +49,7 @@ In addition, the recommended type of approved ASF license header (i.e., "full" o
 | :--- | :--- | :--- |
 | Source code (e.g., `*.scala`, `*.go`, `*.java`, `*.py`, etc.) | Full | Source code. |
 | Action functions (source) (e.g., `.js`, `.py`, `.swift`, etc, particularly under `tests/dat` folder.) | Mini | Source code.</br>Use "Mini" header as best practice for performance reasons. |
-| Ansible Group vars. (`*/group_vars/all`) | Mini | Project convention. |
+| Ansible Group vars. (YAML) (`*/group_vars/all`) | Mini | Project convention. |
 | Docker image build file (`dockerfile`) | Mini | May contain functional (script) code. |
 | Documentation (e.g., `*.md`) | Full | Intellectual property. |
 | Gradle files (`build.gradle`, `*.gradle`) | Full |  May contain functional scripts and code (e.g., Groovy, Kotlin).</br>Includes build (`build.gradle`) and settings (`settings.gradle`)files. |
@@ -77,7 +77,6 @@ In accordance with Apache LICENSE policies, the table below lists general exclus
 |:---|:---|:---|
 | ANS.INI | Ansible (host) Inventory Files (`*.ini`) | Configuration files. Not much creativity.<br/>Example: [incubator-openwhisk/ansible/environments/local/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/hosts.j2.ini) |
 | ANS.CFG| Ansible Configuration Files (`*.cfg`) | Configuration files. Not much creativity.<br/>Example: [incubator-openwhisk/ansible/ansible.cfg](https://github.com/apache/incubator-openwhisk/blob/master/ansible/ansible.cfg) |
-| ANS.ALL | Ansible Group Variable (YAML) files (`group_vars/all`) | Configuration files. Not much creativity.</br>Example [ansible/environments/local/group_vars/all](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/group_vars/all) |
 | ANS.HOSTS | Ansible hosts files (`hosts`) | Configuration files. Not much creativity.</br>Example: [incubator-openwhisk/ansible/environments/distributed/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/hosts) |
 | ANS.ENV | Ansible environment files (`*.env`) | Configuration files. Not much creativity.</br>Example: [ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) |
 | DATA.TEST | Empty (zero-length) test files | Empty test data file.</br>Example: [incubator-openwhisk/tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) |

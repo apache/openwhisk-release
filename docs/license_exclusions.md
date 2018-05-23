@@ -80,10 +80,10 @@ For convenience, the following table provides links to each project repository's
 | [incubator-openwhisk-runtime-php](https://github.com/apache/incubator-openwhisk-runtime-php) | tests/src/test/resources/application.conf | Config. file, Not much creativity |
 |               | [ansible/environments/local/group_vars/all]() | ANS.ALL **TODO: add ASF Mini header** |
 |               | [ansible/environments/local/hosts]() | ANS.HOSTS |
-| [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python) | tests/src/test/resources/application.conf | [ansible/environments/local/hosts]() | ANS.HOSTS |
+| [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python) | [ansible/environments/local/hosts]() | ANS.HOSTS |
 | [incubator-openwhisk-runtime-swift](https://github.com/apache/incubator-openwhisk-runtime-swift)| [ansible/environments/local/hosts]() | ANS.HOSTS |
-|               | [SwiftyRequest/Package.resolved](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/tests/dat/actions/SwiftyRequest/Package.resolved) | OAPI, JSON data|
-| [incubator-openwhisk-wskdeploy](https://github.com/apache/incubator-openwhisk-wskdeploy) | [wski18n/i18n_resources.go](https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/wski18n/i18n_resources.go) | Generated, translated/encoded JSON data file. |
+|               | [SwiftyRequest/Package.resolved](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/tests/dat/actions/SwiftyRequest/Package.resolved) | OAPI |
+| [incubator-openwhisk-wskdeploy](https://github.com/apache/incubator-openwhisk-wskdeploy) | [wski18n/i18n_resources.go](https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/wski18n/i18n_resources.go) | I18N.1 |
 
 
 ### Test files excluded from source release
