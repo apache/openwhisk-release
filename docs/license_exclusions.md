@@ -21,7 +21,7 @@
 
 For convenience, the following table provides links to each project repository's LICENSE and NOTICE files, as well as an overview of notable software dependencies (non-canonical) and license scanning exclusions.
 
-This listing is not intended to be complete or canonical
+**NOTE: This listing is not intended to be complete or canonical**
 
 | Repository | Exclusion | Rationale [TAG] |
 |:---|:---|:---|
@@ -59,38 +59,6 @@ This listing is not intended to be complete or canonical
 |          | [gradle/wrapper/gradle-wrapper.properties]() | **TBD** |
 |          | [gradlew.bat]() | GRDL.1 |
 |          | [gradlew]() | GRDL.3 |
-|          | [performance/gatling_tests/src/gatling/resources/data/javaAction.jar]() | TEST.JAR |
-|          | [performance/wrk_tests/post.lua](https://github.com/apache/incubator-openwhisk/blob/master/performance/wrk_tests/post.lua) | DATA.TEXT, Performance test data file. |
-|          | [tests/dat/actions/blackbox.zip]() | TEST.ZIP |
-|          | [tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) | DATA.TEST, Empty (zero-length) test data file. |
-|          | [tests/dat/actions/helloJava.jar]() | TEST.JAR |
-|          | [tests/dat/actions/helloJavaDefaultPackage.jar]() | TEST.JAR |
-|          | [tests/dat/actions/helloSwift311.zip]() | TEST.ZIP |
-|          | [tests/dat/actions/multiSwift.zip]() | TEST.ZIP |
-|          | [tests/dat/actions/python.zip]() | TEST.ZIP |
-|          | [tests/dat/actions/python2_virtualenv.zip]() | TEST.ZIP |
-|          | [tests/dat/actions/python3_virtualenv.zip]() | TEST.ZIP |
-|          | [tests/dat/actions/python_virtualenv_dir.zip]() | TEST.ZIP |
-|          | [tests/dat/actions/python_virtualenv_name.zip]() | TEST.ZIP |
-|          | [tests/dat/actions/seq_echo_word_count.json]() | JSON |
-|          | [tests/dat/actions/seq_type_2.json]() | JSON |
-|          | [tests/dat/actions/sleep.jar]() | TEST.JAR |
-|          | [tests/dat/actions/unicode.jar]() | TEST.JAR |
-|          | [tests/dat/actions/unicode/build.gradle]() | **FIX!!!** |
-|          | [tests/dat/actions/validInput1.json]() | JSON |
-|          | [tests/dat/actions/validInput2.json]() | JSON |
-|          | [tests/dat/actions/word_count.json]() | JSON |
-|          | [tests/dat/actions/zippedaction.zip]() | TEST.ZIP |
-|          | [tests/dat/apigw/apigw_path_param_support_test_invalidActionType.json]() | JSON |
-|          | [tests/dat/apigw/apigw_path_param_support_test_invalidParamName1.json]() | JSON |
-|          | [tests/dat/apigw/apigw_path_param_support_test_invalidParamName2.json]() | JSON |
-|          | [tests/dat/apigw/apigw_path_param_support_test_invalidTargetUrl.json]() | JSON |
-|          | [tests/dat/apigw/apigw_path_param_support_test_withPathParameters1.json]() | JSON |
-|          | [tests/dat/apigw/apigw_path_param_support_test_withPathParameters2.json]() | JSON |
-|          | [tests/dat/apigw/endpoints.without.action.swagger.json]() | JSON |
-|          | [tests/dat/apigw/testswaggerdoc1]() | OAPI. Test data. |
-|          | [tests/dat/apigw/testswaggerdoc2]() | OAPI. Test data. |
-|          | [tests/dat/apigw/testswaggerdocinvalid]() | OAPI. Test data. |
 |          | [tests/src/test/resources/application.conf.j2]() | J2 |
 |          | [tools/eclipse/java.xml](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) | XML |
 | [incubator-openwhisk-apigateway](https://github.com/apache/incubator-openwhisk-apigateway) | [tests/scripts/lua/management/examples](https://github.com/apache/incubator-openwhisk-apigateway/tree/master/tests/scripts/lua/management/examples) | JSON |
@@ -123,3 +91,42 @@ This listing is not intended to be complete or canonical
 |          | wski18n/i18n_resources.go | Generated, translation JSON data file. |
 |          | wski18n/README.md | **FIX!!!** |
 |          | wski18n/resources | JSON data files |
+
+
+The following test/dat files are excluded, but alse are NOT part of the project source code release:
+
+| Repository | Exclusion | Rationale [TAG] |
+|:---|:---|:---|
+|          | [performance/gatling_tests/src/gatling/resources/data/javaAction.jar]() | TEST.JAR |
+|          | [performance/wrk_tests/post.lua](https://github.com/apache/incubator-openwhisk/blob/master/performance/wrk_tests/post.lua) | DATA.TEXT, Performance test data file. |
+|          | [tests/dat/actions/blackbox.zip]() | TEST.ZIP |
+|          | [tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) | DATA.TEST, Empty (zero-length) test data file. |
+|          | [tests/dat/actions/helloJava.jar]() | TEST.JAR |
+|          | [tests/dat/actions/helloJavaDefaultPackage.jar]() | TEST.JAR |
+|          | [tests/dat/actions/helloSwift311.zip]() | TEST.ZIP |
+|          | [tests/dat/actions/multiSwift.zip]() | TEST.ZIP |
+|          | [tests/dat/actions/python.zip]() | TEST.ZIP |
+|          | [tests/dat/actions/python2_virtualenv.zip]() | TEST.ZIP |
+|          | [tests/dat/actions/python3_virtualenv.zip]() | TEST.ZIP |
+|          | [tests/dat/actions/python_virtualenv_dir.zip]() | TEST.ZIP |
+|          | [tests/dat/actions/python_virtualenv_name.zip]() | TEST.ZIP |
+|          | [tests/dat/actions/seq_echo_word_count.json]() | JSON |
+|          | [tests/dat/actions/seq_type_2.json]() | JSON |
+|          | [tests/dat/actions/sleep.jar]() | TEST.JAR |
+|          | [tests/dat/actions/unicode.jar]() | TEST.JAR |
+|          | [tests/dat/actions/unicode/build.gradle]() | **FIX!!!** |
+|          | [tests/dat/actions/validInput1.json]() | JSON |
+|          | [tests/dat/actions/validInput2.json]() | JSON |
+|          | [tests/dat/actions/word_count.json]() | JSON |
+|          | [tests/dat/actions/zippedaction.zip]() | TEST.ZIP |
+|          | [tests/dat/apigw/apigw_path_param_support_test_invalidActionType.json]() | JSON |
+|          | [tests/dat/apigw/apigw_path_param_support_test_invalidParamName1.json]() | JSON |
+|          | [tests/dat/apigw/apigw_path_param_support_test_invalidParamName2.json]() | JSON |
+|          | [tests/dat/apigw/apigw_path_param_support_test_invalidTargetUrl.json]() | JSON |
+|          | [tests/dat/apigw/apigw_path_param_support_test_withPathParameters1.json]() | JSON |
+|          | [tests/dat/apigw/apigw_path_param_support_test_withPathParameters2.json]() | JSON |
+|          | [tests/dat/apigw/endpoints.without.action.swagger.json]() | JSON |
+|          | [tests/dat/apigw/testswaggerdoc1]() | OAPI. Test data. |
+|          | [tests/dat/apigw/testswaggerdoc2]() | OAPI. Test data. |
+|          | [tests/dat/apigw/testswaggerdocinvalid]() | OAPI. Test data. |
+
