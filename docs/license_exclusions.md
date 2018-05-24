@@ -26,8 +26,8 @@ For convenience, the following table provides links to each project repository's
 ### [incubator-openwhisk](https://github.com/apache/incubator-openwhisk)
 
 | Exclusion | Rationale [TAG] |
-|:---|:---------------------------------------------------------------|
-| [ansible/ansible.cfg]() | ANS.CFG |
+|:---|:---|
+| [ansible/ansible.cfg]() | ANS.CFG                                                     |
 | [ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) | ANS.ENV |
 | [ansible/environments/distributed/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/hosts) | ANS.HOSTS |
 | [ansible/environments/docker-machine/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/docker-machine/hosts.j2.ini) | ANS.INI |
