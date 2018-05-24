@@ -26,7 +26,7 @@ For convenience, the following table provides links to each project repository's
 ### [incubator-openwhisk](https://github.com/apache/incubator-openwhisk)
 
 | Exclusion | Rationale [TAG] |
-|:---|:---|
+|:---|:---------------------------------------------------------------|
 | [ansible/ansible.cfg]() | ANS.CFG |
 | [ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) | ANS.ENV |
 | [ansible/environments/distributed/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/hosts) | ANS.HOSTS |
@@ -176,7 +176,6 @@ The following "tests" files are excluded from having ASF License headers, but al
 | [tests/dat/actions/seq_type_2.json]() | JSON |
 | [tests/dat/actions/sleep.jar]() | TEST.JAR |
 | [tests/dat/actions/unicode.jar]() | TEST.JAR |
-| [tests/dat/actions/unicode/build.gradle]() | **FIX!!!** |
 | [tests/dat/actions/validInput1.json]() | JSON |
 | [tests/dat/actions/validInput2.json]() | JSON |
 | [tests/dat/actions/word_count.json]() | JSON |
