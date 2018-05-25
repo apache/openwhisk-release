@@ -55,13 +55,11 @@ For convenience, the following table provides links to each project repository's
 | [ansible/templates/whisk.properties.j2]() | J2 |
 | [bin/wskadmin](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskadmin) | Generated, symbolic link |
 | [bin/wskdev](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskdev) | Generated, symbolic link |
-| [common/scala/src/main/resources/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/common/scala/src/main/resources/logback.xml) | XML |
+| [common/scala/src/main/resources/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/common/scala/src/main/resources/logback.xml) | XML, PR[#3702](https://github.com/apache/incubator-openwhisk/pull/3702/files)|
+| [gradle/wrapper/gradle-wrapper.jar](https://github.com/apache/incubator-openwhisk/blob/master/gradle/wrapper/gradle-wrapper.jar) | TEST.JAR |
+| [gradlew.bat](https://github.com/apache/incubator-openwhisk/blob/master/gradlew.bat) | GRDL.1 |
+| [gradlew](https://github.com/apache/incubator-openwhisk/blob/master/gradlew) | GRDL.3 |
 | [incubator-openwhisk/docs/images/OpenWhisk_flow_of_processing.draw.io.xml](https://github.com/apache/incubator-openwhisk/blob/master/docs/images/OpenWhisk_flow_of_processing.draw.io.xml) | XML |
-| [gradle/wrapper/gradle-wrapper.jar]() | TEST.JAR |
-| [gradle/wrapper/gradle-wrapper.properties]() | **TBD** |
-| [gradlew.bat]() | GRDL.1 |
-| [gradlew]() | GRDL.3 |
-| [tests/src/test/resources/application.conf.j2]() | J2 |
 | [tools/eclipse/java.xml](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) | XML |
 
 ### [incubator-openwhisk-apigateway](https://github.com/apache/incubator-openwhisk-apigateway)
@@ -73,7 +71,6 @@ For convenience, the following table provides links to each project repository's
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [credentials.json.enc](https://github.com/apache/incubator-openwhisk-catalog/blob/master/credentials.json.enc) | **TBD** |
-| [tests/credentials.json.enc](https://github.com/apache/incubator-openwhisk-catalog/blob/master/tests/credentials.json.enc) | **TBD** |
 | [gradle/wrapper/gradle-wrapper.jar](https://github.com/apache/incubator-openwhisk-catalog/blob/master/gradle/wrapper/gradle-wrapper.jar) | **TBD** |
 
 ### [incubator-openwhisk-cli](https://github.com/apache/incubator-openwhisk-cli)
@@ -159,8 +156,7 @@ The following "tests" files are excluded from having ASF License headers, but al
 ### [incubator-openwhisk](https://github.com/apache/incubator-openwhisk)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [performance/gatling_tests/src/gatling/resources/data/javaAction.jar]() | TEST.JAR |
-| [performance/wrk_tests/post.lua](https://github.com/apache/incubator-openwhisk/blob/master/performance/wrk_tests/post.lua) | DATA.TEXT, Empy (Http POST) Performance test data file. |
+| [tests/credentials.json.enc](https://github.com/apache/incubator-openwhisk-catalog/blob/master/tests/credentials.json.enc) | **TBD** |
 | [tests/dat/actions/blackbox.zip]() | TEST.ZIP |
 | [tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) | DATA.TEST, Empty (zero-length) test data file. |
 | [tests/dat/actions/helloJava.jar]() | TEST.JAR |
@@ -180,6 +176,7 @@ The following "tests" files are excluded from having ASF License headers, but al
 | [tests/dat/actions/validInput2.json]() | JSON |
 | [tests/dat/actions/word_count.json]() | JSON |
 | [tests/dat/actions/zippedaction.zip]() | TEST.ZIP |
+| [tests/dat/actions/unicode/build.gradle]() | Fixed by PR[#3702](https://github.com/apache/incubator-openwhisk/pull/3702/files) |
 | [tests/dat/apigw/apigw_path_param_support_test_invalidActionType.json]() | JSON |
 | [tests/dat/apigw/apigw_path_param_support_test_invalidParamName1.json]() | JSON |
 | [tests/dat/apigw/apigw_path_param_support_test_invalidParamName2.json]() | JSON |
@@ -190,3 +187,8 @@ The following "tests" files are excluded from having ASF License headers, but al
 | [tests/dat/apigw/testswaggerdoc1]() | OAPI. Test data. |
 | [tests/dat/apigw/testswaggerdoc2]() | OAPI. Test data. |
 | [tests/dat/apigw/testswaggerdocinvalid]() | OAPI. Test data. |
+| [tests/performance/gatling_tests/src/gatling/resources/conf/logback.xml]() | XML, PR[#3702](https://github.com/apache/incubator-openwhisk/pull/3702/files) |
+| [tests/performance/gatling_tests/src/gatling/resources/data/javaAction.jar](https://github.com/apache/incubator-openwhisk/blob/master/tests/performance/gatling_tests/src/gatling/resources/data/javaAction.jar) | TEST.JAR |
+| [tests/performance/gatling_tests/src/gatling/resources/conf/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/tests/performance/gatling_tests/src/gatling/resources/conf/logback.xml) | XML |
+| [tests/performance/wrk_tests/post.lua](https://github.com/apache/incubator-openwhisk/blob/master/tests/performance/wrk_tests/post.lua) | DATA.TEXT, Empy (HTTP POST) Performance test data file. |
+| [tests/src/test/resources/logback-test.xml]() | XML, PR[#3702](https://github.com/apache/incubator-openwhisk/pull/3702/files)|
