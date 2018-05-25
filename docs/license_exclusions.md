@@ -194,4 +194,4 @@ The following "tests" files are excluded from having ASF License headers, but al
 | [tests/src/test/resources/logback-test.xml]() | XML |
 
 ### Notes
-- Apparently, logback (logger) does not support comments in their XML config. files.  We had to revert PR[#3702](https://github.com/apache/incubator-openwhisk/pull/3702/files).  This needs to be investigated as to why it failed in PG.
+- logback (logger) failed in PG when adding XML comments that included the ASF license header. See PR[#3702](https://github.com/apache/incubator-openwhisk/pull/3702/files) which had to be reverted (although it passed Travis).  This needs to be investigated as to why it failed in PG and if we need additional Travis tests.
