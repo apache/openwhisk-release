@@ -55,7 +55,7 @@ For convenience, the following table provides links to each project repository's
 | [ansible/templates/whisk.properties.j2]() | J2 |
 | [bin/wskadmin](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskadmin) | Generated, symbolic link |
 | [bin/wskdev](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskdev) | Generated, symbolic link |
-| [common/scala/src/main/resources/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/common/scala/src/main/resources/logback.xml) | XML, PR[#3702](https://github.com/apache/incubator-openwhisk/pull/3702/files)|
+| [common/scala/src/main/resources/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/common/scala/src/main/resources/logback.xml) | XML |
 | [gradle/wrapper/gradle-wrapper.jar](https://github.com/apache/incubator-openwhisk/blob/master/gradle/wrapper/gradle-wrapper.jar) | TEST.JAR |
 | [gradlew.bat](https://github.com/apache/incubator-openwhisk/blob/master/gradlew.bat) | GRDL.1 |
 | [gradlew](https://github.com/apache/incubator-openwhisk/blob/master/gradlew) | GRDL.3 |
@@ -187,8 +187,11 @@ The following "tests" files are excluded from having ASF License headers, but al
 | [tests/dat/apigw/testswaggerdoc1]() | OAPI. Test data. |
 | [tests/dat/apigw/testswaggerdoc2]() | OAPI. Test data. |
 | [tests/dat/apigw/testswaggerdocinvalid]() | OAPI. Test data. |
-| [tests/performance/gatling_tests/src/gatling/resources/conf/logback.xml]() | XML, PR[#3702](https://github.com/apache/incubator-openwhisk/pull/3702/files) |
+| [tests/performance/gatling_tests/src/gatling/resources/conf/logback.xml]() | XML |
 | [tests/performance/gatling_tests/src/gatling/resources/data/javaAction.jar](https://github.com/apache/incubator-openwhisk/blob/master/tests/performance/gatling_tests/src/gatling/resources/data/javaAction.jar) | TEST.JAR |
 | [tests/performance/gatling_tests/src/gatling/resources/conf/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/tests/performance/gatling_tests/src/gatling/resources/conf/logback.xml) | XML |
 | [tests/performance/wrk_tests/post.lua](https://github.com/apache/incubator-openwhisk/blob/master/tests/performance/wrk_tests/post.lua) | DATA.TEXT, Empy (HTTP POST) Performance test data file. |
-| [tests/src/test/resources/logback-test.xml]() | XML, PR[#3702](https://github.com/apache/incubator-openwhisk/pull/3702/files)|
+| [tests/src/test/resources/logback-test.xml]() | XML |
+
+### Notes
+- Apparently, logback (logger) does not support comments in their XML config. files.  We had to revert PR[#3702](https://github.com/apache/incubator-openwhisk/pull/3702/files).  This needs to be investigated as to why it failed in PG.
