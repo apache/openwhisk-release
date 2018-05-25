@@ -58,8 +58,8 @@ For convenience, the following table provides links to each project repository's
 | [common/scala/src/main/resources/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/common/scala/src/main/resources/logback.xml) | XML |
 | [docs/images/OpenWhisk_flow_of_processing.draw.io.xml](https://github.com/apache/incubator-openwhisk/blob/master/docs/images/OpenWhisk_flow_of_processing.draw.io.xml) | XML |
 | [gradle/wrapper/gradle-wrapper.jar](https://github.com/apache/incubator-openwhisk/blob/master/gradle/wrapper/gradle-wrapper.jar) | TEST.JAR |
-| [gradlew.bat](https://github.com/apache/incubator-openwhisk/blob/master/gradlew.bat) | GRDL.1 |
-| [gradlew](https://github.com/apache/incubator-openwhisk/blob/master/gradlew) | GRDL.3 |
+| [gradlew.bat](https://github.com/apache/incubator-openwhisk/blob/master/gradlew.bat) | GRDL.BAT |
+| [gradlew](https://github.com/apache/incubator-openwhisk/blob/master/gradlew) | GRDL.W |
 | [tools/eclipse/java.xml](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) | XML |
 
 ### [incubator-openwhisk-apigateway](https://github.com/apache/incubator-openwhisk-apigateway)
@@ -72,8 +72,8 @@ For convenience, the following table provides links to each project repository's
 |:---|:---|
 | [credentials.json.enc](https://github.com/apache/incubator-openwhisk-catalog/blob/master/credentials.json.enc) | **TBD** |
 | [gradle/wrapper/gradle-wrapper.jar](https://github.com/apache/incubator-openwhisk-catalog/blob/master/gradle/wrapper/gradle-wrapper.jar) | **TBD** |
-| [gradlew.bat](https://github.com/apache/incubator-openwhisk/blob/master/gradlew.bat) | GRDL.1 |
-| [gradlew](https://github.com/apache/incubator-openwhisk/blob/master/gradlew) | GRDL.3 |
+| [gradlew.bat](https://github.com/apache/incubator-openwhisk/blob/master/gradlew.bat) | GRDL.BAT |
+| [gradlew](https://github.com/apache/incubator-openwhisk/blob/master/gradlew) | GRDL.W |
 
 ### [incubator-openwhisk-cli](https://github.com/apache/incubator-openwhisk-cli)
 | Exclusion | Rationale [TAG] |
@@ -127,8 +127,8 @@ For convenience, the following table provides links to each project repository's
 | Godeps/Readme | GODEPS.2 |
 | ansible/environments/local/hosts | ANS.HOSTS |
 | **gradle/wrapper/gradle-wrapper.jar** | **TBD** |
-| gradlew | GRDL.3 |
-| gradlew.bat | GRDL.1 |
+| gradlew | GRDL.W |
+| gradlew.bat | GRDL.BAT |
 | specification/archive/*.pdf | **TBD**, e.g., specification/archive/openwhisk_v0.8.1.pdf |
 | specification/diagrams/*.jpg | ve.g., specification/diagrams/OW-Programming-Model-Slides-Slide1.jpg |
 | specification/diagrams/*.pptx | **TBD**, e.g., OW-Programming-Model-Slides.pptx |
