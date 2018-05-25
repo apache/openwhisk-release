@@ -95,6 +95,8 @@ For convenience, the following table provides links to each project repository's
 ### [incubator-openwhisk-client-go](https://github.com/apache/incubator-openwhisk-client-go)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
+| [Godeps/Godeps.json](https://github.com/apache/incubator-openwhisk-client-go/blob/master/Godeps/Godeps.json) | JSON |
+| [Godeps/Readme](https://github.com/apache/incubator-openwhisk-client-go/blob/master/Godeps/Readme) | Not much creativity. Generated Godeps "do not edit" (these files) readme. |
 | [wski18n/i18n_resources.go](https://github.com/apache/incubator-openwhisk-client-go/blob/master/wski18n/i18n_resources.go) | I18N.1, NOTE: ASF Header manually added after autogen. recently |
 | [wski18n/resources](https://github.com/apache/incubator-openwhisk-client-go/tree/master/wski18n/resources) | JSON, Empty files (i.e., no translations yet) |
 
