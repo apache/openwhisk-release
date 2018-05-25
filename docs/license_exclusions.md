@@ -72,6 +72,8 @@ For convenience, the following table provides links to each project repository's
 |:---|:---|
 | [credentials.json.enc](https://github.com/apache/incubator-openwhisk-catalog/blob/master/credentials.json.enc) | **TBD** |
 | [gradle/wrapper/gradle-wrapper.jar](https://github.com/apache/incubator-openwhisk-catalog/blob/master/gradle/wrapper/gradle-wrapper.jar) | **TBD** |
+| [gradlew.bat](https://github.com/apache/incubator-openwhisk/blob/master/gradlew.bat) | GRDL.1 |
+| [gradlew](https://github.com/apache/incubator-openwhisk/blob/master/gradlew) | GRDL.3 |
 
 ### [incubator-openwhisk-cli](https://github.com/apache/incubator-openwhisk-cli)
 | Exclusion | Rationale [TAG] |
