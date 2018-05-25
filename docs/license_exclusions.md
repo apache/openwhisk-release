@@ -56,10 +56,10 @@ For convenience, the following table provides links to each project repository's
 | [bin/wskadmin](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskadmin) | Generated, symbolic link |
 | [bin/wskdev](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskdev) | Generated, symbolic link |
 | [common/scala/src/main/resources/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/common/scala/src/main/resources/logback.xml) | XML |
+| [docs/images/OpenWhisk_flow_of_processing.draw.io.xml](https://github.com/apache/incubator-openwhisk/blob/master/docs/images/OpenWhisk_flow_of_processing.draw.io.xml) | XML |
 | [gradle/wrapper/gradle-wrapper.jar](https://github.com/apache/incubator-openwhisk/blob/master/gradle/wrapper/gradle-wrapper.jar) | TEST.JAR |
 | [gradlew.bat](https://github.com/apache/incubator-openwhisk/blob/master/gradlew.bat) | GRDL.1 |
 | [gradlew](https://github.com/apache/incubator-openwhisk/blob/master/gradlew) | GRDL.3 |
-| [incubator-openwhisk/docs/images/OpenWhisk_flow_of_processing.draw.io.xml](https://github.com/apache/incubator-openwhisk/blob/master/docs/images/OpenWhisk_flow_of_processing.draw.io.xml) | XML |
 | [tools/eclipse/java.xml](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) | XML |
 
 ### [incubator-openwhisk-apigateway](https://github.com/apache/incubator-openwhisk-apigateway)
