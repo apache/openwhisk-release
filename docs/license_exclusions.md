@@ -231,7 +231,6 @@ The following "tests" files are excluded from having ASF License headers, but al
 | [tests/dat/actions/validInput2.json]() | JSON |
 | [tests/dat/actions/word_count.json]() | JSON |
 | [tests/dat/actions/zippedaction.zip]() | TEST.ZIP |
-| [tests/dat/actions/unicode/build.gradle]() | Fixed by PR[#3708](https://github.com/apache/incubator-openwhisk/pull/3708) |
 | [tests/dat/apigw/apigw_path_param_support_test_invalidActionType.json]() | JSON |
 | [tests/dat/apigw/apigw_path_param_support_test_invalidParamName1.json]() | JSON |
 | [tests/dat/apigw/apigw_path_param_support_test_invalidParamName2.json]() | JSON |
