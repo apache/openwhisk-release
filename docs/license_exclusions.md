@@ -96,7 +96,7 @@ For convenience, the following table provides links to each project repository's
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [Godeps/Godeps.json](https://github.com/apache/incubator-openwhisk-client-go/blob/master/Godeps/Godeps.json) | JSON |
-| [Godeps/Readme](https://github.com/apache/incubator-openwhisk-client-go/blob/master/Godeps/Readme) | Not much creativity. Generated Godeps "do not edit" (these files) readme. |
+| [Godeps/Readme](https://github.com/apache/incubator-openwhisk-client-go/blob/master/Godeps/Readme) | Not much creativity. Tooling generated "do not edit" [these files] message. |
 | [wski18n/i18n_resources.go](https://github.com/apache/incubator-openwhisk-client-go/blob/master/wski18n/i18n_resources.go) | I18N.1, NOTE: ASF Header manually added after autogen. recently |
 | [wski18n/resources](https://github.com/apache/incubator-openwhisk-client-go/tree/master/wski18n/resources) | JSON, Empty files (i.e., no translations yet) |
 
@@ -109,7 +109,6 @@ For convenience, the following table provides links to each project repository's
 | [gradlew]() | GRDL.W |
 | [gradlew.bat]() | GRDL.BAT |
 | [sdk/docker/Dockerfile]() | **FIX** |
-| [sdk/docker/example.c]() | **FIX**, **TBD** |
 | [tests/.pydevproject]() |  |
 | [tests/dat/blackbox/badaction/Dockerfile]() | **FIX** |
 | [tests/dat/blackbox/badproxy/Dockerfile]() | **FIX** |
