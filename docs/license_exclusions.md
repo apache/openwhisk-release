@@ -104,6 +104,14 @@ For convenience, the following table provides links to each project repository's
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
+| [core/actionProxy/Dockerfile]() | **FIX**  |
+| [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
+| [gradlew]() | GRDL.W |
+| [gradlew.bat]() | GRDL.BAT |
+| [sdk/docker/Dockerfile]() | **FIX** |
+| [sdk/docker/example.c]() | **FIX**, **TBD** |
+| [tests/.pydevproject]() |  |
+| [tests/dat/blackbox/badaction/Dockerfile]() | **FIX** |
 
 ### [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java)
 | Exclusion | Rationale [TAG] |
