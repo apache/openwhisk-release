@@ -65,7 +65,9 @@ For convenience, the following table provides links to each project repository's
 ### [incubator-openwhisk-apigateway](https://github.com/apache/incubator-openwhisk-apigateway)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [naxsi_core.rules]() | Configuration data. |
+| [.profiling.after](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/.profiling.after) | **TBD**, Profile tool script. |
+| [.profiling.before](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/.profiling.before) | **TBD**, Profile tool script. |
+| [naxsi_core.rules](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/naxsi_core.rules) | **FIX** BAD HEADER |
 | [tests/scripts/lua/management/examples/example1.json](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example1.json) | JSON |
 | [tests/scripts/lua/management/examples/example2.json](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example2.json) | JSON |
 | [tests/scripts/lua/management/examples/example3.json](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example3.json) | JSON |
@@ -82,7 +84,13 @@ For convenience, the following table provides links to each project repository's
 ### [incubator-openwhisk-cli](https://github.com/apache/incubator-openwhisk-cli)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| _None_ | **_test files?_** |
+| [gradle/wrapper/gradle-wrapper.jar]() | TEST.JAR |
+| [gradlew.bat](https://github.com/apache/incubator-openwhisk-cli/blob/master/gradlew.bat) | GRDL.BAT |
+| [gradlew](https://github.com/apache/incubator-openwhisk-cli/blob/master/gradlew) | GRDL.W |
+| [tests/src/dat/invalidInput1.json]() | JSON |
+| [tests/src/dat/invalidInput2.json]() | JSON |
+| [tests/src/dat/invalidInput3.json]() | JSON |
+| [tests/src/dat/invalidInput4.json]() | JSON |
 
 ### [incubator-openwhisk-client-go](https://github.com/apache/incubator-openwhisk-client-go)
 | Exclusion | Rationale [TAG] |
