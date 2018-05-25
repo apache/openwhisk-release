@@ -112,35 +112,66 @@ For convenience, the following table provides links to each project repository's
 | [sdk/docker/example.c]() | **FIX**, **TBD** |
 | [tests/.pydevproject]() |  |
 | [tests/dat/blackbox/badaction/Dockerfile]() | **FIX** |
+| [tests/dat/blackbox/badproxy/Dockerfile]() | **FIX** |
 
 ### [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
+| [gradle/wrapper/gradle-wrapper.jar]() |  |
+| [gradlew]() |  |
+| [gradlew.bat]() |  |
+| [java8/Dockerfile]() | **FIX** |
+| [java8/proxy/gradle/wrapper/gradle-wrapper.jar]() |  |
+| [java8/proxy/gradlew]() |  |
+| [java8/proxy/gradlew.bat]() |  |
 
 ### [incubator-openwhisk-runtime-nodejs](https://github.com/apache/incubator-openwhisk-runtime-nodejs)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
+| [core/nodejs6Action/Dockerfile]() | **FIX** |
+| [core/nodejs8Action/Dockerfile]() | **FIX** |
+| [core/nodejs8Action/package.json]() | JSON |
+| [core/nodejsActionBase/Dockerfile]() | **FIX** |
+| [core/nodejsActionBase/package.json]() | JSON |
+| [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
+| [gradlew]() | GRDL.W |
+| [gradlew.bat]() | GRDL.BAT |
 
 ### [incubator-openwhisk-runtime-php](https://github.com/apache/incubator-openwhisk-runtime-php)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
 
 ### [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
+| [core/php7.1Action/Dockerfil]() | **FIX** |
+| [core/php7.1Action/composer.json]() | JSON |
+| [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
+| [gradlew]() | GRDL.W |
+| [gradlew.bat]() | GRDL.BAT |
 
 ### [incubator-openwhisk-runtime-swift](https://github.com/apache/incubator-openwhisk-runtime-swift)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
 | [SwiftyRequest/Package.resolved](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/tests/dat/actions/SwiftyRequest/Package.resolved) | OAPI |
+| [core/python2Action/Dockerfile]() | **FIX** |
+| [core/pythonAction/Dockerfile]() | **FIX** |
+| [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
+| [gradlew]() | GRDL.W |
+| [gradlew.bat]() | GRDL.BAT |
 
 ### [incubator-openwhisk-wskdeploy](https://github.com/apache/incubator-openwhisk-wskdeploy)
-
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [wski18n/i18n_resources.go](https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/wski18n/i18n_resources.go) | I18N.1 |
