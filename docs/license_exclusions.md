@@ -106,7 +106,7 @@ For convenience, the following table provides links to each project repository's
 | [gradlew]() | GRDL.W |
 | [gradlew.bat]() | GRDL.BAT |
 | [sdk/docker/Dockerfile]() | **FIX** |
-| [tests/.pydevproject]() |  |
+| [tests/.pydevproject]() | **TBD** PYDEV |
 | [tests/dat/blackbox/badaction/Dockerfile]() | **FIX** |
 | [tests/dat/blackbox/badproxy/Dockerfile]() | **FIX** |
 
