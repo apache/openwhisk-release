@@ -103,6 +103,7 @@ In accordance with Apache LICENSE policies, the table below lists general exclus
 | TEST.JAR | Java Application Resource (JAR) files (`*.jar`) | Binary JAR files used for testing (Actions). |
 | TEST.ZIP | ZIP compressed archive files (`*.zip`) | Binary ZIP files used for testing (Actions). |
 | XML | XML files (`*.xml`) | Configuration and test data files.</br>Example: [incubator-openwhisk/tools/eclipse/java.xml](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) |
+| PROFILE | Profiling configuration scripts (`.profiling.*`) | Configure Docker container for profiling (build). |
 
 # Known exclusions
 
