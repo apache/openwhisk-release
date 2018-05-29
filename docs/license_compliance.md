@@ -99,11 +99,11 @@ In accordance with Apache LICENSE policies, the table below lists general exclus
 | KUBE.1 | Kubernetes Configurations (e.g., `*.env`) | Configuration file. Not much creativity.<br/>Example: [incubator-openwhisk//ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) |
 | OAPI | Open API (Swagger) documents | JSON files describing API input data.</br>Example: [incubator-openwhisk/blob/master/tests/dat/apigw/testswaggerdoc2](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/apigw/testswaggerdoc2) for test input data |
 | PEM | Privacy Enhanced Mail (PEM) files (`*.pem`) | Contains generated, base64-encoded x509 keys.</br>Example: [incubator-openwhisk/ansible/roles/nginx/files/openwhisk-server-key.pem](https://github.com/apache/incubator-openwhisk/blob/master/ansible/roles/nginx/files/openwhisk-server-key.pem)|
+| PROFILE | Profiling configuration scripts (`.profiling.*`) | Configure Docker container for profiling (build). |
 | PYDEV | PyDev configuration files (`.pydevproject`) | Not included in source release. |
 | TEST.JAR | Java Application Resource (JAR) files (`*.jar`) | Binary JAR files used for testing (Actions). |
 | TEST.ZIP | ZIP compressed archive files (`*.zip`) | Binary ZIP files used for testing (Actions). |
 | XML | XML files (`*.xml`) | Configuration and test data files.</br>Example: [incubator-openwhisk/tools/eclipse/java.xml](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) |
-| PROFILE | Profiling configuration scripts (`.profiling.*`) | Configure Docker container for profiling (build). |
 
 # Known exclusions
 
