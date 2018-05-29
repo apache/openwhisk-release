@@ -68,11 +68,6 @@ For convenience, the following table provides links to each project repository's
 | [.profiling.after](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/.profiling.after) | PROFILE, **TBD** |
 | [.profiling.before](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/.profiling.before) | PROFILE, **TBD** |
 | [naxsi_core.rules](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/naxsi_core.rules) | **FIX** BAD HEADER |
-| [tests/scripts/lua/management/examples/example1.json](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example1.json) | JSON |
-| [tests/scripts/lua/management/examples/example2.json](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example2.json) | JSON |
-| [tests/scripts/lua/management/examples/example3.json](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example3.json) | JSON |
-| [tests/lua_modules]() | Travis installed test modules scripts. Not part of source code release. |
-| [lua_install]() | **FIX** Travis installed test modules scripts. Not part of source code release. |
 
 ### [incubator-openwhisk-catalog](https://github.com/apache/incubator-openwhisk-catalog)
 | Exclusion | Rationale [TAG] |
@@ -254,6 +249,7 @@ The following "tests" files are excluded from having ASF License headers, but al
 | [tests/scripts/lua/management/examples/example2.json](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example2.json) | JSON |
 | [tests/scripts/lua/management/examples/example3.json](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example3.json) | JSON |
 | [tests/lua_modules]() | Travis installed test modules scripts. Not part of source code release. |
+| [lua_install]() | **FIX** Travis installed test modules scripts. Not part of source code release. |
 
 ### Notes
 - logback (logger) failed in PG when adding XML comments that included the ASF license header. See PR[#3702](https://github.com/apache/incubator-openwhisk/pull/3702/files) which had to be reverted (although it passed Travis).  This needs to be investigated as to why it failed in PG and if we need additional Travis tests.
