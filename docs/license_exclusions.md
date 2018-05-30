@@ -106,7 +106,6 @@ For convenience, the following table provides links to each project repository's
 | [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
 | [gradlew]() | GRDL.W |
 | [gradlew.bat]() | GRDL.BAT |
-| [java8/Dockerfile]() | **FIX** |
 | [java8/proxy/gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
 | [java8/proxy/gradlew]() | GRDL.W |
 | [java8/proxy/gradlew.bat]() | GRDL.BAT |
@@ -115,10 +114,7 @@ For convenience, the following table provides links to each project repository's
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
-| [core/nodejs6Action/Dockerfile]() | **FIX** |
-| [core/nodejs8Action/Dockerfile]() | **FIX** |
 | [core/nodejs8Action/package.json]() | JSON |
-| [core/nodejsActionBase/Dockerfile]() | **FIX** |
 | [core/nodejsActionBase/package.json]() | JSON |
 | [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
 | [gradlew]() | GRDL.W |
@@ -128,7 +124,6 @@ For convenience, the following table provides links to each project repository's
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
-| [core/php7.1Action/Dockerfile]() | **FIX** |
 | [core/php7.1Action/composer.json]() | JSON |
 | [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
 | [gradlew]() | GRDL.W |
@@ -259,6 +254,16 @@ The following "tests" files are excluded from having ASF License headers, but al
 | [tests/.pydevproject]() | PYDEV |
 
 ### [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| _None_ |  |
+
+### [incubator-openwhisk-runtime-nodejs](https://github.com/apache/incubator-openwhisk-runtime-nodejs)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| _None_ |  |
+
+### [incubator-openwhisk-runtime-php](https://github.com/apache/incubator-openwhisk-runtime-php)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | _None_ |  |
