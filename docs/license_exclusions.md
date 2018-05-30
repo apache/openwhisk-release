@@ -156,14 +156,14 @@ In additon, the specific rationale for the exclusion, in accordance with Apache 
 |:---|:---|
 | [wski18n/i18n_resources.go](https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/wski18n/i18n_resources.go) | I18N.1 |
 | [wski18n/resources](https://github.com/apache/incubator-openwhisk-wskdeploy/tree/master/wski18n/resources) | JSON, Empty files (i.e., no translations yet) |
-| [Godeps/Godeps.json]() | GODEPS.1 |
-| [Godeps/Readme]() | GODEPS.2 |
+| [Godeps/Godeps.json]() | GODEPS.JSON |
+| [Godeps/Readme]() | GODEPS.README |
 | [ansible/environments/local/hosts]() | ANS.HOSTS |
 | [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
 | [gradlew]() | GRDL.W |
 | [gradlew.bat]() | GRDL.BAT |
 | [specificatio_N/A_rchive/*.pdf]() | **TBD**, e.g., specificatio_N/A_rchive/openwhisk_v0.8.1.pdf |
-| [specification/diagrams/*.jpg]() | ve.g., specification/diagrams/OW-Programming-Model-Slides-Slide1.jpg |
+| [specification/diagrams/*.jpg]() | IMAGE, e.g., specification/diagrams/OW-Programming-Model-Slides-Slide1.jpg |
 | [specification/diagrams/*.pptx]() | **TBD**, e.g., OW-Programming-Model-Slides.pptx |
 | [specification/*.pdf]() | **TBD**, e.g., specification/openwhisk_v0.9.1.pdf |
 | [tests/apps/owbp-cloudant-trigger/manifest-bp.json]() | JSON |
