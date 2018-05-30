@@ -17,11 +17,15 @@
 #
 -->
 
-# ASF License header exception tracking
+# ASF License header Known Exclusions
 
-For convenience, the following table provides links to each project repository's LICENSE and NOTICE files, as well as an overview of notable software dependencies (non-canonical) and license scanning exclusions.
+For convenience, the following tables provide listings of each project repository's files that have been excluded from having Apache license headers and from license scanning utilities that are part of the release process.
 
-**NOTE: This listing is not intended to be complete or canonical**
+In additon, the specific rationale for the exclusion, in accordance with Apache release policies, is indicated as well. Rationales that are indicated by a TAG are fully described on the [license_compliance.md](license_compliance.md) page.
+
+**NOTE: This listings are not intended to be complete or canonical**
+
+## Exclusions part of Apache source code release
 
 ### [incubator-openwhisk](https://github.com/apache/incubator-openwhisk)
 
@@ -57,7 +61,7 @@ For convenience, the following table provides links to each project repository's
 | [bin/wskdev](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskdev) | Generated, symbolic link |
 | [common/scala/src/main/resources/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/common/scala/src/main/resources/logback.xml) | XML |
 | [docs/images/OpenWhisk_flow_of_processing.draw.io.xml](https://github.com/apache/incubator-openwhisk/blob/master/docs/images/OpenWhisk_flow_of_processing.draw.io.xml) | XML |
-| [gradle/wrapper/gradle-wrapper.jar](https://github.com/apache/incubator-openwhisk/blob/master/gradle/wrapper/gradle-wrapper.jar) | TEST.JAR |
+| [gradle/wrapper/gradle-wrapper.jar](https://github.com/apache/incubator-openwhisk/blob/master/gradle/wrapper/gradle-wrapper.jar) | GRDL.JAR |
 | [gradlew.bat](https://github.com/apache/incubator-openwhisk/blob/master/gradlew.bat) | GRDL.BAT |
 | [gradlew](https://github.com/apache/incubator-openwhisk/blob/master/gradlew) | GRDL.W |
 | [tools/eclipse/java.xml](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) | XML |
@@ -65,12 +69,8 @@ For convenience, the following table provides links to each project repository's
 ### [incubator-openwhisk-apigateway](https://github.com/apache/incubator-openwhisk-apigateway)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [.profiling.after](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/.profiling.after) | **TBD**, Profile tool script. |
-| [.profiling.before](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/.profiling.before) | **TBD**, Profile tool script. |
-| [naxsi_core.rules](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/naxsi_core.rules) | **FIX** BAD HEADER |
-| [tests/scripts/lua/management/examples/example1.json](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example1.json) | JSON |
-| [tests/scripts/lua/management/examples/example2.json](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example2.json) | JSON |
-| [tests/scripts/lua/management/examples/example3.json](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example3.json) | JSON |
+| [.profiling.after](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/.profiling.after) | PROFILE |
+| [.profiling.before](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/.profiling.before) | PROFILE |
 
 ### [incubator-openwhisk-catalog](https://github.com/apache/incubator-openwhisk-catalog)
 | Exclusion | Rationale [TAG] |
@@ -79,24 +79,19 @@ For convenience, the following table provides links to each project repository's
 | [gradle/wrapper/gradle-wrapper.jar](https://github.com/apache/incubator-openwhisk-catalog/blob/master/gradle/wrapper/gradle-wrapper.jar) | GRDL.JAR |
 | [gradlew.bat](https://github.com/apache/incubator-openwhisk/blob/master/gradlew.bat) | GRDL.BAT |
 | [gradlew](https://github.com/apache/incubator-openwhisk/blob/master/gradlew) | GRDL.W |
-| [tests/credentials.json.enc](https://github.com/apache/incubator-openwhisk/blob/master/tests/credentials.json.enc) | API.ENC |
 
 ### [incubator-openwhisk-cli](https://github.com/apache/incubator-openwhisk-cli)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [gradle/wrapper/gradle-wrapper.jar]() | TEST.JAR |
+| [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
 | [gradlew.bat](https://github.com/apache/incubator-openwhisk-cli/blob/master/gradlew.bat) | GRDL.BAT |
 | [gradlew](https://github.com/apache/incubator-openwhisk-cli/blob/master/gradlew) | GRDL.W |
-| [tests/src/dat/invalidInput1.json]() | JSON |
-| [tests/src/dat/invalidInput2.json]() | JSON |
-| [tests/src/dat/invalidInput3.json]() | JSON |
-| [tests/src/dat/invalidInput4.json]() | JSON |
 
 ### [incubator-openwhisk-client-go](https://github.com/apache/incubator-openwhisk-client-go)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [Godeps/Godeps.json](https://github.com/apache/incubator-openwhisk-client-go/blob/master/Godeps/Godeps.json) | JSON |
-| [Godeps/Readme](https://github.com/apache/incubator-openwhisk-client-go/blob/master/Godeps/Readme) | Not much creativity. Generated Godeps "do not edit" (these files) readme. |
+| [Godeps/Godeps.json](https://github.com/apache/incubator-openwhisk-client-go/blob/master/Godeps/Godeps.json) | GODEPS.JSON |
+| [Godeps/Readme](https://github.com/apache/incubator-openwhisk-client-go/blob/master/Godeps/Readme) | GODEPS.README |
 | [wski18n/i18n_resources.go](https://github.com/apache/incubator-openwhisk-client-go/blob/master/wski18n/i18n_resources.go) | I18N.1, NOTE: ASF Header manually added after autogen. recently |
 | [wski18n/resources](https://github.com/apache/incubator-openwhisk-client-go/tree/master/wski18n/resources) | JSON, Empty files (i.e., no translations yet) |
 
@@ -104,36 +99,26 @@ For convenience, the following table provides links to each project repository's
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
-| [core/actionProxy/Dockerfile]() | **FIX**  |
 | [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
 | [gradlew]() | GRDL.W |
 | [gradlew.bat]() | GRDL.BAT |
-| [sdk/docker/Dockerfile]() | **FIX** |
-| [sdk/docker/example.c]() | **FIX**, **TBD** |
-| [tests/.pydevproject]() |  |
-| [tests/dat/blackbox/badaction/Dockerfile]() | **FIX** |
-| [tests/dat/blackbox/badproxy/Dockerfile]() | **FIX** |
 
 ### [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
-| [gradle/wrapper/gradle-wrapper.jar]() |  |
-| [gradlew]() |  |
-| [gradlew.bat]() |  |
-| [java8/Dockerfile]() | **FIX** |
-| [java8/proxy/gradle/wrapper/gradle-wrapper.jar]() |  |
-| [java8/proxy/gradlew]() |  |
-| [java8/proxy/gradlew.bat]() |  |
+| [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
+| [gradlew]() | GRDL.W |
+| [gradlew.bat]() | GRDL.BAT |
+| [java8/proxy/gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
+| [java8/proxy/gradlew]() | GRDL.W |
+| [java8/proxy/gradlew.bat]() | GRDL.BAT |
 
 ### [incubator-openwhisk-runtime-nodejs](https://github.com/apache/incubator-openwhisk-runtime-nodejs)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
-| [core/nodejs6Action/Dockerfile]() | **FIX** |
-| [core/nodejs8Action/Dockerfile]() | **FIX** |
 | [core/nodejs8Action/package.json]() | JSON |
-| [core/nodejsActionBase/Dockerfile]() | **FIX** |
 | [core/nodejsActionBase/package.json]() | JSON |
 | [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
 | [gradlew]() | GRDL.W |
@@ -143,18 +128,15 @@ For convenience, the following table provides links to each project repository's
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
+| [core/php7.1Action/composer.json]() | JSON |
+| [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
+| [gradlew]() | GRDL.W |
+| [gradlew.bat]() | GRDL.BAT |
 
 ### [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
-| [core/php7.1Action/Dockerfil]() | **FIX** |
 | [core/php7.1Action/composer.json]() | JSON |
 | [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
 | [gradlew]() | GRDL.W |
@@ -164,9 +146,6 @@ For convenience, the following table provides links to each project repository's
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
-| [SwiftyRequest/Package.resolved](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/tests/dat/actions/SwiftyRequest/Package.resolved) | OAPI |
-| [core/python2Action/Dockerfile]() | **FIX** |
-| [core/pythonAction/Dockerfile]() | **FIX** |
 | [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
 | [gradlew]() | GRDL.W |
 | [gradlew.bat]() | GRDL.BAT |
@@ -176,33 +155,33 @@ For convenience, the following table provides links to each project repository's
 |:---|:---|
 | [wski18n/i18n_resources.go](https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/wski18n/i18n_resources.go) | I18N.1 |
 | [wski18n/resources](https://github.com/apache/incubator-openwhisk-wskdeploy/tree/master/wski18n/resources) | JSON, Empty files (i.e., no translations yet) |
-| Godeps/Godeps.json | GODEPS.1 |
-| Godeps/Readme | GODEPS.2 |
-| ansible/environments/local/hosts | ANS.HOSTS |
-| **gradle/wrapper/gradle-wrapper.jar** | **TBD** |
-| gradlew | GRDL.W |
-| gradlew.bat | GRDL.BAT |
-| specification/archive/*.pdf | **TBD**, e.g., specification/archive/openwhisk_v0.8.1.pdf |
-| specification/diagrams/*.jpg | ve.g., specification/diagrams/OW-Programming-Model-Slides-Slide1.jpg |
-| specification/diagrams/*.pptx | **TBD**, e.g., OW-Programming-Model-Slides.pptx |
-| specification/*.pdf | **TBD**, e.g., specification/openwhisk_v0.9.1.pdf |
-| tests/apps/owbp-cloudant-trigger/manifest-bp.json | JSON |
-| tests/dat/wskprops | API Client configuration data. |
-| tests/src/integration/docker/actions/exec.zip | TEST.ZIP |
-| tests/src/integration/docker/actions/go/exec | TEST.ZIP, renamed from exec.zip |
-| tests/src/integration/helloworld/actions/hello.jar | TEST.JAR |
-| tests/src/integration/jaraction/src/hello.jar | TEST.JAR |
-| tests/src/integration/message-hub/src/events.json | JSON |
-| tests/src/integration/runtimetests/src/hello.jar | TEST.JAR |
-| tests/src/integration/runtimetests/src/helloworld/helloworld.zip | TEST.ZIP |
-| tests/src/integration/runtimetests/src/helloworld/node_modules/string-format/package.json | JSON |
-| tests/src/integration/runtimetests/src/helloworld/package.json | JSON |
-| tests/src/integration/validate-packages-in-manifest/actions/hello.jar | TEST.JAR |
-| tests/src/integration/zipaction/actions/cat/node_modules/cat/package.json | JSON |
-| tests/src/integration/zipaction/actions/cat/package.json | JSON |
-| tests/apps/owbp-cloudant-trigger/manifest-bp.json | JSON |
+| [Godeps/Godeps.json]() | GODEPS.JSON |
+| [Godeps/Readme]() | GODEPS.README |
+| [ansible/environments/local/hosts]() | ANS.HOSTS |
+| [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
+| [gradlew]() | GRDL.W |
+| [gradlew.bat]() | GRDL.BAT |
+| [specificatio_N/A_rchive/*.pdf]() | **TBD**, e.g., specificatio_N/A_rchive/openwhisk_v0.8.1.pdf |
+| [specification/diagrams/*.jpg]() | IMAGE, e.g., specification/diagrams/OW-Programming-Model-Slides-Slide1.jpg |
+| [specification/diagrams/*.pptx]() | **TBD**, e.g., OW-Programming-Model-Slides.pptx |
+| [specification/*.pdf]() | **TBD**, e.g., specification/openwhisk_v0.9.1.pdf |
+| [tests/apps/owbp-cloudant-trigger/manifest-bp.json]() | JSON |
+| [tests/dat/wskprops]() | API Client configuration data. |
+| [tests/src/integration/docker/actions/exec.zip]() | TEST.ZIP |
+| [tests/src/integration/docker/actions/go/exec]() | TEST.ZIP, renamed from exec.zip |
+| [tests/src/integration/helloworld/actions/hello.jar]() | TEST.JAR |
+| [tests/src/integration/jaraction/src/hello.jar]() | TEST.JAR |
+| [tests/src/integration/message-hub/src/events.json]() | JSON |
+| [tests/src/integration/runtimetests/src/hello.jar]() | TEST.JAR |
+| [tests/src/integration/runtimetests/src/helloworld/helloworld.zip]() | TEST.ZIP |
+| [tests/src/integration/runtimetests/src/helloworld/node_modules/string-format/package.json]() | JSON |
+| [tests/src/integration/runtimetests/src/helloworld/package.json]() | JSON |
+| [tests/src/integration/validate-packages-in-manifest/actions/hello.jar]() | TEST.JAR |
+| [tests/src/integration/zipactio_N/A_ctions/cat/node_modules/cat/package.json]() | JSON |
+| [tests/src/integration/zipactio_N/A_ctions/cat/package.json]() | JSON |
+| [tests/apps/owbp-cloudant-trigger/manifest-bp.json]() | JSON |
 
-## Test files excluded from source release
+## Exclusions NOT part of Apache source code release
 <!--
  ======= Test file exclusions NOT part of Source code releases (yet) =========
 -->
@@ -211,7 +190,7 @@ The following "tests" files are excluded from having ASF License headers, but al
 ### [incubator-openwhisk](https://github.com/apache/incubator-openwhisk)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [tests/credentials.json.enc](https://github.com/apache/incubator-openwhisk-catalog/blob/master/tests/credentials.json.enc) | **TBD** |
+| [tests/credentials.json.enc](https://github.com/apache/incubator-openwhisk-catalog/blob/master/tests/credentials.json.enc) | API.ENC |
 | [tests/dat/actions/blackbox.zip]() | TEST.ZIP |
 | [tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) | DATA.TEST, Empty (zero-length) test data file. |
 | [tests/dat/actions/helloJava.jar]() | TEST.JAR |
@@ -246,6 +225,58 @@ The following "tests" files are excluded from having ASF License headers, but al
 | [tests/performance/gatling_tests/src/gatling/resources/conf/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/tests/performance/gatling_tests/src/gatling/resources/conf/logback.xml) | XML |
 | [tests/performance/wrk_tests/post.lua](https://github.com/apache/incubator-openwhisk/blob/master/tests/performance/wrk_tests/post.lua) | DATA.TEXT, Empy (HTTP POST) Performance test data file. |
 | [tests/src/test/resources/logback-test.xml]() | XML |
+
+### [incubator-openwhisk-apigateway](https://github.com/apache/incubator-openwhisk-apigateway)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| [tests/scripts/lua/management/examples/example1.json](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example1.json) | JSON |
+| [tests/scripts/lua/management/examples/example2.json](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example2.json) | JSON |
+| [tests/scripts/lua/management/examples/example3.json](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example3.json) | JSON |
+| [tests/lua_modules]() | Travis installed test modules scripts. Not part of source code release. |
+| [lua_install]() | Travis installed test packages. Not part of source code release. |
+
+### [incubator-openwhisk-catalog](https://github.com/apache/incubator-openwhisk-catalog)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| [tests/credentials.json.enc](https://github.com/apache/incubator-openwhisk/blob/master/tests/credentials.json.enc) | API.ENC |
+
+### [incubator-openwhisk-cli](https://github.com/apache/incubator-openwhisk-cli)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| [tests/src/dat/invalidInput1.json]() | JSON |
+| [tests/src/dat/invalidInput2.json]() | JSON |
+| [tests/src/dat/invalidInput3.json]() | JSON |
+| [tests/src/dat/invalidInput4.json]() | JSON |
+
+### [incubator-openwhisk-runtime-docker](https://github.com/apache/incubator-openwhisk-runtime-docker)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| _None_ | _N/A_ |
+
+### [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| _None_ | _N/A_ |
+
+### [incubator-openwhisk-runtime-nodejs](https://github.com/apache/incubator-openwhisk-runtime-nodejs)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| _None_ | _N/A_ |
+
+### [incubator-openwhisk-runtime-php](https://github.com/apache/incubator-openwhisk-runtime-php)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| _None_ | _N/A_ |
+
+### [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| _None_ | _N/A_ |
+
+### [incubator-openwhisk-runtime-swift](https://github.com/apache/incubator-openwhisk-runtime-swift)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| [tests/dat/SwiftyRequest/Package.resolved](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/tests/dat/actions/SwiftyRequest/Package.resolved) | OAPI |
 
 ### Notes
 - logback (logger) failed in PG when adding XML comments that included the ASF license header. See PR[#3702](https://github.com/apache/incubator-openwhisk/pull/3702/files) which had to be reverted (although it passed Travis).  This needs to be investigated as to why it failed in PG and if we need additional Travis tests.
