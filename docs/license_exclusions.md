@@ -19,7 +19,9 @@
 
 # ASF License header Known Exclusions
 
-For convenience, the following tables provide listings of each project repository's files that have been excluded from having Apache license headers and from license scanning utilities that are part of the release process.  The rationale for the exclusion, in accordance with Apache release policies, are indicated as well.  If the tationale is a TAG, you may view the rationale on the [license_compliance.md](license_compliance.md) page.
+For convenience, the following tables provide listings of each project repository's files that have been excluded from having Apache license headers and from license scanning utilities that are part of the release process.
+
+The rationale for the exclusion, in accordance with Apache release policies, are indicated as well. Rationales that are indicated by a TAG are fully described on the [license_compliance.md](license_compliance.md) page.
 
 **NOTE: This listings are not intended to be complete or canonical**
 
