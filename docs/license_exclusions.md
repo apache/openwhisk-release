@@ -191,7 +191,7 @@ The following "tests" files are excluded from having ASF License headers, but al
 ### [incubator-openwhisk](https://github.com/apache/incubator-openwhisk)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [tests/credentials.json.enc](https://github.com/apache/incubator-openwhisk-catalog/blob/master/tests/credentials.json.enc) | **TBD** |
+| [tests/credentials.json.enc](https://github.com/apache/incubator-openwhisk-catalog/blob/master/tests/credentials.json.enc) | API.ENC |
 | [tests/dat/actions/blackbox.zip]() | TEST.ZIP |
 | [tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) | DATA.TEST, Empty (zero-length) test data file. |
 | [tests/dat/actions/helloJava.jar]() | TEST.JAR |
