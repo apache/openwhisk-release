@@ -234,7 +234,7 @@ The following "tests" files are excluded from having ASF License headers, but al
 | [tests/scripts/lua/management/examples/example2.json](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example2.json) | JSON |
 | [tests/scripts/lua/management/examples/example3.json](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example3.json) | JSON |
 | [tests/lua_modules]() | Travis installed test modules scripts. Not part of source code release. |
-| [lua_install]() | **FIX** Travis installed test modules scripts. Not part of source code release. |
+| [lua_install]() | Travis installed test packages. Not part of source code release. |
 
 ### [incubator-openwhisk-catalog](https://github.com/apache/incubator-openwhisk-catalog)
 | Exclusion | Rationale [TAG] |
