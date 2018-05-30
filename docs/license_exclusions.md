@@ -17,11 +17,13 @@
 #
 -->
 
-# ASF License header exception tracking
+# ASF License header Known Exclusions
 
-For convenience, the following table provides links to each project repository's LICENSE and NOTICE files, as well as an overview of notable software dependencies (non-canonical) and license scanning exclusions.
+For convenience, the following tables provide listings of each project repository's files that have been excluded from having Apache license headers and from license scanning utilities that are part of the release process.  The rationale for the exclusion, in accordance with Apache release policies, are indicated as well.  If the tationale is a TAG, you may view the rationale on the [license_compliance.md](license_compliance.md) page.
 
-**NOTE: This listing is not intended to be complete or canonical**
+**NOTE: This listings are not intended to be complete or canonical**
+
+## Exclusions part of Apache source code release
 
 ### [incubator-openwhisk](https://github.com/apache/incubator-openwhisk)
 
@@ -178,7 +180,7 @@ For convenience, the following table provides links to each project repository's
 | [tests/src/integration/zipaction/actions/cat/package.json]() | JSON |
 | [tests/apps/owbp-cloudant-trigger/manifest-bp.json]() | JSON |
 
-## Test files excluded from source release
+## Exclusions NOT part of Apache source code release
 <!--
  ======= Test file exclusions NOT part of Source code releases (yet) =========
 -->
