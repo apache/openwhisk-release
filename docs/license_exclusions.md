@@ -67,7 +67,6 @@ For convenience, the following table provides links to each project repository's
 |:---|:---|
 | [.profiling.after](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/.profiling.after) | PROFILE |
 | [.profiling.before](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/.profiling.before) | PROFILE |
-| [naxsi_core.rules](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/naxsi_core.rules) | **FIX** BAD HEADER |
 
 ### [incubator-openwhisk-catalog](https://github.com/apache/incubator-openwhisk-catalog)
 | Exclusion | Rationale [TAG] |
@@ -76,7 +75,6 @@ For convenience, the following table provides links to each project repository's
 | [gradle/wrapper/gradle-wrapper.jar](https://github.com/apache/incubator-openwhisk-catalog/blob/master/gradle/wrapper/gradle-wrapper.jar) | GRDL.JAR |
 | [gradlew.bat](https://github.com/apache/incubator-openwhisk/blob/master/gradlew.bat) | GRDL.BAT |
 | [gradlew](https://github.com/apache/incubator-openwhisk/blob/master/gradlew) | GRDL.W |
-| [tests/credentials.json.enc](https://github.com/apache/incubator-openwhisk/blob/master/tests/credentials.json.enc) | API.ENC |
 
 ### [incubator-openwhisk-cli](https://github.com/apache/incubator-openwhisk-cli)
 | Exclusion | Rationale [TAG] |
@@ -84,10 +82,6 @@ For convenience, the following table provides links to each project repository's
 | [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
 | [gradlew.bat](https://github.com/apache/incubator-openwhisk-cli/blob/master/gradlew.bat) | GRDL.BAT |
 | [gradlew](https://github.com/apache/incubator-openwhisk-cli/blob/master/gradlew) | GRDL.W |
-| [tests/src/dat/invalidInput1.json]() | JSON |
-| [tests/src/dat/invalidInput2.json]() | JSON |
-| [tests/src/dat/invalidInput3.json]() | JSON |
-| [tests/src/dat/invalidInput4.json]() | JSON |
 
 ### [incubator-openwhisk-client-go](https://github.com/apache/incubator-openwhisk-client-go)
 | Exclusion | Rationale [TAG] |
@@ -245,6 +239,19 @@ The following "tests" files are excluded from having ASF License headers, but al
 | [tests/scripts/lua/management/examples/example3.json](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example3.json) | JSON |
 | [tests/lua_modules]() | Travis installed test modules scripts. Not part of source code release. |
 | [lua_install]() | **FIX** Travis installed test modules scripts. Not part of source code release. |
+
+### [incubator-openwhisk-catalog](https://github.com/apache/incubator-openwhisk-catalog)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| [tests/credentials.json.enc](https://github.com/apache/incubator-openwhisk/blob/master/tests/credentials.json.enc) | API.ENC |
+
+### [incubator-openwhisk-cli](https://github.com/apache/incubator-openwhisk-cli)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| [tests/src/dat/invalidInput1.json]() | JSON |
+| [tests/src/dat/invalidInput2.json]() | JSON |
+| [tests/src/dat/invalidInput3.json]() | JSON |
+| [tests/src/dat/invalidInput4.json]() | JSON |
 
 ### [incubator-openwhisk-runtime-docker](https://github.com/apache/incubator-openwhisk-runtime-docker)
 | Exclusion | Rationale [TAG] |
