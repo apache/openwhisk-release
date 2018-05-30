@@ -162,7 +162,7 @@ In additon, the specific rationale for the exclusion, in accordance with Apache 
 | [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
 | [gradlew]() | GRDL.W |
 | [gradlew.bat]() | GRDL.BAT |
-| [specification/archive/*.pdf]() | **TBD**, e.g., specification/archive/openwhisk_v0.8.1.pdf |
+| [specificatio_N/A_rchive/*.pdf]() | **TBD**, e.g., specificatio_N/A_rchive/openwhisk_v0.8.1.pdf |
 | [specification/diagrams/*.jpg]() | ve.g., specification/diagrams/OW-Programming-Model-Slides-Slide1.jpg |
 | [specification/diagrams/*.pptx]() | **TBD**, e.g., OW-Programming-Model-Slides.pptx |
 | [specification/*.pdf]() | **TBD**, e.g., specification/openwhisk_v0.9.1.pdf |
@@ -178,8 +178,8 @@ In additon, the specific rationale for the exclusion, in accordance with Apache 
 | [tests/src/integration/runtimetests/src/helloworld/node_modules/string-format/package.json]() | JSON |
 | [tests/src/integration/runtimetests/src/helloworld/package.json]() | JSON |
 | [tests/src/integration/validate-packages-in-manifest/actions/hello.jar]() | TEST.JAR |
-| [tests/src/integration/zipaction/actions/cat/node_modules/cat/package.json]() | JSON |
-| [tests/src/integration/zipaction/actions/cat/package.json]() | JSON |
+| [tests/src/integration/zipactio_N/A_ctions/cat/node_modules/cat/package.json]() | JSON |
+| [tests/src/integration/zipactio_N/A_ctions/cat/package.json]() | JSON |
 | [tests/apps/owbp-cloudant-trigger/manifest-bp.json]() | JSON |
 
 ## Exclusions NOT part of Apache source code release
@@ -257,27 +257,27 @@ The following "tests" files are excluded from having ASF License headers, but al
 ### [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| _None_ |  |
+| _None_ | _N/A_ |
 
 ### [incubator-openwhisk-runtime-nodejs](https://github.com/apache/incubator-openwhisk-runtime-nodejs)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| _None_ |  |
+| _None_ | _N/A_ |
 
 ### [incubator-openwhisk-runtime-php](https://github.com/apache/incubator-openwhisk-runtime-php)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| _None_ |  |
+| _None_ | _N/A_ |
 
 ### [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| _None_ |  |
+| _None_ | _N/A_ |
 
 ### [incubator-openwhisk-runtime-swift](https://github.com/apache/incubator-openwhisk-runtime-swift)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| _None_ |  |
+| _None_ | _N/A_ |
 
 ### Notes
 - logback (logger) failed in PG when adding XML comments that included the ASF license header. See PR[#3702](https://github.com/apache/incubator-openwhisk/pull/3702/files) which had to be reverted (although it passed Travis).  This needs to be investigated as to why it failed in PG and if we need additional Travis tests.
