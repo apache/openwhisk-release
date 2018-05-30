@@ -57,7 +57,7 @@ For convenience, the following table provides links to each project repository's
 | [bin/wskdev](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskdev) | Generated, symbolic link |
 | [common/scala/src/main/resources/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/common/scala/src/main/resources/logback.xml) | XML |
 | [docs/images/OpenWhisk_flow_of_processing.draw.io.xml](https://github.com/apache/incubator-openwhisk/blob/master/docs/images/OpenWhisk_flow_of_processing.draw.io.xml) | XML |
-| [gradle/wrapper/gradle-wrapper.jar](https://github.com/apache/incubator-openwhisk/blob/master/gradle/wrapper/gradle-wrapper.jar) | TEST.JAR |
+| [gradle/wrapper/gradle-wrapper.jar](https://github.com/apache/incubator-openwhisk/blob/master/gradle/wrapper/gradle-wrapper.jar) | GRDL.JAR |
 | [gradlew.bat](https://github.com/apache/incubator-openwhisk/blob/master/gradlew.bat) | GRDL.BAT |
 | [gradlew](https://github.com/apache/incubator-openwhisk/blob/master/gradlew) | GRDL.W |
 | [tools/eclipse/java.xml](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) | XML |
@@ -81,7 +81,7 @@ For convenience, the following table provides links to each project repository's
 ### [incubator-openwhisk-cli](https://github.com/apache/incubator-openwhisk-cli)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [gradle/wrapper/gradle-wrapper.jar]() | TEST.JAR |
+| [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
 | [gradlew.bat](https://github.com/apache/incubator-openwhisk-cli/blob/master/gradlew.bat) | GRDL.BAT |
 | [gradlew](https://github.com/apache/incubator-openwhisk-cli/blob/master/gradlew) | GRDL.W |
 | [tests/src/dat/invalidInput1.json]() | JSON |
@@ -109,13 +109,13 @@ For convenience, the following table provides links to each project repository's
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
-| [gradle/wrapper/gradle-wrapper.jar]() |  |
-| [gradlew]() |  |
-| [gradlew.bat]() |  |
+| [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
+| [gradlew]() | GRDL.W |
+| [gradlew.bat]() | GRDL.BAT |
 | [java8/Dockerfile]() | **FIX** |
-| [java8/proxy/gradle/wrapper/gradle-wrapper.jar]() |  |
-| [java8/proxy/gradlew]() |  |
-| [java8/proxy/gradlew.bat]() |  |
+| [java8/proxy/gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
+| [java8/proxy/gradlew]() | GRDL.W |
+| [java8/proxy/gradlew.bat]() | GRDL.BAT |
 
 ### [incubator-openwhisk-runtime-nodejs](https://github.com/apache/incubator-openwhisk-runtime-nodejs)
 | Exclusion | Rationale [TAG] |
@@ -169,7 +169,7 @@ For convenience, the following table provides links to each project repository's
 | [Godeps/Godeps.json]() | GODEPS.1 |
 | [Godeps/Readme]() | GODEPS.2 |
 | [ansible/environments/local/hosts]() | ANS.HOSTS |
-| [gradle/wrapper/gradle-wrapper.jar]() | **TBD** |
+| [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
 | [gradlew]() | GRDL.W |
 | [gradlew.bat]() | GRDL.BAT |
 | [specification/archive/*.pdf]() | **TBD**, e.g., specification/archive/openwhisk_v0.8.1.pdf |
