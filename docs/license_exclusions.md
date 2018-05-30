@@ -133,7 +133,6 @@ For convenience, the following table provides links to each project repository's
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
-| [core/php7.1Action/Dockerfile]() | **FIX** |
 | [core/php7.1Action/composer.json]() | JSON |
 | [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
 | [gradlew]() | GRDL.W |
@@ -144,8 +143,6 @@ For convenience, the following table provides links to each project repository's
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
 | [SwiftyRequest/Package.resolved](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/tests/dat/actions/SwiftyRequest/Package.resolved) | OAPI |
-| [core/python2Action/Dockerfile]() | **FIX** |
-| [core/pythonAction/Dockerfile]() | **FIX** |
 | [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
 | [gradlew]() | GRDL.W |
 | [gradlew.bat]() | GRDL.BAT |
@@ -264,6 +261,16 @@ The following "tests" files are excluded from having ASF License headers, but al
 | _None_ |  |
 
 ### [incubator-openwhisk-runtime-php](https://github.com/apache/incubator-openwhisk-runtime-php)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| _None_ |  |
+
+### [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| _None_ |  |
+
+### [incubator-openwhisk-runtime-swift](https://github.com/apache/incubator-openwhisk-runtime-swift)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | _None_ |  |
