@@ -101,14 +101,9 @@ For convenience, the following table provides links to each project repository's
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
-| [core/actionProxy/Dockerfile]() | **FIX**  |
 | [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
 | [gradlew]() | GRDL.W |
 | [gradlew.bat]() | GRDL.BAT |
-| [sdk/docker/Dockerfile]() | **FIX** |
-| [tests/.pydevproject]() | **TBD** PYDEV |
-| [tests/dat/blackbox/badaction/Dockerfile]() | **FIX** |
-| [tests/dat/blackbox/badproxy/Dockerfile]() | **FIX** |
 
 ### [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java)
 | Exclusion | Rationale [TAG] |
@@ -171,31 +166,31 @@ For convenience, the following table provides links to each project repository's
 |:---|:---|
 | [wski18n/i18n_resources.go](https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/wski18n/i18n_resources.go) | I18N.1 |
 | [wski18n/resources](https://github.com/apache/incubator-openwhisk-wskdeploy/tree/master/wski18n/resources) | JSON, Empty files (i.e., no translations yet) |
-| Godeps/Godeps.json | GODEPS.1 |
-| Godeps/Readme | GODEPS.2 |
-| ansible/environments/local/hosts | ANS.HOSTS |
-| **gradle/wrapper/gradle-wrapper.jar** | **TBD** |
-| gradlew | GRDL.W |
-| gradlew.bat | GRDL.BAT |
-| specification/archive/*.pdf | **TBD**, e.g., specification/archive/openwhisk_v0.8.1.pdf |
-| specification/diagrams/*.jpg | ve.g., specification/diagrams/OW-Programming-Model-Slides-Slide1.jpg |
-| specification/diagrams/*.pptx | **TBD**, e.g., OW-Programming-Model-Slides.pptx |
-| specification/*.pdf | **TBD**, e.g., specification/openwhisk_v0.9.1.pdf |
-| tests/apps/owbp-cloudant-trigger/manifest-bp.json | JSON |
-| tests/dat/wskprops | API Client configuration data. |
-| tests/src/integration/docker/actions/exec.zip | TEST.ZIP |
-| tests/src/integration/docker/actions/go/exec | TEST.ZIP, renamed from exec.zip |
-| tests/src/integration/helloworld/actions/hello.jar | TEST.JAR |
-| tests/src/integration/jaraction/src/hello.jar | TEST.JAR |
-| tests/src/integration/message-hub/src/events.json | JSON |
-| tests/src/integration/runtimetests/src/hello.jar | TEST.JAR |
-| tests/src/integration/runtimetests/src/helloworld/helloworld.zip | TEST.ZIP |
-| tests/src/integration/runtimetests/src/helloworld/node_modules/string-format/package.json | JSON |
-| tests/src/integration/runtimetests/src/helloworld/package.json | JSON |
-| tests/src/integration/validate-packages-in-manifest/actions/hello.jar | TEST.JAR |
-| tests/src/integration/zipaction/actions/cat/node_modules/cat/package.json | JSON |
-| tests/src/integration/zipaction/actions/cat/package.json | JSON |
-| tests/apps/owbp-cloudant-trigger/manifest-bp.json | JSON |
+| [Godeps/Godeps.json]() | GODEPS.1 |
+| [Godeps/Readme]() | GODEPS.2 |
+| [ansible/environments/local/hosts]() | ANS.HOSTS |
+| [gradle/wrapper/gradle-wrapper.jar]() | **TBD** |
+| [gradlew]() | GRDL.W |
+| [gradlew.bat]() | GRDL.BAT |
+| [specification/archive/*.pdf]() | **TBD**, e.g., specification/archive/openwhisk_v0.8.1.pdf |
+| [specification/diagrams/*.jpg]() | ve.g., specification/diagrams/OW-Programming-Model-Slides-Slide1.jpg |
+| [specification/diagrams/*.pptx]() | **TBD**, e.g., OW-Programming-Model-Slides.pptx |
+| [specification/*.pdf]() | **TBD**, e.g., specification/openwhisk_v0.9.1.pdf |
+| [tests/apps/owbp-cloudant-trigger/manifest-bp.json]() | JSON |
+| [tests/dat/wskprops]() | API Client configuration data. |
+| [tests/src/integration/docker/actions/exec.zip]() | TEST.ZIP |
+| [tests/src/integration/docker/actions/go/exec]() | TEST.ZIP, renamed from exec.zip |
+| [tests/src/integration/helloworld/actions/hello.jar]() | TEST.JAR |
+| [tests/src/integration/jaraction/src/hello.jar]() | TEST.JAR |
+| [tests/src/integration/message-hub/src/events.json]() | JSON |
+| [tests/src/integration/runtimetests/src/hello.jar]() | TEST.JAR |
+| [tests/src/integration/runtimetests/src/helloworld/helloworld.zip]() | TEST.ZIP |
+| [tests/src/integration/runtimetests/src/helloworld/node_modules/string-format/package.json]() | JSON |
+| [tests/src/integration/runtimetests/src/helloworld/package.json]() | JSON |
+| [tests/src/integration/validate-packages-in-manifest/actions/hello.jar]() | TEST.JAR |
+| [tests/src/integration/zipaction/actions/cat/node_modules/cat/package.json]() | JSON |
+| [tests/src/integration/zipaction/actions/cat/package.json]() | JSON |
+| [tests/apps/owbp-cloudant-trigger/manifest-bp.json]() | JSON |
 
 ## Test files excluded from source release
 <!--
@@ -250,6 +245,16 @@ The following "tests" files are excluded from having ASF License headers, but al
 | [tests/scripts/lua/management/examples/example3.json](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example3.json) | JSON |
 | [tests/lua_modules]() | Travis installed test modules scripts. Not part of source code release. |
 | [lua_install]() | **FIX** Travis installed test modules scripts. Not part of source code release. |
+
+### [incubator-openwhisk-runtime-docker](https://github.com/apache/incubator-openwhisk-runtime-docker)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| [tests/.pydevproject]() | PYDEV |
+
+### [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| _None_ |  |
 
 ### Notes
 - logback (logger) failed in PG when adding XML comments that included the ASF license header. See PR[#3702](https://github.com/apache/incubator-openwhisk/pull/3702/files) which had to be reverted (although it passed Travis).  This needs to be investigated as to why it failed in PG and if we need additional Travis tests.
