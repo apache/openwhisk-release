@@ -31,6 +31,7 @@ OPENWHISK_RELEASE_DIR="$WORK_DIR/openwhisk_release"
 OPENWHISK_SOURCE_DIR="$OPENWHISK_RELEASE_DIR/openwhisk_sources"
 OPENWHISK_CLEANED_SOURCE_DIR="$OPENWHISK_RELEASE_DIR/openwhisk_cleaned_sources"
 OPENWHISK_SVN="$OPENWHISK_RELEASE_DIR/openwhisk"
+OPENWHISK_PROJECT_NAME="apache-openwhisk"
 
 source "$SCRIPTDIR/util.sh"
 
@@ -53,8 +54,8 @@ if [ ! -z "$pre_release_version" ]; then
     fi
 fi
 
-REMOTE_PATH="openwhisk-$full_version"
-REMOTE_PATH_RELEASE="openwhisk-$version"
+REMOTE_PATH="$OPENWHISK_PROJECT_NAME-$full_version"
+REMOTE_PATH_RELEASE="$OPENWHISK_PROJECT_NAME-$version"
 
 CURRENT_VERSION_URL="$STAGE_URL/${REMOTE_PATH}/"
 CURRENT_VERSION_DIR="$OPENWHISK_SVN/$REMOTE_PATH"
