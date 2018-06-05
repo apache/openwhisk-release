@@ -44,7 +44,7 @@
   },
   "openwhisk_catalog": {
     "hash": "7f47212",
-    "repository": "https://github.com/apache/openwhisk-catalog.git",
+    "repository": "https://github.com/apache/incubator-openwhisk-catalog.git",
     "branch": "master"
   },
   "openwhisk_apigateway": {
