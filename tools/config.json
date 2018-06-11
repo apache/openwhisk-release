@@ -12,6 +12,7 @@
     "openwhisk-cli",
     "openwhisk-client-go",
     "openwhisk-catalog",
+    "openwhisk-deploy-kube",
     "openwhisk-apigateway",
     "openwhisk-runtime-nodejs",
     "openwhisk-runtime-swift",
@@ -45,6 +46,11 @@
   "openwhisk_catalog": {
     "hash": "7f47212",
     "repository": "https://github.com/apache/incubator-openwhisk-catalog.git",
+    "branch": "master"
+  },
+  "openwhisk_deploy_kube": {
+    "hash": "7340cc9",
+    "repository": "https://github.com/apache/incubator-openwhisk-deploy-kube.git",
     "branch": "master"
   },
   "openwhisk_apigateway": {

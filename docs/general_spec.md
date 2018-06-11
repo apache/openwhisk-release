@@ -63,6 +63,8 @@ We plan to release the following OpenWhisk repositories:
     - [incubator-openwhisk-runtime-docker](https://github.com/apache/incubator-openwhisk-runtime-docker)
 - OpenWhisk catalog: [incubator-openwhisk-catalog](https://github.com/apache/incubator-openwhisk-catalog)
 - OpenWhisk API gateway: [incubator-openwhisk-apigateway](https://github.com/apache/incubator-openwhisk-apigateway)
+- OpenWhisk deployment support:
+    - [incubator-openwhisk-deploy-kube](https://github.com/apache/incubator-openwhisk-deploy-kube)
 - OpenWhisk clients:
     - [incubator-openwhisk-client-go](https://github.com/apache/incubator-openwhisk-client-go)
     - [incubator-openwhisk-cli](https://github.com/apache/incubator-openwhisk-cli)

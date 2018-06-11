@@ -117,6 +117,14 @@ The following table can be used by Release Managers to get quickly check the sta
 <td><a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/tools/travis/scancode.sh">scancode.sh</a></td>
 </tr>
 <tr align="left">
+<td><a href="https://github.com/apache/incubator-openwhisk-deploy-kube">incubator-openwhisk-deploy-kube</a></td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk-deploy-kube/branches"><img src="https://travis-ci.org/apache/incubator-openwhisk-deploy-kube.svg?branch=master" alt="" /></a></td>
+<td><a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/NOTICE.txt">NOTICE</a></td>
+<td><a href="https://openwhisk-team.slack.com/messages/C4J3R7JFL/"><img src="https://img.shields.io/badge/channel-Slack-800080.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/tools/travis/scancode.sh">scancode.sh</a></td>
+</tr>
+<tr align="left">
 <td><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs">incubator-openwhisk-runtime-nodejs</a></td>
 <td><a href="https://travis-ci.org/apache/incubator-openwhisk-runtime-nodejs/branches"><img src="https://travis-ci.org/apache/incubator-openwhisk-runtime-nodejs.svg?branch=master" alt="" /></a></td>
 <td><a href="https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/LICENSE.txt"><img src="https://camo.githubusercontent.com/3a4d3bc039085cffdfecbe3077ffe49c5fe23286/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4170616368652d2d322e302d626c75652e737667" alt="" /></a></td>
