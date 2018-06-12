@@ -161,10 +161,6 @@ In additon, the specific rationale for the exclusion, in accordance with Apache 
 | [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
 | [gradlew]() | GRDL.W |
 | [gradlew.bat]() | GRDL.BAT |
-| [specificatio_N/A_rchive/*.pdf]() | **TBD**, e.g., specificatio_N/A_rchive/openwhisk_v0.8.1.pdf |
-| [specification/diagrams/*.jpg]() | IMAGE, e.g., specification/diagrams/OW-Programming-Model-Slides-Slide1.jpg |
-| [specification/diagrams/*.pptx]() | **TBD**, e.g., OW-Programming-Model-Slides.pptx |
-| [specification/*.pdf]() | **TBD**, e.g., specification/openwhisk_v0.9.1.pdf |
 
 ## Exclusions NOT part of Apache source code release
 <!--
