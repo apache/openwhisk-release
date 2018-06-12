@@ -17,7 +17,7 @@
 #
 -->
 
-# ASF License header Known Exclusions
+# ASF License Header Known Exclusions
 
 For convenience, the following tables provide listings of each project repository's files that have been excluded from having Apache license headers and from license scanning utilities that are part of the release process.
 
