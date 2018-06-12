@@ -161,25 +161,10 @@ In additon, the specific rationale for the exclusion, in accordance with Apache 
 | [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
 | [gradlew]() | GRDL.W |
 | [gradlew.bat]() | GRDL.BAT |
-| [specificatio_N/A_rchive/*.pdf]() | **TBD**, e.g., specificatio_N/A_rchive/openwhisk_v0.8.1.pdf |
+| [specification/archive/*.pdf]() | **TBD**, e.g., specificatio_N/A_rchive/openwhisk_v0.8.1.pdf |
 | [specification/diagrams/*.jpg]() | IMAGE, e.g., specification/diagrams/OW-Programming-Model-Slides-Slide1.jpg |
 | [specification/diagrams/*.pptx]() | **TBD**, e.g., OW-Programming-Model-Slides.pptx |
 | [specification/*.pdf]() | **TBD**, e.g., specification/openwhisk_v0.9.1.pdf |
-| [tests/apps/owbp-cloudant-trigger/manifest-bp.json]() | JSON |
-| [tests/dat/wskprops]() | API Client configuration data. |
-| [tests/src/integration/docker/actions/exec.zip]() | TEST.ZIP |
-| [tests/src/integration/docker/actions/go/exec]() | TEST.ZIP, renamed from exec.zip |
-| [tests/src/integration/helloworld/actions/hello.jar]() | TEST.JAR |
-| [tests/src/integration/jaraction/src/hello.jar]() | TEST.JAR |
-| [tests/src/integration/message-hub/src/events.json]() | JSON |
-| [tests/src/integration/runtimetests/src/hello.jar]() | TEST.JAR |
-| [tests/src/integration/runtimetests/src/helloworld/helloworld.zip]() | TEST.ZIP |
-| [tests/src/integration/runtimetests/src/helloworld/node_modules/string-format/package.json]() | JSON |
-| [tests/src/integration/runtimetests/src/helloworld/package.json]() | JSON |
-| [tests/src/integration/validate-packages-in-manifest/actions/hello.jar]() | TEST.JAR |
-| [tests/src/integration/zipactio_N/A_ctions/cat/node_modules/cat/package.json]() | JSON |
-| [tests/src/integration/zipactio_N/A_ctions/cat/package.json]() | JSON |
-| [tests/apps/owbp-cloudant-trigger/manifest-bp.json]() | JSON |
 
 ## Exclusions NOT part of Apache source code release
 <!--
@@ -277,6 +262,25 @@ The following "tests" files are excluded from having ASF License headers, but al
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [tests/dat/SwiftyRequest/Package.resolved](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/tests/dat/actions/SwiftyRequest/Package.resolved) | OAPI |
+
+### [incubator-openwhisk-wskdeploy](https://github.com/apache/incubator-openwhisk-wskdeploy)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| [tests/apps/owbp-cloudant-trigger/manifest-bp.json]() | JSON |
+| [tests/dat/wskprops]() | API Client configuration data. |
+| [tests/src/integration/docker/actions/exec.zip]() | TEST.ZIP |
+| [tests/src/integration/docker/actions/go/exec]() | TEST.ZIP, renamed from exec.zip |
+| [tests/src/integration/helloworld/actions/hello.jar]() | TEST.JAR |
+| [tests/src/integration/jaraction/src/hello.jar]() | TEST.JAR |
+| [tests/src/integration/message-hub/src/events.json]() | JSON |
+| [tests/src/integration/runtimetests/src/hello.jar]() | TEST.JAR |
+| [tests/src/integration/runtimetests/src/helloworld/helloworld.zip]() | TEST.ZIP |
+| [tests/src/integration/runtimetests/src/helloworld/node_modules/string-format/package.json]() | JSON |
+| [tests/src/integration/runtimetests/src/helloworld/package.json]() | JSON |
+| [tests/src/integration/validate-packages-in-manifest/actions/hello.jar]() | TEST.JAR |
+| [tests/src/integration/zipactio_N/A_ctions/cat/node_modules/cat/package.json]() | JSON |
+| [tests/src/integration/zipactio_N/A_ctions/cat/package.json]() | JSON |
+| [tests/apps/owbp-cloudant-trigger/manifest-bp.json]() | JSON |
 
 ### Notes
 - logback (logger) failed in PG when adding XML comments that included the ASF license header. See PR[#3702](https://github.com/apache/incubator-openwhisk/pull/3702/files) which had to be reverted (although it passed Travis).  This needs to be investigated as to why it failed in PG and if we need additional Travis tests.
