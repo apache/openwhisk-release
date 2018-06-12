@@ -161,7 +161,7 @@ In additon, the specific rationale for the exclusion, in accordance with Apache 
 | [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
 | [gradlew]() | GRDL.W |
 | [gradlew.bat]() | GRDL.BAT |
-| [specification/archive/*.pdf]() | **TBD**, e.g., specificatio_N/A_rchive/openwhisk_v0.8.1.pdf |
+| [specificatio_N/A_rchive/*.pdf]() | **TBD**, e.g., specificatio_N/A_rchive/openwhisk_v0.8.1.pdf |
 | [specification/diagrams/*.jpg]() | IMAGE, e.g., specification/diagrams/OW-Programming-Model-Slides-Slide1.jpg |
 | [specification/diagrams/*.pptx]() | **TBD**, e.g., OW-Programming-Model-Slides.pptx |
 | [specification/*.pdf]() | **TBD**, e.g., specification/openwhisk_v0.9.1.pdf |
@@ -266,8 +266,11 @@ The following "tests" files are excluded from having ASF License headers, but al
 ### [incubator-openwhisk-wskdeploy](https://github.com/apache/incubator-openwhisk-wskdeploy)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
+| [specification/archive/*](https://github.com/apache/incubator-openwhisk-wskdeploy/tree/master/specification/archive) | Archive of specification versions in PDF format. |
+| [specification/diagrams/*](https://github.com/apache/incubator-openwhisk-wskdeploy/tree/master/specification/diagrams) | IMAGE, Ninary images (e.g., ```.jpg```, ```.png```, etc.) used in specification HTML. |
 | [tests/apps/owbp-cloudant-trigger/manifest-bp.json]() | JSON |
 | [tests/dat/wskprops]() | API Client configuration data. |
+| [tests/dat/wskpropsnokeycert]() | API Client configuration data. |
 | [tests/src/integration/docker/actions/exec.zip]() | TEST.ZIP |
 | [tests/src/integration/docker/actions/go/exec]() | TEST.ZIP, renamed from exec.zip |
 | [tests/src/integration/helloworld/actions/hello.jar]() | TEST.JAR |
@@ -278,8 +281,8 @@ The following "tests" files are excluded from having ASF License headers, but al
 | [tests/src/integration/runtimetests/src/helloworld/node_modules/string-format/package.json]() | JSON |
 | [tests/src/integration/runtimetests/src/helloworld/package.json]() | JSON |
 | [tests/src/integration/validate-packages-in-manifest/actions/hello.jar]() | TEST.JAR |
-| [tests/src/integration/zipactio_N/A_ctions/cat/node_modules/cat/package.json]() | JSON |
-| [tests/src/integration/zipactio_N/A_ctions/cat/package.json]() | JSON |
+| [tests/src/integration/zipactio_actions/cat/node_modules/cat/package.json]() | JSON |
+| [tests/src/integration/zipactio_actions/cat/package.json]() | JSON |
 | [tests/apps/owbp-cloudant-trigger/manifest-bp.json]() | JSON |
 
 ### Notes
