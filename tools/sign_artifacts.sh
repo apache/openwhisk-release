@@ -36,16 +36,18 @@ fi
 
 cd $CURRENT_VERSION_DIR
 echo "Sign the artifacts with the private key."
-for artifact in *.tar.gz *.zip *.tgz; do
-    gpg --print-md MD5 ${artifact} > ${artifact}.md5
-    gpg --print-md SHA512 ${artifact} > ${artifact}.sha512
+for artifact in *.tar.gz *.zip; do
+    if [ "${artifact}" != "*.tar.gz" ] && [ "${artifact}" != "*.zip"  ] ; then
+        gpg --print-md MD5 ${artifact} > ${artifact}.md5
+        gpg --print-md SHA512 ${artifact} > ${artifact}.sha512
 
-    if [ $sysOS == "Darwin" ];then
-        # The option --passphrase-fd does not work on Mac.
-        `gpg --yes --armor --output ${artifact}.asc --detach-sig ${artifact}`
-    elif [ $sysOS == "Linux" ];then
-        `echo $passphrase | gpg --passphrase-fd 0 --yes --armor --output ${artifact}.asc --detach-sig ${artifact}`
+        if [ $sysOS == "Darwin" ];then
+            # The option --passphrase-fd does not work on Mac.
+            `gpg --yes --armor --output ${artifact}.asc --detach-sig ${artifact}`
+        elif [ $sysOS == "Linux" ];then
+            `echo $passphrase | gpg --passphrase-fd 0 --yes --armor --output ${artifact}.asc --detach-sig ${artifact}`
+        fi
     fi
 done
 
-ls
+#ls
