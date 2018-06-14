@@ -18,10 +18,8 @@
 
 echo "Generate the report regarding the source code headers."
 
-WORK_DIR=${1:-"$HOME"}
-
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
-source "$SCRIPTDIR/load_config.sh" $1
+source "$SCRIPTDIR/load_config.sh"
 PARENTDIR="$(dirname "$SCRIPTDIR")"
 
 # run Apache rat to check headers

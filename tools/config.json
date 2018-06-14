@@ -22,7 +22,7 @@
     "openwhisk-runtime-python"
   ],
   "openwhisk": {
-    "hash": "0f0063b",
+    "hash": "1d79fa3",
     "repository": "https://github.com/apache/incubator-openwhisk.git",
     "branch": "master"
   },
@@ -33,7 +33,7 @@
     "binaries": "no"
   },
   "openwhisk_cli": {
-    "hash": "ea1d97c",
+    "hash": "a4ca79a",
     "repository": "https://github.com/apache/incubator-openwhisk-cli.git",
     "branch": "master",
     "binaries": "no"

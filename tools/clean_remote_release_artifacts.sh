@@ -21,11 +21,10 @@ set -e
 echo "Clean the remote artifacts in release directory"
 
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
-WORK_DIR=${1:-"$HOME"}
-SVN_USERNAME=$2
-SVN_PASSWORD=$3
+SVN_USERNAME=$1
+SVN_PASSWORD=$2
 
-source "$SCRIPTDIR/load_config.sh" "$WORK_DIR" "$SVN_USERNAME" "$SVN_PASSWORD"
+source "$SCRIPTDIR/load_config.sh" "$SVN_USERNAME" "$SVN_PASSWORD"
 
 if [[ `wget -S --spider $RELEASE_VERSION_URL  2>&1 | grep 'HTTP/1.1 200 OK'` ]]; then
     svn delete $RELEASE_VERSION_URL -m "Removing Apache OpenWhisk release ${version}." $CREDENTIALS

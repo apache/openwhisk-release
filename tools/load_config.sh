@@ -16,26 +16,30 @@
 # limitations under the License.
 #
 
-WORK_DIR=${1:-"$HOME"}
 DIR="$(cd $(dirname "$0")/ && pwd)"
-SVN_USERNAME=$2
-SVN_PASSWORD=$3
-SCRIPTDIR=${4:-"$DIR"}
+SVN_USERNAME=$1
+SVN_PASSWORD=$2
+SCRIPTDIR=${3:-"$DIR"}
 CREDENTIALS=""
+
+CURRENTDIR="$(cd $(dirname "$0")/ && pwd)"
+PARENTDIR="$(dirname "$CURRENTDIR")"
 
 if [ ! -z "$SVN_USERNAME" ] && [ ! -z "$SVN_PASSWORD" ];then
     CREDENTIALS="--username $SVN_USERNAME --password $SVN_PASSWORD --non-interactive"
 fi
 
-OPENWHISK_RELEASE_DIR="$WORK_DIR/openwhisk_release"
+source "$SCRIPTDIR/util.sh"
+
+CONFIG=$(read_file $SCRIPTDIR/config.json)
+OPENWHISK_RELEASE_DIR="$PARENTDIR/openwhisk_release"
+
 OPENWHISK_SOURCE_DIR="$OPENWHISK_RELEASE_DIR/openwhisk_sources"
+
 OPENWHISK_CLEANED_SOURCE_DIR="$OPENWHISK_RELEASE_DIR/openwhisk_cleaned_sources"
 OPENWHISK_SVN="$OPENWHISK_RELEASE_DIR/openwhisk"
 OPENWHISK_PROJECT_NAME="apache-openwhisk"
 
-source "$SCRIPTDIR/util.sh"
-
-CONFIG=$(read_file $SCRIPTDIR/config.json)
 PUBLISH_STAGE=$(json_by_key "$CONFIG" "publish_stage")
 repos=$(echo $(json_by_key "$CONFIG" "RepoList") | sed 's/[][]//g')
 STAGE_URL=$(json_by_key "$CONFIG" "stage_url")
