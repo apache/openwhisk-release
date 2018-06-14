@@ -18,12 +18,10 @@
 
 set -e
 
-WORK_DIR=${1:-"$HOME"}
-
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
-source "$SCRIPTDIR/load_config.sh" $1
+source "$SCRIPTDIR/load_config.sh"
 
-clone_depth=${2:-"100"}
+clone_depth=${1:-"100"}
 
 function git_clone_repo() {
     PROJECT_NAME=$1

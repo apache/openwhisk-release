@@ -22,7 +22,6 @@
 Make sure that the source code is downloaded via the script download_source_code.sh. The release notes can be generated
 by running the following script under the directory _tools_:
 ```
-$ ./generate_release_notes.sh <WORK_DIR>
+$ ./generate_release_notes.sh
 ```
-The parameter <WORK_DIR> should be the same one used to download the source code. This script will generate a release
-notes file named releaseNotes.md under the directory <WORK_DIR>/openwhisk_release/openwhisk_sources.
+This script will generate a release notes file named releaseNotes.md under the directory <local_release_dir>/openwhisk_release/openwhisk_sources.

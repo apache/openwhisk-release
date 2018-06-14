@@ -20,10 +20,8 @@ set -e
 
 echo "Checkout the SVN to the local directory."
 
-WORK_DIR=${1:-"$HOME"}
-
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
-source "$SCRIPTDIR/load_config.sh" $1 $2 $3
+source "$SCRIPTDIR/load_config.sh" $1 $2
 
 if [[ `wget -S --spider $CURRENT_VERSION_URL  2>&1 | grep 'HTTP/1.1 404 Not Found'` ]]; then
     # Create an empty folder named ${REMOTE_PATH} in the remote staging folder
