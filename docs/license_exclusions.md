@@ -95,6 +95,15 @@ In additon, the specific rationale for the exclusion, in accordance with Apache 
 | [wski18n/i18n_resources.go](https://github.com/apache/incubator-openwhisk-client-go/blob/master/wski18n/i18n_resources.go) | I18N.1, NOTE: ASF Header manually added after autogen. recently |
 | [wski18n/resources](https://github.com/apache/incubator-openwhisk-client-go/tree/master/wski18n/resources) | JSON, Empty files (i.e., no translations yet) |
 
+### [incubator-openwhisk-deploy-kube](https://github.com/apache/incubator-openwhisk-deploy-kube)
+| Exclusion | Rationale [TAG] |
+|:---|:---|
+| [helm/runtimes.json](https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/helm/runtimes.json) | JSON |
+| [runtimes-minimal-travis.json](https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/helm/runtimes-minimal-travis.json) | JSON |
+| [kubernetes/controller/controller.env](https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/kubernetes/controller/controller.env) | KUBE.1 |
+| [kubernetes/invoker/invoker-dcf.env](https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/kubernetes/invoker/invoker-dcf.env) | KUBE.1 |
+| [kubernetes/invoker/invoker-k8scf.env](https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/kubernetes/invoker/invoker-k8scf.env) | KUBE.1 |
+
 ### [incubator-openwhisk-runtime-docker](https://github.com/apache/incubator-openwhisk-runtime-docker)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
