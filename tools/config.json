@@ -1,9 +1,9 @@
 {
-  "publish_stage": "false",
+  "publish_stage": "true",
   "stage_url": "https://dist.apache.org/repos/dist/dev/incubator/openwhisk",
   "release_url": "https://dist.apache.org/repos/dist/release/incubator/openwhisk",
   "versioning": {
-    "version": "incubator",
+    "version": "incubator-1.0.0",
     "pre_release_version": "rc1"
   },
   "RepoList": [
@@ -22,69 +22,69 @@
     "openwhisk-runtime-python"
   ],
   "openwhisk": {
-    "hash": "0134f78",
+    "hash": "1d79fa3",
     "repository": "https://github.com/apache/incubator-openwhisk.git",
     "branch": "master"
   },
   "openwhisk_wskdeploy": {
-    "hash": "07ce883",
+    "hash": "18a9898",
     "repository": "https://github.com/apache/incubator-openwhisk-wskdeploy.git",
     "branch": "master",
     "binaries": "no"
   },
   "openwhisk_cli": {
-    "hash": "e5e8bf0",
+    "hash": "a4ca79a",
     "repository": "https://github.com/apache/incubator-openwhisk-cli.git",
     "branch": "master",
     "binaries": "no"
   },
   "openwhisk_client_go": {
-    "hash": "df32dca",
+    "hash": "1e50522",
     "repository": "https://github.com/apache/incubator-openwhisk-client-go.git",
     "branch": "master"
   },
   "openwhisk_catalog": {
-    "hash": "7f47212",
+    "hash": "517341d",
     "repository": "https://github.com/apache/incubator-openwhisk-catalog.git",
     "branch": "master"
   },
   "openwhisk_deploy_kube": {
-    "hash": "7340cc9",
+    "hash": "9811fc7",
     "repository": "https://github.com/apache/incubator-openwhisk-deploy-kube.git",
     "branch": "master"
   },
   "openwhisk_apigateway": {
-    "hash": "8907ab9",
+    "hash": "8fbfb97",
     "repository": "https://github.com/apache/incubator-openwhisk-apigateway.git",
     "branch": "master"
   },
   "openwhisk_runtime_nodejs": {
-    "hash": "26ed5d5",
+    "hash": "b675151",
     "repository": "https://github.com/apache/incubator-openwhisk-runtime-nodejs.git",
     "branch": "master"
   },
   "openwhisk_runtime_swift": {
-    "hash": "f783a44",
+    "hash": "ffb8323",
     "repository": "https://github.com/apache/incubator-openwhisk-runtime-swift.git",
     "branch": "master"
   },
   "openwhisk_runtime_php": {
-    "hash": "c2e63eb",
+    "hash": "22c59f2",
     "repository": "https://github.com/apache/incubator-openwhisk-runtime-php.git",
     "branch": "master"
   },
   "openwhisk_runtime_java": {
-    "hash": "2f894b7",
+    "hash": "77018ab",
     "repository": "https://github.com/apache/incubator-openwhisk-runtime-java.git",
     "branch": "master"
   },
   "openwhisk_runtime_docker": {
-    "hash": "f17da4f",
+    "hash": "135b94a",
     "repository": "https://github.com/apache/incubator-openwhisk-runtime-docker.git",
     "branch": "master"
   },
   "openwhisk_runtime_python": {
-    "hash": "252caf4",
+    "hash": "c44d706",
     "repository": "https://github.com/apache/incubator-openwhisk-runtime-python.git",
     "branch": "master"
   }

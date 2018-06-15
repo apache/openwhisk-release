@@ -18,10 +18,8 @@
 
 echo "Generate release notes and collect change logs of all projects."
 
-WORK_DIR=${1:-"$HOME"}
-
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
-source "$SCRIPTDIR/load_config.sh" $1
+source "$SCRIPTDIR/load_config.sh"
 PARENTDIR="$(dirname "$SCRIPTDIR")"
 
 FILE="$OPENWHISK_SOURCE_DIR/releaseNotes.md"

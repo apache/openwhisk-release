@@ -160,7 +160,7 @@ done
 
 After downloading the source codes to your local disk, run the following script to verify license compliance:
 ```
-$ ./tools/travis/verify_source_code.sh <WORK_DIR>
+$ ./tools/travis/verify_source_code.sh
 ```
 
 ### Apache Tentacles

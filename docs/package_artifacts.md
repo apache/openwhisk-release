@@ -25,10 +25,9 @@ Before generating any release artifacts, it is recommended to verify the source 
 the existence of LICENSE and NOTICE files under each repository. This step can be done by running the following script
 under the directory _tools_:
 ```
-$ ./verify_source_code.sh <WORK_DIR>
+$ ./verify_source_code.sh
 ```
-The <WORK_DIR> should be the same one used to download the source code. This script will generate a RAT report called
-rat.txt under the directory <WORK_DIR>/openwhisk_release/openwhisk_sources/target. You can find the status of license
+This script will generate a RAT report called rat.txt under the directory <local_release_dir>/openwhisk_release/openwhisk_sources/target. You can find the status of license
 header in this RAT report. In addition, you can check the existence of LICENSE and NOTICE from the terminal, after
 running this script.
 
@@ -40,8 +39,7 @@ source code packages. Binary and docker image are on our future agenda.
 
 After downloading the source code, we can run the following script under _tools_ to generate the artifacts for each OpenWhisk project:
 ```
-$ ./package_source_code.sh <WORK_DIR>
+$ ./package_source_code.sh
 ```
-The <WORK_DIR> should be the same one used to download the source code. This script will create a source code package file
-of source code suffixed with tar.gz for each project, under <WORK_DIR>/openwhisk_sources/openwhisk/openwhisk-\<version\>.
+This script will create a source code package file of source code suffixed with tar.gz for each project, under <local_release_dir>/openwhisk_sources/openwhisk/openwhisk-\<version\>.
 The key version is defined in _config.json_.

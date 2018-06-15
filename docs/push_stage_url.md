@@ -23,9 +23,8 @@ After the artifacts are generated and signed, you can run the following script u
 into the staging directory:
 
 ```
-$ ./upload_artifacts.sh <WORK_DIR>
+$ ./upload_artifacts.sh
 ```
 
-The <WORK_DIR> should be the same one used to download the source code. This script will create a remote directory named
-openwhisk-\<version\>-\<pre_release_version\> under the staging directory, and push all the files available locally under openwhisk-\<version\>-\<pre_release_version\>
+This script will create a remote directory named openwhisk-\<version\>-\<pre_release_version\> under the staging directory, and push all the files available locally under openwhisk-\<version\>-\<pre_release_version\>
 upstream. It will overwrite the old files or directories, if the directory openwhisk-\<version\>-\<pre_release_version\> is available as a svn folder.

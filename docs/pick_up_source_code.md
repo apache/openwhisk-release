@@ -75,22 +75,27 @@ Template of [_config.json_](../tools/config.json):
 ## Download the source code to a local directory
 
 Run the following script to download source code based on the configuration in _config.json_:
+
 ```
-$ ./download_source_code.sh <WORK_DIR>
+$ ./download_source_code.sh
 ```
-You may specify where to download all the source code with <WORK_DIR>. If you specify the <WORK_DIR> here, you need to
-specify the same value as well to the sequential scripts as well. It will take $HOME by default.
+
+After this script is executed, a directory called _openwhisk_release_ will be created under the home directory of openwhisk
+release tool, if it is not available. The directory _openwhisk_release_ will save the output files, including the source code
+of all the OpenWhisk repositories, packages to be rleased, signature, checksums, etc, when we run any bash script of this
+release tool.
 
 ## Checkout the subversion repository
 
 We need to checkout the subversion repository for OpenWhisk to stage the artifacts with the following command:
+
 ```
-$ ./checkout_svn.sh <WORK_DIR> <SVN_USERNAME> <SVN_PASSWORD>
+$ ./checkout_svn.sh <SVN_USERNAME> <SVN_PASSWORD>
 ```
 
-The <WORK_DIR> should be the same one used to download the source code. If you have already configured your local
-svn command with a pair of username and password, there is no need to provide the values for the arguments <SVN_USERNAME>
-and <SVN_PASSWORD>. With this command, a remote folder named openwhisk-$version will be created in the subversion
-repository if necessary, and checked out to the local folder <WORK_DIR>/openwhisk_release/openwhisk/openwhisk-$full_version.
+If you have configured your local SVN with the username and the password, you can run the above script without the parameters.
+
+After running this command, a remote folder named openwhisk-$version will be created in the subversion
+repository if necessary, and checked out to the local folder openwhisk_release/openwhisk/openwhisk-$full_version.
 The value of $full_version is $version-$pre_release_version, as defined in config.json. This command can also be used to
 sync-up your local folder with the remote subversion folder.

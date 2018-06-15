@@ -18,37 +18,34 @@
 
 set -e
 
-WORK_DIR=${1:-"$(dirname "$TRAVIS_BUILD_DIR")"}
-OPENWHISK_SOURCE_DIR="$WORK_DIR/openwhisk_sources"
-
 CURRENTDIR="$(cd $(dirname "$0")/ && pwd)"
 PARENTDIR="$(dirname "$CURRENTDIR")"
 
-SVN_USERNAME=$2
-SVN_PASSWORD=$3
+SVN_USERNAME=$1
+SVN_PASSWORD=$2
 
 "$PARENTDIR/install_dependencies.sh"
 
 if [ ! -z "$TRAVIS_TAG" ] ; then
     # The git tag is named after the version to be released.
     release_version=$TRAVIS_TAG
-    source "$PARENTDIR/load_config.sh" "$WORK_DIR" "$SVN_USERNAME" "$SVN_PASSWORD" "$PARENTDIR" "$release_version"
-    "$PARENTDIR/move_stage_to_release.sh" "$WORK_DIR" "$SVN_USERNAME" "$SVN_PASSWORD"
+    source "$PARENTDIR/load_config.sh" "$SVN_USERNAME" "$SVN_PASSWORD" "$PARENTDIR" "$release_version"
+    "$PARENTDIR/move_stage_to_release.sh" "$SVN_USERNAME" "$SVN_PASSWORD"
 else
-    source "$PARENTDIR/load_config.sh" "$WORK_DIR" "$SVN_USERNAME" "$SVN_PASSWORD" "$PARENTDIR"
-    "$PARENTDIR/download_source_code.sh" "$WORK_DIR"
+    source "$PARENTDIR/load_config.sh" "$SVN_USERNAME" "$SVN_PASSWORD" "$PARENTDIR"
+    "$PARENTDIR/download_source_code.sh"
     if [ "$TRAVIS_EVENT_TYPE" == "push" ] && [ "$PUBLISH_STAGE" == "true" ] ; then
-        "$PARENTDIR/checkout_svn.sh" "$WORK_DIR" "$SVN_USERNAME" "$SVN_PASSWORD"
+        "$PARENTDIR/checkout_svn.sh" "$SVN_USERNAME" "$SVN_PASSWORD"
     fi
 
-    "$PARENTDIR/package_source_code.sh" "$WORK_DIR" "$SVN_USERNAME" "$SVN_PASSWORD"
-    "$PARENTDIR/package_binaries.sh" "$WORK_DIR" "$SVN_USERNAME" "$SVN_PASSWORD"
+    "$PARENTDIR/package_source_code.sh"
+    "$PARENTDIR/package_binaries.sh"
 
     if [ "$TRAVIS_EVENT_TYPE" == "push" ] && [ "$PUBLISH_STAGE" == "true" ] ; then
         "$CURRENTDIR/import_pgp_key.sh"
-        "$PARENTDIR/sign_artifacts.sh" "$WORK_DIR"
-        "$PARENTDIR/upload_artifacts.sh" "$WORK_DIR" "$SVN_USERNAME" "$SVN_PASSWORD"
+        "$PARENTDIR/sign_artifacts.sh"
+        "$PARENTDIR/upload_artifacts.sh" "$SVN_USERNAME" "$SVN_PASSWORD"
     fi
 
-    "$PARENTDIR/verify_source_code.sh" "$WORK_DIR"
+    "$PARENTDIR/verify_source_code.sh"
 fi

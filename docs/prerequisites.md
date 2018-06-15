@@ -23,30 +23,32 @@
 
 This project is only supported under Mac or Ununtu operating system.
 
-## Software packages
-
-The following software packages are required for your operating system.
-
- - git and svn
- - jq
- - gpg or gnupg and expect
-
 ## Download the source code
 
-Open a terminal, go to the directory where you save the source code, and run
+Open a terminal, go to the directory where you save the source code of this release tool, and run
+
 ```
 $ git clone https://github.com/apache/incubator-openwhisk-release.git
 ```
 
+The directory _incubator-openwhisk-release_ becomes the home directory of openwhisk release tool, which will be referred to
+in the following context.
+
 ## Install the dependencies
 
-Normally, Mac or Ubuntu will have some the packages installed by default. Suppose _$OPENWHISK_RELEASE_ is the home directory
-of openwhisk release on your local machine. You can run the script _install_dependencies.sh_ under the folder _tools_
-to install the software packages:
+After running the "git clone" command to download the source code this release repository, you need to run the following
+command to install all the dependencies:
+
 ```
-$ cd $OPENWHISK_RELEASE/tools
+$ cd incubator-openwhisk-release/tools
 $ ./install_dependencies.sh
 ```
 
 For some old versions of Ubuntu, you probably need to run _sudo apt-get update_ before running the script to install
 dependencies.
+
+Your local machine should have the following packages, if the dependencies are installed:
+
+ - svn
+ - jq
+ - gpg or gnupg and expect
