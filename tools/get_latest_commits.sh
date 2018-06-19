@@ -21,13 +21,6 @@ set -e
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
 source "$SCRIPTDIR/load_config.sh"
 
-function get_latest_commit() {
-    REPO_URL=$1
-    BRANCH=$2
-    a=$(git ls-remote $REPO_URL | awk "/$BRANCH/ {print \$1}")
-    return $a
-}
-
 for repo in $(echo $repos | sed "s/,/ /g")
 do
     repo_name=$(echo "$repo" | sed -e 's/^"//' -e 's/"$//')
@@ -36,9 +29,8 @@ do
     REPO=$(json_by_key "$CONFIG" $REPO_KEY)
     BRANCH=$(json_by_key "$CONFIG" $REPO_BRANCH)
 
-    if [ "$HASH" != "null" ]; then
-        echo "The hash for $repo_name is $HASH"
-        hash=$(get_latest_commit $REPO $BRANCH)
-        echo "$hash"
-    fi
+    echo "The hash for $repo_name is"
+    FULL_HASH=$(git ls-remote $REPO | awk "/$BRANCH/ {print \$1}")
+    SHORT_HASH=${FULL_HASH:0:7}
+    echo "$SHORT_HASH"
 done
