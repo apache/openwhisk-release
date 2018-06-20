@@ -3,7 +3,7 @@
   "stage_url": "https://dist.apache.org/repos/dist/dev/incubator/openwhisk",
   "release_url": "https://dist.apache.org/repos/dist/release/incubator/openwhisk",
   "versioning": {
-    "version": "incubator-0.9.0",
+    "version": "0.9.0-incubating",
     "pre_release_version": "rc1"
   },
   "RepoList": [
@@ -59,17 +59,17 @@
     "branch": "master"
   },
   "openwhisk_runtime_nodejs": {
-    "hash": "f87af49",
+    "hash": "557c4bd",
     "repository": "https://github.com/apache/incubator-openwhisk-runtime-nodejs.git",
     "branch": "master"
   },
   "openwhisk_runtime_swift": {
-    "hash": "f476907",
+    "hash": "06c4972",
     "repository": "https://github.com/apache/incubator-openwhisk-runtime-swift.git",
     "branch": "master"
   },
   "openwhisk_runtime_php": {
-    "hash": "86c0a91",
+    "hash": "b0834a5",
     "repository": "https://github.com/apache/incubator-openwhisk-runtime-php.git",
     "branch": "master"
   },
@@ -84,7 +84,7 @@
     "branch": "master"
   },
   "openwhisk_runtime_python": {
-    "hash": "36254cb",
+    "hash": "a2098d9",
     "repository": "https://github.com/apache/incubator-openwhisk-runtime-python.git",
     "branch": "master"
   }
