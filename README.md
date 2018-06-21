@@ -182,7 +182,7 @@ The following table can be used by Release Managers to get quickly check the sta
 - The ScanCode column text is hyperlinked to the corresponding repository's build file that executes the scancode utility.
   - The ASF scan configuration for all repos. can be found here: [ASF-Release.cfg](https://github.com/apache/incubator-openwhisk-utilities/blob/master/scancode/ASF-Release.cfg).
 - The Slack badge is hyperlinked to the corresponding repository's public Slack channel (if one exists).
-- LICENSE and NOTICE file compliance tracking can be found here: [project_licenses.md](docs/project_licenses.md)
+- LICENSE and NOTICE file process and compliance tracking can be found here: [license_compliance.md](docs/license_compliance.md)
 
 # References
 - [Apache Release Creation Process](http://www.apache.org/dev/release-publishing.html)
