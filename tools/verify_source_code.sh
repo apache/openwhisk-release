@@ -32,6 +32,7 @@ echo "Check the existence of LICENSE and NOTICE."
 for repo in $(echo $repos | sed "s/,/ /g")
 do
     repo_name=$(echo "$repo" | sed -e 's/^"//' -e 's/"$//')
-    echo "Check the repository $repo_name"
-    cd $OPENWHISK_SOURCE_DIR/$repo_name && ls {LICENSE*,NOTICE*}
+    project_name="incubator-$repo_name"
+    echo "Check the repository $project_name"
+    cd $OPENWHISK_SOURCE_DIR/$project_name && ls {LICENSE*,NOTICE*}
 done

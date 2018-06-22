@@ -35,7 +35,8 @@ rsync -rtp --exclude .bin --exclude .jshintrc --exclude .pydevproject --exclude 
 for repo in $(echo $repos | sed "s/,/ /g")
 do
     repo_name=$(echo "$repo" | sed -e 's/^"//' -e 's/"$//')
-    cd $OPENWHISK_CLEANED_SOURCE_DIR/$repo_name
-    rm -rf .git
-    tar czf ${CURRENT_VERSION_DIR}/${repo_name}-${version}-sources.tar.gz .
+    project_name="incubator-$repo_name"
+    rm -rf $OPENWHISK_CLEANED_SOURCE_DIR/$project_name/.git
+    cd $OPENWHISK_CLEANED_SOURCE_DIR
+    tar czf ${CURRENT_VERSION_DIR}/${repo_name}-${version}-sources.tar.gz $project_name
 done
