@@ -168,10 +168,17 @@ deploy OpenWhisk, please [log an issue](https://github.com/apache/incubator-open
 ## Run OpenWhisk
 
 The easiest way to try out OpenWhisk is to use OpenWhisk CLI. Please find the configuration [here](https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md).
-After that, run the following command to each an input message:
+For example, you can configure you CLI with the following command, if you have deployed OpenWhisk locally:
 
 ```
-$ bin/wsk action invoke /whisk.system/utils/echo -p message hello --result
+$ wsk property set --apihost 172.17.0.1 --auth $(cat ${OPENWHISK_HOME}/ansible/files/auth.guest)
+```
+
+The environment variable $OPENWHISK_HOME points to the directory incubator-openwhisk. After that, run the following command
+to each an input message:
+
+```
+$ bin/wsk -i action invoke /whisk.system/utils/echo -p message hello --result
 ```
 
 Output:
