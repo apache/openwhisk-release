@@ -160,9 +160,17 @@ $ ansible-playbook -i environments/local openwhisk.yml
 $ ansible-playbook -i environments/local postdeploy.yml
 ```
 
-Normally, the ansible scripts will be executed without error. One known issue we have can be found at [this link](https://github.com/apache/incubator-openwhisk/issues/3804), you
-can try to run the script "ansible-playbook -i environments/local routemgmt.yml" to see if it can succeed. If you fail to
-deploy OpenWhisk, please [log an issue](https://github.com/apache/incubator-openwhisk/issues) for OpenWhisk community.
+There are several know issues when you run the above ansible scripts:
+
+One known issue we have can be found at [this link](https://github.com/apache/incubator-openwhisk/issues/3804). You
+can run the script "ansible-playbook -i environments/local routemgmt.yml" to see if it can succeed.
+
+Another issue can be found at [this link](https://github.com/apache/incubator-openwhisk/issues/3815). You can find the solution
+in the description of this issue.
+
+Since this release does not ship the code of test cases, any error regarding test cases can be ignored.
+
+The ansible scripts will be executed without error after you go through the above issues. If you still fail to deploy OpenWhisk, please [log an issue](https://github.com/apache/incubator-openwhisk/issues) for OpenWhisk community.
 
 
 ## Run OpenWhisk
