@@ -29,7 +29,7 @@ OpenWhisk uses a tool called openwhisk-utilities to check the license header of 
 tutorial [here](https://github.com/apache/incubator-openwhisk-utilities) about how to run it on the directory level.
 
 
-# Verify the MD5 & SHA-512 checksums, and signature
+# Verify the SHA-512 checksums, and signature
 
 You need to install gpg on your local machine.
 
@@ -54,16 +54,6 @@ $ gpg --import <key_file>
 
 The parameter <key_file> is the file, where the public key is saved.
 
-
-To generate the MD5 checksum:
-
-```
-$ gpg --print-md MD5 <artifact>
-```
-
-The parameter <artifact> is the file of the artifact "openwhisk-0.9.0-incubating-sources.tar.gz". Compare the content with the [MD5 file](https://dist.apache.org/repos/dist/dev/incubator/openwhisk/apache-openwhisk-0.9.0-incubating-rc1/openwhisk-0.9.0-incubating-sources.tar.gz.md5).
-
-
 To generate the SHA512 checksum:
 
 ```
@@ -83,16 +73,16 @@ $ gpg --verify openwhisk-0.9.0-incubating-sources.tar.gz.asc openwhisk-0.9.0-inc
 
 This instruction walks you through the steps to install OpenWhisk 0.9.0. We support both Ubuntu and Mac operating systems.
 Please download the source code package of OpenWhisk "openwhisk-0.9.0-incubating-sources.tar.gz" and unzip it, then you
-get a directory called "incubator-openwhisk" on your local machine.
+get a directory called "incubator-openwhisk-<version>" on your local machine.
 
 
 ## Prerequisites
 
 If you are a Ubuntu user, our suggested version is between 14.04 and 16.04. Open a terminal, go to the directory of "incubator-openwhisk",
-and run the script "all.sh" under tools//ubuntu-setup:
+and run the script "all.sh" under tools/ubuntu-setup:
 
 ```
-$ cd incubator-openwhisk
+$ cd incubator-openwhisk-<version>
 $ ./tools/ubuntu-setup/all.sh
 ```
 
@@ -134,7 +124,9 @@ some error messages pop-up, please [log an issue](https://github.com/apache/incu
 
 ## Build the source code
 
-Stay under the directory of incubator-openwhisk, and run the following gradlew command to build the source code:
+
+Stay under the directory of incubator-openwhisk-<version>, and download [gradle-wrapper-4.8.1.jar](https://repo.gradle.org/gradle/libs-releases-local/org/gradle/gradle-wrapper/4.8.1/gradle-wrapper-4.8.1.jar) and place it in the gradle/wrapper
+folder. Rename it into gradle-wrapper.jar, run the following gradlew command to build the source code:
 
 ```
 $ ./gradlew distDocker
@@ -147,9 +139,10 @@ remains clueless, please [log an issue](https://github.com/apache/incubator-open
 
 ## Deploy OpenWhisk
 
-Stay under the directory of incubator-openwhisk, and run the following ansible scripts one by one:
+Stay under the directory of incubator-openwhisk-<version>, and run the following ansible scripts one by one:
 
 ```
+$ cd ansible
 $ ansible-playbook -i environments/local setup.yml
 $ ansible-playbook -i environments/local prereq.yml
 $ ansible-playbook -i environments/local couchdb.yml
@@ -182,7 +175,7 @@ For example, you can configure you CLI with the following command, if you have d
 $ wsk property set --apihost 172.17.0.1 --auth $(cat ${OPENWHISK_HOME}/ansible/files/auth.guest)
 ```
 
-The environment variable $OPENWHISK_HOME points to the directory incubator-openwhisk. After that, run the following command
+The environment variable $OPENWHISK_HOME points to the directory incubator-openwhisk-<version>. After that, run the following command
 to each an input message:
 
 ```

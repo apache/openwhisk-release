@@ -52,4 +52,4 @@ $ ./sign_artifacts.sh <SVN_USERNAME> <SVN_PASSWORD>
                       
 If you have configured your local SVN with the username and the password, you can run the above script without the parameters.
 
-This script generates a file of the MD5 checksum suffixed with .md5, a file of the SHA512 checksum suffixed with .sha512, and a signature file suffixed with .asc for each package.
+This script generates a file of the SHA512 checksum suffixed with .sha512, and a signature file suffixed with .asc for each package.

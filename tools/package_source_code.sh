@@ -30,7 +30,7 @@ mkdir -p $CURRENT_VERSION_DIR
 # Remove bin and build folders
 mkdir -p $OPENWHISK_CLEANED_SOURCE_DIR
 rm -rf $OPENWHISK_CLEANED_SOURCE_DIR/*
-rsync -rtp --exclude .bin --exclude .jshintrc --exclude .pydevproject --exclude .rat-excludes --exclude .git\* --exclude .travis.yml --exclude build --exclude specification/archive --exclude specification/diagrams --exclude tests $OPENWHISK_SOURCE_DIR/. $OPENWHISK_CLEANED_SOURCE_DIR
+rsync -rtp --exclude gradle/wrapper/gradle-\*.jar --exclude .bin --exclude .jshintrc --exclude .pydevproject --exclude .rat-excludes --exclude .git\* --exclude .travis.yml --exclude build --exclude specification/archive --exclude specification/diagrams --exclude tests $OPENWHISK_SOURCE_DIR/. $OPENWHISK_CLEANED_SOURCE_DIR
 
 for repo in $(echo $repos | sed "s/,/ /g")
 do
@@ -38,7 +38,9 @@ do
     project_name="incubator-$repo_name"
     rm -rf $OPENWHISK_CLEANED_SOURCE_DIR/$project_name/.git
     cd $OPENWHISK_CLEANED_SOURCE_DIR
-    tar czf ${CURRENT_VERSION_DIR}/${repo_name}-${version}-sources.tar.gz $project_name
+    # Rename the directory by adding the version number
+    mv $project_name $project_name-$version
+    tar czfv ${CURRENT_VERSION_DIR}/${repo_name}-${version}-sources.tar.gz $project_name-$version
 done
 
 # Copy the documents for the current release into the $CURRENT_VERSION_DIR directory
