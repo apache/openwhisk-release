@@ -29,7 +29,7 @@ OpenWhisk uses a tool called openwhisk-utilities to check the license header of 
 tutorial [here](https://github.com/apache/incubator-openwhisk-utilities) about how to run it on the directory level.
 
 
-# Verify the MD5 & SHA-512 checksums, and signature
+# Verify the SHA-512 checksums, and signature
 
 You need to install gpg on your local machine.
 
@@ -53,16 +53,6 @@ $ gpg --import <key_file>
 ```
 
 The parameter <key_file> is the file, where the public key is saved.
-
-
-To generate the MD5 checksum:
-
-```
-$ gpg --print-md MD5 <artifact>
-```
-
-The parameter <artifact> is the file of the artifact "openwhisk-0.9.0-incubating-sources.tar.gz". Compare the content with the [MD5 file](https://dist.apache.org/repos/dist/dev/incubator/openwhisk/apache-openwhisk-0.9.0-incubating-rc1/openwhisk-0.9.0-incubating-sources.tar.gz.md5).
-
 
 To generate the SHA512 checksum:
 
