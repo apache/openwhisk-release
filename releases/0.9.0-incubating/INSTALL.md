@@ -124,7 +124,9 @@ some error messages pop-up, please [log an issue](https://github.com/apache/incu
 
 ## Build the source code
 
-Stay under the directory of incubator-openwhisk, and run the following gradlew command to build the source code:
+
+Stay under the directory of incubator-openwhisk, and download [gradle-wrapper-4.8.1.jar](https://repo.gradle.org/gradle/libs-releases-local/org/gradle/gradle-wrapper/4.8.1/gradle-wrapper-4.8.1.jar) and place it in the gradle/wrapper
+folder. Rename it into gradle-wrapper.jar, run the following gradlew command to build the source code:
 
 ```
 $ ./gradlew distDocker
