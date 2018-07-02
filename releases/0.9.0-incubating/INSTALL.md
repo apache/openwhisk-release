@@ -110,6 +110,14 @@ Then, you need to add the permission for the current Ubuntu user in Docker:
 sudo usermod -a -G docker $USER
 ```
 
+Install Gradle 4.8.1 or the latest version with the following commands:
+
+```
+sudo add-apt-repository ppa:cwchien/gradle
+sudo apt-get update
+sudo apt-get install gradle
+```
+
 If you are a Mac user, please run the following script:
 
 ```
@@ -136,15 +144,25 @@ Then, activate docker0 network with the following command:
 sudo ifconfig lo0 alias 172.17.0.1/24
 ```
 
+Install Gradle 4.8.1 or the latest version with the following commands:
+
+```
+brew install gradle
+```
+
 After running the script above, you should have all you need to install OpenWhisk. Normally there should be no error, but it
 some error messages pop-up, please [log an issue](https://github.com/apache/incubator-openwhisk/issues) for OpenWhisk community.
 
 
 ## Build the source code
 
+Open the terminal, and go to the directory $OPENWHISK_HOME. Install the Gradle wrapper with the command:
 
-Stay under the directory of $OPENWHISK_HOME, and download [gradle-wrapper-4.8.1.jar](https://repo.gradle.org/gradle/libs-releases-local/org/gradle/gradle-wrapper/4.8.1/gradle-wrapper-4.8.1.jar) and place it in the gradle/wrapper
-folder. Rename it into gradle-wrapper.jar, run the following gradlew command to build the source code:
+```
+gradle wrapper
+```
+
+Then, run the following gradlew command to build the source code:
 
 ```
 ./gradlew distDocker
