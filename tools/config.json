@@ -4,7 +4,7 @@
   "release_url": "https://dist.apache.org/repos/dist/release/incubator/openwhisk",
   "versioning": {
     "version": "0.9.0-incubating",
-    "pre_release_version": "rc1"
+    "pre_release_version": "rc2"
   },
   "RepoList": [
     "openwhisk",
@@ -22,7 +22,7 @@
     "openwhisk-runtime-python"
   ],
   "openwhisk": {
-    "hash": "76dadd2",
+    "hash": "b1476b9",
     "repository": "https://github.com/apache/incubator-openwhisk.git",
     "branch": "master"
   },
