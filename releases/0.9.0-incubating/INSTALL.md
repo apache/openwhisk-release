@@ -83,7 +83,7 @@ gpg --verify openwhisk-0.9.0-incubating-sources.tar.gz.asc openwhisk-0.9.0-incub
 
 This instruction walks you through the steps to install OpenWhisk 0.9.0. We support both Ubuntu and Mac operating systems.
 Please download the source code package of OpenWhisk "openwhisk-0.9.0-incubating-sources.tar.gz", unzip and extract it, then
-you get a directory called "incubator-openwhisk-<version>" on your local machine.
+you get a directory called "incubator-openwhisk-0.9.0" on your local machine.
 
 You can use the following command to untar the package:
 
@@ -93,11 +93,14 @@ tar -xvzf openwhisk-0.9.0-incubating-sources.tar.gz
 
 ## Prerequisites
 
+We recommend you set the environment variable $OPENWHISK_HOME on your local machine to the extracted directory incubator-openwhisk-0.9.0.
+It is UNACCEPTABLE to set $OPENWHISK_HOME to empty or a wrong directory.
+
 If you are a Ubuntu user, our suggested version is between 14.04 and 16.04. Open a terminal, go to the directory of "incubator-openwhisk",
 and run the script "all.sh" under tools/ubuntu-setup:
 
 ```
-cd incubator-openwhisk-<version>;
+cd $OPENWHISK_HOME
 ./tools/ubuntu-setup/all.sh
 ```
 
@@ -140,7 +143,7 @@ some error messages pop-up, please [log an issue](https://github.com/apache/incu
 ## Build the source code
 
 
-Stay under the directory of incubator-openwhisk-<version>, and download [gradle-wrapper-4.8.1.jar](https://repo.gradle.org/gradle/libs-releases-local/org/gradle/gradle-wrapper/4.8.1/gradle-wrapper-4.8.1.jar) and place it in the gradle/wrapper
+Stay under the directory of $OPENWHISK_HOME, and download [gradle-wrapper-4.8.1.jar](https://repo.gradle.org/gradle/libs-releases-local/org/gradle/gradle-wrapper/4.8.1/gradle-wrapper-4.8.1.jar) and place it in the gradle/wrapper
 folder. Rename it into gradle-wrapper.jar, run the following gradlew command to build the source code:
 
 ```
@@ -154,20 +157,16 @@ remains clueless, please [log an issue](https://github.com/apache/incubator-open
 
 ## Deploy OpenWhisk
 
-We recommend you set the environment variable $OPENWHISK_HOME on your local machine to the extracted directory incubator-openwhisk-<version>.
-The deployment of OpenWhisk can also work without setting this environment variable. It is UNACCEPTABLE to set $OPENWHISK_HOME
-to empty or a wrong directory.
-
-Make sure your terminal goes to the directory of incubator-openwhisk-<version>/ansible, and run the following ansible
+Make sure your terminal goes to the directory of $OPENWHISK_HOME/ansible, and run the following ansible
 scripts one by one:
 
 ```
-ansible-playbook -i environments/local setup.yml;
-ansible-playbook -i environments/local couchdb.yml;
-ansible-playbook -i environments/local initdb.yml;
-ansible-playbook -i environments/local wipe.yml;
-ansible-playbook -i environments/local apigateway.yml;
-ansible-playbook -i environments/local openwhisk.yml;
+ansible-playbook -i environments/local setup.yml
+ansible-playbook -i environments/local couchdb.yml
+ansible-playbook -i environments/local initdb.yml
+ansible-playbook -i environments/local wipe.yml
+ansible-playbook -i environments/local apigateway.yml
+ansible-playbook -i environments/local openwhisk.yml
 ansible-playbook -i environments/local postdeploy.yml
 ```
 
@@ -193,8 +192,7 @@ For example, you can configure you CLI with the following command, if you have d
 wsk property set --apihost 172.17.0.1 --auth $(cat ${OPENWHISK_HOME}/ansible/files/auth.guest)
 ```
 
-The environment variable $OPENWHISK_HOME points to the directory incubator-openwhisk-<version>, which is required. After that,
-run the following command to each an input message:
+Run the following command to each an input message:
 
 ```
 bin/wsk -i action invoke /whisk.system/utils/echo -p message hello --result
