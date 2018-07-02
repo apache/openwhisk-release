@@ -144,10 +144,10 @@ remains clueless, please [log an issue](https://github.com/apache/incubator-open
 
 ## Deploy OpenWhisk
 
-Stay under the directory of incubator-openwhisk-<version>, and run the following ansible scripts one by one:
+Make sure your terminal goes to the directory of incubator-openwhisk-<version>/ansible, and run the following ansible
+scripts one by one:
 
 ```
-$ cd ansible
 $ ansible-playbook -i environments/local setup.yml
 $ ansible-playbook -i environments/local prereq.yml
 $ ansible-playbook -i environments/local couchdb.yml
