@@ -19,7 +19,7 @@
 
 # Download OpenWhisk
 
-The source code of OpenWhisk can be accessed by [this link](https://dist.apache.org/repos/dist/dev/incubator/openwhisk/apache-openwhisk-0.9.0-incubating-rc1/).
+The source code of OpenWhisk can be accessed by [this link](https://dist.apache.org/repos/dist/dev/incubator/openwhisk/apache-openwhisk-0.9.0-incubating-rc2/).
 You are currently releasing the version 0.9.0, and the artifact of OpenWhisk source code is called "openwhisk-0.9.0-incubating-sources.tar.gz".
 
 
@@ -70,9 +70,9 @@ To generate the SHA512 checksum:
 gpg --print-md SHA512 <artifact>
 ```
 
-The parameter <artifact> is the file of the artifact "openwhisk-0.9.0-incubating-sources.tar.gz". Compare the content with the [SHA512 file](https://dist.apache.org/repos/dist/dev/incubator/openwhisk/apache-openwhisk-0.9.0-incubating-rc1/openwhisk-0.9.0-incubating-sources.tar.gz.sha512).
+The parameter <artifact> is the file of the artifact "openwhisk-0.9.0-incubating-sources.tar.gz". Compare the content with the [SHA512 file](https://dist.apache.org/repos/dist/dev/incubator/openwhisk/apache-openwhisk-0.9.0-incubating-rc2/openwhisk-0.9.0-incubating-sources.tar.gz.sha512).
 
-Download the [signature](https://dist.apache.org/repos/dist/dev/incubator/openwhisk/apache-openwhisk-0.9.0-incubating-rc1/openwhisk-0.9.0-incubating-sources.tar.gz.asc), and verify it with the command:
+Download the [signature](https://dist.apache.org/repos/dist/dev/incubator/openwhisk/apache-openwhisk-0.9.0-incubating-rc2/openwhisk-0.9.0-incubating-sources.tar.gz.asc), and verify it with the command:
 
 ```
 gpg --verify openwhisk-0.9.0-incubating-sources.tar.gz.asc openwhisk-0.9.0-incubating-sources.tar.gz
@@ -83,7 +83,7 @@ gpg --verify openwhisk-0.9.0-incubating-sources.tar.gz.asc openwhisk-0.9.0-incub
 
 This instruction walks you through the steps to install OpenWhisk 0.9.0. We support both Ubuntu and Mac operating systems.
 Please download the source code package of OpenWhisk "openwhisk-0.9.0-incubating-sources.tar.gz", unzip and extract it, then
-you get a directory called "incubator-openwhisk-0.9.0" on your local machine.
+you get a directory called "incubator-openwhisk-0.9.0-incubating" on your local machine.
 
 You can use the following command to untar the package:
 
@@ -93,10 +93,10 @@ tar -xvzf openwhisk-0.9.0-incubating-sources.tar.gz
 
 ## Prerequisites
 
-We recommend you set the environment variable $OPENWHISK_HOME on your local machine to the extracted directory incubator-openwhisk-0.9.0.
+We recommend you set the environment variable $OPENWHISK_HOME on your local machine to the extracted directory incubator-openwhisk-0.9.0-incubating.
 It is UNACCEPTABLE to set $OPENWHISK_HOME to empty or a wrong directory.
 
-If you are a Ubuntu user, our suggested version is between 14.04 and 16.04. Open a terminal, go to the directory of "incubator-openwhisk",
+If you are a Ubuntu user, our suggested version is between 14.04 and 16.04. Open a terminal, go to the directory of "incubator-openwhisk-0.9.0-incubating",
 and run the script "all.sh" under tools/ubuntu-setup:
 
 ```
@@ -180,7 +180,22 @@ in the description of this issue.
 
 Since this release does not ship the code of test cases, any error regarding test cases can be ignored.
 
-The ansible scripts will be executed without error after you go through the above issues. If you still fail to deploy OpenWhisk, please [log an issue](https://github.com/apache/incubator-openwhisk/issues) for OpenWhisk community.
+
+## Troubleshooting
+
+The ansible scripts should be executed without error after you go through the above issues. If you fail to run one or a few
+scripts, the easiest way of troubleshooting is to clean your OpenWhisk environment and run the above ansible scripts again.
+
+To clean your local environment, run the following commands:
+
+```
+ansible-playbook -i environments/local openwhisk.yml -e mode=clean
+ansible-playbook -i environments/local apigateway.yml -e mode=clean
+ansible-playbook -i environments/local couchdb.yml -e mode=clean
+```
+
+Then, run the ansible scripts of deployment again to see if there are still failures. If you still fail to deploy OpenWhisk,
+please [log an issue](https://github.com/apache/incubator-openwhisk/issues) for OpenWhisk community.
 
 
 ## Run OpenWhisk
@@ -192,7 +207,7 @@ For example, you can configure you CLI with the following command, if you have d
 wsk property set --apihost 172.17.0.1 --auth $(cat ${OPENWHISK_HOME}/ansible/files/auth.guest)
 ```
 
-Run the following command to each an input message:
+Run the following command to echo an input message:
 
 ```
 bin/wsk -i action invoke /whisk.system/utils/echo -p message hello --result
