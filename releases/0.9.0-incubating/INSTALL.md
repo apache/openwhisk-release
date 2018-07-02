@@ -45,6 +45,16 @@ For Mac user, run the following command:
 brew install gpg
 ```
 
+Before using gpg to verify the checksums and signature for OpenWhisk, you need to check the integrity for your gpg first.
+You can download a [trusted source](https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.8.tar.bz2) and a [trusted signature](https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.8.tar.bz2.sig) to the same directory.
+Under that directory, run the following command to verify the integrity:
+
+```
+gpg --verify gnupg-2.2.8.tar.bz2.sig gnupg-2.2.8.tar.bz2
+```
+
+If you receive an output, showing that the signature is "Good signature", you can trust your gpg to do further verification.
+
 The public key used to verify the checksums can be found [here](https://dist.apache.org/repos/dist/dev/incubator/openwhisk/KEYS). After
 download it, you need to import it on your local machine. 
 
