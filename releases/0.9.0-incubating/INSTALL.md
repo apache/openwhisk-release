@@ -72,9 +72,14 @@ $ gpg --verify openwhisk-0.9.0-incubating-sources.tar.gz.asc openwhisk-0.9.0-inc
 # Installation of OpenWhisk 0.9.0
 
 This instruction walks you through the steps to install OpenWhisk 0.9.0. We support both Ubuntu and Mac operating systems.
-Please download the source code package of OpenWhisk "openwhisk-0.9.0-incubating-sources.tar.gz" and unzip it, then you
-get a directory called "incubator-openwhisk-<version>" on your local machine.
+Please download the source code package of OpenWhisk "openwhisk-0.9.0-incubating-sources.tar.gz", unzip and extract it, then
+you get a directory called "incubator-openwhisk-<version>" on your local machine.
 
+You can use the following command to untar the package:
+
+```
+tar -xvzf openwhisk-0.9.0-incubating-sources.tar.gz 
+```
 
 ## Prerequisites
 
