@@ -144,6 +144,10 @@ remains clueless, please [log an issue](https://github.com/apache/incubator-open
 
 ## Deploy OpenWhisk
 
+We recommend you set the environment variable $OPENWHISK_HOME on your local machine to the extracted directory incubator-openwhisk-<version>.
+The deployment of OpenWhisk can also work without setting this environment variable. It is UNACCEPTABLE to set $OPENWHISK_HOME
+to empty or a wrong directory.
+
 Make sure your terminal goes to the directory of incubator-openwhisk-<version>/ansible, and run the following ansible
 scripts one by one:
 
@@ -179,8 +183,8 @@ For example, you can configure you CLI with the following command, if you have d
 wsk property set --apihost 172.17.0.1 --auth $(cat ${OPENWHISK_HOME}/ansible/files/auth.guest)
 ```
 
-The environment variable $OPENWHISK_HOME points to the directory incubator-openwhisk-<version>. After that, run the following command
-to each an input message:
+The environment variable $OPENWHISK_HOME points to the directory incubator-openwhisk-<version>, which is required. After that,
+run the following command to each an input message:
 
 ```
 bin/wsk -i action invoke /whisk.system/utils/echo -p message hello --result
