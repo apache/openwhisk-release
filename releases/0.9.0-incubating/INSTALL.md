@@ -36,20 +36,20 @@ You need to install gpg on your local machine.
 For Ubuntu user, run the following command:
 
 ```
-$ sudo apt-get install gnupg
+sudo apt-get install gnupg
 ```
 
 For Mac user, run the following command:
 
 ```
-$ brew install gpg
+brew install gpg
 ```
 
 The public key used to verify the checksums can be found [here](https://dist.apache.org/repos/dist/dev/incubator/openwhisk/KEYS). After
 download it, you need to import it on your local machine. 
 
 ```
-$ gpg --import <key_file>
+gpg --import <key_file>
 ```
 
 The parameter <key_file> is the file, where the public key is saved.
@@ -57,7 +57,7 @@ The parameter <key_file> is the file, where the public key is saved.
 To generate the SHA512 checksum:
 
 ```
-$ gpg --print-md SHA512 <artifact>
+gpg --print-md SHA512 <artifact>
 ```
 
 The parameter <artifact> is the file of the artifact "openwhisk-0.9.0-incubating-sources.tar.gz". Compare the content with the [SHA512 file](https://dist.apache.org/repos/dist/dev/incubator/openwhisk/apache-openwhisk-0.9.0-incubating-rc1/openwhisk-0.9.0-incubating-sources.tar.gz.sha512).
@@ -65,7 +65,7 @@ The parameter <artifact> is the file of the artifact "openwhisk-0.9.0-incubating
 Download the [signature](https://dist.apache.org/repos/dist/dev/incubator/openwhisk/apache-openwhisk-0.9.0-incubating-rc1/openwhisk-0.9.0-incubating-sources.tar.gz.asc), and verify it with the command:
 
 ```
-$ gpg --verify openwhisk-0.9.0-incubating-sources.tar.gz.asc openwhisk-0.9.0-incubating-sources.tar.gz
+gpg --verify openwhisk-0.9.0-incubating-sources.tar.gz.asc openwhisk-0.9.0-incubating-sources.tar.gz
 ```
 
 
@@ -87,14 +87,14 @@ If you are a Ubuntu user, our suggested version is between 14.04 and 16.04. Open
 and run the script "all.sh" under tools/ubuntu-setup:
 
 ```
-$ cd incubator-openwhisk-<version>
-$ ./tools/ubuntu-setup/all.sh
+cd incubator-openwhisk-<version>;
+./tools/ubuntu-setup/all.sh
 ```
 
 Then, you need to add the permission for the current Ubuntu user in Docker:
 
 ```
-$ sudo usermod -a -G docker $USER
+sudo usermod -a -G docker $USER
 ```
 
 If you are a Mac user, please run the following script:
@@ -120,7 +120,7 @@ sudo -H pip install docker==2.2.1 ansible==2.5.2 jinja2==2.9.6 couchdb==1.1 http
 Then, activate docker0 network with the following command:
 
 ```
-$ sudo ifconfig lo0 alias 172.17.0.1/24
+sudo ifconfig lo0 alias 172.17.0.1/24
 ```
 
 After running the script above, you should have all you need to install OpenWhisk. Normally there should be no error, but it
@@ -134,7 +134,7 @@ Stay under the directory of incubator-openwhisk-<version>, and download [gradle-
 folder. Rename it into gradle-wrapper.jar, run the following gradlew command to build the source code:
 
 ```
-$ ./gradlew distDocker
+./gradlew distDocker
 ```
 
 You should be able to have all the docker images necessary to run OpenWhisk, after running this command. If you fail to build
@@ -148,13 +148,13 @@ Make sure your terminal goes to the directory of incubator-openwhisk-<version>/a
 scripts one by one:
 
 ```
-$ ansible-playbook -i environments/local setup.yml
-$ ansible-playbook -i environments/local couchdb.yml
-$ ansible-playbook -i environments/local initdb.yml
-$ ansible-playbook -i environments/local wipe.yml
-$ ansible-playbook -i environments/local apigateway.yml
-$ ansible-playbook -i environments/local openwhisk.yml
-$ ansible-playbook -i environments/local postdeploy.yml
+ansible-playbook -i environments/local setup.yml;
+ansible-playbook -i environments/local couchdb.yml;
+ansible-playbook -i environments/local initdb.yml;
+ansible-playbook -i environments/local wipe.yml;
+ansible-playbook -i environments/local apigateway.yml;
+ansible-playbook -i environments/local openwhisk.yml;
+ansible-playbook -i environments/local postdeploy.yml
 ```
 
 There are several know issues when you run the above ansible scripts:
@@ -176,14 +176,14 @@ The easiest way to try out OpenWhisk is to use OpenWhisk CLI. Please find the co
 For example, you can configure you CLI with the following command, if you have deployed OpenWhisk locally:
 
 ```
-$ wsk property set --apihost 172.17.0.1 --auth $(cat ${OPENWHISK_HOME}/ansible/files/auth.guest)
+wsk property set --apihost 172.17.0.1 --auth $(cat ${OPENWHISK_HOME}/ansible/files/auth.guest)
 ```
 
 The environment variable $OPENWHISK_HOME points to the directory incubator-openwhisk-<version>. After that, run the following command
 to each an input message:
 
 ```
-$ bin/wsk -i action invoke /whisk.system/utils/echo -p message hello --result
+bin/wsk -i action invoke /whisk.system/utils/echo -p message hello --result
 ```
 
 Output:
