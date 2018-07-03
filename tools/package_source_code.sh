@@ -40,7 +40,7 @@ do
     cd $OPENWHISK_CLEANED_SOURCE_DIR
     # Rename the directory by adding the version number
     mv $project_name $project_name-$version
-    tar czfv ${CURRENT_VERSION_DIR}/${repo_name}-${version}-sources.tar.gz $project_name-$version
+    tar czf ${CURRENT_VERSION_DIR}/${repo_name}-${version}-sources.tar.gz $project_name-$version
 done
 
 # Copy the documents for the current release into the $CURRENT_VERSION_DIR directory
