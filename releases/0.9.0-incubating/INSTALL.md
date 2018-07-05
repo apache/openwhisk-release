@@ -64,6 +64,20 @@ Download the [signature](https://dist.apache.org/repos/dist/dev/incubator/openwh
 gpg --verify openwhisk-0.9.0-incubating-sources.tar.gz.asc openwhisk-0.9.0-incubating-sources.tar.gz
 ```
 
+You should receive the output messages similar to the following:
+
+```
+﻿gpg: Signature made <time to generate the key> using RSA key ID <key ID>
+gpg: Good signature from "Release manager's name (Release manager of OpenWhisk) <Release manager's Email address>"
+```
+
+It is acceptable that gpg command pops-up some additional warning messages:
+
+```
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+```
+
 # Unpack the release
 
 Once you have verified the artifact checksums, unzip and extract the source code from the file `"openwhisk-0.9.0-incubating-sources.tar.gz"`. This will yield a directory called `"incubator-openwhisk-0.9.0-incubating"` on your local machine.
@@ -146,6 +160,7 @@ brew install gradle
 
 After running the script above, you should have all you need to install OpenWhisk. Normally there should be no error, but it
 some error messages pop-up, please [log an issue](https://github.com/apache/incubator-openwhisk/issues) for the OpenWhisk community to assist you.
+We suggest you restart your local machine to make sure all the packages have been well configured.
 
 
 ## Build the source code
@@ -202,10 +217,10 @@ please [log an issue](https://github.com/apache/incubator-openwhisk/issues) for 
 
 ## Run OpenWhisk
 
-The easiest way to try out OpenWhisk is to use OpenWhisk CLI. Please find the configuration [steps here](https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md). Briefly, you can configure the CLI with the following command once you have deployed OpenWhisk locally:
+Make sure you are in the `$OPENWHISK_HOME` directory. The easiest way to try out OpenWhisk is to use OpenWhisk CLI. Please find the configuration [steps here](https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md). Briefly, you can configure the CLI with the following command once you have deployed OpenWhisk locally:
 
 ```
-wsk property set --apihost 172.17.0.1 --auth $(cat ${OPENWHISK_HOME}/ansible/files/auth.guest)
+bin/wsk property set --apihost 172.17.0.1 --auth $(cat ${OPENWHISK_HOME}/ansible/files/auth.guest)
 ```
 
 Run the following command to invoke a built in "echo" action that returns the received input parameters as its result:
