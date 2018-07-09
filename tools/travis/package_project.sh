@@ -31,21 +31,32 @@ if [ ! -z "$TRAVIS_TAG" ] ; then
     release_version=$TRAVIS_TAG
     source "$PARENTDIR/load_config.sh" "$SVN_USERNAME" "$SVN_PASSWORD" "$PARENTDIR" "$release_version"
     "$PARENTDIR/move_stage_to_release.sh" "$SVN_USERNAME" "$SVN_PASSWORD"
-else
+elif [ "$TRAVIS_EVENT_TYPE" == "push" ] ; then
+    # For the Travis builds based on PRs, we only pick the necessary steps based on the flags PUBLISH_STAGE and UPDATE_DOC configured in config.json.
     source "$PARENTDIR/load_config.sh" "$SVN_USERNAME" "$SVN_PASSWORD" "$PARENTDIR"
     "$PARENTDIR/download_source_code.sh"
-    if [ "$TRAVIS_EVENT_TYPE" == "push" ] && [ "$PUBLISH_STAGE" == "true" ] ; then
-        "$PARENTDIR/checkout_svn.sh" "$SVN_USERNAME" "$SVN_PASSWORD"
-    fi
-
-    "$PARENTDIR/package_source_code.sh"
-    "$PARENTDIR/package_binaries.sh"
-
-    if [ "$TRAVIS_EVENT_TYPE" == "push" ] && [ "$PUBLISH_STAGE" == "true" ] ; then
+    "$PARENTDIR/checkout_svn.sh" "$SVN_USERNAME" "$SVN_PASSWORD"
+    if [ "$PUBLISH_STAGE" == "true" ] ; then
+        "$PARENTDIR/package_source_code.sh"
+        if [ "$UPDATE_DOC" == "true" ] ; then
+            "$PARENTDIR/package_doc.sh"
+        fi
+        "$PARENTDIR/package_binaries.sh"
         "$CURRENTDIR/import_pgp_key.sh"
         "$PARENTDIR/sign_artifacts.sh"
         "$PARENTDIR/upload_artifacts.sh" "$SVN_USERNAME" "$SVN_PASSWORD"
+        "$PARENTDIR/verify_source_code.sh"
+    elif [ "$UPDATE_DOC" == "true" ] ; then
+        "$PARENTDIR/package_doc.sh"
+        "$PARENTDIR/upload_artifacts.sh" "$SVN_USERNAME" "$SVN_PASSWORD"
+        "$PARENTDIR/verify_source_code.sh"
     fi
-
+elif [ "$TRAVIS_EVENT_TYPE" == "pull_request" ] ; then
+    # For the Travis builds based on PRs, we need to verify all the steps, expect importing credentials, and uploading the artifacts.
+    source "$PARENTDIR/load_config.sh" "$SVN_USERNAME" "$SVN_PASSWORD" "$PARENTDIR"
+    "$PARENTDIR/download_source_code.sh"
+    "$PARENTDIR/package_source_code.sh"
+    "$PARENTDIR/package_doc.sh"
+    "$PARENTDIR/package_binaries.sh"
     "$PARENTDIR/verify_source_code.sh"
 fi
