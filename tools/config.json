@@ -1,5 +1,6 @@
 {
-  "publish_stage": "true",
+  "publish_stage": "false",
+  "update_doc": "true",
   "stage_url": "https://dist.apache.org/repos/dist/dev/incubator/openwhisk",
   "release_url": "https://dist.apache.org/repos/dist/release/incubator/openwhisk",
   "versioning": {

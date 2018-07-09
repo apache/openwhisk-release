@@ -41,6 +41,7 @@ OPENWHISK_SVN="$OPENWHISK_RELEASE_DIR/openwhisk"
 OPENWHISK_PROJECT_NAME="apache-openwhisk"
 
 PUBLISH_STAGE=$(json_by_key "$CONFIG" "publish_stage")
+UPDATE_DOC=$(json_by_key "$CONFIG" "update_doc")
 repos=$(echo $(json_by_key "$CONFIG" "RepoList") | sed 's/[][]//g')
 STAGE_URL=$(json_by_key "$CONFIG" "stage_url")
 RELEASE_URL=$(json_by_key "$CONFIG" "release_url")
