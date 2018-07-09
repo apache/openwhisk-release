@@ -91,6 +91,25 @@ tar -xvzf openwhisk-0.9.0-incubating-sources.tar.gz
 # Verify the Apache license header
 
 OpenWhisk uses a tool called [`scanCode`](https://github.com/apache/incubator-openwhisk-utilities/tree/master/scancode) to check the license header of each source file included in the release. Please check the [`scanCode` tutorial](https://github.com/apache/incubator-openwhisk-utilities) for instructions to download and run the tool and scan all code in the release.
+Download the OpenWhisk utilities project with the following command:
+
+```
+git clone https://github.com/apache/incubator-openwhisk-utilities.git
+```
+
+Go to the directory of the OpenWhisk utilities and run the following command:
+
+```
+scancode/scanCode.py --config scancode/ASF-Release.cfg <Path of incubator-openwhisk-0.9.0-incubating>
+```
+
+All the checks have passed for Apache license header, if you receive the result as below:
+
+```
+Reading configuration file [scancode/ASF-Release.cfg]...
+Scanning files starting at [/Users/vincent/workspace/openwhisk]...
+All checks passed.
+```
 
 # Building OpenWhisk
 
@@ -171,7 +190,8 @@ Open the terminal, and go to the directory $OPENWHISK_HOME. Install the Gradle w
 gradle wrapper
 ```
 
-Then, run the following gradlew command to build the source code:
+Some files regarding gradle wrapper will be updated or generated with this command, so we recommend you to verify the source code based on Apache
+policies before running it. After this wrapper generation, run the following gradlew command to build the source code:
 
 ```
 ./gradlew distDocker
