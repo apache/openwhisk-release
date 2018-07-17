@@ -26,13 +26,30 @@ SVN_PASSWORD=$2
 
 source "$SCRIPTDIR/load_config.sh" "$SVN_USERNAME" "$SVN_PASSWORD"
 
-if [[ `wget -S --spider $RELEASE_VERSION_URL  2>&1 | grep 'HTTP/1.1 200 OK'` ]]; then
-    svn delete $RELEASE_VERSION_URL -m "Removing Apache OpenWhisk release ${full_version}." $CREDENTIALS
+if [[ `wget -S --spider $RELEASE_VERSION_URL  2>&1 | grep 'HTTP/1.1 404 Not Found'` ]]; then
+    svn mkdir $RELEASE_VERSION_URL -m "Creating Apache OpenWhisk release ${version}." $CREDENTIALS
 fi
 
-if [[ `wget -S --spider $CURRENT_VERSION_URL  2>&1 | grep 'HTTP/1.1 200 OK'` ]]; then
-    svn copy $CURRENT_VERSION_URL $RELEASE_URL -m "Releasing Apache OpenWhisk release ${full_version}." $CREDENTIALS
-    if [ "$full_version" != "$version" ]; then
-        svn mv $RELEASE_VERSION_URL_STAGE $RELEASE_VERSION_URL -m "Remaning the directory from ${full_version} to ${version}." $CREDENTIALS
-    fi
-fi
+# Create a subversion directory for openwhisk to stage all the packages
+rm -rf $OPENWHISK_SVN
+mkdir -p $OPENWHISK_SVN
+cd $OPENWHISK_SVN
+
+# Check out the artifacts in the staging URL to a local directory.
+svn co $CURRENT_VERSION_URL $REMOTE_PATH
+
+# Check out the release directory to a local directory.
+svn co $RELEASE_VERSION_URL $REMOTE_PATH_RELEASE
+
+for repo in $(echo $repos | sed "s/,/ /g")
+do
+    repo_name=$(echo "$repo" | sed -e 's/^"//' -e 's/"$//')
+    cp ${REMOTE_PATH}/${repo_name}-${version}-sources.tar.gz* ${REMOTE_PATH_RELEASE}/
+done
+
+# Copy the documents into the release folder
+cp -R ${REMOTE_PATH}/doc ${REMOTE_PATH_RELEASE}/
+
+cd $REMOTE_PATH_RELEASE
+svn add --force * $CREDENTIALS
+svn commit -m "Updating Apache OpenWhisk release ${version}." $CREDENTIALS
