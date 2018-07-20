@@ -19,11 +19,11 @@
 
 # Download OpenWhisk
 
-The OpenWhisk source code may be downloaded from https://dist.apache.org/repos/dist/release/incubator/openwhisk/apache-openwhisk-0.9.0-incubating. The current release is version 0.9.0, and the artifact for this OpenWhisk source code release is called `"openwhisk-0.9.0-incubating-sources.tar.gz"`.
+The OpenWhisk source code may be downloaded from [this link](http://www.apache.org/dyn/closer.lua?filename=incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz&action=download). The current release is version 0.9.0, and the artifact for this OpenWhisk source code release is called `"openwhisk-0.9.0-incubating-sources.tar.gz"`.
 
 ```
 # download from your terminal with wget
-wget https://dist.apache.org/repos/dist/release/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz
+wget http://apache.mirrors.ionfish.org/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz
 ```
 
 # Verify the SHA-512 checksums, and signature
@@ -42,7 +42,7 @@ You need to install `gpg` on your local machine.
 
 Before using `gpg` to verify the OpenWhisk release integrity, you should [verify `gpg`'s own integrity](https://gnupg.org/download/integrity_check.html).
 
-The public key used to verify the OpenWhisk checksums can be found [here](https://dist.apache.org/repos/dist/release/incubator/openwhisk/KEYS). Download the key and import it on your local machine.
+The public key used to verify the OpenWhisk checksums can be found [here](https://www-us.apache.org/dist/incubator/openwhisk/KEYS). Download the key and import it on your local machine.
 
 ```
 gpg --import <key_file>
@@ -56,9 +56,9 @@ To generate the SHA512 checksum:
 gpg --print-md SHA512 <artifact>
 ```
 
-The parameter <artifact> is the file of the artifact `"openwhisk-0.9.0-incubating-sources.tar.gz"`. Compare the content with the [SHA512 file](https://dist.apache.org/repos/dist/release/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz.sha512).
+The parameter <artifact> is the file of the artifact `"openwhisk-0.9.0-incubating-sources.tar.gz"`. Compare the content with the [SHA512 file](https://www-us.apache.org/dist/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz.sha512).
 
-Download the [signature](https://dist.apache.org/repos/dist/release/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz.asc), and verify it with the command:
+Download the [signature](https://www-us.apache.org/dist/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz.asc), and verify it with the command:
 
 ```
 gpg --verify openwhisk-0.9.0-incubating-sources.tar.gz.asc openwhisk-0.9.0-incubating-sources.tar.gz
