@@ -35,6 +35,7 @@ function git_clone_repo() {
 }
 
 rm -rf $OPENWHISK_SOURCE_DIR/*
+mkdir -p $OPENWHISK_SOURCE_DIR
 
 for repo in $(echo $repos | sed "s/,/ /g")
 do
