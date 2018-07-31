@@ -19,11 +19,27 @@
 
 # Download OpenWhisk
 
-The OpenWhisk source code may be downloaded from [this link](http://www.apache.org/dyn/closer.lua?filename=incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz&action=download). The current release is version 0.9.0, and the artifact for this OpenWhisk source code release is called `"openwhisk-0.9.0-incubating-sources.tar.gz"`.
+The current release of OpenWhisk is version 0.9.0, which consists of multiple modules.
+
+The source code of OpenWhisk main module may be downloaded at [this link](http://www.apache.org/dyn/closer.lua?filename=incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz&action=download). The artifact for this main module is called `"openwhisk-0.9.0-incubating-sources.tar.gz"`.
 
 ```
 # download from your terminal with wget
 wget http://apache.mirrors.ionfish.org/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz
+```
+
+The source code of OpenWhisk Client Go may be downloaded at [this link](https://dist.apache.org/repos/dist/dev/incubator/openwhisk/apache-openwhisk-0.9.0-incubating-rc1/openwhisk-client-go-0.9.0-incubating-sources.tar.gz). The artifact for this main module is called `"openwhisk-0.9.0-incubating-sources.tar.gz"`.
+
+```
+# download from your terminal with wget
+wget https://dist.apache.org/repos/dist/dev/incubator/openwhisk/apache-openwhisk-0.9.0-incubating-rc1/openwhisk-client-go-0.9.0-incubating-sources.tar.gz
+```
+
+The source code of OpenWhisk CLI may be downloaded at [this link](https://dist.apache.org/repos/dist/dev/incubator/openwhisk/apache-openwhisk-0.9.0-incubating-rc1/openwhisk-cli-0.9.0-incubating-sources.tar.gz). The artifact for this main module is called `"openwhisk-0.9.0-incubating-sources.tar.gz"`.
+
+```
+# download from your terminal with wget
+wget https://dist.apache.org/repos/dist/dev/incubator/openwhisk/apache-openwhisk-0.9.0-incubating-rc1/openwhisk-cli-0.9.0-incubating-sources.tar.gz
 ```
 
 # Verify the SHA-512 checksums, and signature
@@ -56,13 +72,17 @@ To generate the SHA512 checksum:
 gpg --print-md SHA512 <artifact>
 ```
 
-The parameter <artifact> is the file of the artifact `"openwhisk-0.9.0-incubating-sources.tar.gz"`. Compare the content with the [SHA512 file](https://www-us.apache.org/dist/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz.sha512).
+Take the OpenWhisk main module for example, the parameter <artifact> is the file of the artifact `"openwhisk-0.9.0-incubating-sources.tar.gz"`. Compare the content with the [SHA512 file](https://www-us.apache.org/dist/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz.sha512).
 
 Download the [signature](https://www-us.apache.org/dist/incubator/openwhisk/apache-openwhisk-0.9.0-incubating/openwhisk-0.9.0-incubating-sources.tar.gz.asc), and verify it with the command:
 
 ```
 gpg --verify openwhisk-0.9.0-incubating-sources.tar.gz.asc openwhisk-0.9.0-incubating-sources.tar.gz
 ```
+
+As you may notice, if each OpenWhisk module is named <artifact>, the naming convention for the SHA512 checksum is <artifact>.sha512 and for the signature is <artifact>.sha512.asc. 
+The download link for its SHA512 checksum is https://dist.apache.org/repos/dist/dev/incubator/openwhisk/apache-openwhisk-0.9.0-incubating-rc1/<artifact>.sha512
+and for its signature is https://dist.apache.org/repos/dist/dev/incubator/openwhisk/apache-openwhisk-0.9.0-incubating-rc1/<artifact>.sha512.asc.
 
 You should receive the output messages similar to the following:
 
@@ -88,6 +108,8 @@ You can use the following command to untar the package:
 tar -xvzf openwhisk-0.9.0-incubating-sources.tar.gz 
 ```
 
+You may need to change the name of the artifact based on the module to be unzipped and extracted.
+
 # Verify the Apache license header
 
 OpenWhisk uses a tool called [`scanCode`](https://github.com/apache/incubator-openwhisk-utilities/tree/master/scancode) to check the license header of each source file included in the release. Please check the [`scanCode` tutorial](https://github.com/apache/incubator-openwhisk-utilities) for instructions to download and run the tool and scan all code in the release.
@@ -100,7 +122,7 @@ git clone https://github.com/apache/incubator-openwhisk-utilities.git
 Go to the directory of the OpenWhisk utilities and run the following command:
 
 ```
-scancode/scanCode.py --config scancode/ASF-Release.cfg <Path of incubator-openwhisk-0.9.0-incubating>
+scancode/scanCode.py --config scancode/ASF-Release.cfg <Path of incubator-openwhisk-0.9.0-incubating or any other module>
 ```
 
 All the checks have passed for Apache license header, if you receive the result as below:
@@ -119,6 +141,8 @@ The following instructions walk you through the steps to build OpenWhisk 0.9.0 f
 
 We recommend you set the environment variable `$OPENWHISK_HOME` on your local machine to the extracted directory `incubator-openwhisk-0.9.0-incubating`.
 It is an _error_ to set `$OPENWHISK_HOME` to an invalid or incorrect path (including an empty string). If you do not wish to use the environment variable, make sure it is not defined in your environment at all. The rest of the instructions assume you have defined this environment variable.
+
+If you would like to build the CLI locally, set the environment variable `$OPENWHISK_HOME_CLI` on your local machine to the directory `incubator-openwhisk-cli-0.9.0-incubating`.
 
 ### Ubuntu users
 
@@ -201,6 +225,14 @@ Once the build is complete, you will have Docker images necessary to run OpenWhi
 first make sure `docker` is running correctly by verifying with the command `docker images`. If you continue
 to encounter build problems, please seek help by opening [an issue](https://github.com/apache/incubator-openwhisk/issues) for the OpenWhisk community to assist you.
 
+If you have downloaded the source code of OpenWhisk CLI and decide to use it during the installation of OpenWhisk, run the following commands:
+
+```
+cd $OPENWHISK_HOME_CLI
+gradle wrapper
+./gradlew releaseBinaries
+```
+
 
 ## Deploy OpenWhisk
 
@@ -217,6 +249,19 @@ ansible-playbook -i environments/local openwhisk.yml
 ansible-playbook -i environments/local postdeploy.yml
 ansible-playbook -i environments/local apigateway.yml
 ```
+
+If you would like to use the CLI from your local build, please run the following command for the playbook of openwhisk.yml:
+
+```
+ansible-playbook -i environments/local openwhisk.yml -e cli_installation_mode=local -e openwhisk_cli_home=$OPENWHISK_HOME_CLI 
+```
+
+instead of
+
+```
+ansible-playbook -i environments/local openwhisk.yml
+```
+
 
 ### Troubleshooting
 
