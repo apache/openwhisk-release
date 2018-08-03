@@ -12,12 +12,12 @@
     "openwhisk-cli"
   ],
   "openwhisk_client_go": {
-    "hash": "90976ef",
+    "hash": "d7cee96",
     "repository": "https://github.com/apache/incubator-openwhisk-client-go.git",
     "branch": "master"
   },
   "openwhisk_cli": {
-    "hash": "4a5a372",
+    "hash": "0807de2",
     "repository": "https://github.com/apache/incubator-openwhisk-cli.git",
     "branch": "master"
   }
