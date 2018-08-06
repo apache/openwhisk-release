@@ -208,6 +208,7 @@ We suggest you restart your local machine to make sure all the packages have bee
 
 ## Build the source code
 
+### OpenWhisk
 Open the terminal, and go to the directory $OPENWHISK_HOME. Install the Gradle wrapper with the command:
 
 ```
@@ -225,6 +226,11 @@ Once the build is complete, you will have Docker images necessary to run OpenWhi
 first make sure `docker` is running correctly by verifying with the command `docker images`. If you continue
 to encounter build problems, please seek help by opening [an issue](https://github.com/apache/incubator-openwhisk/issues) for the OpenWhisk community to assist you.
 
+### OpenWhisk Client Go
+
+Please refer to the instruction on how to use OpenWhisk Client Go at [this page](https://github.com/apache/incubator-openwhisk-client-go/blob/master/README.md).
+
+### OpenWhisk CLI
 If you have downloaded the source code of OpenWhisk CLI and decide to use it during the installation of OpenWhisk, run the following commands:
 
 ```
