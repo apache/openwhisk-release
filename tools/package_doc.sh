@@ -23,9 +23,11 @@ echo "Package the documents."
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
 source "$SCRIPTDIR/load_config.sh" $1 $2 $3
 
-mkdir -p $CURRENT_VERSION_DIR
+if [ "$UPDATE_DOC" == "true" ] ; then
+    mkdir -p $CURRENT_VERSION_DIR
 
-# Copy the documents for the current release into the $CURRENT_VERSION_DIR directory
-PARENTDIR="$(dirname "$SCRIPTDIR")"
-mkdir -p ${CURRENT_VERSION_DIR}/doc
-cp $PARENTDIR/releases/$version/* ${CURRENT_VERSION_DIR}/doc/
+    # Copy the documents for the current release into the $CURRENT_VERSION_DIR directory
+    PARENTDIR="$(dirname "$SCRIPTDIR")"
+    mkdir -p ${CURRENT_VERSION_DIR}/doc
+    cp $PARENTDIR/releases/$version/* ${CURRENT_VERSION_DIR}/doc/
+fi
