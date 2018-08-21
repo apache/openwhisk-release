@@ -1,18 +1,24 @@
 {
   "publish_stage": "true",
-  "update_doc": "false",
+  "update_doc": "true",
   "stage_url": "https://dist.apache.org/repos/dist/dev/incubator/openwhisk",
   "release_url": "https://dist.apache.org/repos/dist/release/incubator/openwhisk",
   "versioning": {
-    "version": "0.9.8-incubating",
+    "version": "0.9.0-incubating",
     "pre_release_version": "rc1"
   },
   "RepoList": [
-    "openwhisk-wskdeploy"
+    "openwhisk-catalog",
+    "openwhisk-apigateway"
   ],
-  "openwhisk_wskdeploy": {
-    "hash": "cd3c3c4",
-    "repository": "https://github.com/apache/incubator-openwhisk-wskdeploy.git",
+  "openwhisk_catalog": {
+    "hash": "5c4f2a8",
+    "repository": "https://github.com/apache/incubator-openwhisk-catalog.git",
+    "branch": "master"
+  },
+  "openwhisk_apigateway": {
+    "hash": "eb22ac6",
+    "repository": "https://github.com/apache/incubator-openwhisk-apigateway.git",
     "branch": "master"
   }
 }
