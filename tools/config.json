@@ -12,7 +12,8 @@
     "openwhisk-runtime-java",
     "openwhisk-runtime-docker",
     "openwhisk-runtime-php",
-    "openwhisk-runtime-python"
+    "openwhisk-runtime-python",
+    "openwhisk-runtime-swift"
   ],
   "openwhisk_runtime_nodejs": {
     "hash": "fcd42de",
@@ -37,6 +38,11 @@
   "openwhisk_runtime_python": {
     "hash": "ae1f013",
     "repository": "https://github.com/apache/incubator-openwhisk-runtime-python.git",
+    "branch": "master"
+  },
+  "openwhisk_runtime_swift": {
+    "hash": "2b9bad5",
+    "repository": "https://github.com/apache/incubator-openwhisk-runtime-swift.git",
     "branch": "master"
   }
 }
