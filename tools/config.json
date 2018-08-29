@@ -8,11 +8,35 @@
     "pre_release_version": "rc1"
   },
   "RepoList": [
-    "openwhisk-deploy-kube"
+    "openwhisk-runtime-nodejs",
+    "openwhisk-runtime-java",
+    "openwhisk-runtime-docker",
+    "openwhisk-runtime-php",
+    "openwhisk-runtime-python"
   ],
-  "openwhisk_deploy_kube": {
-    "hash": "5344a67",
-    "repository": "https://github.com/apache/incubator-openwhisk-deploy-kube.git",
+  "openwhisk_runtime_nodejs": {
+    "hash": "fcd42de",
+    "repository": "https://github.com/apache/incubator-openwhisk-runtime-nodejs.git",
+    "branch": "master"
+  },
+  "openwhisk_runtime_java": {
+    "hash": "7cd1789",
+    "repository": "https://github.com/apache/incubator-openwhisk-runtime-java.git",
+    "branch": "master"
+  },
+  "openwhisk_runtime_docker": {
+    "hash": "247baf5",
+    "repository": "https://github.com/apache/incubator-openwhisk-runtime-docker.git",
+    "branch": "master"
+  },
+  "openwhisk_runtime_php": {
+    "hash": "93c1871",
+    "repository": "https://github.com/apache/incubator-openwhisk-runtime-php.git",
+    "branch": "master"
+  },
+  "openwhisk_runtime_python": {
+    "hash": "ae1f013",
+    "repository": "https://github.com/apache/incubator-openwhisk-runtime-python.git",
     "branch": "master"
   }
 }
