@@ -47,8 +47,10 @@ do
     cp ${REMOTE_PATH}/${repo_name}-${version}-sources.tar.gz* ${REMOTE_PATH_RELEASE}/
 done
 
-# Copy the documents into the release folder
-cp -R ${REMOTE_PATH}/doc ${REMOTE_PATH_RELEASE}/
+if [ "$UPDATE_DOC" == "true" ] ; then
+    # Copy the documents into the release folder
+    cp -R ${REMOTE_PATH}/doc ${REMOTE_PATH_RELEASE}/
+fi
 
 cd $REMOTE_PATH_RELEASE
 svn add --force * $CREDENTIALS
