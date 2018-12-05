@@ -33,6 +33,7 @@ elif [ $sysOS == "Linux" ];then
     fi
     if [ $DISTRO == "Ubuntu" ];then
         echo "This is Ubuntu."
+        sudo apt-get update
         sudo apt-get install jq gnupg expect wget
     fi
 else
