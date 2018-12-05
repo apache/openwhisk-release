@@ -109,6 +109,14 @@ The following table can be used by Release Managers to get quickly check the sta
 <td><a href="https://github.com/apache/incubator-openwhisk-client-go/blob/master/tools/travis/build.sh">build.sh</a></td>
 </tr>
 <tr align="left">
+<td><a href="https://github.com/apache/incubator-openwhisk-composer">incubator-openwhisk-composer</a></td>
+<td><a href="https://travis-ci.org/apache/incubator-openwhisk-composer/branches"><img src="https://travis-ci.org/apache/incubator-openwhisk-composer.svg?branch=master" alt="" /></a></td>
+<td><a href="https://github.com/apache/incubator-openwhisk-composer/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/incubator-openwhisk-composer/blob/master/NOTICE.txt">NOTICE</a></td>
+<td><a href="https://openwhisk-team.slack.com/messages/C7DJNS37W/"><img src="https://img.shields.io/badge/channel-Slack-800080.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/incubator-openwhisk-composer/blob/master/travis/scancode.sh">scancode.sh</a></td>
+</tr>
+<tr align="left">
 <td><a href="https://github.com/apache/incubator-openwhisk-wskdeploy">incubator-openwhisk-wskdeploy</a></td>
 <td><a href="https://travis-ci.org/apache/incubator-openwhisk-wskdeploy/branches"><img src="https://travis-ci.org/apache/incubator-openwhisk-wskdeploy.svg?branch=master" alt="" /></a></td>
 <td><a href="https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
