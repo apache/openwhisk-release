@@ -4,45 +4,15 @@
   "stage_url": "https://dist.apache.org/repos/dist/dev/incubator/openwhisk",
   "release_url": "https://dist.apache.org/repos/dist/release/incubator/openwhisk",
   "versioning": {
-    "version": "1.12.0-incubating",
+    "version": "0.10.0-incubating",
     "pre_release_version": "rc1"
   },
   "RepoList": [
-    "openwhisk-runtime-nodejs",
-    "openwhisk-runtime-java",
-    "openwhisk-runtime-docker",
-    "openwhisk-runtime-php",
-    "openwhisk-runtime-python",
-    "openwhisk-runtime-swift"
+    "openwhisk-composer"
   ],
-  "openwhisk_runtime_nodejs": {
-    "hash": "fcd42de",
-    "repository": "https://github.com/apache/incubator-openwhisk-runtime-nodejs.git",
-    "branch": "master"
-  },
-  "openwhisk_runtime_java": {
-    "hash": "7cd1789",
-    "repository": "https://github.com/apache/incubator-openwhisk-runtime-java.git",
-    "branch": "master"
-  },
-  "openwhisk_runtime_docker": {
-    "hash": "247baf5",
-    "repository": "https://github.com/apache/incubator-openwhisk-runtime-docker.git",
-    "branch": "master"
-  },
-  "openwhisk_runtime_php": {
-    "hash": "93c1871",
-    "repository": "https://github.com/apache/incubator-openwhisk-runtime-php.git",
-    "branch": "master"
-  },
-  "openwhisk_runtime_python": {
-    "hash": "ae1f013",
-    "repository": "https://github.com/apache/incubator-openwhisk-runtime-python.git",
-    "branch": "master"
-  },
-  "openwhisk_runtime_swift": {
-    "hash": "2b9bad5",
-    "repository": "https://github.com/apache/incubator-openwhisk-runtime-swift.git",
+  "openwhisk_composer": {
+    "hash": "96ccab9",
+    "repository": "https://github.com/apache/incubator-openwhisk-composer.git",
     "branch": "master"
   }
 }
