@@ -10,7 +10,7 @@
   "RepoList": [
       "openwhisk-cli",
       "openwhisk-client-go",
-      "openwhisk-wskdeploy",
+      "openwhisk-wskdeploy"
   ],
   "openwhisk-cli": {
     "hash": "eaf64aef74deaf61a1eaa5d93ce1102d3d91407f",
@@ -18,7 +18,7 @@
     "branch": "master"
   },
   "openwhisk-client-go": {
-    "hash": " 4286a8212a74c40d8950ee76681a67e12c9bf1a0",
+    "hash": "4286a8212a74c40d8950ee76681a67e12c9bf1a0",
     "repository": "https://github.com/apache/incubator-openwhisk-client-go.git",
     "branch": "master"
   },
