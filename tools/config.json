@@ -12,17 +12,17 @@
       "openwhisk-client-go",
       "openwhisk-wskdeploy"
   ],
-  "openwhisk-cli": {
+  "openwhisk_cli": {
     "hash": "eaf64ae",
     "repository": "https://github.com/apache/incubator-openwhisk-cli.git",
     "branch": "master"
   },
-  "openwhisk-client-go": {
+  "openwhisk_client_go": {
     "hash": "4286a82",
     "repository": "https://github.com/apache/incubator-openwhisk-client-go.git",
     "branch": "master"
   },
-  "openwhisk-wskdeploy": {
+  "openwhisk_wskdeploy": {
     "hash": "7d79fd7",
     "repository": "https://github.com/apache/incubator-openwhisk-wskdeploy.git",
     "branch": "master"
