@@ -4,27 +4,27 @@
   "stage_url": "https://dist.apache.org/repos/dist/dev/incubator/openwhisk",
   "release_url": "https://dist.apache.org/repos/dist/release/incubator/openwhisk",
   "versioning": {
-    "version": "0.10.0-incubating",
+    "version": "2.0.0-incubating",
     "pre_release_version": "rc1"
   },
   "RepoList": [
-      "openwhisk-cli",
-      "openwhisk-client-go",
-      "openwhisk-wskdeploy"
+      "openwhisk-package-alarms",
+      "openwhisk-package-cloudant",
+      "openwhisk-package-kafka"
   ],
-  "openwhisk_cli": {
-    "hash": "eaf64ae",
-    "repository": "https://github.com/apache/incubator-openwhisk-cli.git",
+  "openwhisk_package_alarms": {
+    "hash": "d5538697d95a381a1e46b9bad5b9e00998a11a22",
+    "repository": "https://github.com/apache/incubator-openwhisk-package-alarms.git",
     "branch": "master"
   },
-  "openwhisk_client_go": {
-    "hash": "4286a82",
-    "repository": "https://github.com/apache/incubator-openwhisk-client-go.git",
+  "openwhisk_package_cloudant": {
+    "hash": "130adbce243e07a0520cbdbaff5072ddd4b0596b",
+    "repository": "https://github.com/apache/incubator-openwhisk-package-cloudant.git",
     "branch": "master"
   },
-  "openwhisk_wskdeploy": {
-    "hash": "7d79fd7",
-    "repository": "https://github.com/apache/incubator-openwhisk-wskdeploy.git",
+  "openwhisk_package_kafka": {
+    "hash": "ffe05144578b8f132289620c0a4bd8907f9ba62c",
+    "repository": "https://github.com/apache/incubator-openwhisk-package-kafka.git",
     "branch": "master"
   }
 }
