@@ -17,11 +17,6 @@
 
 sudo: required
 
-group: deprecated-2017Q3
-
-services:
-  - docker
-
 env:
   global:
   - secure: S4eRZSGj/pfsicg50UXrTmwRurzgUrd0idQH5nKvc+O+lwAYv3SIhbsufUHseQEUSfoO0jFCyoCbWDtFMdsW3t2eGPdciViek/LaocxxG2Br539VDVXhS+NAwqiRGbCqKHCe2aNqIdo8vCvUaj/BfFJNUK4Fhpw6iBix0pvlnRkYBX7hHphU88N69gmnMOo1oZwEwaobaQeXOc/8OwH2aPD8lCmNk41IvvLFAwIhXrP4Thb+xBh4+oSlqcJyDCUouIfYFd4B1pHQehAVu0kBoUiKZHfKUyT+Q/V8hzBR3nJ/IzzSLNOYcTTYXBbL5x/SKe/LiBio4yLdPuRMTZl/xKarhShHJg3JKRvfushaMJDKJfLrbcCPUDnSCK1v0D4zZc0DceOBawhipSPkam3kNER/ImZcpTj79u/VKBrlwbVwjKTyZ4d/4/N2cP4jyvjmwW6fM4N3kM/V+S+EoGR5EiFTKAiPBzKaRi+/+VUO8ha9TsdTu+vkDRUjDFuYLSod0aj8XHUoZiL7NF8qS1PK6AFfTRpet1NM6BDOWYh15GmuZ/noyXTZ5eJv/8/ecfLMEp+DXAZ+YVI6a9/xhxE1klI88zHIoVMmhwd76jcvHVLolKa8fX9Dv5rZeOcPLoR2/jiteoApOGD0ehnkJH76gUMyBQO+q3yzRzz1VQvjOyA=
@@ -36,10 +31,6 @@ notifications:
 
 jobs:
   include:
-    #- stage: verify source code
-    #  script: ./tools/travis/verify_source_code.sh
-    #- stage: deploy
-    #  script: ./tools/travis/setup.sh
     - stage: package
       script: ./tools/travis/package_project.sh $SVN_USERNAME $SVN_PASSWORD
 
