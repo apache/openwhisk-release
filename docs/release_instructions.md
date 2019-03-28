@@ -88,11 +88,132 @@ and the approved release path:
 ### Release Approval
 
 These steps are **manual** and must be performed by the Release Manager.
+ - Starting the Vote: The Release manager for Apache OpenWhisk sends a release note to the OpenWhisk mailing for votes, and opens the mail for 72 hours. Apache requires a minimum of three positive votes and more positive than negative votes MUST be cast, in order to release.
 
-Apache requires a minimum of three positive votes and more positive than negative votes MUST be cast, in order to release.
+ - Wait for the Results
 
--The Release manager for Apache OpenWhisk sends a release note to the OpenWhisk mailing for votes, and opens the mail for 72 hours.
+#### Starting the Vote
+
+Propose a vote on the dev list. Here is an example:
+```
+To: "OpenWhisk Developers List" <dev@openwhisk.apache.org>
+Subject: [VOTE] Release Apache OpenWhisk {ABC} version {X.Y.Z}
+
+Hi,
+
+This is a call to vote on releasing version {X.Y.Z}-incubating of the Apache
+OpenWhisk {ABC}.
+
+{One line description of the component ABC.}
+
+This release comprises of source code distribution only. There are {N}
+modules (git repos) included in this release. All artifacts were built
+by PR#{NNN} in the openwhisk-release repo from the following Git commit IDs:
+* {YOUR REPOSITORY ID} : {GIT HASH}
+* {... list others if more than one}
+
+You can use this UNIX script to download the release and verify the signatures:
+https://gitbox.apache.org/repos/asf?p=incubator-openwhisk-release.git;a=blob_plain;f=tools/rcverify.sh;hb=HEAD
+
+Usage:
+sh rcverify.sh {YOUR REPOSITORY ID} {ABC} {X.Y.Z}
+
+Please vote to approve this release:
+
+  [ ] +1 Approve the release
+  [ ]  0 Don't care
+  [ ] -1 Don't release, because ...
+
+Release verification checklist for reference:
+  [ ] Download links are valid.
+  [ ] Checksums and PGP signatures are valid.
+  [ ] DISCLAIMER is included.
+  [ ] Source code artifacts have correct names matching the current release.
+  [ ] LICENSE and NOTICE files are correct for each OpenWhisk repository.
+  [ ] All files have license headers if necessary.
+  [ ] No compiled archives bundled in source archive.
+
+This majority vote is open for at least 72 hours.
+```
+
 - **TBD** We can create JIRA issue for this release and close it when the requirement is met and ready for release. **TODO** further document discrete steps/requirements community agrees upon.
+
+#### Wait for the Results
+
+From [Votes on Package Releases](http://www.apache.org/foundation/voting.html):
+```
+Votes on whether a package is ready to be released follow a format
+similar to majority approval -- except that the decision is officially
+determined solely by whether at least three +1 votes were
+registered. Releases may not be vetoed. Generally the community will
+table the vote to release if anyone identifies serious problems, but
+in most cases the ultimate decision, once three or more positive votes
+have been garnered, lies with the individual serving as release
+manager. The specifics of the process may vary from project to
+project, but the 'minimum of three +1 votes' rule is universal.
+```
+
+The list of binding voters is available on the Project Team page.
+
+If the vote is successful, post the result to the dev list - for example:
+```
+To: "OpenWhisk Developers List" <dev@openwhisk.apache.org>
+Subject: [RESULT] [VOTE] Release Apache OpenWhisk {ABC} version {X.Y.Z}
+
+Hi,
+
+The vote has passed with the following result:
+
++1 (binding): <<list of names>>
++1 (non binding): <<list of names>>
+```
+
+Be sure to include all votes in the list and indicate which votes were binding. Consider -1 votes very carefully. While there is technically no veto on release votes, there may be reasons for people to vote -1. So sometimes it may be better to cancel a release when someone, especially a member of the PMC, votes -1.
+
+If the vote is unsuccessful, you need to fix the issues and restart the process. Note that any changes to the artifacts under vote require a restart of the process, no matter how trivial. When restarting a vote version numbers must not be reused, since binaries might have already been copied around.
+
+#### Release verification tool
+
+The script [rcverify.sh](../tools/rcverify.sh) is available to automate the process of verifying a release.
+The script will download the release candidate, verify signatures, discalaimer, notice, and license. The tool assumes that are no executable files in the release and will flag any executable that it finds. If the tool discovers an issue during verification, it will try to emit useful information for you to further inspect the findings. The release is left on your disk for you to further inspect and you must delete the scratch space when finished.
+
+Example of how to use `rcverify.sh`:
+```
+rcverify.sh openwhisk-client-js 'OpenWhisk JavaScript Client Library' 3.19.0
+```
+
+Example output from `rcverify.sh`:
+```
+working in the following directory:
+/var/folders/q9/s3th42s53d34ftd5wvcypybr0000gn/T/tmp.6t9xcMV8
+fetching openwhisk-client-js-3.19.0-incubating-sources.tar.gz
+fetching openwhisk-client-js-3.19.0-incubating-sources.tar.gz.asc
+fetching openwhisk-client-js-3.19.0-incubating-sources.tar.gz.sha512
+fetching release keys
+import keys
+gpg: key 72AF0CC22C4CF320: "Vincent Hou (Release manager of OpenWhisk) <houshengbo@apache.org>" not changed
+gpg: key 22907064147F886E: "Dave Grove <groved@us.ibm.com>" not changed
+gpg: Total number processed: 2
+gpg:              unchanged: 2
+unpacking tar ball
+cloning scancode
+Cloning into 'incubator-openwhisk-utilities'...
+remote: Enumerating objects: 52, done.
+remote: Counting objects: 100% (52/52), done.
+remote: Compressing objects: 100% (35/35), done.
+remote: Total 52 (delta 23), reused 34 (delta 15), pack-reused 0
+Unpacking objects: 100% (52/52), done.
+computing sha512 and validating... valid
+verifying asc... valid
+verifying disclaimer... valid
+verifing notice... valid
+verifying license... not valid (diff '/var/folders/q9/s3th42s53d34ftd5wvcypybr0000gn/T/tmp.6t9xcMV8/incubator-openwhisk-client-js-3.19.0-incubating/LICENSE.txt' '/var/folders/q9/s3th42s53d34ftd5wvcypybr0000gn/T/tmp.6t9xcMV8/LICENSE-2.0')
+verifying sources have proper headers... valid
+scanning for binaries... valid
+
+run the following command to remove the scratch space:
+  rm -rf '/var/folders/q9/s3th42s53d34ftd5wvcypybr0000gn/T/tmp.6t9xcMV8'
+
 
 ### Create Release notes
 
