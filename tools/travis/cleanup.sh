@@ -18,6 +18,9 @@
 SUFFIX="$TRAVIS_BUILD_NUMBER"
 PR_NUM="$TRAVIS_PULL_REQUEST"
 
+rm -f tools/key_sec.gpg
+rm -f tools/mail-config.yaml
+
 mkdir -p ~/docker
 cd ~/docker
 ls
