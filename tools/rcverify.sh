@@ -42,8 +42,8 @@ DL=${DL:-1}
 IMPORT=${IMPORT:-1}
 
 # this is the construct name of the artifact
-BASE=incubator-$NAME-$V-incubating
-TGZ=$NAME-$V-incubating-sources.tar.gz
+BASE=incubator-$NAME-$V
+TGZ=$NAME-$V-sources.tar.gz
 
 # this is a constructed name for the keys file
 KEYS=$RC-$V-KEYS
@@ -66,13 +66,13 @@ echo "$(tput setaf 6)$DIR$(tput sgr0)"
 
 if [ $DL -ne 0 ]; then
   echo fetching $TGZ
-  curl $DIST/apache-openwhisk-$V-incubating-$RC/$TGZ -s -o "$DIR/$TGZ"
+  curl $DIST/apache-openwhisk-$V-$RC/$TGZ -s -o "$DIR/$TGZ"
 
   echo fetching $TGZ.asc
-  curl $DIST/apache-openwhisk-$V-incubating-$RC/$TGZ.asc -s -o "$DIR/$TGZ.asc"
+  curl $DIST/apache-openwhisk-$V-$RC/$TGZ.asc -s -o "$DIR/$TGZ.asc"
 
   echo fetching $TGZ.sha512
-  curl $DIST/apache-openwhisk-$V-incubating-$RC/$TGZ.sha512 -s -o "$DIR/$TGZ.sha512"
+  curl $DIST/apache-openwhisk-$V-$RC/$TGZ.sha512 -s -o "$DIR/$TGZ.sha512"
 fi
 
 if [ $IMPORT -ne 0 ]; then

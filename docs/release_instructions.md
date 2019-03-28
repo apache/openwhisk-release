@@ -179,7 +179,7 @@ The script will download the release candidate, verify signatures, discalaimer, 
 
 Example of how to use `rcverify.sh`:
 ```
-rcverify.sh openwhisk-client-js 'OpenWhisk JavaScript Client Library' 3.19.0
+rcverify.sh openwhisk-client-js 'OpenWhisk JavaScript Client Library' 3.19.0-incubating
 ```
 
 Example output from `rcverify.sh`:
