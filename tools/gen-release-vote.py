@@ -38,6 +38,7 @@ def parseArgsAndConfig():
     parser.add_argument('-n', '--dryrun', help='verbose output', action='store_true')
     parser.add_argument('-mc', '--mail-conf', help='YAML configuration file for mailer', metavar='YAML', type=argparse.FileType('r'), required=False)
     parser.add_argument('-rc', '--rc-conf', help='JSON configuration file for release candidate', metavar='JSON', type=argparse.FileType('r'), required=True)
+    parser.add_argument('-s', '--subject', help='Component name for subject line', metavar='NAME')
 
     if argcomplete:
         argcomplete.autocomplete(parser)
@@ -84,11 +85,11 @@ def releaseVersion(config):
             'rc': config['versioning']['pre_release_version']
     })
 
-def sendVoteEmail(mailConfig, rcConfig, dryrun):
+def sendVoteEmail(mailConfig, rcConfig, dryrun, subjectLineId):
     components = list(componentList(rcConfig))
     componentsString = ', '.join(map(lambda c: c.name, components))
     version = releaseVersion(rcConfig)
-    subject = '[VOTE] Release Apache OpenWhisk %s (v%s, %s)' % (componentsString, version.v, version.rc)
+    subject = '[VOTE] Release Apache OpenWhisk %s (v%s, %s)' % (subjectLineId if subjectLineId else componentsString, version.v, version.rc)
     content = """Hi,
 
 This is a call to vote on releasing version {version} release
@@ -150,7 +151,7 @@ This majority vote is open for at least 72 hours.
     server.quit()
 
 def main(args):
-  sendVoteEmail(args.mailConfig, args.rcConfig, args.dryrun)
+  sendVoteEmail(args.mailConfig, args.rcConfig, args.dryrun, args.subject)
 
 if __name__ == "__main__":
   args = parseArgsAndConfig()
