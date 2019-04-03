@@ -45,6 +45,10 @@ _Automated mode_ provides the release manager another option to walk through the
   13. [Publish the release artifacts to Apache release directory](publish_apache_directory.md)
   14. [Generate the release notes](generate_release_notes.md)
   15. Announce the release
+  16. Cleanup the artifacts from the release process:
+      a. Remove the rc files from staging.
+      b. If there is a previous released version, remove it from Apache release directory
+         (it will automatically still be available via the Apache archive server).
 
 ## Automated mode of Release Process
 
