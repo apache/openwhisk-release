@@ -5,13 +5,14 @@
   "release_url": "https://dist.apache.org/repos/dist/release/incubator/openwhisk",
   "versioning": {
     "version": "0.11.0-incubating",
-    "pre_release_version": "rc1"
+    "pre_release_version": "rc2"
   },
   "RepoList": [
       "openwhisk-composer"
   ],
   "openwhisk_composer": {
-    "hash": "35fad149738691802bd37c6b6e4a5e9a7d72df3e",
+    "name": "OpenWhisk Composer",
+    "hash": "6bc3405280176e55618853ee8eae284c6e603806",
     "repository": "https://github.com/apache/incubator-openwhisk-composer.git",
     "branch": "master"
   }
