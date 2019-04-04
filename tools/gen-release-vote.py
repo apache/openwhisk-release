@@ -91,12 +91,13 @@ def releaseVersion(config):
 def sendVoteEmail(mailConfig, rcConfig, dryrun, subjectLineId, signature):
     components = list(componentList(rcConfig))
     componentsString = ', '.join(map(lambda c: c.name, components))
+    componentCount = len(components)
     version = releaseVersion(rcConfig)
-    subject = '[VOTE] Release Apache OpenWhisk %s (v%s, %s)' % (subjectLineId if subjectLineId else componentsString, version.v, version.rc)
+    subject = '[VOTE] Release Apache %s (v%s, %s)' % (subjectLineId if subjectLineId else componentsString, version.v, version.rc)
     content = """Hi,
 
 This is a call to vote on releasing version {version} release
-candidate {rc} of the following {N} project modules with artifacts
+candidate {rc} of the following {N} with artifacts
 built from the Git repositories and commit IDs listed below.
 
 {githashes}
@@ -128,7 +129,7 @@ Release verification checklist for reference:
 This majority vote is open for at least 72 hours.
 {signature}""".format(version = version.v,
            rc = version.rc,
-           N = len(components),
+           N = ("%s project modules" % componentCount) if componentCount > 1 else "project module",
            githashes = gitHashes(components),
            rcverifies = rcverify(components, version.v),
            signature = ("\n%s" % signature) if signature else "")
