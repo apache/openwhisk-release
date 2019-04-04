@@ -4,27 +4,16 @@
   "stage_url": "https://dist.apache.org/repos/dist/dev/incubator/openwhisk",
   "release_url": "https://dist.apache.org/repos/dist/release/incubator/openwhisk",
   "versioning": {
-    "version": "2.0.0-incubating",
+    "version": "0.11.0-incubating",
     "pre_release_version": "rc2"
   },
   "RepoList": [
-      "openwhisk-package-alarms",
-      "openwhisk-package-cloudant",
-      "openwhisk-package-kafka"
+      "openwhisk-composer"
   ],
-  "openwhisk_package_alarms": {
-    "hash": "dd6ab4d81c8893436e7242170d57951c089d5185",
-    "repository": "https://github.com/apache/incubator-openwhisk-package-alarms.git",
-    "branch": "master"
-  },
-  "openwhisk_package_cloudant": {
-    "hash": "ce5dac9cb0204fb2f78195d9e3f9364236613a31",
-    "repository": "https://github.com/apache/incubator-openwhisk-package-cloudant.git",
-    "branch": "master"
-  },
-  "openwhisk_package_kafka": {
-    "hash": "49820dd24170f24a37c02fae6ba7ec06e190423f",
-    "repository": "https://github.com/apache/incubator-openwhisk-package-kafka.git",
+  "openwhisk_composer": {
+    "name": "OpenWhisk Composer",
+    "hash": "6bc3405280176e55618853ee8eae284c6e603806",
+    "repository": "https://github.com/apache/incubator-openwhisk-composer.git",
     "branch": "master"
   }
 }

@@ -38,6 +38,8 @@ def parseArgsAndConfig():
     parser.add_argument('-n', '--dryrun', help='verbose output', action='store_true')
     parser.add_argument('-mc', '--mail-conf', help='YAML configuration file for mailer', metavar='YAML', type=argparse.FileType('r'), required=False)
     parser.add_argument('-rc', '--rc-conf', help='JSON configuration file for release candidate', metavar='JSON', type=argparse.FileType('r'), required=True)
+    parser.add_argument('-s', '--subject', help='Component name for subject line', metavar='NAME')
+    parser.add_argument('-i', '--signature', help='Signature line to conclude email', metavar='SIGNATURE')
 
     if argcomplete:
         argcomplete.autocomplete(parser)
@@ -46,7 +48,7 @@ def parseArgsAndConfig():
 
     args.rcConfig = json.load(args.rc_conf)
     if not args.dryrun:
-      if 'mail_config' not in args:
+      if 'mail_conf' not in args:
         parser.error("--mail-config required except for a dryrun.")
 
       args.mailConfig = yaml.load(args.mail_conf)
@@ -64,14 +66,16 @@ def componentList(config):
         key = r.replace('-', '_')
         hash = config[key]['hash']
         name = config[key]['name'] if 'name' in config[key] else '???'
+        repo = config[key]['repository']
         yield objectify({
                 'id': r,
                 'hash': hash,
-                'name': name
+                'name': name,
+                'url': repo
         })
 
 def gitHashes(components):
-    s = map(lambda r: "* %s: %s" % (r.name, r.hash), components)
+    s = map(lambda r: "* %s: %s\n  %s/commits/%s\n" % (r.name, r.hash, r.url, r.hash), components)
     return '\n'.join(list(s))
 
 def rcverify(components, version):
@@ -84,11 +88,11 @@ def releaseVersion(config):
             'rc': config['versioning']['pre_release_version']
     })
 
-def sendVoteEmail(mailConfig, rcConfig, dryrun):
+def sendVoteEmail(mailConfig, rcConfig, dryrun, subjectLineId, signature):
     components = list(componentList(rcConfig))
     componentsString = ', '.join(map(lambda c: c.name, components))
     version = releaseVersion(rcConfig)
-    subject = '[VOTE] Release Apache OpenWhisk %s (v%s, %s)' % (componentsString, version.v, version.rc)
+    subject = '[VOTE] Release Apache OpenWhisk %s (v%s, %s)' % (subjectLineId if subjectLineId else componentsString, version.v, version.rc)
     content = """Hi,
 
 This is a call to vote on releasing version {version} release
@@ -96,7 +100,6 @@ candidate {rc} of the following {N} project modules with artifacts
 built from the Git repositories and commit IDs listed below.
 
 {githashes}
-
 This release comprises of source code distribution only.
 
 You can use this UNIX script to download the release and verify the checklist below:
@@ -123,18 +126,19 @@ Release verification checklist for reference:
   [ ] No compiled archives bundled in source archive.
 
 This majority vote is open for at least 72 hours.
-""".format(version = version.v,
+{signature}""".format(version = version.v,
            rc = version.rc,
            N = len(components),
            githashes = gitHashes(components),
-           rcverifies = rcverify(components, version.v))
+           rcverifies = rcverify(components, version.v),
+           signature = ("\n%s" % signature) if signature else "")
 
     if (dryrun):
       print(subject)
       print(content)
       return
 
-    print('Sending email: %s -> %s' % (frm, to))
+    print('Sending email: %s -> %s' % (mailConfig['from'], mailConfig['to']))
 
     msg = MIMEText(content, _charset='utf-8')
     msg['From'] = mailConfig['from']
@@ -150,7 +154,7 @@ This majority vote is open for at least 72 hours.
     server.quit()
 
 def main(args):
-  sendVoteEmail(args.mailConfig, args.rcConfig, args.dryrun)
+  sendVoteEmail(args.mailConfig, args.rcConfig, args.dryrun, args.subject, args.signature)
 
 if __name__ == "__main__":
   args = parseArgsAndConfig()
