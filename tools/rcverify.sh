@@ -59,6 +59,8 @@ The Apache Software Foundation (http://www.apache.org/).
 END
 )
 
+echo "$(basename $0) (script SHA1: $(gpg --print-md SHA1 $0 | cut -d' ' -f2-))"
+
 DIR=$(mktemp -d)
 
 echo working in the following directory:
