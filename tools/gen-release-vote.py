@@ -79,7 +79,7 @@ def gitHashes(components):
     return '\n'.join(list(s))
 
 def rcverify(components, version):
-    s = map(lambda r: "rcverify.sh %s '%s' %s" % (r.id, r.name, version), components)
+    s = map(lambda r: "rcverify.sh %s '%s' %s %s" % (r.id, r.name, version.v, version.rc), components)
     return '\n'.join(list(s))
 
 def releaseVersion(config):
@@ -96,12 +96,10 @@ def sendVoteEmail(mailConfig, rcConfig, dryrun, subjectLineId, signature):
     subject = '[VOTE] Release Apache %s (v%s, %s)' % (subjectLineId if subjectLineId else componentsString, version.v, version.rc)
     content = """Hi,
 
-This is a call to vote on releasing version {version} release
-candidate {rc} of the following {N} with artifacts
-built from the Git repositories and commit IDs listed below.
+This is a call to vote on releasing version {version} release candidate {rc} of the following {N} with artifacts built from the Git repositories and commit IDs listed below.
 
 {githashes}
-This release comprises of source code distribution only.
+This release is comprised of source code distribution only.
 
 You can use this UNIX script to download the release and verify the checklist below:
 https://gitbox.apache.org/repos/asf?p=incubator-openwhisk-release.git;a=blob_plain;f=tools/rcverify.sh;hb=HEAD
@@ -131,7 +129,7 @@ This majority vote is open for at least 72 hours.
            rc = version.rc,
            N = ("%s project modules" % componentCount) if componentCount > 1 else "project module",
            githashes = gitHashes(components),
-           rcverifies = rcverify(components, version.v),
+           rcverifies = rcverify(components, version),
            signature = ("\n%s" % signature) if signature else "")
 
     if (dryrun):
