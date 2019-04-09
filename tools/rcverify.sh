@@ -81,7 +81,7 @@ if [ $IMPORT -ne 0 ]; then
   echo fetching release keys
   curl $DIST/KEYS -s -o "$DIR/$KEYS"
 
-  echo import keys
+  echo importing keys
   gpg --import "$DIR/$KEYS"
 fi
 
@@ -109,10 +109,12 @@ tar zxf "$DIR/$TGZ" -C "$DIR"
 echo "cloning scancode"
 cd "$DIR" && git clone https://github.com/apache/incubator-openwhisk-utilities.git --depth 1
 
-printf "computing sha512 and validating..."
+echo "computing sha512 for $TGZ"
 EXPECTED=$(cat "$DIR/$TGZ.sha512")
 CMD="cd $DIR && gpg --print-md SHA512 '$TGZ'"
 SHA=$(eval $CMD)
+echo "SHA512: $(tput setaf 6)$SHA$(tput sgr0)"
+printf "validating sha512..."
 validate "$EXPECTED" "$SHA" "$CMD"
 
 printf "verifying asc..."  
