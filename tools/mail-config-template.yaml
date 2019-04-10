@@ -1,0 +1,7 @@
+mail:
+  from: '"OpenWhisk Release" <YOUR-ID@apache.org>'
+  to: 'dev@openwhisk.apache.org'
+  smtp: mail-relay.apache.org:587
+  useTLS: true
+  username: YOUR-ID
+  password: YOUR-PASSWORD

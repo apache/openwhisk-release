@@ -1,0 +1,5 @@
+#*
+*~
+openwhisk_release/
+tools/key_sec.gpg
+tools/mail-config.yaml

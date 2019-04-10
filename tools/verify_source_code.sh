@@ -25,7 +25,8 @@ PARENTDIR="$(dirname "$SCRIPTDIR")"
 # run Apache rat to check headers
 cd $OPENWHISK_SOURCE_DIR
 cp $SCRIPTDIR/lib/pom.xml ./
-mvn clean apache-rat:check
+# Comment out the rat check, since it has been applied in the release process
+# mvn clean apache-rat:check
 
 echo "Check the existence of LICENSE and NOTICE."
 

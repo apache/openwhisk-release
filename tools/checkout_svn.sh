@@ -23,6 +23,8 @@ echo "Checkout the SVN to the local directory."
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
 source "$SCRIPTDIR/load_config.sh" $1 $2
 
+: ${OPENWHISK_SVN?"Need is not set OPENWHISK_SVN"}
+
 if [[ `wget -S --spider $CURRENT_VERSION_URL  2>&1 | grep 'HTTP/1.1 404 Not Found'` ]]; then
     # Create an empty folder named ${REMOTE_PATH} in the remote staging folder
     svn mkdir -m "Create the directory for ${full_version} in staging." $CURRENT_VERSION_URL $CREDENTIALS
@@ -36,4 +38,7 @@ rm -rf $OPENWHISK_SVN/*
 cd $OPENWHISK_SVN
 
 # Make sure the folder $REMOTE_PATH is connected to the svn staging server.
-svn co $CURRENT_VERSION_URL $REMOTE_PATH
+CMD="svn co $CURRENT_VERSION_URL $REMOTE_PATH"
+echo $CMD
+$CMD
+echo svn repo checked out to... $OPENWHISK_SVN
