@@ -153,6 +153,10 @@ printf "scanning for executable files..."
 EXE=$(find "$DIR/$BASE" -type f ! -name "*.sh" ! -name "*.sh" ! -name "*.py" ! -name "*.php" ! -name "gradlew" ! -name "gradlew.bat" ! -path "*/bin/*" -perm -001)
 validate "$EXE" "" "$EXE"
 
+printf "scanning for non-text files..."
+EXE=$(find "$DIR/$BASE" -type f -exec file --mime {} \; | grep -v ": text/")
+validate "$EXE" "" "$EXE"
+
 printf "scanning for archives..."
 EXE=$(find "$DIR/$BASE" -type f -name "*.tar" -name "*.tgz" -o -name "*.gz" -o -name ".zip" -o -name "*.jar")
 validate "$EXE" "" "$EXE"
