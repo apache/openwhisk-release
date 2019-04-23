@@ -61,7 +61,7 @@ def parseArgsAndConfig():
         args.mailConfig = None
     return args
 
-def componentList(config):
+def componentList(config, version):
     for r in config['RepoList']:
         key = r.replace('-', '_')
         hash = config[key]['hash']
@@ -71,11 +71,23 @@ def componentList(config):
                 'id': r,
                 'hash': hash,
                 'name': name,
-                'url': repo
+                'url': repo,
+                'artifacts': artifactLinks(r, version.v, version.rc)
         })
 
+def artifactLinks(name, version, rc):
+    root = 'https://dist.apache.org/repos/dist/dev/incubator/openwhisk/apache-openwhisk-%s-%s' % (version, rc)
+    tgz  = '%s-%s-sources.tar.gz' % (name, version)
+    asc  = '%s.asc' % tgz
+    sha  = '%s.sha512' % tgz
+    return objectify({
+       'tgz': '%s/%s' % (root, tgz),
+       'asc': '%s/%s' % (root, asc),
+       'sha': '%s/%s' % (root, sha)
+    })
+
 def gitHashes(components):
-    s = map(lambda r: "* %s: %s\n  %s/commits/%s\n" % (r.name, r.hash, r.url, r.hash), components)
+    s = map(lambda r: "* %s: %s\n  %s/commits/%s\n  %s\n  %s\n  %s\n" % (r.name, r.hash, r.url, r.hash, r.artifacts.tgz, r.artifacts.asc, r.artifacts.sha), components)
     return '\n'.join(list(s))
 
 def rcverify(components, version):
@@ -89,10 +101,11 @@ def releaseVersion(config):
     })
 
 def sendVoteEmail(mailConfig, rcConfig, dryrun, subjectLineId, signature):
-    components = list(componentList(rcConfig))
+    version = releaseVersion(rcConfig)
+    components = list(componentList(rcConfig, version))
     componentsString = ', '.join(map(lambda c: c.name, components))
     componentCount = len(components)
-    version = releaseVersion(rcConfig)
+
     subject = '[VOTE] Release Apache %s (v%s, %s)' % (subjectLineId if subjectLineId else componentsString, version.v, version.rc)
     content = """Hi,
 
