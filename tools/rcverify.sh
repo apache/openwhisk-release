@@ -149,8 +149,8 @@ CMD="'$DIR/incubator-openwhisk-utilities/scancode/scanCode.py' --config '$DIR/in
 SC=$(eval $CMD >& /dev/null)
 validate $? 0 "$CMD"
 
-printf "scanning for binaries..."
-EXE=$(find "$DIR/$BASE" -type f ! -name "*.sh" ! -name "*.sh" ! -name "*.py" ! -name "*.php" ! -name "gradlew" ! -name "gradlew.bat" -perm -001)
+printf "scanning for executable files..."
+EXE=$(find "$DIR/$BASE" -type f ! -name "*.sh" ! -name "*.sh" ! -name "*.py" ! -name "*.php" ! -name "gradlew" ! -name "gradlew.bat" ! -path "*/bin/*" -perm -001)
 validate "$EXE" "" "$EXE"
 
 printf "scanning for archives..."
