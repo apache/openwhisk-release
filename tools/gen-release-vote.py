@@ -71,7 +71,7 @@ def componentList(config, version):
                 'id': r,
                 'hash': hash,
                 'name': name,
-                'url': repo,
+                'url': repo[0:-4],
                 'artifacts': artifactLinks(r, version.v, version.rc)
         })
 
