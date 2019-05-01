@@ -67,14 +67,17 @@ echo working in the following directory:
 echo "$(tput setaf 6)$DIR$(tput sgr0)"
 
 if [ $DL -ne 0 ]; then
+  SRC=$DIST/apache-openwhisk-$V-$RC
+  echo fetching tarball and signatures from $SRC
+
   echo fetching $TGZ
-  curl $DIST/apache-openwhisk-$V-$RC/$TGZ -s -o "$DIR/$TGZ"
+  curl $SRC/$TGZ -s -o "$DIR/$TGZ"
 
   echo fetching $TGZ.asc
-  curl $DIST/apache-openwhisk-$V-$RC/$TGZ.asc -s -o "$DIR/$TGZ.asc"
+  curl $SRC/$TGZ.asc -s -o "$DIR/$TGZ.asc"
 
   echo fetching $TGZ.sha512
-  curl $DIST/apache-openwhisk-$V-$RC/$TGZ.sha512 -s -o "$DIR/$TGZ.sha512"
+  curl $SRC/$TGZ.sha512 -s -o "$DIR/$TGZ.sha512"
 fi
 
 if [ $IMPORT -ne 0 ]; then
