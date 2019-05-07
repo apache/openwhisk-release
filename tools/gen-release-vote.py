@@ -134,11 +134,13 @@ Release verification checklist for reference:
   [ ] DISCLAIMER is included.
   [ ] Source code artifacts have correct names matching the current release.
   [ ] LICENSE and NOTICE files are correct for each OpenWhisk repository.
-  [ ] All files have license headers if necessary.
+  [ ] All files have license headers as specified by OpenWhisk project policy [1].
   [ ] No compiled archives bundled in source archive.
 
 This majority vote is open for at least 72 hours.
-{signature}""".format(version = version.v,
+{signature}
+
+[1] https://github.com/apache/incubator-openwhisk-release/blob/master/docs/license_compliance.md""".format(version = version.v,
            rc = version.rc,
            N = ("%s project modules" % componentCount) if componentCount > 1 else "project module",
            githashes = gitHashes(components),
