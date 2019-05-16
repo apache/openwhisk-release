@@ -43,9 +43,10 @@ _Automated mode_ provides the release manager another option to walk through the
   11. if the vote fails - configure the file config.json and resume from step 3
   12. if the vote passes - close the vote with final email to incubator list (cc dev list)
   13. [Publish the release artifacts to Apache release directory](publish_apache_directory.md)
-  14. [Generate the release notes](generate_release_notes.md)
-  15. Announce the release
-  16. Cleanup the artifacts from the release process:
+  13. [Tag the commit IDs in the Github repository for the project](tag_release.md)
+  15. [Generate the release notes](generate_release_notes.md)
+  16. Announce the release
+  17. Cleanup the artifacts from the release process:
       a. Remove the rc files from staging.
       b. If there is a previous released version, remove it from Apache release directory
          (it will automatically still be available via the Apache archive server).
