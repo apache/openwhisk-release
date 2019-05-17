@@ -22,14 +22,18 @@
 # Release process
 
 This project offers the Apache OpenWhisk Release Manager two modes to release OpenWhisk projects:
-- **Manual mode** and
-- **Automated mode**
+- [**Manual mode**](#manual-mode-of-release-process)
+- [**Automated mode**](#automated-mode-of-release-process)
 
 _Manual mode_ makes sure that the release manager can download the source code of this repository, and go through the release process by running scripts sequentially on a local machine, to push the artifacts into the staging directory and eventually move them into the Apache release directory.
 
 _Automated mode_ provides the release manager another option to walk through the Apache release process by kicking off the Travis job to run the scripts. A release manager can choose either way to publish the artifacts in the staging directory and the Apache release directory.
 
 ## Manual mode of Release Process
+
+If you work as a release manager on an official release for an OpenWhisk project, manual mode is recommended for you to go
+through and understand all the necessary steps of Apache release process tailored for OpenWhisk.
+
   1. [Preparing for a release](prepare_release.md) - how to prepare OpenWhisk projects for a release
   2. [Prerequisites](prerequisites.md) - steps that release manager needs to do before a release
   3. [Picking up the source code](pick_up_source_code.md) - determine the branch and hash value for each OpenWhisk project to release
@@ -43,14 +47,21 @@ _Automated mode_ provides the release manager another option to walk through the
   11. if the vote fails - configure the file config.json and resume from step 3
   12. if the vote passes - close the vote with final email to incubator list (cc dev list)
   13. [Publish the release artifacts to Apache release directory](publish_apache_directory.md)
-  14. [Generate the release notes](generate_release_notes.md)
-  15. Announce the release
-  16. Cleanup the artifacts from the release process:
+  13. [Tag the commit IDs in the Github repository for the project](tag_release.md)
+  15. [Generate the release notes](generate_release_notes.md)
+  16. Announce the release
+  17. Cleanup the artifacts from the release process:
       a. Remove the rc files from staging.
       b. If there is a previous released version, remove it from Apache release directory
          (it will automatically still be available via the Apache archive server).
 
 ## Automated mode of Release Process
+
+As the single configuration file config.json can lead to code conflict and inconsistency, if multiple OpenWhisk projects
+are releasing individually in parallel, this automated mode is not recommended for release managers. However, if you still
+lean on to the convenience of Travis builds, please fork this repository, embed the credentials you need in your fork, and
+run with the automated mode. Don't forget to refer to the manual mode from time to time, because many steps there are not
+automated, like the voting process, release notes, tags for Github repositories, etc.
 
 The release manager can take full advantage of Travis CI to implement the release process. The only manual step is to configure the release information, by editing the configuration file _config.json_. Please refer to [edit configuration file](pick_up_source_code.md#edit-the-configuration-file) for the information able to be configured.
 
