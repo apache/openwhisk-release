@@ -139,16 +139,24 @@ printf "verifing notice..."
 NTXT=$(cat "$DIR/$BASE/NOTICE.txt")
 validate "$NOTICE" "$NTXT" "cat '$DIR/$BASE/NOTICE.txt'"
 
+# If a project bundles any dependencies, there will be additional
+# text appended to LICENSE.txt to summarize the additional licenses.
+# Therefore only enforce a prefix match between the project's
+# LICENSE.txt and the official text of the Apache LICENSE-2.0.
 printf "verifying license..."
 curl http://www.apache.org/licenses/LICENSE-2.0 -s -o "$DIR/LICENSE-2.0"
-## this is a more forgiving license check that allows for the copyright line to be filled out
-#CMD="diff '$DIR/$BASE/LICENSE.txt' '$DIR/LICENSE-2.0' -I '^   Copyright'"
-CMD="diff '$DIR/$BASE/LICENSE.txt' '$DIR/LICENSE-2.0'"
-DIF=$(eval "$CMD")
+LICENSE_LEN=$(wc -c "$DIR/LICENSE-2.0" | awk '{print $1}')
+CMD="cmp -n $LICENSE_LEN '$DIR/LICENSE-2.0' '$DIR/$BASE/LICENSE.txt'"
+CMP=$(eval "$CMD")
 validate $? 0 "$CMD"
 
 printf "verifying sources have proper headers..."
-CMD="'$DIR/incubator-openwhisk-utilities/scancode/scanCode.py' --config '$DIR/incubator-openwhisk-utilities/scancode/ASF-Release.cfg' '$DIR/$BASE'"
+if [ -f '$DIR/$BASE/tools/travis/scancodeExlusions' ]; then
+    SCANCODE_EXTRA_ARGS="--gitignore '$DIR/$BASE/tools/travis/scancodeExclusions'"
+else
+    SCANCODE_EXTRA_ARGS=""
+fi
+CMD="'$DIR/incubator-openwhisk-utilities/scancode/scanCode.py' --config '$DIR/incubator-openwhisk-utilities/scancode/ASF-Release.cfg' $SCANCODE_EXTRA_ARGS '$DIR/$BASE'"
 SC=$(eval $CMD >& /dev/null)
 validate $? 0 "$CMD"
 
