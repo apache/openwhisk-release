@@ -26,6 +26,7 @@ import yaml
 import json
 import sys
 import smtplib
+import subprocess
 from email.mime.text import MIMEText
 
 class objectify(object):
@@ -86,6 +87,9 @@ def artifactLinks(name, version, rc):
        'sha': '%s/%s' % (root, sha)
     })
 
+def currentGitHead():
+    return subprocess.check_output(['git', 'show-ref', '--hash', '--abbrev', '--', 'refs/remotes/upstream/master']).strip()
+
 def gitHashes(components):
     s = map(lambda r: "* %s: %s\n  %s/commits/%s\n  %s\n  %s\n  %s\n" % (r.name, r.hash, r.url, r.hash, r.artifacts.tgz, r.artifacts.asc, r.artifacts.sha), components)
     return '\n'.join(list(s))
@@ -115,10 +119,10 @@ This is a call to vote on releasing version {version} release candidate {rc} of 
 This release is comprised of source code distribution only.
 
 You can use this UNIX script to download the release and verify the checklist below:
-https://gitbox.apache.org/repos/asf?p=incubator-openwhisk-release.git;a=blob_plain;f=tools/rcverify.sh;hb=HEAD
+https://gitbox.apache.org/repos/asf?p=incubator-openwhisk-release.git;a=blob_plain;f=tools/rcverify.sh;hb={HEAD}
 
 Usage:
-curl -s "https://gitbox.apache.org/repos/asf?p=incubator-openwhisk-release.git;a=blob_plain;f=tools/rcverify.sh;hb=HEAD" -o rcverify.sh
+curl -s "https://gitbox.apache.org/repos/asf?p=incubator-openwhisk-release.git;a=blob_plain;f=tools/rcverify.sh;hb={HEAD}" -o rcverify.sh
 chmod +x rcverify.sh
 {rcverifies}
 
@@ -140,12 +144,14 @@ Release verification checklist for reference:
 This majority vote is open for at least 72 hours.
 {signature}
 
-[1] https://github.com/apache/incubator-openwhisk-release/blob/master/docs/license_compliance.md""".format(version = version.v,
-           rc = version.rc,
-           N = ("%s project modules" % componentCount) if componentCount > 1 else "project module",
-           githashes = gitHashes(components),
-           rcverifies = rcverify(components, version),
-           signature = ("\n%s" % signature) if signature else "")
+[1] https://github.com/apache/incubator-openwhisk-release/blob/master/docs/license_compliance.md""".format(
+        version = version.v,
+        rc = version.rc,
+        N = ("%s project modules" % componentCount) if componentCount > 1 else "project module",
+        HEAD = currentGitHead(),
+        githashes = gitHashes(components),
+        rcverifies = rcverify(components, version),
+        signature = ("\n%s" % signature) if signature else "")
 
     if (dryrun):
       print(subject)
