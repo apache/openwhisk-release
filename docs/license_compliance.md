@@ -48,21 +48,21 @@ In addition, the recommended type of approved ASF license header (i.e., "full" o
 | File type | ASF Header Type | Rationale |
 | :--- | :--- | :--- |
 | Source code (e.g., `*.scala`, `*.go`, `*.java`, `*.py`, etc.) | Full | Source code. |
-| Action functions (source) (e.g., `.js`, `.py`, `.swift`, etc, particularly under `tests/dat` folder.) | Mini | Source code.</br>Use "Mini" header as best practice for performance reasons. |
-| Ansible Group vars. (YAML) (`*/group_vars/all`) | Mini | Project convention. |
-| Docker image build file (`Dockerfile`) | Mini | May contain functional (script) code. |
+| Action functions (source) (e.g., `.js`, `.py`, `.swift`, etc, particularly under `tests/dat` folder.) | Full | Source code.</br>Use "Mini" header as best practice for performance reasons. |
+| Ansible Group vars. (YAML) (`*/group_vars/all`) | Full | Project convention. |
+| Docker image build file (`Dockerfile`) | Full | May contain functional (script) code. |
 | Documentation (e.g., `*.md`) | Full | Intellectual property. |
 | Gradle files (`build.gradle`, `*.gradle`) | Full |  May contain functional scripts and code (e.g., Groovy, Kotlin).</br>Includes build (`build.gradle`) and settings (`settings.gradle`)files. |
-| Gradle properties files (`*.properties`) | Mini | Project convention. |
+| Gradle properties files (`*.properties`) | Full | Project convention. |
 | Groovy code (`*.groovy`) | Full | Source code. |
 | Makefile | Full | May contain functional (script) code. |
 | Scala Configurations (`*.conf`) | Full | Scala (Java)  configuration files may contain code or interfaces. |
-| Scala Properties (`*.properties`) | Mini | Project convention.</br>Example: [incubator-openwhisk/blob/master/tools/eclipse/scala.properties](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/scala.properties) |
-| Script files (`*.sh`) | Mini | May contain functional (script) code. |
+| Scala Properties (`*.properties`) | Full | Project convention.</br>Example: [incubator-openwhisk/blob/master/tools/eclipse/scala.properties](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/scala.properties) |
+| Script files (`*.sh`) | Full | May contain functional (script) code. |
 | Vagrantfile configuration file (`Vagrantfile`)| Full | Project convention. |
 | Web Content (e.g., `*.html`, `.css`) | Full | Source code. |
-| Windows Command file (`*.cmd`) | Mini | May contain functional code. |
-| YAML files (`*.yaml`, `*.yml`) | Mini | May contain functional code.<br/>Note: Includes (`.travis.yml`)|
+| Windows Command file (`*.cmd`) | Full | May contain functional code. |
+| YAML files (`*.yaml`, `*.yml`) | Full | May contain functional code.<br/>Note: Includes (`.travis.yml`)|
 
 #### Notes
 - Full ASF License headers are always accepted regardless if a "Mini" header is recommended as best practice.
