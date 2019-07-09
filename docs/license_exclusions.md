@@ -61,9 +61,6 @@ In additon, the specific rationale for the exclusion, in accordance with Apache 
 | [bin/wskdev](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskdev) | Generated, symbolic link |
 | [common/scala/src/main/resources/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/common/scala/src/main/resources/logback.xml) | XML |
 | [docs/images/OpenWhisk_flow_of_processing.draw.io.xml](https://github.com/apache/incubator-openwhisk/blob/master/docs/images/OpenWhisk_flow_of_processing.draw.io.xml) | XML |
-| [gradle/wrapper/gradle-wrapper.jar](https://github.com/apache/incubator-openwhisk/blob/master/gradle/wrapper/gradle-wrapper.jar) | GRDL.JAR |
-| [gradlew.bat](https://github.com/apache/incubator-openwhisk/blob/master/gradlew.bat) | GRDL.BAT |
-| [gradlew](https://github.com/apache/incubator-openwhisk/blob/master/gradlew) | GRDL.W |
 | [tools/eclipse/java.xml](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) | XML |
 
 ### [incubator-openwhisk-apigateway](https://github.com/apache/incubator-openwhisk-apigateway)
@@ -76,16 +73,6 @@ In additon, the specific rationale for the exclusion, in accordance with Apache 
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [credentials.json.enc](https://github.com/apache/incubator-openwhisk-catalog/blob/master/credentials.json.enc) | API.ENC |
-| [gradle/wrapper/gradle-wrapper.jar](https://github.com/apache/incubator-openwhisk-catalog/blob/master/gradle/wrapper/gradle-wrapper.jar) | GRDL.JAR |
-| [gradlew.bat](https://github.com/apache/incubator-openwhisk/blob/master/gradlew.bat) | GRDL.BAT |
-| [gradlew](https://github.com/apache/incubator-openwhisk/blob/master/gradlew) | GRDL.W |
-
-### [incubator-openwhisk-cli](https://github.com/apache/incubator-openwhisk-cli)
-| Exclusion | Rationale [TAG] |
-|:---|:---|
-| [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
-| [gradlew.bat](https://github.com/apache/incubator-openwhisk-cli/blob/master/gradlew.bat) | GRDL.BAT |
-| [gradlew](https://github.com/apache/incubator-openwhisk-cli/blob/master/gradlew) | GRDL.W |
 
 ### [incubator-openwhisk-client-go](https://github.com/apache/incubator-openwhisk-client-go)
 | Exclusion | Rationale [TAG] |
@@ -108,20 +95,11 @@ In additon, the specific rationale for the exclusion, in accordance with Apache 
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
-| [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
-| [gradlew]() | GRDL.W |
-| [gradlew.bat]() | GRDL.BAT |
 
 ### [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
-| [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
-| [gradlew]() | GRDL.W |
-| [gradlew.bat]() | GRDL.BAT |
-| [java8/proxy/gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
-| [java8/proxy/gradlew]() | GRDL.W |
-| [java8/proxy/gradlew.bat]() | GRDL.BAT |
 
 ### [incubator-openwhisk-runtime-nodejs](https://github.com/apache/incubator-openwhisk-runtime-nodejs)
 | Exclusion | Rationale [TAG] |
@@ -129,35 +107,23 @@ In additon, the specific rationale for the exclusion, in accordance with Apache 
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
 | [core/nodejs8Action/package.json]() | JSON |
 | [core/nodejsActionBase/package.json]() | JSON |
-| [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
-| [gradlew]() | GRDL.W |
-| [gradlew.bat]() | GRDL.BAT |
 
 ### [incubator-openwhisk-runtime-php](https://github.com/apache/incubator-openwhisk-runtime-php)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
 | [core/php7.1Action/composer.json]() | JSON |
-| [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
-| [gradlew]() | GRDL.W |
-| [gradlew.bat]() | GRDL.BAT |
 
 ### [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
 | [core/php7.1Action/composer.json]() | JSON |
-| [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
-| [gradlew]() | GRDL.W |
-| [gradlew.bat]() | GRDL.BAT |
 
 ### [incubator-openwhisk-runtime-swift](https://github.com/apache/incubator-openwhisk-runtime-swift)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
-| [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
-| [gradlew]() | GRDL.W |
-| [gradlew.bat]() | GRDL.BAT |
 
 ### [incubator-openwhisk-wskdeploy](https://github.com/apache/incubator-openwhisk-wskdeploy)
 | Exclusion | Rationale [TAG] |
@@ -167,9 +133,6 @@ In additon, the specific rationale for the exclusion, in accordance with Apache 
 | [Godeps/Godeps.json]() | GODEPS.JSON |
 | [Godeps/Readme]() | GODEPS.README |
 | [ansible/environments/local/hosts]() | ANS.HOSTS |
-| [gradle/wrapper/gradle-wrapper.jar]() | GRDL.JAR |
-| [gradlew]() | GRDL.W |
-| [gradlew.bat]() | GRDL.BAT |
 
 ## Exclusions NOT part of Apache source code release
 <!--
