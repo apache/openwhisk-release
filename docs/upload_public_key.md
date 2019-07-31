@@ -19,10 +19,10 @@
 
 # Upload the public PGP key
 
-The public PGP key file is named _KEYS_ available under the [staging directory](https://dist.apache.org/repos/dist/dev/incubator/openwhisk/). If you generate a new key to
-sign the artifacts, you need to update the file of public key in the staging directory for further use to verify the
-artifacts. Checkout the [staging directory](https://dist.apache.org/repos/dist/dev/incubator/openwhisk/) via subversion,
-modify the file KEYS by appending your local public key, and commit it back to the staging directory. Please refer to the
+The public PGP key file is named _KEYS_ available under the [release directory](https://dist.apache.org/repos/dist/release/openwhisk/). If you generate a new key to
+sign the artifacts, you need to update the file of public key in the release directory for further use to verify the
+artifacts. Checkout the [release directory](https://dist.apache.org/repos/dist/release/openwhisk/) via subversion,
+modify the file KEYS by appending your local public key, and commit it back to the release directory. Please refer to the
 [svn commands](http://svnbook.red-bean.com/en/1.7/svn.ref.html) to checkout, and commit.
 
 You can export your public PGP key by running the following command:

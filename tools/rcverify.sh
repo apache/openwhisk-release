@@ -20,8 +20,11 @@
 # they are properly signed and authentic. The script assumes you have
 # curl, git, python and gpg already installed and that your gpg is trusted.
 
-# the location providing the distribution
-DIST=https://dist.apache.org/repos/dist/dev/incubator/openwhisk
+# the location providing the rc distribution
+RC_DIST=https://dist.apache.org/repos/dist/dev/openwhisk
+
+# the location providing the KEYS
+KEYS_DIST=https://dist.apache.org/repos/dist/release/openwhisk
 
 # the artifact being released
 NAME=${1?"missing artifact name e.g., openwhisk-client-js"}
@@ -30,7 +33,7 @@ NAME=${1?"missing artifact name e.g., openwhisk-client-js"}
 DESCRIPTION=${2?"missing podling description e.g., 'OpenWhisk JavaScript Client Library'"}
 
 # the version of the release artifact
-V=${3?"missing version e.g., '3.19.0-incubating'"}
+V=${3?"missing version e.g., '3.19.0'"}
 
 # the release candidate, usualy 'rc1'
 RC=${4:-rc1}
@@ -42,13 +45,11 @@ DL=${DL:-1}
 IMPORT=${IMPORT:-1}
 
 # this is the construct name of the artifact
-BASE=incubator-$NAME-$V
+BASE=$NAME-$V
 TGZ=$NAME-$V-sources.tar.gz
 
 # this is a constructed name for the keys file
 KEYS=$RC-$V-KEYS
-
-DISCLAIMER="Apache $DESCRIPTION is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF."
 
 NOTICE=$(cat << END
 Apache $DESCRIPTION
@@ -67,7 +68,7 @@ echo working in the following directory:
 echo "$(tput setaf 6)$DIR$(tput sgr0)"
 
 if [ $DL -ne 0 ]; then
-  SRC=$DIST/apache-openwhisk-$V-$RC
+  SRC=$RC_DIST/apache-openwhisk-$V-$RC
   echo fetching tarball and signatures from $SRC
 
   echo fetching $TGZ
@@ -82,7 +83,7 @@ fi
 
 if [ $IMPORT -ne 0 ]; then
   echo fetching release keys
-  curl $DIST/KEYS -s -o "$DIR/$KEYS"
+  curl $KEYS_DIST/KEYS -s -o "$DIR/$KEYS"
 
   echo importing keys
   gpg --import "$DIR/$KEYS"
@@ -130,10 +131,6 @@ else
   SIGNER="$(tput setaf 1)???$(tput sgr0)"
 fi
 validate $RES 0 "$CMD" "signed-by: $SIGNER"
-
-printf "verifying disclaimer..."
-DTXT=$(cat "$DIR/$BASE/DISCLAIMER.txt")
-validate "$DISCLAIMER" "$DTXT" "cat '$DIR/$BASE/DISCLAIMER.txt'"
 
 printf "verifing notice..."
 NTXT=$(cat "$DIR/$BASE/NOTICE.txt")
