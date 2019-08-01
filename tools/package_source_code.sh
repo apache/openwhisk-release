@@ -35,7 +35,7 @@ rsync -rtp --exclude gradle/wrapper/gradle-\*.jar --exclude .bin --exclude .jshi
 for repo in $(echo $repos | sed "s/,/ /g")
 do
     repo_name=$(echo "$repo" | sed -e 's/^"//' -e 's/"$//')
-    project_name="incubator-$repo_name"
+    project_name="$repo_name"
     rm -rf $OPENWHISK_CLEANED_SOURCE_DIR/$project_name/.git
     cd $OPENWHISK_CLEANED_SOURCE_DIR
     # Rename the directory by adding the version number

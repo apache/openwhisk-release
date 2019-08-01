@@ -46,7 +46,7 @@ do
     HASH=$(json_by_key "$CONFIG" $HASH_KEY)
     REPO=$(json_by_key "$CONFIG" $REPO_KEY)
     BRANCH=$(json_by_key "$CONFIG" $REPO_BRANCH)
-    project_name="incubator-$repo_name"
+    project_name="$repo_name"
     if [ "$HASH" != "null" ]; then
         echo "The hash for $project_name is $HASH"
         git_clone_repo $project_name $HASH $REPO $BRANCH
