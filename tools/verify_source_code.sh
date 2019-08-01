@@ -26,14 +26,14 @@ PARENTDIR="$(dirname "$SCRIPTDIR")"
 cd $OPENWHISK_SOURCE_DIR
 cp $SCRIPTDIR/lib/pom.xml ./
 # Comment out the rat check, since it has been applied in the release process
-# mvn clean apache-rat:check
+mvn clean apache-rat:check
 
 echo "Check the existence of LICENSE and NOTICE."
 
 for repo in $(echo $repos | sed "s/,/ /g")
 do
     repo_name=$(echo "$repo" | sed -e 's/^"//' -e 's/"$//')
-    project_name="incubator-$repo_name"
+    project_name="$repo_name"
     echo "Check the repository $project_name"
     cd $OPENWHISK_SOURCE_DIR/$project_name && ls {LICENSE*,NOTICE*}
 done
