@@ -24,4 +24,3 @@
   file contains the Apache V2.0 license and the notice file includes the dependencies.
   3. Update the release notes. (It is still to be determined where to publish the release notes)
   4. Update the changelog file CHANGELOG.txt for each project, including the new commits based on the previous release.
-  5. Create a JIRA issue at [issue of ASF JIRA](https://issues.apache.org/jira/), to track this release. This issue will be closed, if the release is approved.
