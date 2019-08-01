@@ -19,7 +19,9 @@ sudo: required
 
 env:
   global:
+  # TODO: I think this is only needed for deprecated automated mode -- remove?
   - secure: Ewi5JFoq6fr4MxGNdhF075gs0hGwvUws6PdfuRz4Xx+vQSGIsStBcaUrK+oiOxiJ1Z6LY7i6A916PTg+fmzyLgkE+FAOCVcNxtCEoyYXPV7JqGwHYGSBOVDa6Xxz5OEccbmdD7zYFfGKniSfyVhtFYyACRZoTIqvOfiuXHDNSCosXL2PO+8I9UaQek2Y1TG+LNuysz9blkY8ykPQMB7bWBAAfPm+UhRZdkbtXDT9dfRdIQ6IYTKsBmwUEf9UiY64h8nr3pxcLHtwkkZMmDfIPk56BN+vt8dFfO6JrbodqwiTwvbhPkD0S6XFAebNthbgY7dtN+9Lje5F0pgO0PBc+bjNMljappjuOl2/xb/ZxeowFnmR1h7tCZ41UDFMqMY+BEBd+wIjuGjC5OylftiA5kiKBDPUBS5AV9JlN6DMeJySbACprHXpAN0rjJLxEiZXxris1mRfZO+4UMBMGRFbG017WpueSNOnscurN+cAnuZmpZs7t0XDVpuNEXba8Ej313kahMM4zhx62FCQZrEuuYYwyp/89O2Zinkt9m6bL+8iYJjtCAmmJdCIhkGZFAXmbkmDOHvMN2aj/Hb5jBwfBIGW0mAScJzLdJuocKYTAkuLGpU80EtzQFJmfv/flWEZFdQScsqF7RacHbs0ZoNI2A+SR2V00xAr+6KRd84HG2I=
+  # TODO: I think this is only needed for deprecated automated mode -- remove?
   - secure: jFn9V/gAyihATBMxGSIyYLo+DfVYGz1xflEB5e7MeRr7uSkB1off39U6B5WpxgCNqmE24gmBsATVmghCYmvxnFxwfD5Q3McTtcj8zX5yVfBQ0FlrXnaZ/dHlzpygRNmk0EK+IRsuCExabZ4SnJ8PvLp4YV4ni9U+8CNjE/df5GIAIoqck/UsvO5zPGiqI/Ppi2ElpyTnhhGpAq+1eWmz/MsI21tZJZF8/E0CV9nmAQTq8TrHDuPcIagE0gx7+1FUrEGhY8LckXoYzWm/1nG+r7hDi3qYe+p0vlB8tiek+33nYWk/QW03QQ/9dXc054aUedXxNMDt5kGxlfy/ef+U53wsvs4KMS582KKqweIIx1RRYApwkpooqSziPdLRcxSQOMpP8hRI7yS7wJzXtJ7X7gp/DevaFeCDPQV0OnWjGO4dM8JbTEz86ec131txibiColS4i+//aPmHlUXa6OTuchxZOgMCBFz5drqfgYleR3dhIW4YK1af7dWNxowPVMvT2oR7LKFBvAPwgVF/P4XUsqzZcw9LV8bVPePMjQ5YYPFdz4QNSzEIUWHWf541zfeUzhPc6n2QLcd8oBA+DtrQ30TryYpU2uBkjVJDPK07dTujxdjzfw8EpBOumo0cNQsLixXHtA29KjlVqB6up/Qu2/Vzz5KwvNvqm7fMMQhxdKE=
 
 notifications:
@@ -29,11 +31,10 @@ notifications:
       # travis2slack webhook to enable DMs on openwhisk-team.slack.com to PR authors with TravisCI results
       secure: ZudPWFKvM+ndX1M6D1Opj6qYQLbexAgJuDJgs409LT9Je5pBuXPhho8G8rj5RwZpnZA3ZdRArG64tJXp0wil/w3nSt8Bx7B6ZhoO9hpJSWbWw3qDR2ffiZDrB6Cc2fMr+VfsvpEENJEvB8oeGmCqJmBzm9fXVoE9+nqKoDrEKF8ek9xfN63Etx3VnqORia1SyEvVWoP7F49DuRs9d2hswbFXGPhHZCLp8/p03IMvKVJT0YID7o6lxODi0Ck0GRVKOqnrRYwZbSe0hDQ5YJsY+AkFrTtYJVxDnTKlLKtEc9gTcj96SP1f9f8Noy37V4xxxBLokrjZYcCkGLT34Ef7wa14a1K8WUxahX5/eAf6TCHpZeK7o8j6cMzxFr/GK+XX5aHzWXgALdy11bastDfkmz3rTUaz0eB6eiQfSl0p/merVKkEJGjwUcJ4MrpdaB1v8QAHT0VO7qsffsdqTfOi0F9bCiupNnrhkE6rhwUZfEj2NdHz768ptjsQlTyNAH2y4Cgn37lKS7l7FrX9pVO77Qt6UuFUEpITyPpIsLHi5mYqH+3XealQoY/mKQYD3YSK3ON3sDdkU8UNMJl634mBalrb0mQQbxkRZOYSvK1Jns0hy34yW5R36SBmZ0puh0ZcHWDK9709jrhsJjns8NybKLV6N4KIoxJXcHhcDT+a7Zg=
 
-jobs:
-  include:
-    - stage: package
-      script: ./tools/travis/package_project.sh $SVN_USERNAME $SVN_PASSWORD
+script:
+ - echo "nothing to do..."
 
+# TODO: I think this is only needed for deprecated automated mode -- remove?
 before_install:
   - if [ "$TRAVIS_PULL_REQUEST" == "false" ] ; then
       openssl aes-256-cbc -K $encrypted_6f36f6d35f7f_key -iv $encrypted_6f36f6d35f7f_iv -in tools/key_sec.gpg.enc -out tools/key_sec.gpg -d;

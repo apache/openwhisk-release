@@ -77,7 +77,7 @@ def componentList(config, version):
         })
 
 def artifactLinks(name, version, rc):
-    root = 'https://dist.apache.org/repos/dist/dev/incubator/openwhisk/apache-openwhisk-%s-%s' % (version, rc)
+    root = 'https://dist.apache.org/repos/dist/dev/openwhisk/apache-openwhisk-%s-%s' % (version, rc)
     tgz  = '%s-%s-sources.tar.gz' % (name, version)
     asc  = '%s.asc' % tgz
     sha  = '%s.sha512' % tgz

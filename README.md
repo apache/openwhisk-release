@@ -48,10 +48,10 @@ Please follow the [Instructions for Release Managers](docs/release_instructions.
 ## Publishing
 
 Staged candidate releases of Apache OpenWhisk artifacts are published to the approved staging repository path under Apache with all required PGP singatures:
-- https://dist.apache.org/repos/dist/dev/incubator/openwhisk/
+- https://dist.apache.org/repos/dist/dev/openwhisk/
 
 Once candidates are approved, in accordance with required release processes and policies, their artifacts can be moved from the staging path to the approved release path:
-- https://dist.apache.org/repos/dist/release/incubator/openwhisk/
+- https://dist.apache.org/repos/dist/release/openwhisk/
 
 
 # Project status

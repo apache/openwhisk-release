@@ -30,8 +30,8 @@ Template of [_config.json_](../tools/config.json):
 ```
 {
   "publish_stage": "false",
-  "stage_url": "https://dist.apache.org/repos/dist/dev/incubator/openwhisk",
-  "release_url": "https://dist.apache.org/repos/dist/release/incubator/openwhisk",
+  "stage_url": "https://dist.apache.org/repos/dist/dev/openwhisk",
+  "release_url": "https://dist.apache.org/repos/dist/release/openwhisk",
   "versioning": {
     "version": "incubator",
     "pre_release_version": "rc1"

@@ -21,13 +21,10 @@
 
 # Release process
 
-This project offers the Apache OpenWhisk Release Manager two modes to release OpenWhisk projects:
-- [**Manual mode**](#manual-mode-of-release-process)
-- [**Automated mode**](#automated-mode-of-release-process)
+This project contains scripts to automate most aspects of making a release of one or more Apache OpenWhisk projects.
 
-_Manual mode_ makes sure that the release manager can download the source code of this repository, and go through the release process by running scripts sequentially on a local machine, to push the artifacts into the staging directory and eventually move them into the Apache release directory.
-
-_Automated mode_ provides the release manager another option to walk through the Apache release process by kicking off the Travis job to run the scripts. A release manager can choose either way to publish the artifacts in the staging directory and the Apache release directory.
+It is intended to be used by a project Release Manager who will clone this repository to their
+local dev machine and then go through the release process by running scripts sequentially on a local machine, to push the artifacts into the staging directory and eventually move them into the Apache release directory.
 
 ## Manual mode of Release Process
 
@@ -42,36 +39,15 @@ through and understand all the necessary steps of Apache release process tailore
   6. [Uploading public PGP key](upload_public_key.md)
   7. [Publish the release artifacts to the staging directory](push_stage_url.md)
   8. Vote on the dev@openwhisk.apache.org list
-  9. If the vote fails - configure the file config.json and resume from step 3
-  10. If the vote passes - send Vote on the general@incubator.apache.org list (cc dev list)
-  11. if the vote fails - configure the file config.json and resume from step 3
-  12. if the vote passes - close the vote with final email to incubator list (cc dev list)
-  13. [Publish the release artifacts to Apache release directory](publish_apache_directory.md)
-  13. [Tag the commit IDs in the Github repository for the project](tag_release.md)
-  15. [Generate the release notes](generate_release_notes.md)
-  16. Announce the release
-  17. Cleanup the artifacts from the release process:
+  9. If the vote fails - configure the file config.json and resume from step 3.  If the vote passes, continue with step 10.
+  10. [Publish the release artifacts to Apache release directory](publish_apache_directory.md)
+  11. [Tag the commit IDs in the Github repository for the project](tag_release.md)
+  12. [Generate the release notes](generate_release_notes.md)
+  13. Announce the release
+  14. Cleanup the artifacts from the release process:
       a. Remove the rc files from staging.
       b. If there is a previous released version, remove it from Apache release directory
          (it will automatically still be available via the Apache archive server).
-
-## Automated mode of Release Process
-
-As the single configuration file config.json can lead to code conflict and inconsistency, if multiple OpenWhisk projects
-are releasing individually in parallel, this automated mode is not recommended for release managers. However, if you still
-lean on to the convenience of Travis builds, please fork this repository, embed the credentials you need in your fork, and
-run with the automated mode. Don't forget to refer to the manual mode from time to time, because many steps there are not
-automated, like the voting process, release notes, tags for Github repositories, etc.
-
-The release manager can take full advantage of Travis CI to implement the release process. The only manual step is to configure the release information, by editing the configuration file _config.json_. Please refer to [edit configuration file](pick_up_source_code.md#edit-the-configuration-file) for the information able to be configured.
-
-* **PR-based Travis build**: the Travis build triggered by a pull request. Each time the file config.json is ready, release manager can submit a pull request to the master branch of OpenWhisk release repository. Based on the result of the Travis build, we know whether the configurations in config.json can be used as a candidate to release. This type of Travis build will download the source code, generate the artifacts, sign the artifacts, install the OpenWhisk services and run the test cases.
-
-* **Push-based Travis build**: the Travis build triggered by a push into master branch. When a PR with new configurations is accepted, the release manager can merge it to kick off this type of Travis build. On top of the tasks done by PR-based Travis build, it will upload the artifacts into the staging directory.
-
-* **Tag-based Travis build**: the Travis build triggered by git tag. After the vote succeeds in the community, we decide to move the artifacts from the staging directory to the Apache release directory. This type of Travis build is responsible for this task.
-
-In summary, the release process of OpenWhisk is the process of developing the configuration file _config.json_ for a certain release.
 
 ## Key requirements for producing releases
 
@@ -95,10 +71,10 @@ These steps have been **automated** for the Release Manager.
 All release artifacts must be uploaded to project’s designated subdirectory in the Apache distribution channel (i.e., [https://dist.apache.org/repos/dist/](https://dist.apache.org/repos/dist/)).
 
 Specifically, the Apache OpenWhisk project has paths to publish both candidate (staged) releases:
-- [https://dist.apache.org/repos/dist/dev/incubator/openwhisk/](https://dist.apache.org/repos/dist/dev/incubator/openwhisk/)
+- [https://dist.apache.org/repos/dist/dev/openwhisk/](https://dist.apache.org/repos/dist/dev/openwhisk/)
 
 and the approved release path:
-- [https://dist.apache.org/repos/dist/release/incubator/openwhisk/](https://dist.apache.org/repos/dist/release/incubator/openwhisk/).
+- [https://dist.apache.org/repos/dist/release/openwhisk/](https://dist.apache.org/repos/dist/release/openwhisk/).
 
 ### Release Approval
 
