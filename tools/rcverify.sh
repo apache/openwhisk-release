@@ -29,8 +29,8 @@ KEYS_DIST=https://dist.apache.org/repos/dist/release/openwhisk
 # the artifact being released
 NAME=${1?"missing artifact name e.g., openwhisk-client-js"}
 
-# the name of the podling (to match what is in the disclaimer file)
-DESCRIPTION=${2?"missing podling description e.g., 'OpenWhisk JavaScript Client Library'"}
+# the name of the project (to match what is in the NOTICE file)
+DESCRIPTION=${2?"missing project description e.g., 'OpenWhisk JavaScript Client Library'"}
 
 # the version of the release artifact
 V=${3?"missing version e.g., '3.19.0'"}
@@ -135,6 +135,11 @@ validate $RES 0 "$CMD" "signed-by: $SIGNER"
 printf "verifing notice..."
 NTXT=$(cat "$DIR/$BASE/NOTICE.txt")
 validate "$NOTICE" "$NTXT" "cat '$DIR/$BASE/NOTICE.txt'"
+
+printf "verifying absence of DISCLAIMER.txt"
+CMD="test -f '$DIR/$BASE/DISCLAIMER.txt'"
+TEST_DIS=$(eval "$CMD")
+validate $? 1 "$CMD"
 
 # If a project bundles any dependencies, there will be additional
 # text appended to LICENSE.txt to summarize the additional licenses.
