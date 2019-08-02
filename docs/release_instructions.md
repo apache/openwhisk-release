@@ -125,8 +125,6 @@ Release verification checklist for reference:
 This majority vote is open for at least 72 hours.
 ```
 
-- **TBD** We can create JIRA issue for this release and close it when the requirement is met and ready for release. **TODO** further document discrete steps/requirements community agrees upon.
-
 #### Wait for the Results
 
 From [Votes on Package Releases](http://www.apache.org/foundation/voting.html):
