@@ -102,7 +102,7 @@ built from the Git repositories and commit IDs listed below.
 This release comprises of source code distribution only.
 
 You can use this UNIX script to download the release and verify the signatures:
-https://gitbox.apache.org/repos/asf?p=incubator-openwhisk-release.git;a=blob_plain;f=tools/rcverify.sh;hb=HEAD
+https://gitbox.apache.org/repos/asf?p=openwhisk-release.git;a=blob_plain;f=tools/rcverify.sh;hb=HEAD
 
 Usage:
 sh rcverify.sh {repository} {component} {version}
@@ -166,41 +166,48 @@ The script will download the release candidate, verify signatures, discalaimer, 
 
 Example of how to use `rcverify.sh`:
 ```
-rcverify.sh openwhisk-client-js 'OpenWhisk JavaScript Client Library' 3.19.0-incubating
+rcverify.sh openwhisk-client-js 'OpenWhisk Client Js' 3.20.0 rc2
 ```
 
 Example output from `rcverify.sh`:
 ```
 working in the following directory:
-/tmp/tmp.6t9xcMV8
-fetching openwhisk-client-js-3.19.0-incubating-sources.tar.gz
-fetching openwhisk-client-js-3.19.0-incubating-sources.tar.gz.asc
-fetching openwhisk-client-js-3.19.0-incubating-sources.tar.gz.sha512
+/var/folders/8c/zvj0nsxx2rgc_km8nvf8k0c00000gn/T/tmp.S8okDNye
+fetching tarball and signatures from https://dist.apache.org/repos/dist/dev/openwhisk/apache-openwhisk-3.20.0-rc2
+fetching openwhisk-client-js-3.20.0-sources.tar.gz
+fetching openwhisk-client-js-3.20.0-sources.tar.gz.asc
+fetching openwhisk-client-js-3.20.0-sources.tar.gz.sha512
 fetching release keys
-import keys
-gpg: key ABCXYZ: "Some Name <some@email>" ...
-gpg: key FOOBAR: "Another Name <another@email>" ...
-gpg: Total number processed: 2
-gpg:              unchanged: 2
+importing keys
+gpg: key 72AF0CC22C4CF320: "Vincent Hou (Release manager of OpenWhisk) <ho...@apache.org>" not changed
+gpg: key 22907064147F886E: "Dave Grove <dg...@apache.org>" not changed
+gpg: key 44667BC927C86D51: "Rodric Rabbah <ra...@apache.org>" not changed
+gpg: key B1457C3D7101CC78: "James Thomas <ja...@apache.org>" not changed
+gpg: Total number processed: 4
+gpg:              unchanged: 4
 unpacking tar ball
 cloning scancode
 Cloning into 'incubator-openwhisk-utilities'...
-remote: Enumerating objects: 52, done.
-remote: Counting objects: 100% (52/52), done.
-remote: Compressing objects: 100% (35/35), done.
-remote: Total 52 (delta 23), reused 34 (delta 15), pack-reused 0
-Unpacking objects: 100% (52/52), done.
-computing sha512 and validating... passed
-verifying asc... passed (signed-by: Some Name <some@email>)
-verifying disclaimer... passed
+remote: Enumerating objects: 55, done.
+remote: Counting objects: 100% (55/55), done.
+remote: Compressing objects: 100% (41/41), done.
+remote: Total 55 (delta 21), reused 29 (delta 11), pack-reused 0
+Unpacking objects: 100% (55/55), done.
+computing sha512 for openwhisk-client-js-3.20.0-sources.tar.gz
+SHA512: openwhisk-client-js-3.20.0-sources.tar.gz:
+5FEF999E 532BD0C1 6C8BC0A1 F5232C93 964A30CF F14B2D82 1C8A2E1D 1106339C E2457918
+ C9873B3B 26FB4711 4FBA6F1C 8C8A62A8 3D50592C F9617EA5 54827EBA
+validating sha512... passed
+verifying asc... passed (signed-by: James Thomas <ja...@apache.org>)
 verifing notice... passed
-verifying license... failed (diff '/tmp/tmp.6t9xcMV8/incubator-openwhisk-client-js-3.19.0-incubating/LICENSE.txt' '/tmp/tmp.6t9xcMV8/LICENSE-2.0')
+verifying absence of DISCLAIMER.txt passed
+verifying license... passed
 verifying sources have proper headers... passed
-scanning for binaries... passed
-
-run the following command to remove the scratch space:
-  rm -rf '/tmp/tmp.6t9xcMV8'
-
+scanning for executable files... passed
+scanning for non-text files... passed
+scanning for archives... passed
+scanning for packages... passed
+```
 
 ### Create Release notes
 

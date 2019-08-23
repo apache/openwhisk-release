@@ -111,7 +111,7 @@ echo "unpacking tar ball"
 tar zxf "$DIR/$TGZ" -C "$DIR"
 
 echo "cloning scancode"
-cd "$DIR" && git clone https://github.com/apache/incubator-openwhisk-utilities.git --depth 1
+cd "$DIR" && git clone https://github.com/apache/openwhisk-utilities.git --depth 1
 
 echo "computing sha512 for $TGZ"
 EXPECTED=$(cat "$DIR/$TGZ.sha512")
@@ -158,7 +158,7 @@ if [ -f '$DIR/$BASE/tools/travis/scancodeExlusions' ]; then
 else
     SCANCODE_EXTRA_ARGS=""
 fi
-CMD="'$DIR/incubator-openwhisk-utilities/scancode/scanCode.py' --config '$DIR/incubator-openwhisk-utilities/scancode/ASF-Release.cfg' $SCANCODE_EXTRA_ARGS '$DIR/$BASE'"
+CMD="'$DIR/openwhisk-utilities/scancode/scanCode.py' --config '$DIR/openwhisk-utilities/scancode/ASF-Release.cfg' $SCANCODE_EXTRA_ARGS '$DIR/$BASE'"
 SC=$(eval $CMD >& /dev/null)
 validate $? 0 "$CMD"
 

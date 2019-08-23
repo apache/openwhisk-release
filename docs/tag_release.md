@@ -55,8 +55,8 @@ To change an existing variable, you can run the following command as an example:
 git remote set-url <remote_url_var> <full_remote_url>
 ```
 
-If you are releasing OpenWhisk, the \<full_remote_url\> will be "git@github.com:apache/incubator-openwhisk.git" or
-"https://github.com/apache/incubator-openwhisk.git".
+If you are releasing OpenWhisk, the \<full_remote_url\> will be "git@github.com:apache/openwhisk.git" or
+"https://github.com/apache/openwhisk.git".
 
 In case of making mistakes, you may need to remove tags. You can run the following command to remove a local tag:
 ```
@@ -78,15 +78,15 @@ each OpenWhisk project, don't forget to verify whether the Travis build succeed 
 If the Travis job succeeds, you are all set for this step; if the Travis job fails, you need to find out the reason,
 why it has failed. Empirically, it fails due to that you pushed a tag, not compliant with naming convention for that project.
 Let's take the Go runtime as an example, if you name the tag after "1.11@1.13.0-incubating", the Travis build will fail,
-like the error result [here](https://travis-ci.org/apache/incubator-openwhisk-runtime-go/builds/532326848). The correct tag for Go runtime in this case is like "golang1.11@1.13.0-incubating", and the successful
-build is located [here](https://travis-ci.org/apache/incubator-openwhisk-runtime-go/builds/533325334).
+like the error result [here](https://travis-ci.org/apache/openwhisk-runtime-go/builds/532326848). The correct tag for Go runtime in this case is like "golang1.11@1.13.0-incubating", and the successful
+build is located [here](https://travis-ci.org/apache/openwhisk-runtime-go/builds/533325334).
 
 Another reason that the Travis build fails can be there is really a bug with the Travis build. In this case, you can keep
 the tag you have pushed in the Github repository, but log this issue as well. One way to compensate is to run the "docker push"
 manually on your local machine to upload the image into Docker Hub. Here are the steps you need to follow for this situation:
 
 1. Visit the private SVN repository to access the credentials for Docker Hub
-If you are a PMC member, your credentials with Apache should give you the access to the [private SVN repository](https://svn.apache.org/repos/private/pmc/incubator/openwhisk/accounts).
+If you are a PMC member, your credentials with Apache should give you the access to the [private SVN repository](https://svn.apache.org/repos/private/pmc/openwhisk/accounts).
 After you login with your credentials, open the file called dockerhub.txt, and you will see the username and password to
 push your local docker images. DON'T misuse it.
 
@@ -108,6 +108,6 @@ go to the home directory of the specific OpenWhisk project, and run the followin
 
 The argument \<runtime_kind\> is the folder name for each version of the runtime. You can find the name by checking what
 are under the folder core. For example, your want to find the runtime kind for the runtime Ruby, there are ruby2.5Action
-and ruby2.6ActionLoop under the [core folder](https://github.com/apache/incubator-openwhisk-runtime-ruby/tree/master/core). The candidates
+and ruby2.6ActionLoop under the [core folder](https://github.com/apache/openwhisk-runtime-ruby/tree/master/core). The candidates
 for \<runtime_kind\> will be ruby2.5Action or ruby2.6ActionLoop. The argument \<tag\> is usually \<version\>-\<pre_release_version\>,
 the real full version we specify for each release.
