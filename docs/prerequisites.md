@@ -28,10 +28,10 @@ This project is only supported under Mac or Ununtu operating system.
 Open a terminal, go to the directory where you save the source code of this release tool, and run
 
 ```
-$ git clone https://github.com/apache/incubator-openwhisk-release.git
+$ git clone https://github.com/apache/openwhisk-release.git
 ```
 
-The directory _incubator-openwhisk-release_ becomes the home directory of openwhisk release tool, which will be referred to
+The directory _openwhisk-release_ becomes the home directory of openwhisk release tool, which will be referred to
 in the following context.
 
 ## Install the dependencies
@@ -40,7 +40,7 @@ After running the "git clone" command to download the source code this release r
 command to install all the dependencies:
 
 ```
-$ cd incubator-openwhisk-release/tools
+$ cd openwhisk-release/tools
 $ ./install_dependencies.sh
 ```
 

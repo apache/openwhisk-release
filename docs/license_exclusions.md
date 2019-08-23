@@ -27,16 +27,16 @@ In additon, the specific rationale for the exclusion, in accordance with Apache 
 
 ## Exclusions part of Apache source code release
 
-### [incubator-openwhisk](https://github.com/apache/incubator-openwhisk)
+### [openwhisk](https://github.com/apache/openwhisk)
 
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [ansible/ansible.cfg]() | ANS.CFG |
-| [ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) | ANS.ENV |
-| [ansible/environments/distributed/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/distributed/hosts) | ANS.HOSTS |
-| [ansible/environments/docker-machine/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/docker-machine/hosts.j2.ini) | ANS.INI |
-| [ansible/environments/local/hosts.j2.ini](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/local/hosts.j2.ini) | ANS.INI |
-| [ansible/environments/vagrant/hosts](https://github.com/apache/incubator-openwhisk/blob/master/ansible/environments/vagrant/hosts) | ANS.HOSTS |
+| [ansible/environments/distributed/files/openstack/openstack.env](https://github.com/apache/openwhisk/blob/master/ansible/environments/distributed/files/openstack/openstack.env) | ANS.ENV |
+| [ansible/environments/distributed/hosts](https://github.com/apache/openwhisk/blob/master/ansible/environments/distributed/hosts) | ANS.HOSTS |
+| [ansible/environments/docker-machine/hosts.j2.ini](https://github.com/apache/openwhisk/blob/master/ansible/environments/docker-machine/hosts.j2.ini) | ANS.INI |
+| [ansible/environments/local/hosts.j2.ini](https://github.com/apache/openwhisk/blob/master/ansible/environments/local/hosts.j2.ini) | ANS.INI |
+| [ansible/environments/vagrant/hosts](https://github.com/apache/openwhisk/blob/master/ansible/environments/vagrant/hosts) | ANS.HOSTS |
 | [ansible/files/activations_design_document_for_activations_db.json]() | JSON |
 | [ansible/files/auth.guest]() | DATA.AUTH |
 | [ansible/files/auth.whisk.system]() |  DATA.AUTH |
@@ -57,79 +57,79 @@ In additon, the specific rationale for the exclusion, in accordance with Apache 
 | [ansible/templates/jmxremote.access.j2]() | J2 |
 | [ansible/templates/jmxremote.password.j2]() | J2 |
 | [ansible/templates/whisk.properties.j2]() | J2 |
-| [bin/wskadmin](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskadmin) | Generated, symbolic link |
-| [bin/wskdev](https://github.com/apache/incubator-openwhisk/blob/master/bin/wskdev) | Generated, symbolic link |
-| [common/scala/src/main/resources/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/common/scala/src/main/resources/logback.xml) | XML |
-| [docs/images/OpenWhisk_flow_of_processing.draw.io.xml](https://github.com/apache/incubator-openwhisk/blob/master/docs/images/OpenWhisk_flow_of_processing.draw.io.xml) | XML |
-| [tools/eclipse/java.xml](https://github.com/apache/incubator-openwhisk/blob/master/tools/eclipse/java.xml) | XML |
+| [bin/wskadmin](https://github.com/apache/openwhisk/blob/master/bin/wskadmin) | Generated, symbolic link |
+| [bin/wskdev](https://github.com/apache/openwhisk/blob/master/bin/wskdev) | Generated, symbolic link |
+| [common/scala/src/main/resources/logback.xml](https://github.com/apache/openwhisk/blob/master/common/scala/src/main/resources/logback.xml) | XML |
+| [docs/images/OpenWhisk_flow_of_processing.draw.io.xml](https://github.com/apache/openwhisk/blob/master/docs/images/OpenWhisk_flow_of_processing.draw.io.xml) | XML |
+| [tools/eclipse/java.xml](https://github.com/apache/openwhisk/blob/master/tools/eclipse/java.xml) | XML |
 
-### [incubator-openwhisk-apigateway](https://github.com/apache/incubator-openwhisk-apigateway)
+### [openwhisk-apigateway](https://github.com/apache/openwhisk-apigateway)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [.profiling.after](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/.profiling.after) | PROFILE |
-| [.profiling.before](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/.profiling.before) | PROFILE |
+| [.profiling.after](https://github.com/apache/openwhisk-apigateway/blob/master/.profiling.after) | PROFILE |
+| [.profiling.before](https://github.com/apache/openwhisk-apigateway/blob/master/.profiling.before) | PROFILE |
 
-### [incubator-openwhisk-catalog](https://github.com/apache/incubator-openwhisk-catalog)
+### [openwhisk-catalog](https://github.com/apache/openwhisk-catalog)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [credentials.json.enc](https://github.com/apache/incubator-openwhisk-catalog/blob/master/credentials.json.enc) | API.ENC |
+| [credentials.json.enc](https://github.com/apache/openwhisk-catalog/blob/master/credentials.json.enc) | API.ENC |
 
-### [incubator-openwhisk-client-go](https://github.com/apache/incubator-openwhisk-client-go)
+### [openwhisk-client-go](https://github.com/apache/openwhisk-client-go)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [Godeps/Godeps.json](https://github.com/apache/incubator-openwhisk-client-go/blob/master/Godeps/Godeps.json) | GODEPS.JSON |
-| [Godeps/Readme](https://github.com/apache/incubator-openwhisk-client-go/blob/master/Godeps/Readme) | GODEPS.README |
-| [wski18n/i18n_resources.go](https://github.com/apache/incubator-openwhisk-client-go/blob/master/wski18n/i18n_resources.go) | I18N.1, NOTE: ASF Header manually added after autogen. recently |
-| [wski18n/resources](https://github.com/apache/incubator-openwhisk-client-go/tree/master/wski18n/resources) | JSON, Empty files (i.e., no translations yet) |
+| [Godeps/Godeps.json](https://github.com/apache/openwhisk-client-go/blob/master/Godeps/Godeps.json) | GODEPS.JSON |
+| [Godeps/Readme](https://github.com/apache/openwhisk-client-go/blob/master/Godeps/Readme) | GODEPS.README |
+| [wski18n/i18n_resources.go](https://github.com/apache/openwhisk-client-go/blob/master/wski18n/i18n_resources.go) | I18N.1, NOTE: ASF Header manually added after autogen. recently |
+| [wski18n/resources](https://github.com/apache/openwhisk-client-go/tree/master/wski18n/resources) | JSON, Empty files (i.e., no translations yet) |
 
-### [incubator-openwhisk-deploy-kube](https://github.com/apache/incubator-openwhisk-deploy-kube)
+### [openwhisk-deploy-kube](https://github.com/apache/openwhisk-deploy-kube)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [helm/runtimes.json](https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/helm/runtimes.json) | JSON |
-| [runtimes-minimal-travis.json](https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/helm/runtimes-minimal-travis.json) | JSON |
-| [kubernetes/controller/controller.env](https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/kubernetes/controller/controller.env) | KUBE.1 |
-| [kubernetes/invoker/invoker-dcf.env](https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/kubernetes/invoker/invoker-dcf.env) | KUBE.1 |
-| [kubernetes/invoker/invoker-k8scf.env](https://github.com/apache/incubator-openwhisk-deploy-kube/blob/master/kubernetes/invoker/invoker-k8scf.env) | KUBE.1 |
+| [helm/runtimes.json](https://github.com/apache/openwhisk-deploy-kube/blob/master/helm/runtimes.json) | JSON |
+| [runtimes-minimal-travis.json](https://github.com/apache/openwhisk-deploy-kube/blob/master/helm/runtimes-minimal-travis.json) | JSON |
+| [kubernetes/controller/controller.env](https://github.com/apache/openwhisk-deploy-kube/blob/master/kubernetes/controller/controller.env) | KUBE.1 |
+| [kubernetes/invoker/invoker-dcf.env](https://github.com/apache/openwhisk-deploy-kube/blob/master/kubernetes/invoker/invoker-dcf.env) | KUBE.1 |
+| [kubernetes/invoker/invoker-k8scf.env](https://github.com/apache/openwhisk-deploy-kube/blob/master/kubernetes/invoker/invoker-k8scf.env) | KUBE.1 |
 
-### [incubator-openwhisk-runtime-docker](https://github.com/apache/incubator-openwhisk-runtime-docker)
+### [openwhisk-runtime-docker](https://github.com/apache/openwhisk-runtime-docker)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-docker/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
+| [ansible/environments/local/hosts](https://github.com/apache/openwhisk-runtime-docker/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
 
-### [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java)
+### [openwhisk-runtime-java](https://github.com/apache/openwhisk-runtime-java)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-java/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
+| [ansible/environments/local/hosts](https://github.com/apache/openwhisk-runtime-java/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
 
-### [incubator-openwhisk-runtime-nodejs](https://github.com/apache/incubator-openwhisk-runtime-nodejs)
+### [openwhisk-runtime-nodejs](https://github.com/apache/openwhisk-runtime-nodejs)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-nodejs/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
+| [ansible/environments/local/hosts](https://github.com/apache/openwhisk-runtime-nodejs/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
 | [core/nodejs8Action/package.json]() | JSON |
 | [core/nodejsActionBase/package.json]() | JSON |
 
-### [incubator-openwhisk-runtime-php](https://github.com/apache/incubator-openwhisk-runtime-php)
+### [openwhisk-runtime-php](https://github.com/apache/openwhisk-runtime-php)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-php/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
+| [ansible/environments/local/hosts](https://github.com/apache/openwhisk-runtime-php/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
 | [core/php7.1Action/composer.json]() | JSON |
 
-### [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python)
+### [openwhisk-runtime-python](https://github.com/apache/openwhisk-runtime-python)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-python/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
+| [ansible/environments/local/hosts](https://github.com/apache/openwhisk-runtime-python/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
 | [core/php7.1Action/composer.json]() | JSON |
 
-### [incubator-openwhisk-runtime-swift](https://github.com/apache/incubator-openwhisk-runtime-swift)
+### [openwhisk-runtime-swift](https://github.com/apache/openwhisk-runtime-swift)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [ansible/environments/local/hosts](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
+| [ansible/environments/local/hosts](https://github.com/apache/openwhisk-runtime-swift/blob/master/ansible/environments/local/hosts) | ANS.HOSTS |
 
-### [incubator-openwhisk-wskdeploy](https://github.com/apache/incubator-openwhisk-wskdeploy)
+### [openwhisk-wskdeploy](https://github.com/apache/openwhisk-wskdeploy)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [wski18n/i18n_resources.go](https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/wski18n/i18n_resources.go) | I18N.1 |
-| [wski18n/resources](https://github.com/apache/incubator-openwhisk-wskdeploy/tree/master/wski18n/resources) | JSON, Empty files (i.e., no translations yet) |
+| [wski18n/i18n_resources.go](https://github.com/apache/openwhisk-wskdeploy/blob/master/wski18n/i18n_resources.go) | I18N.1 |
+| [wski18n/resources](https://github.com/apache/openwhisk-wskdeploy/tree/master/wski18n/resources) | JSON, Empty files (i.e., no translations yet) |
 | [Godeps/Godeps.json]() | GODEPS.JSON |
 | [Godeps/Readme]() | GODEPS.README |
 | [ansible/environments/local/hosts]() | ANS.HOSTS |
@@ -140,12 +140,12 @@ In additon, the specific rationale for the exclusion, in accordance with Apache 
 -->
 The following "tests" files are excluded from having ASF License headers, but alse are NOT part of the project source code release archive when created.
 
-### [incubator-openwhisk](https://github.com/apache/incubator-openwhisk)
+### [openwhisk](https://github.com/apache/openwhisk)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [tests/credentials.json.enc](https://github.com/apache/incubator-openwhisk-catalog/blob/master/tests/credentials.json.enc) | API.ENC |
+| [tests/credentials.json.enc](https://github.com/apache/openwhisk-catalog/blob/master/tests/credentials.json.enc) | API.ENC |
 | [tests/dat/actions/blackbox.zip]() | TEST.ZIP |
-| [tests/dat/actions/empty.js](https://github.com/apache/incubator-openwhisk/blob/master/tests/dat/actions/empty.js) | DATA.TEST, Empty (zero-length) test data file. |
+| [tests/dat/actions/empty.js](https://github.com/apache/openwhisk/blob/master/tests/dat/actions/empty.js) | DATA.TEST, Empty (zero-length) test data file. |
 | [tests/dat/actions/helloJava.jar]() | TEST.JAR |
 | [tests/dat/actions/helloJavaDefaultPackage.jar]() | TEST.JAR |
 | [tests/dat/actions/helloSwift311.zip]() | TEST.ZIP |
@@ -174,26 +174,26 @@ The following "tests" files are excluded from having ASF License headers, but al
 | [tests/dat/apigw/testswaggerdoc2]() | OAPI. Test data. |
 | [tests/dat/apigw/testswaggerdocinvalid]() | OAPI. Test data. |
 | [tests/performance/gatling_tests/src/gatling/resources/conf/logback.xml]() | XML |
-| [tests/performance/gatling_tests/src/gatling/resources/data/javaAction.jar](https://github.com/apache/incubator-openwhisk/blob/master/tests/performance/gatling_tests/src/gatling/resources/data/javaAction.jar) | TEST.JAR |
-| [tests/performance/gatling_tests/src/gatling/resources/conf/logback.xml](https://github.com/apache/incubator-openwhisk/blob/master/tests/performance/gatling_tests/src/gatling/resources/conf/logback.xml) | XML |
-| [tests/performance/wrk_tests/post.lua](https://github.com/apache/incubator-openwhisk/blob/master/tests/performance/wrk_tests/post.lua) | DATA.TEXT, Empy (HTTP POST) Performance test data file. |
+| [tests/performance/gatling_tests/src/gatling/resources/data/javaAction.jar](https://github.com/apache/openwhisk/blob/master/tests/performance/gatling_tests/src/gatling/resources/data/javaAction.jar) | TEST.JAR |
+| [tests/performance/gatling_tests/src/gatling/resources/conf/logback.xml](https://github.com/apache/openwhisk/blob/master/tests/performance/gatling_tests/src/gatling/resources/conf/logback.xml) | XML |
+| [tests/performance/wrk_tests/post.lua](https://github.com/apache/openwhisk/blob/master/tests/performance/wrk_tests/post.lua) | DATA.TEXT, Empy (HTTP POST) Performance test data file. |
 | [tests/src/test/resources/logback-test.xml]() | XML |
 
-### [incubator-openwhisk-apigateway](https://github.com/apache/incubator-openwhisk-apigateway)
+### [openwhisk-apigateway](https://github.com/apache/openwhisk-apigateway)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [tests/scripts/lua/management/examples/example1.json](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example1.json) | JSON |
-| [tests/scripts/lua/management/examples/example2.json](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example2.json) | JSON |
-| [tests/scripts/lua/management/examples/example3.json](https://github.com/apache/incubator-openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example3.json) | JSON |
+| [tests/scripts/lua/management/examples/example1.json](https://github.com/apache/openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example1.json) | JSON |
+| [tests/scripts/lua/management/examples/example2.json](https://github.com/apache/openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example2.json) | JSON |
+| [tests/scripts/lua/management/examples/example3.json](https://github.com/apache/openwhisk-apigateway/blob/master/tests/scripts/lua/management/examples/example3.json) | JSON |
 | [tests/lua_modules]() | Travis installed test modules scripts. Not part of source code release. |
 | [lua_install]() | Travis installed test packages. Not part of source code release. |
 
-### [incubator-openwhisk-catalog](https://github.com/apache/incubator-openwhisk-catalog)
+### [openwhisk-catalog](https://github.com/apache/openwhisk-catalog)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [tests/credentials.json.enc](https://github.com/apache/incubator-openwhisk/blob/master/tests/credentials.json.enc) | API.ENC |
+| [tests/credentials.json.enc](https://github.com/apache/openwhisk/blob/master/tests/credentials.json.enc) | API.ENC |
 
-### [incubator-openwhisk-cli](https://github.com/apache/incubator-openwhisk-cli)
+### [openwhisk-cli](https://github.com/apache/openwhisk-cli)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | [tests/src/dat/invalidInput1.json]() | JSON |
@@ -201,41 +201,41 @@ The following "tests" files are excluded from having ASF License headers, but al
 | [tests/src/dat/invalidInput3.json]() | JSON |
 | [tests/src/dat/invalidInput4.json]() | JSON |
 
-### [incubator-openwhisk-runtime-docker](https://github.com/apache/incubator-openwhisk-runtime-docker)
+### [openwhisk-runtime-docker](https://github.com/apache/openwhisk-runtime-docker)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | _None_ | _N/A_ |
 
-### [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java)
+### [openwhisk-runtime-java](https://github.com/apache/openwhisk-runtime-java)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | _None_ | _N/A_ |
 
-### [incubator-openwhisk-runtime-nodejs](https://github.com/apache/incubator-openwhisk-runtime-nodejs)
+### [openwhisk-runtime-nodejs](https://github.com/apache/openwhisk-runtime-nodejs)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | _None_ | _N/A_ |
 
-### [incubator-openwhisk-runtime-php](https://github.com/apache/incubator-openwhisk-runtime-php)
+### [openwhisk-runtime-php](https://github.com/apache/openwhisk-runtime-php)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | _None_ | _N/A_ |
 
-### [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python)
+### [openwhisk-runtime-python](https://github.com/apache/openwhisk-runtime-python)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
 | _None_ | _N/A_ |
 
-### [incubator-openwhisk-runtime-swift](https://github.com/apache/incubator-openwhisk-runtime-swift)
+### [openwhisk-runtime-swift](https://github.com/apache/openwhisk-runtime-swift)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [tests/dat/SwiftyRequest/Package.resolved](https://github.com/apache/incubator-openwhisk-runtime-swift/blob/master/tests/dat/actions/SwiftyRequest/Package.resolved) | OAPI |
+| [tests/dat/SwiftyRequest/Package.resolved](https://github.com/apache/openwhisk-runtime-swift/blob/master/tests/dat/actions/SwiftyRequest/Package.resolved) | OAPI |
 
-### [incubator-openwhisk-wskdeploy](https://github.com/apache/incubator-openwhisk-wskdeploy)
+### [openwhisk-wskdeploy](https://github.com/apache/openwhisk-wskdeploy)
 | Exclusion | Rationale [TAG] |
 |:---|:---|
-| [specification/archive/*](https://github.com/apache/incubator-openwhisk-wskdeploy/tree/master/specification/archive) | Archive of specification versions in PDF format. |
-| [specification/diagrams/*](https://github.com/apache/incubator-openwhisk-wskdeploy/tree/master/specification/diagrams) | IMAGE, Ninary images (e.g., ```.jpg```, ```.png```, etc.) used in specification HTML. |
+| [specification/archive/*](https://github.com/apache/openwhisk-wskdeploy/tree/master/specification/archive) | Archive of specification versions in PDF format. |
+| [specification/diagrams/*](https://github.com/apache/openwhisk-wskdeploy/tree/master/specification/diagrams) | IMAGE, Ninary images (e.g., ```.jpg```, ```.png```, etc.) used in specification HTML. |
 | [tests/apps/owbp-cloudant-trigger/manifest-bp.json]() | JSON |
 | [tests/dat/wskprops]() | API Client configuration data. |
 | [tests/dat/wskpropsnokeycert]() | API Client configuration data. |
@@ -254,4 +254,4 @@ The following "tests" files are excluded from having ASF License headers, but al
 | [tests/apps/owbp-cloudant-trigger/manifest-bp.json]() | JSON |
 
 ### Notes
-- logback (logger) failed in PG when adding XML comments that included the ASF license header. See PR[#3702](https://github.com/apache/incubator-openwhisk/pull/3702/files) which had to be reverted (although it passed Travis).  This needs to be investigated as to why it failed in PG and if we need additional Travis tests.
+- logback (logger) failed in PG when adding XML comments that included the ASF license header. See PR[#3702](https://github.com/apache/openwhisk/pull/3702/files) which had to be reverted (although it passed Travis).  This needs to be investigated as to why it failed in PG and if we need additional Travis tests.

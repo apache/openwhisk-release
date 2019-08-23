@@ -33,27 +33,27 @@ Template of [_config.json_](../tools/config.json):
   "stage_url": "https://dist.apache.org/repos/dist/dev/openwhisk",
   "release_url": "https://dist.apache.org/repos/dist/release/openwhisk",
   "versioning": {
-    "version": "incubator",
+    "version": "",
     "pre_release_version": "rc1"
   },
   "RepoList": [
-    "incubator-openwhisk",
-    "incubator-openwhisk-wskdeploy",
-    "incubator-openwhisk-cli"
+    "openwhisk",
+    "openwhisk-wskdeploy",
+    "openwhisk-cli"
   ],
-  "incubator_openwhisk": {
+  "openwhisk": {
     "hash": "a891e06",
-    "repository": "https://github.com/apache/incubator-openwhisk.git",
+    "repository": "https://github.com/apache/openwhisk.git",
     "branch": "master"
   },
-  "incubator_openwhisk_wskdeploy": {
+  "openwhisk_wskdeploy": {
     "hash": "1425456",
-    "repository": "https://github.com/apache/incubator-openwhisk-wskdeploy.git",
+    "repository": "https://github.com/apache/openwhisk-wskdeploy.git",
     "branch": "master"
   },
-  "incubator_openwhisk_cli": {
+  "openwhisk_cli": {
     "hash": "1448d31",
-    "repository": "https://github.com/apache/incubator-openwhisk-cli.git",
+    "repository": "https://github.com/apache/openwhisk-cli.git",
     "branch": "master"
   }
 }

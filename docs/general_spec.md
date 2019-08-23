@@ -30,17 +30,17 @@ Long story short, Apache generally needs two type of packages to be publicly ava
 ## Release of OpenWhisk artifacts
 
 Please click on the work items listed as belows to access the detailed information:
-- [1. Download the source code](work_items.md#1-download-the-source-code-open-issue) ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/16))
-- [2. Verify the compliance of the source code](work_items.md#2-verify-the-compliance-of-the-source-code-open-issue) ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/17))
-- [3. Deploy OpenWhisk based on the source code](work_items.md#3-deploy-openwhisk-based-on-the-source-code-open-issue) ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/18))
-- [4. Test each OpenWhisk component](work_items.md#4-test-each-openwhisk-component-open-issue) ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/19))
-- [5. Add NOTICE, LICENSE, and CHANGELOG to each OpenWhisk project](work_items.md#5-add-notice-license-and-changelog-to-each-openwhisk-project-open-issue) ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/13))
-- [6. Package the artifacts](work_items.md#6-package-the-artifacts-open-issue) ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/20))
-- [7. Upload the artifacts to staging repository](work_items.md#7-upload-the-artifacts-into-staging-repository-for-release-vote-open-issue) ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/21))
+- [1. Download the source code](work_items.md#1-download-the-source-code-open-issue) ([open issue](https://github.com/apache/openwhisk-release/issues/16))
+- [2. Verify the compliance of the source code](work_items.md#2-verify-the-compliance-of-the-source-code-open-issue) ([open issue](https://github.com/apache/openwhisk-release/issues/17))
+- [3. Deploy OpenWhisk based on the source code](work_items.md#3-deploy-openwhisk-based-on-the-source-code-open-issue) ([open issue](https://github.com/apache/openwhisk-release/issues/18))
+- [4. Test each OpenWhisk component](work_items.md#4-test-each-openwhisk-component-open-issue) ([open issue](https://github.com/apache/openwhisk-release/issues/19))
+- [5. Add NOTICE, LICENSE, and CHANGELOG to each OpenWhisk project](work_items.md#5-add-notice-license-and-changelog-to-each-openwhisk-project-open-issue) ([open issue](https://github.com/apache/openwhisk-release/issues/13))
+- [6. Package the artifacts](work_items.md#6-package-the-artifacts-open-issue) ([open issue](https://github.com/apache/openwhisk-release/issues/20))
+- [7. Upload the artifacts to staging repository](work_items.md#7-upload-the-artifacts-into-staging-repository-for-release-vote-open-issue) ([open issue](https://github.com/apache/openwhisk-release/issues/21))
     - After the above 7 steps, note will be sent out to the community for vote. Before we reach enough votes, Step 1 to 7
     can be re-iterated to update the artifacts in staging repository.
 
-- [8. Release the artifacts](work_items.md#8-release-the-artifacts-open-issue) ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/22))
+- [8. Release the artifacts](work_items.md#8-release-the-artifacts-open-issue) ([open issue](https://github.com/apache/openwhisk-release/issues/22))
 
 ## Different phases of implementations
 
@@ -53,22 +53,22 @@ file, and uploaded into the staging repository. This is the phase we are current
 ## List of OpenWhisk repositories to be released
 
 We plan to release the following OpenWhisk repositories:
-- OpenWhisk core: [incubator-openwhisk](https://github.com/apache/incubator-openwhisk)
+- OpenWhisk core: [openwhisk](https://github.com/apache/openwhisk)
 - OpenWhisk runtimes:
-    - [incubator-openwhisk-runtime-nodejs](https://github.com/apache/incubator-openwhisk-runtime-nodejs)
-    - [incubator-openwhisk-runtime-swift](https://github.com/apache/incubator-openwhisk-runtime-swift)
-    - [incubator-openwhisk-runtime-php](https://github.com/apache/incubator-openwhisk-runtime-php)
-    - [incubator-openwhisk-runtime-python](https://github.com/apache/incubator-openwhisk-runtime-python)
-    - [incubator-openwhisk-runtime-java](https://github.com/apache/incubator-openwhisk-runtime-java)
-    - [incubator-openwhisk-runtime-docker](https://github.com/apache/incubator-openwhisk-runtime-docker)
-- OpenWhisk catalog: [incubator-openwhisk-catalog](https://github.com/apache/incubator-openwhisk-catalog)
-- OpenWhisk API gateway: [incubator-openwhisk-apigateway](https://github.com/apache/incubator-openwhisk-apigateway)
+    - [openwhisk-runtime-nodejs](https://github.com/apache/openwhisk-runtime-nodejs)
+    - [openwhisk-runtime-swift](https://github.com/apache/openwhisk-runtime-swift)
+    - [openwhisk-runtime-php](https://github.com/apache/openwhisk-runtime-php)
+    - [openwhisk-runtime-python](https://github.com/apache/openwhisk-runtime-python)
+    - [openwhisk-runtime-java](https://github.com/apache/openwhisk-runtime-java)
+    - [openwhisk-runtime-docker](https://github.com/apache/openwhisk-runtime-docker)
+- OpenWhisk catalog: [openwhisk-catalog](https://github.com/apache/openwhisk-catalog)
+- OpenWhisk API gateway: [openwhisk-apigateway](https://github.com/apache/openwhisk-apigateway)
 - OpenWhisk deployment support:
-    - [incubator-openwhisk-deploy-kube](https://github.com/apache/incubator-openwhisk-deploy-kube)
+    - [openwhisk-deploy-kube](https://github.com/apache/openwhisk-deploy-kube)
 - OpenWhisk clients:
-    - [incubator-openwhisk-client-go](https://github.com/apache/incubator-openwhisk-client-go)
-    - [incubator-openwhisk-cli](https://github.com/apache/incubator-openwhisk-cli)
-    - [incubator-openwhisk-wskdeploy](https://github.com/apache/incubator-openwhisk-wskdeploy)
+    - [openwhisk-client-go](https://github.com/apache/openwhisk-client-go)
+    - [openwhisk-cli](https://github.com/apache/openwhisk-cli)
+    - [openwhisk-wskdeploy](https://github.com/apache/openwhisk-wskdeploy)
 
 # Proposed implementation
 ## How to automate the release process for OpenWhisk?
@@ -88,7 +88,7 @@ saved for each repository.
 
 The following diagram shows the structure of the repository:
 ```
-|--incubator-openwhisk-release--|
+|--openwhisk-release--|
     |--releases--|
         |--current--|   # the only directory to work with before proposing any release or sub-release
             |--config.json--|
@@ -96,7 +96,7 @@ The following diagram shows the structure of the repository:
             |--LICENSE--|
             |--CHANGELOG--|
             |--...--|
-        |--incubator--| # example with no sub-release
+        |--version--| # example with no sub-release
             |--config.json--|
             |--NOTICE--|
             |--LICENSE--|
@@ -142,9 +142,9 @@ branch, Travis build will be triggered to verify that combination of hash values
 projects. If the Travis build passes, the aggregation of OpenWhisk projects works.
 
 Once the release manager feels confident in a certain the project set, a release can be proposed. For example, the next release
-name of OpenWhisk is _incubator_, and there is no sub-release name. We can copy all the files under _releases/current_ into
-the directory _releases/incubator_(create one if it is missing), and submit this change as a PR to this master branch. When
-this PR is merged into master and becomes a valid commit, the release manager can tag it with the name _incubator_, in order
+name of OpenWhisk is _version_, and there is no sub-release name. We can copy all the files under _releases/current_ into
+the directory _releases/version_(create one if it is missing), and submit this change as a PR to this master branch. When
+this PR is merged into master and becomes a valid commit, the release manager can tag it with the name _version_, in order
 to kick off a Travis build to publish the packages into Apache/staging repository.
 
 ## TBD:

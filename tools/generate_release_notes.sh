@@ -47,7 +47,7 @@ do
     do
       PRNUMBER=$(echo $line | egrep -o '\(#[[:digit:]]+\)') # format like (#1234)
       PRN=$(echo $PRNUMBER | egrep -o '[[:digit:]]+') # format like 1234
-      PRLINK="([#$PRN](https://github.com/apache/incubator-$repo_name/pull/$PRN))"
+      PRLINK="([#$PRN](https://github.com/apache/$repo_name/pull/$PRN))"
       line=${line/$PRNUMBER/$PRLINK}
       printf "%s\n" "$line" >> $FILE
     done

@@ -32,7 +32,7 @@ SUFFIX="$TRAVIS_BUILD_NUMBER"
 PR_NUM="$TRAVIS_PULL_REQUEST"
 PREFIX="build_testing"
 
-export OPENWHISK_HOME="$OPENWHISK_SOURCE_DIR/incubator-openwhisk";
+export OPENWHISK_HOME="$OPENWHISK_SOURCE_DIR/openwhisk";
 
 mkdir -p $OPENWHISK_SOURCE_DIR
 cd $OPENWHISK_SOURCE_DIR
@@ -42,7 +42,7 @@ docker images
 
 "$PARENTDIR/download_source_code.sh"
 
-cd $OPENWHISK_SOURCE_DIR/incubator-openwhisk
+cd $OPENWHISK_SOURCE_DIR/openwhisk
 ./tools/travis/setup.sh
 TERM=dumb ./gradlew core:controller:distDocker core:invoker:distDocker -PdockerImagePrefix=$PREFIX
 
@@ -57,9 +57,9 @@ $ANSIBLE_CMD wipe.yml
 $ANSIBLE_CMD openwhisk.yml
 
 # Build the binaries for CLI
-cd $OPENWHISK_SOURCE_DIR/incubator-openwhisk-cli
+cd $OPENWHISK_SOURCE_DIR/openwhisk-cli
 #./gradlew buildBinaries -PcrossCompileCLI=true
 
 # Build the binaries for wskdeploy
-cd $OPENWHISK_SOURCE_DIR/incubator-openwhisk-wskdeploy
+cd $OPENWHISK_SOURCE_DIR/openwhisk-wskdeploy
 #./gradlew distDocker -PcrossCompileWSKDEPLOY=true

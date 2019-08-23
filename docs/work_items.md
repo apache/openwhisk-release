@@ -29,7 +29,7 @@ the test cases to check whether the services are up and running, whether the cli
 
 This release of the source code packages need to have the following features implemented.
 
-## 1. Download the source code ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/16))
+## 1. Download the source code ([open issue](https://github.com/apache/openwhisk-release/issues/16))
 
 All the source code OpenWhisk project is located at the Github website. If a configuration file is in place, we should
 be able to download the source code, based on the hash values or tags, defined for each specified repository. This
@@ -44,7 +44,7 @@ download the source code. It is better to support both Ubuntu and Mac systems.
 - Download the source code into a local workspace, based on predefined project hashes or tags
 - By default, clone the source code with all the git history into a default directory
 
-## 2. Verify the compliance of the source code ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/17))
+## 2. Verify the compliance of the source code ([open issue](https://github.com/apache/openwhisk-release/issues/17))
 
 Each source code file needs to have Apache licensing header at the top. We need to implement the verification in the
 script able to run both locally and in Travis build.
@@ -55,7 +55,7 @@ script able to run both locally and in Travis build.
     - Implement in the script to check the headers
 - Other verifications to be determined
 
-## 3. Deploy OpenWhisk based on the source code ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/18))
+## 3. Deploy OpenWhisk based on the source code ([open issue](https://github.com/apache/openwhisk-release/issues/18))
 
 Build the source code and deploy the OpenWhisk environment. We need to implement the following bulletins in the script.
 
@@ -68,7 +68,7 @@ Build the source code and deploy the OpenWhisk environment. We need to implement
 - Install catalog
 
 
-## 4. Test each OpenWhisk component ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/19))
+## 4. Test each OpenWhisk component ([open issue](https://github.com/apache/openwhisk-release/issues/19))
 
 This step is optional for the release process, but the release manager needs to make sure the code we deliver is in
 good shape in terms of functionality.
@@ -80,7 +80,7 @@ good shape in terms of functionality.
 - Test api gateway by running the test cases under OpenWhisk api gateway
 - ...
 
-## 5. Add NOTICE, LICENSE, and CHANGELOG to each OpenWhisk project ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/13))
+## 5. Add NOTICE, LICENSE, and CHANGELOG to each OpenWhisk project ([open issue](https://github.com/apache/openwhisk-release/issues/13))
 
 We need to prepare these files when release managers are developing the release repository. As we investigated, Apache
 Tentacles can create the LICENSE and NOTICE report. The current question is: can we run this tools locally, to generate
@@ -91,7 +91,7 @@ the NOTICE and LICENSE, before we upload artifacts to any repository, like the s
     - For files with static content, we can add them into the existing project.
     - For files with dynamic content for different releases, we can either manually edit them or use tools to generate them.
 
-## 6. Package the artifacts ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/20))
+## 6. Package the artifacts ([open issue](https://github.com/apache/openwhisk-release/issues/20))
 
 Each OpenWhisk project needs to have one compiled package, and one source code package. This is probably where the Maven
 release plugin can play out. As we have already downloaded the source code of each OpenWhisk repository, Maven command
@@ -111,10 +111,10 @@ how to do it, either in Travis CI, Jenkins pipeline, or any other building tools
 - Implement the script to package the artifacts
 - Sign the artifacts cryptographically for the staging and release
 
-## 7. Upload the artifacts into staging repository for release vote ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/21))
+## 7. Upload the artifacts into staging repository for release vote ([open issue](https://github.com/apache/openwhisk-release/issues/21))
 
 Upload the artifacts including source code, compiled packages, etc into the staging repository for vote.
-This is the [staging directory of Apache projects](https://dist.apache.org/repos/dist/dev/incubator/openwhisk/) for OpenWhisk.
+This is the [staging directory of Apache projects](https://dist.apache.org/repos/dist/dev/openwhisk/) for OpenWhisk.
 
 **Work bulletins**:
 - Investigate how to upload the artifacts to a staging repository with existing tools, like Gradle, Maven, any other
@@ -122,10 +122,10 @@ building plugins, etc
 - Implement the script to upload the artifacts to the staging repository
 - Validate the artifacts in the staging repository
 
-## 8. Release the artifacts ([open issue](https://github.com/apache/incubator-openwhisk-release/issues/22))
+## 8. Release the artifacts ([open issue](https://github.com/apache/openwhisk-release/issues/22))
 
 When we reach an agreement on the candidate located in the staging repository, the artifacts need to be move to the Apache\
-directory for release. This is the [release directory of Apache](https://dist.apache.org/repos/dist/release/incubator/openwhisk/) for OpenWhisk.
+directory for release. This is the [release directory of Apache](https://dist.apache.org/repos/dist/release/openwhisk/) for OpenWhisk.
 
 **Work bulletins**:
 - Migrate artifacts from the staging repository to Apache directory
