@@ -40,7 +40,7 @@ All release artifacts must be built and signed by a project Release Manager on t
 
 Any OpenWhisk committer may take on the role of a Release Manager.  The first time you serve as a Release Manager, you will need to prepare your machine by following the [Release Manager Setup Instructions)(docs/release_manager_setup.md).
 
-## The Gory Details of Making a Release
+## Details of Making a Release
 
 Please follow the [Instructions for Release Managers](docs/release_instructions.md).
 
