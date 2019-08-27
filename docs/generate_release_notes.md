@@ -24,4 +24,4 @@ by running the following script under the directory _tools_:
 ```
 $ ./generate_release_notes.sh
 ```
-This script will generate a release notes file named releaseNotes.md under the directory <local_release_dir>/openwhisk_release/openwhisk_sources.
+This script will generate a release notes file named releaseNotes.md under the directory <local_release_dir>/stagingArea/sources.

@@ -27,7 +27,7 @@ under the directory _tools_:
 ```
 $ ./verify_source_code.sh
 ```
-This script will generate a RAT report called rat.txt under the directory <local_release_dir>/openwhisk_release/openwhisk_sources/target. You can find the status of license
+This script will generate a RAT report called rat.txt under the directory <local_release_dir>/stagingArea/sources/target. You can find the status of license
 header in this RAT report. In addition, you can check the existence of LICENSE and NOTICE from the terminal, after
 running this script.
 
@@ -41,7 +41,7 @@ After downloading the source code, we can run the following script under _tools_
 ```
 $ ./package_source_code.sh
 ```
-This script will create a source code package file of source code suffixed with tar.gz for each project, under <local_release_dir>/openwhisk_sources/openwhisk/apache-openwhisk-\<version\>.
+This script will create a source code package file of source code suffixed with tar.gz for each project, under <local_release_dir>/sources/openwhisk/apache-openwhisk-\<version\>.
 The key version is defined in _config.json_.
 
 ## Adding or updating the documents
@@ -50,4 +50,4 @@ We can run the following script under _tools_ to add or update the documents for
 ```
 $ ./package_doc.sh
 ```
-This script will copy all the files under releases/<current version> into the designated directory, <local_release_dir>/openwhisk_sources/openwhisk/apache-openwhisk-\<version\>/doc/.
+This script will copy all the files under releases/<current version> into the designated directory, <local_release_dir>/sources/openwhisk/apache-openwhisk-\<version\>/doc/.

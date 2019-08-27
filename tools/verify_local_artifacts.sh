@@ -20,6 +20,12 @@ set -e
 
 echo "Verify the local artifacts with the KEYS"
 
+echo "THIS SCRIPT NEEDS TO BE UPDATED"
+
+exit 1
+
+
+
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
 source "$SCRIPTDIR/load_config.sh" $1 $2 $3
 

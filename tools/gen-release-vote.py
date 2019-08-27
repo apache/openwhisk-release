@@ -135,7 +135,6 @@ Please vote to approve this release:
 Release verification checklist for reference:
   [ ] Download links are valid.
   [ ] Checksums and PGP signatures are valid.
-  [ ] DISCLAIMER is included.
   [ ] Source code artifacts have correct names matching the current release.
   [ ] LICENSE and NOTICE files are correct for each OpenWhisk repository.
   [ ] All files have license headers as specified by OpenWhisk project policy [1].

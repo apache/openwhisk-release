@@ -80,22 +80,7 @@ Run the following script to download source code based on the configuration in _
 $ ./download_source_code.sh
 ```
 
-After this script is executed, a directory called _openwhisk_release_ will be created under the home directory of openwhisk
-release tool, if it is not available. The directory _openwhisk_release_ will save the output files, including the source code
+After this script is executed, a directory called _stagingArea_ will be created under the home directory of openwhisk
+release tool, if it is not available. The directory _stagingArea_ will save the output files, including the source code
 of all the OpenWhisk repositories, packages to be rleased, signature, checksums, etc, when we run any bash script of this
 release tool.
-
-## Checkout the subversion repository
-
-We need to checkout the subversion repository for OpenWhisk to stage the artifacts with the following command:
-
-```
-$ ./checkout_svn.sh <SVN_USERNAME> <SVN_PASSWORD>
-```
-
-If you have configured your local SVN with the username and the password, you can run the above script without the parameters.
-
-After running this command, a remote folder named openwhisk-$version will be created in the subversion
-repository if necessary, and checked out to the local folder openwhisk_release/openwhisk/openwhisk-$full_version.
-The value of $full_version is $version-$pre_release_version, as defined in config.json. This command can also be used to
-sync-up your local folder with the remote subversion folder.

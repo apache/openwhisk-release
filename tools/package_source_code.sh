@@ -23,7 +23,7 @@ echo "Package the artifacts."
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
 source "$SCRIPTDIR/load_config.sh" $1 $2 $3
 
-mkdir -p $CURRENT_VERSION_DIR
+mkdir -p $OPENWHISK_ARTIFACT_DIR
 
 # Clean up all the source code by excluding unnecessary files and folders
 # Remove all the hidden files and folder
@@ -40,5 +40,5 @@ do
     cd $OPENWHISK_CLEANED_SOURCE_DIR
     # Rename the directory by adding the version number
     mv $project_name $project_name-$version
-    tar czf ${CURRENT_VERSION_DIR}/${repo_name}-${version}-sources.tar.gz $project_name-$version
+    tar czf ${OPENWHISK_ARTIFACT_DIR}/${repo_name}-${version}-sources.tar.gz $project_name-$version
 done

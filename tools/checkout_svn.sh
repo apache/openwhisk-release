@@ -18,27 +18,12 @@
 
 set -e
 
-echo "Checkout the SVN to the local directory."
+echo "Checkout staging and release SVN to the working directory."
 
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
 source "$SCRIPTDIR/load_config.sh" $1 $2
 
-: ${OPENWHISK_SVN?"Need is not set OPENWHISK_SVN"}
+mkdir -p "$OPENWHISK_WORKING_AREA"
 
-if [[ `wget -S --spider $CURRENT_VERSION_URL  2>&1 | grep 'HTTP/1.1 404 Not Found'` ]]; then
-    # Create an empty folder named ${REMOTE_PATH} in the remote staging folder
-    svn mkdir -m "Create the directory for ${full_version} in staging." $CURRENT_VERSION_URL $CREDENTIALS
-fi
-
-# Create a subversion directory for openwhisk to stage all the packages
-rm -rf $OPENWHISK_SVN
-mkdir -p $OPENWHISK_SVN
-rm -rf $OPENWHISK_SVN/*
-
-cd $OPENWHISK_SVN
-
-# Make sure the folder $REMOTE_PATH is connected to the svn staging server.
-CMD="svn co $CURRENT_VERSION_URL $REMOTE_PATH"
-echo $CMD
-$CMD
-echo svn repo checked out to... $OPENWHISK_SVN
+svn co $STAGE_URL "$STAGE_SVN_DIR"
+svn co $RELEASE_URL "$RELEASE_SVN_DIR"
