@@ -16,35 +16,26 @@
 # limitations under the License.
 #
 
-DIR="$(cd $(dirname "$0")/ && pwd)"
-SVN_USERNAME=$1
-SVN_PASSWORD=$2
-SCRIPTDIR=${3:-"$DIR"}
-CREDENTIALS=""
+SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
 
 CURRENTDIR="$(cd $(dirname "$0")/ && pwd)"
 PARENTDIR="$(dirname "$CURRENTDIR")"
 
-if [ ! -z "$SVN_USERNAME" ] && [ ! -z "$SVN_PASSWORD" ];then
-    CREDENTIALS="--username $SVN_USERNAME --password $SVN_PASSWORD --non-interactive"
-fi
+OPENWHISK_WORKING_AREA="$PARENTDIR/stagingArea"
+OPENWHISK_SOURCE_DIR="$OPENWHISK_WORKING_AREA/sources"
+OPENWHISK_CLEANED_SOURCE_DIR="$OPENWHISK_WORKING_AREA/cleaned_sources"
+OPENWHISK_ARTIFACT_DIR="$OPENWHISK_WORKING_AREA/artifacts"
+
+STAGE_URL="https://dist.apache.org/repos/dist/dev/openwhisk"
+STAGE_SVN_DIR="$OPENWHISK_WORKING_AREA/svn_staging"
+RELEASE_URL="https://dist.apache.org/repos/dist/release/openwhisk"
+RELEASE_SVN_DIR="$OPENWHISK_WORKING_AREA/svn_release"
 
 source "$SCRIPTDIR/util.sh"
 
 CONFIG=$(read_file $SCRIPTDIR/config.json)
-OPENWHISK_RELEASE_DIR="$PARENTDIR/openwhisk_release"
 
-OPENWHISK_SOURCE_DIR="$OPENWHISK_RELEASE_DIR/openwhisk_sources"
-
-OPENWHISK_CLEANED_SOURCE_DIR="$OPENWHISK_RELEASE_DIR/openwhisk_cleaned_sources"
-OPENWHISK_SVN="$OPENWHISK_RELEASE_DIR/openwhisk"
-OPENWHISK_PROJECT_NAME="apache-openwhisk"
-
-PUBLISH_STAGE=$(json_by_key "$CONFIG" "publish_stage")
-UPDATE_DOC=$(json_by_key "$CONFIG" "update_doc")
 repos=$(echo $(json_by_key "$CONFIG" "RepoList") | sed 's/[][]//g')
-STAGE_URL=$(json_by_key "$CONFIG" "stage_url")
-RELEASE_URL=$(json_by_key "$CONFIG" "release_url")
 
 version_key="versioning"
 version_json=$(json_by_key "$CONFIG" ${version_key}.version)
@@ -58,12 +49,3 @@ if [ ! -z "$pre_release_version" ]; then
         full_version=$full_version-$pre_release_version_no_space
     fi
 fi
-
-REMOTE_PATH="$OPENWHISK_PROJECT_NAME-$full_version"
-REMOTE_PATH_RELEASE="$OPENWHISK_PROJECT_NAME-$version"
-
-CURRENT_VERSION_URL="$STAGE_URL/${REMOTE_PATH}/"
-CURRENT_VERSION_DIR="$OPENWHISK_SVN/$REMOTE_PATH"
-
-RELEASE_VERSION_URL_STAGE="$RELEASE_URL/${REMOTE_PATH}/"
-RELEASE_VERSION_URL="$RELEASE_URL/${REMOTE_PATH_RELEASE}/"

@@ -19,24 +19,12 @@
 
 # Instructions for Release Managers
 
-# Release process
-
-This project contains scripts to automate most aspects of making a release of one or more Apache OpenWhisk projects.
-
-It is intended to be used by a project Release Manager who will clone this repository to their
-local dev machine and then go through the release process by running scripts sequentially on a local machine, to push the artifacts into the staging directory and eventually move them into the Apache release directory.
-
-## Manual mode of Release Process
-
-If you work as a release manager on an official release for an OpenWhisk project, manual mode is recommended for you to go
-through and understand all the necessary steps of Apache release process tailored for OpenWhisk.
+## Step-by-Step instructions for the Release Process
 
   1. [Preparing for a release](prepare_release.md) - how to prepare OpenWhisk projects for a release
-  2. [Prerequisites](prerequisites.md) - steps that release manager needs to do before a release
   3. [Picking up the source code](pick_up_source_code.md) - determine the branch and hash value for each OpenWhisk project to release
   4. [Making the release artifacts](package_artifacts.md)
   5. [Signing the release artifacts](sign_artifacts.md)
-  6. [Uploading public PGP key](upload_public_key.md)
   7. [Publish the release artifacts to the staging directory](push_stage_url.md)
   8. Vote on the dev@openwhisk.apache.org list
   9. If the vote fails - configure the file config.json and resume from step 3.  If the vote passes, continue with step 10.
@@ -62,7 +50,7 @@ All released source code has to be compliant with Apache Licensing Policy, by ad
 
 Artifacts for project repository source code and any compiled binaries are packaged separately with each artifact being signed cryptographically.
 
-Source code needs to provide the installation script for users to deploy a full OpenWhisk environment. We target to implement this step in Travis build.
+Source code needs to provide the installation script for users to deploy a full OpenWhisk environment.
 
 ### Release distribution requirements
 
@@ -85,45 +73,7 @@ These steps are **manual** and must be performed by the Release Manager.
 
 #### Starting the Vote
 
-Propose a vote on the dev list. Here is an example:
-```
-To: "OpenWhisk Developers List" <dev@openwhisk.apache.org>
-Subject: [VOTE] Release Apache OpenWhisk {component} version {version}
-
-Hi,
-
-This is a call to vote on releasing version {version} release
-candidate {rc} of the following {N} project modules with artifacts
-built from the Git repositories and commit IDs listed below.
-
-* {YOUR REPOSITORY ID} : {GIT HASH}
-* {... list others if more than one}
-
-This release comprises of source code distribution only.
-
-You can use this UNIX script to download the release and verify the signatures:
-https://gitbox.apache.org/repos/asf?p=openwhisk-release.git;a=blob_plain;f=tools/rcverify.sh;hb=HEAD
-
-Usage:
-sh rcverify.sh {repository} {component} {version}
-
-Please vote to approve this release:
-
-  [ ] +1 Approve the release
-  [ ]  0 Don't care
-  [ ] -1 Don't release, because ...
-
-Release verification checklist for reference:
-  [ ] Download links are valid.
-  [ ] Checksums and PGP signatures are valid.
-  [ ] DISCLAIMER is included.
-  [ ] Source code artifacts have correct names matching the current release.
-  [ ] LICENSE and NOTICE files are correct for each OpenWhisk repository.
-  [ ] All files have license headers if necessary.
-  [ ] No compiled archives bundled in source archive.
-
-This majority vote is open for at least 72 hours.
-```
+Propose a vote on the dev list. Use the tools/gen-release-vote.py script to create the body of the voting email.
 
 #### Wait for the Results
 

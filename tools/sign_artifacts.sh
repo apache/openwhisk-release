@@ -33,7 +33,7 @@ if [ $sysOS == "Darwin" ];then
     `gpg -o /dev/null --sign /dev/null`
 fi
 
-cd $CURRENT_VERSION_DIR
+cd $OPENWHISK_ARTIFACT_DIR
 echo "Sign the artifacts with the private key."
 for artifact in *.tar.gz *.zip *.tgz; do
     if [ "${artifact}" != "*.tar.gz" ] && [ "${artifact}" != "*.zip" ] && [ "${artifact}" != "*.tgz" ] ; then

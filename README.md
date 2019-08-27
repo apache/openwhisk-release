@@ -22,41 +22,37 @@
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 [![Build Status](https://travis-ci.org/apache/openwhisk-release.svg?branch=master)](https://travis-ci.org/apache/openwhisk-release)
 
-The primary goal of this project is to provide the Apache OpenWhisk project's Release Managers the instructions and automation needed to guarantee a release complies with both the Apache Software Foundation's (ASF) [Release Creation Process](http://www.apache.org/dev/release-publishing.html) and [Release Policy](http://www.apache.org/legal/release-policy.html).
+This project provides the Apache OpenWhisk project's Release Managers with the instructions and automation needed to ensure project releases comply with both the Apache Software Foundation's (ASF) [Release Creation Process](http://www.apache.org/dev/release-publishing.html) and [Release Policy](http://www.apache.org/legal/release-policy.html).
 
-Specifically, this repository provides Release Management of all designated Apache OpenWhisk project repositories, by automating:
-- Verification of the source code LICENSE and NOTICE files
-- Building & deploying the OpenWhisk platform
-- Running Build Verification Tests (BVT)
-- Generating CHANGELOGs for each project repository (since last release)
-- Packaging and signing source code (compressed archives) and binaries
-- publishing the artifacts to the approved Apache directories
-
-all in accordance with Apache guidelines.
-
+Specifically, this project documents the steps a Release Manager must take to make a release of an OpenWhisk software component and where possible provides scripts and tool support to reduce the number of manual steps and potential for human error during the process. Script support is provided for:
+- Packaging and signing source code (compressed archives)
+- Verification of LICENSE and NOTICE files, source code license headers, and other formal aspects of a release candidate
+- Publishing release artifacts to the proper staging and release Apache distribution servers
+- Generation of a VOTE email for a release candidate
 
 # Release Process
 
 ## Methodology
 
-This project uses Travis CI as the automated integration build tool to streamline the release process of Apache OpenWhisk. Stages can be applied to build different jobs, which are able to run either in sequential or parallel. Artifacts can be shared across different jobs by using the cache feature in Travis, as different jobs run on different virtual machines.
+All release artifacts must be built and signed by a project Release Manager on their own machine to ensure proper security of signing keys and the integrity of the release artifacts.
 
-## Instructions
+## Being a Release Manager
+
+Any OpenWhisk committer may take on the role of a Release Manager.  The first time you serve as a Release Manager, you will need to prepare your machine by following the [Release Manager Setup Instructions)(docs/release_manager_setup.md).
+
+## Details of Making a Release
 
 Please follow the [Instructions for Release Managers](docs/release_instructions.md).
 
-## Publishing
+## Publishing Release Candidates and Releases
 
-Staged candidate releases of Apache OpenWhisk artifacts are published to the approved staging repository path under Apache with all required PGP singatures:
-- https://dist.apache.org/repos/dist/dev/openwhisk/
+Release candidates of Apache OpenWhisk components are published to the [release candidate staging area](https://dist.apache.org/repos/dist/dev/openwhisk) during the voting process.
 
-Once candidates are approved, in accordance with required release processes and policies, their artifacts can be moved from the staging path to the approved release path:
-- https://dist.apache.org/repos/dist/release/openwhisk/
+If a release candidate is formally approved, it will be removed from the staging area, distributed from the [release distribution server](https://dist.apache.org/repos/dist/release/openwhisk/), and listed on the [Apache OpenWhisk Downloads page](https://http://openwhisk.apache.org/downloads).
 
+# Apache OpenWhisk Git Repository Status
 
-# Project status
-
-The following table can be used by Release Managers to get quickly check the status of all project repositories that are currently included the current release plan:
+The following table can be used by Release Managers to check the status of all project repositories that produced releasable software components:
 
 <table cellpadding="8">
 <tbody>

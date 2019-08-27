@@ -20,13 +20,18 @@ set -e
 
 echo "Upload the artifacts."
 
+echo "THIS SCRIPT NEEDS TO BE UPDATED"
+
+exit 1
+
+
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
 source "$SCRIPTDIR/load_config.sh" $1 $2
 
 cd $OPENWHISK_SVN/$REMOTE_PATH
 
-svn add --force * $CREDENTIALS
-svn commit -m "Staging Apache OpenWhisk release ${full_version}." $CREDENTIALS
+svn add --force *
+svn commit -m "Staging Apache OpenWhisk release ${full_version}."
 
 # Disconnect $REMOTE_PATH with the remote staging server.
 rm -rf .svn

@@ -20,14 +20,16 @@ set -e
 
 echo "Move the remote artifacts from staging to release directory."
 
-SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
-SVN_USERNAME=$1
-SVN_PASSWORD=$2
+echo "THIS SCRIPT NEEDS TO BE UPDATED"
 
-source "$SCRIPTDIR/load_config.sh" "$SVN_USERNAME" "$SVN_PASSWORD"
+exit 1
+
+SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
+
+source "$SCRIPTDIR/load_config.sh"
 
 if [[ `wget -S --spider $RELEASE_VERSION_URL  2>&1 | grep 'HTTP/1.1 404 Not Found'` ]]; then
-    svn mkdir $RELEASE_VERSION_URL -m "Creating Apache OpenWhisk release ${version}." $CREDENTIALS
+    svn mkdir $RELEASE_VERSION_URL -m "Creating Apache OpenWhisk release ${version}."
 fi
 
 # Create a subversion directory for openwhisk to stage all the packages
@@ -47,11 +49,6 @@ do
     cp ${REMOTE_PATH}/${repo_name}-${version}-sources.tar.gz* ${REMOTE_PATH_RELEASE}/
 done
 
-if [ "$UPDATE_DOC" == "true" ] ; then
-    # Copy the documents into the release folder
-    cp -R ${REMOTE_PATH}/doc ${REMOTE_PATH_RELEASE}/
-fi
-
 cd $REMOTE_PATH_RELEASE
-svn add --force * $CREDENTIALS
-svn commit -m "Updating Apache OpenWhisk release ${version}." $CREDENTIALS
+svn add --force *
+svn commit -m "Updating Apache OpenWhisk release ${version}."

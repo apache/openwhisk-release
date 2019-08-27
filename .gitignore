@@ -1,5 +1,5 @@
 #*
 *~
 openwhisk_release/
-tools/key_sec.gpg
+stagingArea/
 tools/mail-config.yaml
