@@ -38,17 +38,17 @@ All release artifacts must be built and signed by a project Release Manager on t
 
 ## Being a Release Manager
 
-Any OpenWhisk committer may take on the role of a Release Manager.  The first time you serve as a Release Manager, you will need to prepare your machine by following the [Release Manager Setup Instructions)(docs/release_manager_setup.md).
+Any OpenWhisk committer may take on the role of a Release Manager.  The first time you serve as a Release Manager, you will need to prepare your machine by following the [Release Manager Setup Instructions](docs/release_manager_setup.md).
 
 ## Details of Making a Release
 
-Please follow the [Instructions for Release Managers](docs/release_instructions.md).
+Please follow the process described in the [Detailed Instructions for Release Managers](docs/release_instructions.md).
 
 ## Publishing Release Candidates and Releases
 
-Release candidates of Apache OpenWhisk components are published to the [release candidate staging area](https://dist.apache.org/repos/dist/dev/openwhisk) during the voting process.
+Release candidates of Apache OpenWhisk components are published to the [release candidate staging area](https://dist.apache.org/repos/dist/dev/openwhisk) during the voting process. ** These release candidates are not Apache Releases and are not intended for end users. **
 
-If a release candidate is formally approved, it will be removed from the staging area, distributed from the [release distribution server](https://dist.apache.org/repos/dist/release/openwhisk/), and listed on the [Apache OpenWhisk Downloads page](https://http://openwhisk.apache.org/downloads).
+If a release candidate is formally approved for release, it will be removed from the staging area, distributed from the [release distribution server](https://dist.apache.org/repos/dist/release/openwhisk/), and listed on the [Apache OpenWhisk Downloads page](https://http://openwhisk.apache.org/downloads).
 
 # Apache OpenWhisk Git Repository Status
 
