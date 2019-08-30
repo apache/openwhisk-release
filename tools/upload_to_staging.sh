@@ -18,26 +18,25 @@
 
 set -e
 
-echo "Verify the remote artifacts with the KEYS"
-
-echo "THIS SCRIPT NEEDS TO BE UPDATED"
-
-exit 1
-
-
+echo "Upload release candidates to staging."
 
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
-source "$SCRIPTDIR/load_config.sh" $1 $2 $3
+source "$SCRIPTDIR/load_config.sh" $1
 
-rm -rf $OPENWHISK_SVN
-mkdir -p $OPENWHISK_SVN/$REMOTE_PATH
-cd $OPENWHISK_SVN
+cd "$STAGE_SVN_DIR"
 
-# Remove the local folder, because we are about to download the artifacts from the staging folder.
-rm -rf $REMOTE_PATH
+svn update
 
-# Check out the artifacts.
-svn co $CURRENT_VERSION_URL $REMOTE_PATH
-cd $REMOTE_PATH
+if [ ! -d "$pre_release_version" ]; then
+    mkdir "$pre_release_version"
+    svn add --force "$pre_release_version"
+fi
 
-import_key_verify_signature $STAGE_URL/KEYS
+cd "$pre_release_version"
+
+for artifact in `ls "$OPENWHISK_ARTIFACT_DIR"`; do
+    mv "$OPENWHISK_ARTIFACT_DIR"/$artifact $artifact
+    svn add --force $artifact
+done
+
+svn commit -m "Staging Apache OpenWhisk release candidates from $1."

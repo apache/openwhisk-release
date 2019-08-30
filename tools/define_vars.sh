@@ -1,4 +1,4 @@
-<!--
+#!/usr/bin/env bash
 #
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE file distributed with
@@ -15,20 +15,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
--->
 
-# Sign the artifacts
+SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
+CURRENTDIR="$(cd $(dirname "$0")/ && pwd)"
+PARENTDIR="$(dirname "$CURRENTDIR")"
 
-Each package needs to be accompanied by cryptographic signatures according to Apache release policy.
+OPENWHISK_WORKING_AREA="$PARENTDIR/stagingArea"
+OPENWHISK_SOURCE_DIR="$OPENWHISK_WORKING_AREA/sources"
+OPENWHISK_CLEANED_SOURCE_DIR="$OPENWHISK_WORKING_AREA/cleaned_sources"
+OPENWHISK_ARTIFACT_DIR="$OPENWHISK_WORKING_AREA/artifacts"
 
-## Sign the artifacts:
-
-All the artifacts can be signed by running the following script under _tools_:
-
-```
-$ ./sign_artifacts.sh <SVN_USERNAME> <SVN_PASSWORD>
-```
-                      
-If you have configured your local SVN with the username and the password, you can run the above script without the parameters.
-
-This script generates a file of the SHA512 checksum suffixed with .sha512, and a signature file suffixed with .asc for each package.
+STAGE_URL="https://dist.apache.org/repos/dist/dev/openwhisk"
+STAGE_SVN_DIR="$OPENWHISK_WORKING_AREA/svn_staging"
+RELEASE_URL="https://dist.apache.org/repos/dist/release/openwhisk"
+RELEASE_SVN_DIR="$OPENWHISK_WORKING_AREA/svn_release"

@@ -21,7 +21,7 @@ set -e
 echo "Checkout staging and release SVN to the working directory."
 
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
-source "$SCRIPTDIR/load_config.sh" $1 $2
+source "$SCRIPTDIR/define_vars.sh"
 
 mkdir -p "$OPENWHISK_WORKING_AREA"
 

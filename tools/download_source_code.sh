@@ -19,9 +19,9 @@
 set -e
 
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
-source "$SCRIPTDIR/load_config.sh"
+source "$SCRIPTDIR/load_config.sh" "$1"
 
-clone_depth=${1:-"100"}
+clone_depth=${2:-"100"}
 
 function git_clone_repo() {
     PROJECT_NAME=$1
@@ -31,11 +31,10 @@ function git_clone_repo() {
     git clone --depth $clone_depth -b $BRANCH $REPO $OPENWHISK_SOURCE_DIR/$PROJECT_NAME
     cd $OPENWHISK_SOURCE_DIR/$PROJECT_NAME
     git reset --hard $HASH
-    #rm -rf .git
 }
 
-rm -rf $OPENWHISK_SOURCE_DIR/*
 mkdir -p $OPENWHISK_SOURCE_DIR
+rm -rf $OPENWHISK_SOURCE_DIR/*
 
 for repo in $(echo $repos | sed "s/,/ /g")
 do

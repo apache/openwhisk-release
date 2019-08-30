@@ -18,20 +18,15 @@
 
 set -e
 
-echo "Upload the artifacts."
-
-echo "THIS SCRIPT NEEDS TO BE UPDATED"
-
-exit 1
-
+echo "Checking the artifacts with rcverify.sh"
 
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
-source "$SCRIPTDIR/load_config.sh" $1 $2
+source "$SCRIPTDIR/load_config.sh" "$1"
 
-cd $OPENWHISK_SVN/$REMOTE_PATH
-
-svn add --force *
-svn commit -m "Staging Apache OpenWhisk release ${full_version}."
-
-# Disconnect $REMOTE_PATH with the remote staging server.
-rm -rf .svn
+for repo in $(echo $repos | sed "s/,/ /g")
+do
+    repo_name=$(echo "$repo" | sed -e 's/^"//' -e 's/"$//')
+    NAME_KEY=${repo_name//-/_}.name
+    NAME=$(json_by_key "$CONFIG" $NAME_KEY)
+    LOCAL_DIR="$OPENWHISK_ARTIFACT_DIR" DL=0 "$SCRIPTDIR"/rcverify.sh $repo_name "$NAME" $version $pre_release_version
+done

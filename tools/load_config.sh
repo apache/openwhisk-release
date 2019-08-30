@@ -16,8 +16,9 @@
 # limitations under the License.
 #
 
-SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
+CONFIG_FILE=$1
 
+SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
 CURRENTDIR="$(cd $(dirname "$0")/ && pwd)"
 PARENTDIR="$(dirname "$CURRENTDIR")"
 
@@ -33,7 +34,7 @@ RELEASE_SVN_DIR="$OPENWHISK_WORKING_AREA/svn_release"
 
 source "$SCRIPTDIR/util.sh"
 
-CONFIG=$(read_file $SCRIPTDIR/config.json)
+CONFIG=$(read_file $CONFIG_FILE)
 
 repos=$(echo $(json_by_key "$CONFIG" "RepoList") | sed 's/[][]//g')
 

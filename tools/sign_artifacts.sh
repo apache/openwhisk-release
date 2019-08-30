@@ -20,10 +20,8 @@ set -e
 
 echo "Sign the artifacts with PGP."
 
-passphrase=${1:-"openwhisk"}
-
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
-source "$SCRIPTDIR/load_config.sh"
+source "$SCRIPTDIR/load_config.sh" "$1"
 
 # Sign all the artifacts with the PGP key.
 export GPG_TTY=$(tty)
@@ -38,13 +36,7 @@ echo "Sign the artifacts with the private key."
 for artifact in *.tar.gz *.zip *.tgz; do
     if [ "${artifact}" != "*.tar.gz" ] && [ "${artifact}" != "*.zip" ] && [ "${artifact}" != "*.tgz" ] ; then
         gpg --print-md SHA512 ${artifact} > ${artifact}.sha512
-
-        if [ $sysOS == "Darwin" ];then
-            # The option --passphrase-fd does not work on Mac.
-            `gpg --yes --armor --output ${artifact}.asc --detach-sig ${artifact}`
-        elif [ $sysOS == "Linux" ];then
-            `echo $passphrase | gpg --passphrase-fd 0 --yes --armor --output ${artifact}.asc --detach-sig ${artifact}`
-        fi
+        gpg --yes --armor --output ${artifact}.asc --detach-sig ${artifact}
     fi
 done
 
