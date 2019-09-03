@@ -46,7 +46,7 @@ Please follow the process described in the [Detailed Instructions for Release Ma
 
 ## Publishing Release Candidates and Releases
 
-Release candidates of Apache OpenWhisk components are published to the [release candidate staging area](https://dist.apache.org/repos/dist/dev/openwhisk) during the voting process. ** These release candidates are not Apache Releases and are not intended for end users. **
+Release candidates of Apache OpenWhisk components are published to the [release candidate staging area](https://dist.apache.org/repos/dist/dev/openwhisk) during the voting process. *These release candidates are not Apache Releases and are not intended for end users.*
 
 If a release candidate is formally approved for release, it will be removed from the staging area, distributed from the [release distribution server](https://dist.apache.org/repos/dist/release/openwhisk/), and listed on the [Apache OpenWhisk Downloads page](https://http://openwhisk.apache.org/downloads).
 
