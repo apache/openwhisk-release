@@ -71,18 +71,18 @@ The following table can be used by Release Managers to check the status of all p
 <td><a href="https://github.com/apache/openwhisk/blob/master/tools/travis/scan.sh">scan.sh</a></td>
 </tr>
 <tr align="left">
-<td><a href="https://github.com/apache/openwhisk-catalog">openwhisk-catalog</a></td>
-<td><a href="https://travis-ci.org/apache/openwhisk-catalog/branches"><img src="https://travis-ci.org/apache/openwhisk-catalog.svg?branch=master" alt="" /></a></td>
-<td><a href="https://github.com/apache/openwhisk-catalog/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
-<td><a href="https://github.com/apache/openwhisk-catalog/blob/master/NOTICE.txt">NOTICE</a></td>
-<td><a href="https://github.com/apache/openwhisk-catalog/blob/master/tools/travis/build.sh">build.sh</a></td>
-</tr>
-<tr align="left">
 <td><a href="https://github.com/apache/openwhisk-apigateway">openwhisk-apigateway</a></td>
 <td><a href="https://travis-ci.org/apache/openwhisk-apigateway/branches"><img src="https://travis-ci.org/apache/openwhisk-apigateway.svg?branch=master" alt="" /></a></td>
 <td><a href="https://github.com/apache/openwhisk-apigateway/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
 <td><a href="https://github.com/apache/openwhisk-apigateway/blob/master/NOTICE.txt">NOTICE</a></td>
 <td><a href="https://github.com/apache/openwhisk-apigateway/blob/master/tools/travis/build.sh">build.sh</a></td>
+</tr>
+<tr align="left">
+<td><a href="https://github.com/apache/openwhisk-catalog">openwhisk-catalog</a></td>
+<td><a href="https://travis-ci.org/apache/openwhisk-catalog/branches"><img src="https://travis-ci.org/apache/openwhisk-catalog.svg?branch=master" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-catalog/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-catalog/blob/master/NOTICE.txt">NOTICE</a></td>
+<td><a href="https://github.com/apache/openwhisk-catalog/blob/master/tools/travis/build.sh">build.sh</a></td>
 </tr>
 <tr align="left">
 <td><a href="https://github.com/apache/openwhisk-cli">openwhisk-cli</a></td>
@@ -99,18 +99,18 @@ The following table can be used by Release Managers to check the status of all p
 <td><a href="https://github.com/apache/openwhisk-client-go/blob/master/tools/travis/build.sh">build.sh</a></td>
 </tr>
 <tr align="left">
+<td><a href="https://github.com/apache/openwhisk-client-js">openwhisk-client-js</a></td>
+<td><a href="https://travis-ci.org/apache/openwhisk-client-js/branches"><img src="https://travis-ci.org/apache/openwhisk-client-js.svg?branch=master" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-client-js/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-client-js/blob/master/NOTICE.txt">NOTICE</a></td>
+<td><a href="https://github.com/apache/openwhisk-client-js/blob/master/tools/travis/scancode.sh">scancode.sh</a></td>
+</tr>
+<tr align="left">
 <td><a href="https://github.com/apache/openwhisk-composer">openwhisk-composer</a></td>
 <td><a href="https://travis-ci.org/apache/openwhisk-composer/branches"><img src="https://travis-ci.org/apache/openwhisk-composer.svg?branch=master" alt="" /></a></td>
 <td><a href="https://github.com/apache/openwhisk-composer/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
 <td><a href="https://github.com/apache/openwhisk-composer/blob/master/NOTICE.txt">NOTICE</a></td>
 <td><a href="https://github.com/apache/openwhisk-composer/blob/master/travis/scancode.sh">scancode.sh</a></td>
-</tr>
-<tr align="left">
-<td><a href="https://github.com/apache/openwhisk-wskdeploy">openwhisk-wskdeploy</a></td>
-<td><a href="https://travis-ci.org/apache/openwhisk-wskdeploy/branches"><img src="https://travis-ci.org/apache/openwhisk-wskdeploy.svg?branch=master" alt="" /></a></td>
-<td><a href="https://github.com/apache/openwhisk-wskdeploy/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
-<td><a href="https://github.com/apache/openwhisk-wskdeploy/blob/master/NOTICE.txt">NOTICE</a></td>
-<td><a href="https://github.com/apache/openwhisk-wskdeploy/blob/master/tools/travis/scancode.sh">scancode.sh</a></td>
 </tr>
 <tr align="left">
 <td><a href="https://github.com/apache/openwhisk-deploy-kube">openwhisk-deploy-kube</a></td>
@@ -120,18 +120,25 @@ The following table can be used by Release Managers to check the status of all p
 <td><a href="https://github.com/apache/openwhisk-deploy-kube/blob/master/tools/travis/scancode.sh">scancode.sh</a></td>
 </tr>
 <tr align="left">
-<td><a href="https://github.com/apache/openwhisk-runtime-nodejs">openwhisk-runtime-nodejs</a></td>
-<td><a href="https://travis-ci.org/apache/openwhisk-runtime-nodejs/branches"><img src="https://travis-ci.org/apache/openwhisk-runtime-nodejs.svg?branch=master" alt="" /></a></td>
-<td><a href="https://github.com/apache/openwhisk-runtime-nodejs/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
-<td><a href="https://github.com/apache/openwhisk-runtime-nodejs/blob/master/NOTICE.txt">NOTICE</a></td>
-<td><a href="https://github.com/apache/openwhisk-runtime-nodejs/blob/master/tools/travis/build.sh">build.sh</a></td>
+<td><a href="https://github.com/apache/openwhisk-package-alarms">openwhisk-package-alarms</a></td>
+<td><a href="https://travis-ci.org/apache/openwhisk-package-alarms/branches"><img src="https://travis-ci.org/apache/openwhisk-package-alarms.svg?branch=master" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-package-alarms/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-package-alarms/blob/master/NOTICE.txt">NOTICE</a></td>
+<td><a href="https://github.com/apache/openwhisk-package-alarms/blob/master/tools/travis/build.sh">build.sh</a></td>
 </tr>
 <tr align="left">
-<td><a href="https://github.com/apache/openwhisk-runtime-swift"> openwhisk-runtime-swift</a></td>
-<td align="left"><a href="https://travis-ci.org/apache/openwhisk-runtime-swift/branches"><img src="https://travis-ci.org/apache/openwhisk-runtime-swift.svg?branch=master" alt="" /></a></td>
-<td><a href="https://github.com/apache/openwhisk-runtime-swift/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
-<td><a href="https://github.com/apache/openwhisk-runtime-swift/blob/master/NOTICE.txt">NOTICE</a></td>
-<td><a href="https://github.com/apache/openwhisk-runtime-swift/blob/master/tools/travis/build.sh">build.sh</a></td>
+<td><a href="https://github.com/apache/openwhisk-package-cloudant">openwhisk-package-cloudant</a></td>
+<td><a href="https://travis-ci.org/apache/openwhisk-package-cloudant/branches"><img src="https://travis-ci.org/apache/openwhisk-package-cloudant.svg?branch=master" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-package-cloudant/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-package-cloudant/blob/master/NOTICE.txt">NOTICE</a></td>
+<td><a href="https://github.com/apache/openwhisk-package-cloudant/blob/master/tools/travis/build.sh">build.sh</a></td>
+</tr>
+<tr align="left">
+<td><a href="https://github.com/apache/openwhisk-package-kafka">openwhisk-package-kafka</a></td>
+<td><a href="https://travis-ci.org/apache/openwhisk-package-kafka/branches"><img src="https://travis-ci.org/apache/openwhisk-package-kafka.svg?branch=master" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-package-kafka/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-package-kafka/blob/master/NOTICE.txt">NOTICE</a></td>
+<td><a href="https://github.com/apache/openwhisk-package-kafka/blob/master/tools/travis/build.sh">build.sh</a></td>
 </tr>
 <tr align="left">
 <td><a href="https://github.com/apache/openwhisk-runtime-docker">openwhisk-runtime-docker</a></td>
@@ -141,11 +148,32 @@ The following table can be used by Release Managers to check the status of all p
 <td><a href="https://github.com/apache/openwhisk-runtime-docker/blob/master/tools/travis/build.sh">build.sh</a></td>
 </tr>
 <tr align="left">
+<td><a href="https://github.com/apache/openwhisk-runtime-dotnet">openwhisk-runtime-dotnet</a></td>
+<td><a href="https://travis-ci.org/apache/openwhisk-runtime-dotnet/branches"><img src="https://travis-ci.org/apache/openwhisk-runtime-dotnet.svg?branch=master" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-runtime-dotnet/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-runtime-dotnet/blob/master/NOTICE.txt">NOTICE</a></td>
+<td><a href="https://github.com/apache/openwhisk-runtime-dotnet/blob/master/tools/travis/build.sh">build.sh</a></td>
+</tr>
+<tr align="left">
+<td><a href="https://github.com/apache/openwhisk-runtime-go">openwhisk-runtime-go</a></td>
+<td><a href="https://travis-ci.org/apache/openwhisk-runtime-go/branches"><img src="https://travis-ci.org/apache/openwhisk-runtime-go.svg?branch=master" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-runtime-go/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-runtime-go/blob/master/NOTICE.txt">NOTICE</a></td>
+<td><a href="https://github.com/apache/openwhisk-runtime-go/blob/master/tools/travis/build.sh">build.sh</a></td>
+</tr>
+<tr align="left">
 <td><a href="https://github.com/apache/openwhisk-runtime-java">openwhisk-runtime-java</a></td>
 <td><a href="https://travis-ci.org/apache/openwhisk-runtime-java/branches"><img src="https://travis-ci.org/apache/openwhisk-runtime-java.svg?branch=master" alt="" /></a></td>
 <td><a href="https://github.com/apache/openwhisk-runtime-java/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
 <td><a href="https://github.com/apache/openwhisk-runtime-java/blob/master/NOTICE.txt">NOTICE</a></td>
 <td><a href="https://github.com/apache/openwhisk-runtime-java/blob/master/tools/travis/build.sh">build.sh</a></td>
+</tr>
+<tr align="left">
+<td><a href="https://github.com/apache/openwhisk-runtime-nodejs">openwhisk-runtime-nodejs</a></td>
+<td><a href="https://travis-ci.org/apache/openwhisk-runtime-nodejs/branches"><img src="https://travis-ci.org/apache/openwhisk-runtime-nodejs.svg?branch=master" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-runtime-nodejs/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-runtime-nodejs/blob/master/NOTICE.txt">NOTICE</a></td>
+<td><a href="https://github.com/apache/openwhisk-runtime-nodejs/blob/master/tools/travis/build.sh">build.sh</a></td>
 </tr>
 <tr align="left">
 <td><a href="https://github.com/apache/openwhisk-runtime-php">openwhisk-runtime-php</a></td>
@@ -160,6 +188,27 @@ The following table can be used by Release Managers to check the status of all p
 <td><a href="https://github.com/apache/openwhisk-runtime-python/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
 <td><a href="https://github.com/apache/openwhisk-runtime-python/blob/master/NOTICE.txt">NOTICE</a></td>
 <td><a href="https://github.com/apache/openwhisk-runtime-python/blob/master/tools/travis/build.sh">build.sh</a></td>
+</tr>
+<tr align="left">
+<td><a href="https://github.com/apache/openwhisk-runtime-ruby">openwhisk-runtime-ruby</a></td>
+<td><a href="https://travis-ci.org/apache/openwhisk-runtime-ruby/branches"><img src="https://travis-ci.org/apache/openwhisk-runtime-ruby.svg?branch=master" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-runtime-ruby/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-runtime-ruby/blob/master/NOTICE.txt">NOTICE</a></td>
+<td><a href="https://github.com/apache/openwhisk-runtime-ruby/blob/master/tools/travis/build.sh">build.sh</a></td>
+</tr>
+<tr align="left">
+<td><a href="https://github.com/apache/openwhisk-runtime-swift"> openwhisk-runtime-swift</a></td>
+<td align="left"><a href="https://travis-ci.org/apache/openwhisk-runtime-swift/branches"><img src="https://travis-ci.org/apache/openwhisk-runtime-swift.svg?branch=master" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-runtime-swift/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-runtime-swift/blob/master/NOTICE.txt">NOTICE</a></td>
+<td><a href="https://github.com/apache/openwhisk-runtime-swift/blob/master/tools/travis/build.sh">build.sh</a></td>
+</tr>
+<tr align="left">
+<td><a href="https://github.com/apache/openwhisk-wskdeploy">openwhisk-wskdeploy</a></td>
+<td><a href="https://travis-ci.org/apache/openwhisk-wskdeploy/branches"><img src="https://travis-ci.org/apache/openwhisk-wskdeploy.svg?branch=master" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-wskdeploy/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-wskdeploy/blob/master/NOTICE.txt">NOTICE</a></td>
+<td><a href="https://github.com/apache/openwhisk-wskdeploy/blob/master/tools/travis/scancode.sh">scancode.sh</a></td>
 </tr>
 </tbody>
 </table>
