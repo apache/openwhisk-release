@@ -115,15 +115,13 @@ provide historical documentation of project releases.
 
 ### Create Release Candidates
 
-Execute the following scripts in the [../tools](../tools) directory
+Execute the build_release script in the [../tools](../tools) directory
 providing the config.json file as an argument.
-Using ../stagingArea as scratch space, these scripts will clone the
+Using ../stagingArea as scratch space, these script will clone the
 source repositories, package them into compressed tarballs, and create
 the checksum and detached PGP signature files.
 ```
-./download_source_code.sh ../release-configs/<MY_RELEASE_CONFIG>.json
-./package_source_code.sh ../release-configs/<MY_RELEASE_CONFIG>.json
-./sign_artifacts.sh ../release-configs/<MY_RELEASE_CONFIG>.json
+./build_release.sh ../release-configs/<MY_RELEASE_CONFIG>.json
 ```
 
 Next, verify the release by running rcverify.sh locally
