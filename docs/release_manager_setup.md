@@ -48,7 +48,7 @@ avoid accidential commits of generated artifacts.
 The Apache distribution servers are managed by commiting/removing
 files from project-specific directory trees in an svn repository.
 
-You can run the script [tools/clone-dist-svns.sh](../tools/clone-dist-svns.sh)
+You can run the script [tools/checkout_svn.sh](../tools/checkout_svn.sh)
 to create a local checkout of these repositories at the path expected
 by the rest of the scripts.
 
