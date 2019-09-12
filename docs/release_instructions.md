@@ -34,8 +34,8 @@ the steps they are executing.
 ### Licensing requirements
 
 All released source code has to be compliant with Apache Licensing
-Policy, by adding the LICENSE file, NOTICE file to each repository and
-the release package, and adding Licensing headers to each source code
+Policy. In part this is done by adding the LICENSE file and NOTICE file
+to each git repository and by adding Licensing headers to each source code
 file.  Please see [License Compliance](license_compliance.md) for
 detailed information on Apache OpenWhisk project policies, rules and
 guidelines.
@@ -75,7 +75,7 @@ Before creating release artifacts, the Release Manager should initiate a communi
 ### Defining the Release Contents
 
 The contents of a release are defined by a JSON configuration file.
-To create one for your release, make a copy of [config_template.json_](../tools/config_template.json)
+To create one for your release, make a copy of [config_template.json](../tools/config_template.json)
 and edit to provide the version information, list of repositories, and details for each repository.
 After creating your config, commit it to [../release-configs](../release-configs) to
 provide historical documentation of project releases.
@@ -93,20 +93,20 @@ provide historical documentation of project releases.
   "openwhisk_repo_name_one": {
     "name": "Apache OpenWhisk Repo Name",
     "hash": "<GIT COMMIT HASH>",
-    "repository": "https://github.com/apache/openwhisk-<REPO-NAME-TWO>.git",
+    "repository": "https://github.com/apache/openwhisk-<REPO-NAME-ONE>.git",
     "branch": "master"
   },
   "openwhisk_repo_name_two": {
     "name": "Apache OpenWhisk Repo Two",
     "hash": "<GIT COMMIT HASH>",
-    "repository": "https://github.com/apache/openwhisk-<REPO-NAME-ONE>.git",
+    "repository": "https://github.com/apache/openwhisk-<REPO-NAME-TWO>.git",
     "branch": "master"
   }
 }
 ```
   - **versioning**: Defines the release version and the release candidate number.
   - **RepoList**: Defines the list of OpenWhisk repositories being released.
-  - For every repository in RepoList, we name-mangle it to convert `-` into `_` and use the
+  - For every repository in `RepoList`, we name-mangle it to convert `-` into `_` and use the
     mangled name as a key whose value is an object that defines
      - name: User level name of the component
      - hash: git commit hash being released
@@ -115,21 +115,24 @@ provide historical documentation of project releases.
 
 ### Create Release Candidates
 
-Execute the build_release script in the [../tools](../tools) directory
+From the [tools directory](../tools), execute the script
+[build_release.sh](../tools/build_release.sh)
 providing the config.json file as an argument.
-Using ../stagingArea as scratch space, these script will clone the
+Using ../stagingArea as scratch space, this script will clone the
 source repositories, package them into compressed tarballs, and create
 the checksum and detached PGP signature files.
 ```
 ./build_release.sh ../release-configs/<MY_RELEASE_CONFIG>.json
 ```
 
-Next, verify the release by running rcverify.sh locally
+Next, verify the release artifacts by running [local_verify.sh](../tools/local_verify.sh). This
+script will run rcverify.sh against your local artifacts.
 ```
 ./local_verify.sh ../release-configs/<MY_RELEASE_CONFIG>.json
 ```
 
-TODO:  Also run Apache Rat from local_verify.sh.
+TODO:  We should also run Apache Rat as part of local_verify.sh; for now it is
+a recommended best practice to run Apache Rat by hand on each of your .tar.gz files.
 
 If the release candidates pass all checks, commit them to the staging svn:
 ```
@@ -138,7 +141,9 @@ If the release candidates pass all checks, commit them to the staging svn:
 
 ### Initiate a Release Vote
 
-Initiate a release vote on the dev list. Use the tools/gen-release-vote.py script to create the body of the voting email.
+Initiate a release vote on the dev list.
+Use the [gen-release-vote.py](../tools/gen-release-vote.py)
+script to create the body of the voting email.
 
 ### Report Vote Result
 
