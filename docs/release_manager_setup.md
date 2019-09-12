@@ -48,9 +48,9 @@ avoid accidential commits of generated artifacts.
 The Apache distribution servers are managed by commiting/removing
 files from project-specific directory trees in an svn repository.
 
-You can run the script tools/clone-dist-svns.sh to create a local
-checkout of these repositories at the path expected by the rest of the
-scripts.
+You can run the script [tools/checkout_svn.sh](../tools/checkout_svn.sh)
+to create a local checkout of these repositories at the path expected
+by the rest of the scripts.
 
 
 ## Signing Keys 
@@ -71,10 +71,11 @@ Currently ASF recommends using a 4096 bit RSA key to sign releases.
 
 ### Publish your public key to the project KEYS file.
 
-Once you have your PGP key pair, append your public key to our KEYS
-file and commit it to svn. 
+Once you have your PGP key pair, append your public key to our
+[KEYS file](https://dist.apache.org/repos/dist/release/openwhisk/KEYS)
+in your local svn clone and commit the change.
 
-** Our KEYS file is append only. Once a key has been used to sign a release it cannot be removed from the project's KEYS file. **
+**Our KEYS file is append only. Once a key has been used to sign a release it cannot be removed from the KEYS file.**
 
 The commands to export your key (depending on your PGP client) can be found at the very top of the KEYS file,
 and are also replicated below:

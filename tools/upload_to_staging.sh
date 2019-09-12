@@ -18,20 +18,25 @@
 
 set -e
 
-echo "Upload the artifacts."
-
-echo "THIS SCRIPT NEEDS TO BE UPDATED"
-
-exit 1
-
+echo "Upload release candidates to staging."
 
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
-source "$SCRIPTDIR/load_config.sh" $1 $2
+source "$SCRIPTDIR/load_config.sh" $1
 
-cd $OPENWHISK_SVN/$REMOTE_PATH
+cd "$STAGE_SVN_DIR"
 
-svn add --force *
-svn commit -m "Staging Apache OpenWhisk release ${full_version}."
+svn update
 
-# Disconnect $REMOTE_PATH with the remote staging server.
-rm -rf .svn
+if [ ! -d "$pre_release_version" ]; then
+    mkdir "$pre_release_version"
+    svn add --force "$pre_release_version"
+fi
+
+cd "$pre_release_version"
+
+for artifact in `ls "$OPENWHISK_ARTIFACT_DIR"`; do
+    mv "$OPENWHISK_ARTIFACT_DIR"/$artifact $artifact
+    svn add --force $artifact
+done
+
+svn commit -m "Staging Apache OpenWhisk release candidates from $1."

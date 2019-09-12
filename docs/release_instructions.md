@@ -19,146 +19,165 @@
 
 # Instructions for Release Managers
 
-## Step-by-Step instructions for the Release Process
+## Background Information
 
-  1. [Preparing for a release](prepare_release.md) - how to prepare OpenWhisk projects for a release
-  3. [Picking up the source code](pick_up_source_code.md) - determine the branch and hash value for each OpenWhisk project to release
-  4. [Making the release artifacts](package_artifacts.md)
-  5. [Signing the release artifacts](sign_artifacts.md)
-  7. [Publish the release artifacts to the staging directory](push_stage_url.md)
-  8. Vote on the dev@openwhisk.apache.org list
-  9. If the vote fails - configure the file config.json and resume from step 3.  If the vote passes, continue with step 10.
-  10. [Publish the release artifacts to Apache release directory](publish_apache_directory.md)
-  11. [Tag the commit IDs in the Github repository for the project](tag_release.md)
-  12. [Generate the release notes](generate_release_notes.md)
-  13. Announce the release
-  14. Cleanup the artifacts from the release process:
-      a. Remove the rc files from staging.
-      b. If there is a previous released version, remove it from Apache release directory
-         (it will automatically still be available via the Apache archive server).
-
-## Key requirements for producing releases
-
-As a Release Manager, please know that most of these requirements are addressed via the release process automation provided in this project; however, some steps are manual. Regardless of automation, it is good to understand all the key considerations and requirements that a release manager is ultimately responsible for.
+If you are acting as a Release Manager, you should be familiar with
+the Apache Software Foundation's (ASF)
+[Release Creation Process](http://www.apache.org/dev/release-publishing.html) and
+[Release Policy](http://www.apache.org/legal/release-policy.html).
+The detailed instructions and scripts we provide for Release Managers
+are designed to implement the ASF's policies and procedures in the
+specific context of the OpenWhisk project. However, it is still
+essential that each Release Manager understands the rationale underlying
+the steps they are executing.
 
 ### Licensing requirements
 
-All released source code has to be compliant with Apache Licensing Policy, by adding the LICENSE file, NOTICE file to each repository and the release package, and adding Licensing headers to each source code file.
-- Please see [License Compliance](license_compliance.md) for detailed information on Apache OpenWhisk project policies, rules and guidelines.
+All released source code has to be compliant with Apache Licensing
+Policy. In part this is done by adding the LICENSE file and NOTICE file
+to each git repository and by adding Licensing headers to each source code
+file.  Please see [License Compliance](license_compliance.md) for
+detailed information on Apache OpenWhisk project policies, rules and
+guidelines.
 
 ### Artifact requirements
 
-Artifacts for project repository source code and any compiled binaries are packaged separately with each artifact being signed cryptographically.
-
-Source code needs to provide the installation script for users to deploy a full OpenWhisk environment.
-
-### Release distribution requirements
-
-These steps have been **automated** for the Release Manager.
-
-All release artifacts must be uploaded to project’s designated subdirectory in the Apache distribution channel (i.e., [https://dist.apache.org/repos/dist/](https://dist.apache.org/repos/dist/)).
-
-Specifically, the Apache OpenWhisk project has paths to publish both candidate (staged) releases:
-- [https://dist.apache.org/repos/dist/dev/openwhisk/](https://dist.apache.org/repos/dist/dev/openwhisk/)
-
-and the approved release path:
-- [https://dist.apache.org/repos/dist/release/openwhisk/](https://dist.apache.org/repos/dist/release/openwhisk/).
+Artifacts for project repository source code and any compiled binaries
+are packaged separately with each artifact being signed
+cryptographically.
 
 ### Release Approval
 
-These steps are **manual** and must be performed by the Release Manager.
- - Starting the Vote: The Release manager for Apache OpenWhisk sends a release note to the OpenWhisk mailing for votes, and opens the mail for 72 hours. Apache requires a minimum of three positive votes and more positive than negative votes MUST be cast, in order to release.
+All Releases must be formally approved via a PMC vote on the dev list.
+A successful release vote must have a minimum of three positive binding
+votes and more positive than negative binding votes MUST be cast.
 
- - Wait for the Results
+### Release distribution requirements
 
-#### Starting the Vote
+All release artifacts must be uploaded to project’s designated subdirectory in the Apache distribution channel ([https://dist.apache.org/repos/dist/](https://dist.apache.org/repos/dist/)).
 
-Propose a vote on the dev list. Use the tools/gen-release-vote.py script to create the body of the voting email.
+Specifically, the Apache OpenWhisk project has a subdirectory to publish both candidate (staged) releases:
+[https://dist.apache.org/repos/dist/dev/openwhisk/](https://dist.apache.org/repos/dist/dev/openwhisk/)
+and approved releases:
+[https://dist.apache.org/repos/dist/release/openwhisk/](https://dist.apache.org/repos/dist/release/openwhisk/).
 
-#### Wait for the Results
+Release announcements should not directly refer to the main Apache dist server for mirrored artifacts (the sources.tar.gz files). Instead they should refer to the OpenWhisk project download page [https://apache.openwhisk.org/downloads](https://openwhisk.apache.org/downloads) which is configured to redirect download requests to Apache dist mirrors or otherwise incorporate a mirroring enabled URL.
 
-From [Votes on Package Releases](http://www.apache.org/foundation/voting.html):
+# Step-by-Step Instructions for the Release Process
+
+### Preparing to Make a Release
+
+Before creating release artifacts, the Release Manager should initiate a community discussion to confirm that we are ready to release the component(s). It is also good practice to do a quick check of the repositories to confirm they are release-ready to reduce the odds of needing multiple release candidates.
+  1. Start a [DISCUSS] thread on the dev list proposing the release.  Allow at least 24 hours for feedback.
+  2. Make sure all unit and integration tests are passing in the repositories that are being released. Check the [project status list](../README.md#project-status).
+  3. If a component being released includes a changelog or release notes file, make sure they are up-to-date.
+
+### Defining the Release Contents
+
+The contents of a release are defined by a JSON configuration file.
+To create one for your release, make a copy of [config_template.json](../tools/config_template.json)
+and edit to provide the version information, list of repositories, and details for each repository.
+After creating your config, commit it to [../release-configs](../release-configs) to
+provide historical documentation of project releases.
+
 ```
-Votes on whether a package is ready to be released follow a format
-similar to majority approval -- except that the decision is officially
-determined solely by whether at least three +1 votes were
-registered. Releases may not be vetoed. Generally the community will
-table the vote to release if anyone identifies serious problems, but
-in most cases the ultimate decision, once three or more positive votes
-have been garnered, lies with the individual serving as release
-manager. The specifics of the process may vary from project to
-project, but the 'minimum of three +1 votes' rule is universal.
+{
+  "versioning": {
+    "version": "X.Y.Z",
+    "pre_release_version": "rc1"
+  },
+  "RepoList": [
+    "openwhisk-repo-name-one",
+    "openwhisk-repo-name-two"
+  ],
+  "openwhisk_repo_name_one": {
+    "name": "Apache OpenWhisk Repo Name",
+    "hash": "<GIT COMMIT HASH>",
+    "repository": "https://github.com/apache/openwhisk-<REPO-NAME-ONE>.git",
+    "branch": "master"
+  },
+  "openwhisk_repo_name_two": {
+    "name": "Apache OpenWhisk Repo Two",
+    "hash": "<GIT COMMIT HASH>",
+    "repository": "https://github.com/apache/openwhisk-<REPO-NAME-TWO>.git",
+    "branch": "master"
+  }
+}
 ```
+  - **versioning**: Defines the release version and the release candidate number.
+  - **RepoList**: Defines the list of OpenWhisk repositories being released.
+  - For every repository in `RepoList`, we name-mangle it to convert `-` into `_` and use the
+    mangled name as a key whose value is an object that defines
+     - name: User level name of the component
+     - hash: git commit hash being released
+     - repository: URL of the repository
+     - branch: git branch being released
 
-The list of binding voters is available on the Project Team page.
+### Create Release Candidates
 
-If the vote is successful, post the result to the dev list - for example:
+From the [tools directory](../tools), execute the script
+[build_release.sh](../tools/build_release.sh)
+providing the config.json file as an argument.
+Using ../stagingArea as scratch space, this script will clone the
+source repositories, package them into compressed tarballs, and create
+the checksum and detached PGP signature files.
 ```
-To: "OpenWhisk Developers List" <dev@openwhisk.apache.org>
-Subject: [RESULT] [VOTE] Release Apache OpenWhisk {ABC} version {X.Y.Z}
-
-Hi,
-
-The vote has passed with the following result:
-
-+1 (binding): <<list of names>>
-+1 (non binding): <<list of names>>
-```
-
-Be sure to include all votes in the list and indicate which votes were binding. Consider -1 votes very carefully. While there is technically no veto on release votes, there may be reasons for people to vote -1. So sometimes it may be better to cancel a release when someone, especially a member of the PMC, votes -1.
-
-If the vote is unsuccessful, you need to fix the issues and restart the process. Note that any changes to the artifacts under vote require a restart of the process, no matter how trivial. When restarting a vote version numbers must not be reused, since binaries might have already been copied around.
-
-#### Release verification tool
-
-The script [rcverify.sh](../tools/rcverify.sh) is available to automate the process of verifying a release.
-The script will download the release candidate, verify signatures, discalaimer, notice, and license. The tool assumes that are no executable files in the release and will flag any executable that it finds. If the tool discovers an issue during verification, it will try to emit useful information for you to further inspect the findings. The release is left on your disk for you to further inspect and you must delete the scratch space when finished.
-
-Example of how to use `rcverify.sh`:
-```
-rcverify.sh openwhisk-client-js 'OpenWhisk Client Js' 3.20.0 rc2
-```
-
-Example output from `rcverify.sh`:
-```
-working in the following directory:
-/var/folders/8c/zvj0nsxx2rgc_km8nvf8k0c00000gn/T/tmp.S8okDNye
-fetching tarball and signatures from https://dist.apache.org/repos/dist/dev/openwhisk/apache-openwhisk-3.20.0-rc2
-fetching openwhisk-client-js-3.20.0-sources.tar.gz
-fetching openwhisk-client-js-3.20.0-sources.tar.gz.asc
-fetching openwhisk-client-js-3.20.0-sources.tar.gz.sha512
-fetching release keys
-importing keys
-gpg: key 72AF0CC22C4CF320: "Vincent Hou (Release manager of OpenWhisk) <ho...@apache.org>" not changed
-gpg: key 22907064147F886E: "Dave Grove <dg...@apache.org>" not changed
-gpg: key 44667BC927C86D51: "Rodric Rabbah <ra...@apache.org>" not changed
-gpg: key B1457C3D7101CC78: "James Thomas <ja...@apache.org>" not changed
-gpg: Total number processed: 4
-gpg:              unchanged: 4
-unpacking tar ball
-cloning scancode
-Cloning into 'incubator-openwhisk-utilities'...
-remote: Enumerating objects: 55, done.
-remote: Counting objects: 100% (55/55), done.
-remote: Compressing objects: 100% (41/41), done.
-remote: Total 55 (delta 21), reused 29 (delta 11), pack-reused 0
-Unpacking objects: 100% (55/55), done.
-computing sha512 for openwhisk-client-js-3.20.0-sources.tar.gz
-SHA512: openwhisk-client-js-3.20.0-sources.tar.gz:
-5FEF999E 532BD0C1 6C8BC0A1 F5232C93 964A30CF F14B2D82 1C8A2E1D 1106339C E2457918
- C9873B3B 26FB4711 4FBA6F1C 8C8A62A8 3D50592C F9617EA5 54827EBA
-validating sha512... passed
-verifying asc... passed (signed-by: James Thomas <ja...@apache.org>)
-verifing notice... passed
-verifying absence of DISCLAIMER.txt passed
-verifying license... passed
-verifying sources have proper headers... passed
-scanning for executable files... passed
-scanning for non-text files... passed
-scanning for archives... passed
-scanning for packages... passed
+./build_release.sh ../release-configs/<MY_RELEASE_CONFIG>.json
 ```
 
-### Create Release notes
+Next, verify the release artifacts by running [local_verify.sh](../tools/local_verify.sh). This
+script will run rcverify.sh against your local artifacts.
+```
+./local_verify.sh ../release-configs/<MY_RELEASE_CONFIG>.json
+```
 
-An example of the release note can be found at the following link: [example of release note](https://github.com/apache/cordova-coho/blob/master/docs/coho-release-process.md).
+TODO:  We should also run Apache Rat as part of local_verify.sh; for now it is
+a recommended best practice to run Apache Rat by hand on each of your .tar.gz files.
+
+If the release candidates pass all checks, commit them to the staging svn:
+```
+./upload_to_staging.sh ../release-configs/<MY_RELEASE_CONFIG>.json
+```
+
+### Initiate a Release Vote
+
+Initiate a release vote on the dev list.
+Use the [gen-release-vote.py](../tools/gen-release-vote.py)
+script to create the body of the voting email.
+
+### Report Vote Result
+
+When the vote can be closed (at least 72 hours and minimum number of
+binding votes cast), the Release Manager will respond to the voting
+thread modifying the subject to start with `[RESULT][VOTE]...`
+announcing the result of the vote. If the vote has sufficient -1 votes
+cast, the Release Manager may declare that the vote has failed without
+waiting the full 72 hours.
+
+If the vote is successful, the Release Manager proceeds with
+publishing the release and cleaning up as described below.
+
+It the vote is unsuccessful, correct whatever issues were raised and
+restart the process with new candidate releases.  Update your
+`config.json` file by incrementing the `rc` number and changing git
+hashes.
+
+### Publishing a Successful Release
+
+TODO: This portion of the documentation and scripting still needs to be updated.
+
+  10. [Publish the release artifacts to Apache release directory](publish_apache_directory.md)
+      You should receive an email from reporter.apache.org asking you to add your version data
+      to its database shortly after you commit to the dist svn.  Please follow the link and
+      add the information (this is useful for generating board reports).
+  11. [Tag the commit IDs in the Github repository for the project](tag_release.md)
+  12. [Generate the release notes](generate_release_notes.md)
+  13. If appropriate, update dockerhub `latest` tags.
+  14. If appropriate update deploy-kube and docker-compose tag info to pick up new images.
+  15. Submit a PR to update the downloads page.
+
+  20. Announce the release -- must wait until website PR is merged and Jenkins publishes site.
+  30. Cleanup the artifacts from the release process:
+      a. Remove the rc files from staging.
+      b. Remove the previous If there is a previous released version, remove it from Apache release directory
+         (it will automatically still be available via the Apache archive server).

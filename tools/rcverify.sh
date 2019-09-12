@@ -41,6 +41,9 @@ RC=${4:-rc1}
 # set to non-zero to download the artifacts to verify, this is the default
 DL=${DL:-1}
 
+# set to local dir containing artifacts; only used if DL is 0
+# LOCAL_DIR=${LOCAL_DIR:-.}
+
 # set to non-zero to import the release keys, this is the default
 IMPORT=${IMPORT:-1}
 
@@ -68,7 +71,7 @@ echo working in the following directory:
 echo "$(tput setaf 6)$DIR$(tput sgr0)"
 
 if [ $DL -ne 0 ]; then
-  SRC=$RC_DIST/apache-openwhisk-$V-$RC
+  SRC=$RC_DIST/$RC
   echo fetching tarball and signatures from $SRC
 
   echo fetching $TGZ
@@ -79,6 +82,11 @@ if [ $DL -ne 0 ]; then
 
   echo fetching $TGZ.sha512
   curl $SRC/$TGZ.sha512 -s -o "$DIR/$TGZ.sha512"
+else
+  echo copying from $LOCAL_DIR
+  cp "$LOCAL_DIR/$TGZ" "$DIR/$TGZ" || exit 1
+  cp "$LOCAL_DIR/$TGZ.asc" "$DIR/$TGZ.asc" || exit 1
+  cp "$LOCAL_DIR/$TGZ.sha512" "$DIR/$TGZ.sha512" || exit 1
 fi
 
 if [ $IMPORT -ne 0 ]; then

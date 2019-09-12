@@ -1,0 +1,22 @@
+{
+  "versioning": {
+    "version": "X.Y.Z",
+    "pre_release_version": "rc1"
+  },
+  "RepoList": [
+    "openwhisk-repo-name-one",
+    "openwhisk-repo-name-two"
+  ],
+  "openwhisk_repo_name_one": {
+    "name": "Apache OpenWhisk Repo Name",
+    "hash": "<GIT COMMIT HASH>",
+    "repository": "https://github.com/apache/openwhisk-<REPO-NAME-TWO>.git",
+    "branch": "master"
+  },
+  "openwhisk_repo_name_two": {
+    "name": "Apache OpenWhisk Repo Two",
+    "hash": "<GIT COMMIT HASH>",
+    "repository": "https://github.com/apache/openwhisk-<REPO-NAME-ONE>.git",
+    "branch": "master"
+  }
+}

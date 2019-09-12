@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+<!--
 #
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE file distributed with
@@ -15,25 +15,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+-->
 
-echo "Generate the report regarding the source code headers."
+## Release verification tools
 
-SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
-source "$SCRIPTDIR/load_config.sh"
-PARENTDIR="$(dirname "$SCRIPTDIR")"
+The script [rcverify.sh](../tools/rcverify.sh) is available to automate the process of verifying a release.
 
-# run Apache rat to check headers
-cd $OPENWHISK_SOURCE_DIR
-cp $SCRIPTDIR/lib/pom.xml ./
-# Comment out the rat check, since it has been applied in the release process
-mvn clean apache-rat:check
+The script will download the release candidate, verify signatures, notice, and license. The tool assumes that are no executable files in the release and will flag any executable that it finds. If the tool discovers an issue during verification, it will try to emit useful information for you to further inspect the findings. The release is left on your disk for you to further inspect and you must delete the scratch space when finished.
 
-echo "Check the existence of LICENSE and NOTICE."
+Example of how to use `rcverify.sh`:
+```
+rcverify.sh openwhisk-client-js 'OpenWhisk Client Js' 3.20.0 rc2
 
-for repo in $(echo $repos | sed "s/,/ /g")
-do
-    repo_name=$(echo "$repo" | sed -e 's/^"//' -e 's/"$//')
-    project_name="$repo_name"
-    echo "Check the repository $project_name"
-    cd $OPENWHISK_SOURCE_DIR/$project_name && ls {LICENSE*,NOTICE*}
-done
+TODO: put updated script output here
+```

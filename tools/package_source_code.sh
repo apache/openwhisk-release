@@ -21,15 +21,17 @@ set -e
 echo "Package the artifacts."
 
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
-source "$SCRIPTDIR/load_config.sh" $1 $2 $3
+source "$SCRIPTDIR/load_config.sh" $1
 
 mkdir -p $OPENWHISK_ARTIFACT_DIR
+rm -rf $OPENWHISK_ARTIFACT_DIR/*
 
-# Clean up all the source code by excluding unnecessary files and folders
-# Remove all the hidden files and folder
-# Remove bin and build folders
 mkdir -p $OPENWHISK_CLEANED_SOURCE_DIR
 rm -rf $OPENWHISK_CLEANED_SOURCE_DIR/*
+
+# Clean up all the source code by excluding unnecessary files and folders
+# Remove hidden files and folder
+# Remove bin and build folders
 rsync -rtp --exclude gradle/wrapper/gradle-\*.jar --exclude .bin --exclude .jshintrc --exclude .pydevproject --exclude .rat-excludes --exclude .git\* --exclude .travis.yml --exclude credentials.json.enc --exclude build --exclude specification/archive --exclude specification/diagrams $OPENWHISK_SOURCE_DIR/. $OPENWHISK_CLEANED_SOURCE_DIR
 
 for repo in $(echo $repos | sed "s/,/ /g")
