@@ -75,7 +75,7 @@ Once you have your PGP key pair, append your public key to our
 [KEYS file](https://dist.apache.org/repos/dist/release/openwhisk/KEYS)
 in your local svn clone and commit the change.
 
-*Our KEYS file is append only. Once a key has been used to sign a release it cannot be removed from the project's KEYS file.*
+**Our KEYS file is append only. Once a key has been used to sign a release it cannot be removed from the KEYS file.**
 
 The commands to export your key (depending on your PGP client) can be found at the very top of the KEYS file,
 and are also replicated below:
