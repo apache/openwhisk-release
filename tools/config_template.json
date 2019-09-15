@@ -8,15 +8,15 @@
     "openwhisk-repo-name-two"
   ],
   "openwhisk_repo_name_one": {
-    "name": "Apache OpenWhisk Repo Name",
+    "name": "OpenWhisk Project One",
     "hash": "<GIT COMMIT HASH>",
-    "repository": "https://github.com/apache/openwhisk-<REPO-NAME-TWO>.git",
+    "repository": "https://github.com/apache/openwhisk-<REPO-NAME-ONE>.git",
     "branch": "master"
   },
   "openwhisk_repo_name_two": {
-    "name": "Apache OpenWhisk Repo Two",
+    "name": "OpenWhisk Project Two",
     "hash": "<GIT COMMIT HASH>",
-    "repository": "https://github.com/apache/openwhisk-<REPO-NAME-ONE>.git",
+    "repository": "https://github.com/apache/openwhisk-<REPO-NAME-TWO>.git",
     "branch": "master"
   }
 }
