@@ -171,11 +171,11 @@ SC=$(eval $CMD >& /dev/null)
 validate $? 0 "$CMD"
 
 printf "scanning for executable files..."
-EXE=$(find "$DIR/$BASE" -type f ! -name "*.sh" ! -name "*.sh" ! -name "*.py" ! -name "*.php" ! -name "gradlew" ! -name "gradlew.bat" ! -path "*/bin/*" -perm -001)
+EXE=$(find "$DIR/$BASE" -type f ! -name "*.sh" ! -name "*.sh" ! -name "*.py" ! -name "*.php" ! -name "gradlew" ! -name "gradlew.bat" ! -name "exec" ! -path "*/bin/*" -perm -001)
 validate "$EXE" "" "$EXE"
 
-printf "scanning for non-text files..."
-EXE=$(find "$DIR/$BASE" -type f -exec file --mime {} \; | grep -v ": text/")
+printf "scanning for unexpected file types..."
+EXE=$(find "$DIR/$BASE" -type f -exec file --mime {} \; | grep -v ": text/" | grep -v ": inode/x-empty" | grep -v ": image/")
 validate "$EXE" "" "$EXE"
 
 printf "scanning for archives..."
