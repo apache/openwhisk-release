@@ -91,13 +91,13 @@ provide historical documentation of project releases.
     "openwhisk-repo-name-two"
   ],
   "openwhisk_repo_name_one": {
-    "name": "Apache OpenWhisk Repo Name",
+    "name": "OpenWhisk Repo Name",
     "hash": "<GIT COMMIT HASH>",
     "repository": "https://github.com/apache/openwhisk-<REPO-NAME-ONE>.git",
     "branch": "master"
   },
   "openwhisk_repo_name_two": {
-    "name": "Apache OpenWhisk Repo Two",
+    "name": "OpenWhisk Repo Two",
     "hash": "<GIT COMMIT HASH>",
     "repository": "https://github.com/apache/openwhisk-<REPO-NAME-TWO>.git",
     "branch": "master"
