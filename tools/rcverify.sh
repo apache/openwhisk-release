@@ -140,7 +140,7 @@ else
 fi
 validate $RES 0 "$CMD" "signed-by: $SIGNER"
 
-printf "verifing notice..."
+printf "verifying notice..."
 NTXT=$(cat "$DIR/$BASE/NOTICE.txt")
 validate "$NOTICE" "$NTXT" "cat '$DIR/$BASE/NOTICE.txt'"
 
