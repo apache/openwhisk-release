@@ -1,4 +1,4 @@
-<!--
+#!/usr/bin/env bash
 #
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE file distributed with
@@ -15,16 +15,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
--->
 
-# Publish the release artifacts to the staging directory
+set -e
 
-After the artifacts are generated and signed, you can run the following script under the folder _tools_, to upload them
-into the staging directory:
+echo "Performing svn add in dist for each artifact in $pre_release_version."
 
-```
-$ ./upload_artifacts.sh
-```
+SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
+source "$SCRIPTDIR/load_config.sh" $1
 
-This script will create a remote directory named openwhisk-\<version\>-\<pre_release_version\> under the staging directory, and push all the files available locally under openwhisk-\<version\>-\<pre_release_version\>
-upstream. It will overwrite the old files or directories, if the directory openwhisk-\<version\>-\<pre_release_version\> is available as a svn folder.
+cd "$STAGE_SVN_DIR"
+svn update
+
+cd "$RELEASE_SVN_DIR"
+svn update
+
+cd "$RELEASE_SVN_DIR"
+
+for artifact in `ls "$STAGE_SVN_DIR/$pre_release_version"`; do
+    cp "$STAGE_SVN_DIR/$pre_release_version/$artifact" $artifact
+    svn add $artifact
+done
