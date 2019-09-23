@@ -235,8 +235,7 @@ dockerhub using the whiskbot dockerhub id, and update the `latest`
 tag to point to the new images.
 
 If you have published new images to dockerhub, submit PRs to
-openwhisk-deploy-kube and openwhisk-devtools (docker-compose)
-to use the new images.
+[openwhisk-deploy-kube](https://github.com/apache/openwhisk-deploy-kube) and [openwhisk-devtools (docker-compose)](https://github.com/apache/openwhisk-devtools) to use the new images.
 
 ### Homebrew
 
