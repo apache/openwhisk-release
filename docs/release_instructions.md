@@ -169,7 +169,7 @@ being released to the openwhisk subdir of the Apache dist svn.
 
 The [`upload_to_dist.sh`](../tools/upload_to_dist.sh) script automates the copy & svn add operations, but it
 assumes that every file found in the release candidate subdir should be released.
-If this is not true (eg multiple parallel release votes), then the upload
+If this is not true (e.g., multiple parallel release votes), then the upload
 must be performed manually.
 ```
 ./upload_to_dist.sh ../release-configs/<MY_RELEASE_CONFIG>.json
