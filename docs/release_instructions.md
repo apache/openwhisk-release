@@ -167,7 +167,7 @@ hashes.
 After a successful vote, the release manager will commit the artifacts
 being released to the openwhisk subdir of the Apache dist svn.
 
-The upload_to_dist.sh script automates the copy & svn add operations, but it
+The [`upload_to_dist.sh`](../tools/upload_to_dist.sh) script automates the copy & svn add operations, but it
 assumes that every file found in the release candidate subdir should be released.
 If this is not true (eg multiple parallel release votes), then the upload
 must be performed manually.
