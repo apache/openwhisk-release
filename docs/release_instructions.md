@@ -162,22 +162,110 @@ restart the process with new candidate releases.  Update your
 `config.json` file by incrementing the `rc` number and changing git
 hashes.
 
-### Publishing a Successful Release
+### Publishing a Successful Release to Apache Dist Servers
 
-TODO: This portion of the documentation and scripting still needs to be updated.
+After a successful vote, the release manager will commit the artifacts
+being released to the `openwhisk` subdir of the Apache dist svn.
 
-  10. [Publish the release artifacts to Apache release directory](publish_apache_directory.md)
-      You should receive an email from reporter.apache.org asking you to add your version data
-      to its database shortly after you commit to the dist svn.  Please follow the link and
-      add the information (this is useful for generating board reports).
-  11. [Tag the commit IDs in the Github repository for the project](tag_release.md)
-  12. [Generate the release notes](generate_release_notes.md)
-  13. If appropriate, update dockerhub `latest` tags.
-  14. If appropriate update deploy-kube and docker-compose tag info to pick up new images.
-  15. Submit a PR to update the downloads page.
+The [`upload_to_dist.sh`](../tools/upload_to_dist.sh) script automates the copy & svn add operations, but it
+assumes that every file found in the release candidate subdir should be released.
+If this is not true (e.g., multiple parallel release votes), then the upload
+must be performed manually.
+```
+./upload_to_dist.sh ../release-configs/<MY_RELEASE_CONFIG>.json
+```
 
-  20. Announce the release -- must wait until website PR is merged and Jenkins publishes site.
-  30. Cleanup the artifacts from the release process:
-      a. Remove the rc files from staging.
-      b. Remove the previous If there is a previous released version, remove it from Apache release directory
-         (it will automatically still be available via the Apache archive server).
+Assuming the expected set of files were added, commit them:
+```
+cd ../stagingArea/svn_release && svn commit -m  "Apache OpenWhisk X.Y.Z release of <Component Description>"
+```
+
+Relatively soon after doing the svn commit, you should receive an email like
+the one shown below from reporter.apache.org asking you to add release data
+to its database information.
+```
+Hi,
+This is an automated email from reporter.apache.org.
+I see that you just pushed something to our release repository for the 'openwhisk' project
+in the following commit:
+
+r35971 at 2019-09-23 16:07:53 +0000 (Mon, 23 Sep 2019)
+Apache OpenWhisk CLI Group v1.0.0
+
+If you are a PMC member of this project, we ask that you log on to:
+<URL ELIDED>
+and add your release data (version and date) to the database.
+
+...elided rest of email...
+```
+Please follow the link and perform the update; this information is
+quite useful for drafting our periodic reports to the ASF Board.
+
+### Tag GitHub repos
+
+Each GitHub repository needs to be tagged.  Unfortunately, the naming conventions for
+tagging vary across the OpenWhisk project repositories and therefore we have not
+yet attempted to automate this step.
+
+For each released repository, the Release Manager should examine the existing set of
+tags (`git tag`) and then add a new tag following the same convention using the
+git commit hash from <MY_RELEASE_CONFIG>.json.  After tagging a repo, push the tag.
+
+Many of the GitHub repositories are configured to build binary artifacts in response
+to new tags being committed.  Monitor the build process and ensure that all expected
+artifacts are created for each tag you commit.
+
+There are some slightly outdated, but much more detailed comments
+on [release tagging](tag_release.md) available if you need a reminder
+of the git commands to use.
+
+### Create GitHub releases
+
+After pushing the tags, you should go to the GitHub Releases for
+each released project and "Draft a new release" using the tag you just
+pushed. If the project contains a CHANGELOG or RELEASENOTES, copy that
+information into the release description.
+
+### Dockerhub updates
+
+If the components you released build docker images, then you should
+build the docker images locally, tag them with the release version
+(following the naming scheme for the repo), push the new images to
+dockerhub using the whiskbot dockerhub id, and update the `latest`
+tag to point to the new images.
+
+If you have published new images to dockerhub, submit PRs to
+[openwhisk-deploy-kube](https://github.com/apache/openwhisk-deploy-kube) and [openwhisk-devtools (docker-compose)](https://github.com/apache/openwhisk-devtools) to use the new images.
+
+### Homebrew
+
+If you released a new version of openwhisk-cli, then submit a PR
+to Homebrew to publish the new cli version.
+
+### Update Downloads Page
+
+Submit a PR to [openwhisk-website](https://github.com/apache/openwhisk-website) to update the Downloads page to
+refer to the newly released versions.
+
+### Announcing the Release
+
+For all normal releases you should wait at least 24 hours before
+announcing the release to allow time for Apache Dist mirrors to
+be updated with the newly released artifacts.  You must also wait
+until the PR to update the website has been merged and the
+change appears on the website (successful Jenkins job to rebuild website).
+
+When announcing a release, you must use the URL of the OpenWhisk Downloads
+page (or some other URL that supports mirroring).  Do not include a direct
+link to the dist.apache.org svn server.
+
+Releases should always be announced to dev@openwhisk.apache.org.
+Releases can optionally be announced to announce@apache.org at the discretion
+of the release manager.
+
+### Post-release cleanup
+
+1. Remove the release candidate files from the staging svn.
+2. If there is a prior release, remove it from the release svn
+(all releases are automatically archived, removing an old release
+from dist does not remove it from the archive).
