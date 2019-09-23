@@ -140,7 +140,7 @@ else
 fi
 validate $RES 0 "$CMD" "signed-by: $SIGNER"
 
-printf "verifing notice..."
+printf "verifying notice..."
 NTXT=$(cat "$DIR/$BASE/NOTICE.txt")
 validate "$NOTICE" "$NTXT" "cat '$DIR/$BASE/NOTICE.txt'"
 
@@ -175,7 +175,7 @@ EXE=$(find "$DIR/$BASE" -type f ! -name "*.sh" ! -name "*.sh" ! -name "*.py" ! -
 validate "$EXE" "" "$EXE"
 
 printf "scanning for unexpected file types..."
-EXE=$(find "$DIR/$BASE" -type f -exec file --mime {} \; | grep -v ": text/" | grep -v ": inode/x-empty" | grep -v ": image/")
+EXE=$(find "$DIR/$BASE" -type f -and -not -empty -exec file --mime {} \; | grep -v ": text/" | grep -v ": image/")
 validate "$EXE" "" "$EXE"
 
 printf "scanning for archives..."
