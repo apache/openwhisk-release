@@ -229,7 +229,7 @@ to Homebrew to publish the new cli version.
 
 ### Update Downloads Page
 
-Submit a PR to openwhisk-website to update the Downloads page to
+Submit a PR to [openwhisk-website](https://github.com/apache/openwhisk-website) to update the Downloads page to
 refer to the newly released versions.
 
 ### Announcing the Release
