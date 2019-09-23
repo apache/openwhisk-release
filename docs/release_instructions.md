@@ -250,7 +250,7 @@ of the release manager.
 
 ### Post-release cleanup
 
-1. Remove the release candidate files from the staging svn
+1. Remove the release candidate files from the staging svn.
 2. If there is a prior release, remove it from the release svn
 (all releases are automatically archived, removing an old release
 from dist does not remove it from the archive).
