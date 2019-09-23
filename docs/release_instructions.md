@@ -180,10 +180,26 @@ Assuming the expected set of files were added, commit them:
 cd ../stagingArea/svn_release && svn commit -m  "Apache OpenWhisk X.Y.Z release of <Component Description>"
 ```
 
-Relatively soon after doing the svn commit, you should receive an email from
-from reporter.apache.org asking you to add your version data
-to its database.  Please follow the link and add the information
-(the data is used to generate periodic reports to the ASF Board).
+Relatively soon after doing the svn commit, you should receive an email like
+the one shown below from reporter.apache.org asking you to add release data
+to its database information.
+```
+Hi,
+This is an automated email from reporter.apache.org.
+I see that you just pushed something to our release repository for the 'openwhisk' project
+in the following commit:
+
+r35971 at 2019-09-23 16:07:53 +0000 (Mon, 23 Sep 2019)
+Apache OpenWhisk CLI Group v1.0.0
+
+If you are a PMC member of this project, we ask that you log on to:
+<URL ELIDED>
+and add your release data (version and date) to the database.
+
+...elided rest of email...
+```
+Please follow the link and perform the update; this information is
+quite useful for drafting our periodic reports to the ASF Board.
 
 ### Tag GitHub repos
 
