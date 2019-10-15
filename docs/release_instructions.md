@@ -237,6 +237,14 @@ tag to point to the new images.
 If you have published new images to dockerhub, submit PRs to
 [openwhisk-deploy-kube](https://github.com/apache/openwhisk-deploy-kube) and [openwhisk-devtools (docker-compose)](https://github.com/apache/openwhisk-devtools) to use the new images.
 
+### Publishing to npm
+
+The openwhisk-client-js and openwhisk-composer project release npm
+packages built from each source release.  The Release Manager should
+build and publish these packages manually using the openwhisk-bot
+credentials found in the npmjs.txt file in the accounts subdir of the
+PMC private svn.
+
 ### Homebrew
 
 If you released a new version of openwhisk-cli, then submit a PR
