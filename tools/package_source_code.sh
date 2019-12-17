@@ -32,7 +32,7 @@ rm -rf $OPENWHISK_CLEANED_SOURCE_DIR/*
 # Clean up all the source code by excluding unnecessary files and folders
 # Remove hidden files and folder
 # Remove bin and build folders
-rsync -rtp --exclude gradle/wrapper/gradle-\*.jar --exclude .bin --exclude .jshintrc --exclude .pydevproject --exclude .rat-excludes --exclude .git\* --exclude .travis.yml --exclude credentials.json.enc --exclude build --exclude specification/archive --exclude specification/diagrams --exclude tests/src/integration $OPENWHISK_SOURCE_DIR/. $OPENWHISK_CLEANED_SOURCE_DIR
+rsync -rtp --exclude gradle/wrapper/gradle-\*.jar --exclude .bin --exclude .jshintrc --exclude .pydevproject --exclude .rat-excludes --exclude .git\* --exclude .travis.yml --exclude credentials.json.enc --exclude build --exclude specification/archive --exclude specification/diagrams --exclude "*.odg" --exclude tests/src/integration $OPENWHISK_SOURCE_DIR/. $OPENWHISK_CLEANED_SOURCE_DIR
 
 for repo in $(echo $repos | sed "s/,/ /g")
 do
