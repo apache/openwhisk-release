@@ -175,8 +175,13 @@ EXE=$(find "$DIR/$BASE" -type f ! -name "*.sh" ! -name "*.sh" ! -name "*.py" ! -
 validate "$EXE" "" "$EXE"
 
 printf "scanning for unexpected file types..."
-EXE=$(find "$DIR/$BASE" -type f -and -not -empty -exec file --mime {} \; | grep -v ": text/" | grep -v ": image/")
+EXE=$(find "$DIR/$BASE" -type f -and -not -empty -exec file --mime {} \; | grep -v ": text/" | grep -v ": image/" | grep -v ": application/json")
 validate "$EXE" "" "$EXE"
+echo
+echo
+echo $EXE
+echo
+echo
 
 printf "scanning for archives..."
 EXE=$(find "$DIR/$BASE" -type f -name "*.tar" -name "*.tgz" -o -name "*.gz" -o -name ".zip" -o -name "*.jar")
