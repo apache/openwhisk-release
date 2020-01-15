@@ -71,6 +71,7 @@ Before creating release artifacts, the Release Manager should initiate a communi
   1. Start a [DISCUSS] thread on the dev list proposing the release.  Allow at least 24 hours for feedback.
   2. Make sure all unit and integration tests are passing in the repositories that are being released. Check the [project status list](../README.md#project-status).
   3. If a component being released includes a changelog or release notes file, make sure they are up-to-date.
+  4. If you are releasing either the `openwhisk` or `openwhisk-deploy-kube` repositories create a release branch in the Apache git repo.  Then submit a PR to that release branch to change all uses of the `nightly` tag to fixed tags (eg `1.14.0` or `8eb922f`).
 
 ### Defining the Release Contents
 
@@ -111,7 +112,7 @@ provide historical documentation of project releases.
      - name: User level name of the component
      - hash: git commit hash being released
      - repository: URL of the repository
-     - branch: git branch being released
+     - branch: git branch being released (`master` or a release branch name)
 
 ### Create Release Candidates
 
