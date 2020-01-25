@@ -238,6 +238,29 @@ tag to point to the new images.
 If you have published new images to dockerhub, submit PRs to
 [openwhisk-deploy-kube](https://github.com/apache/openwhisk-deploy-kube) and [openwhisk-devtools (docker-compose)](https://github.com/apache/openwhisk-devtools) to use the new images.
 
+### Rippling changes for openwhisk-runtime-* releases
+
+If you are releasing a new version of an openwhisk-runtime, then
+once the updated images are available on dockerhub you should submit
+a PR to openwhisk-deploy-kube to update the docker imageTags in
+that project's `helm/openwhisk/runtimes.json`.
+
+If you released a new version of openwhisk-runtime-go, then you need
+to update tag information in the Dockerfiles of all actionloop based
+action runtimes.  To support reproducible builds, we always use a
+fixed-tag (and almost always a release tag) when pulling code
+from openwhisk-runtime-go into other runtime projects to build the
+actionloop go proxy.
+The current list of actionloop based Dockerfiles is:
++ openwhisk-runtime-java/core/java8actionloop/Dockerfile
++ openwhisk-runtime-php/core/php7.4Action/Dockerfile
++ openwhisk-runtime-php/core/php7.3Action/Dockerfile
++ openwhisk-runtime-python/core/pythonActionLoop/Dockerfile
++ openwhisk-runtime-ruby/core/ruby2.6ActionLoop/Dockerfile
++ openwhisk-runtime-rust/rust1.34/Dockerfile
++ openwhisk-runtime-swift/core/swift42Action/Dockerfile
++ openwhisk-runtime-swift/core/swift51Action/Dockerfile
+
 ### Publishing to npm
 
 The openwhisk-client-js and openwhisk-composer project release npm
