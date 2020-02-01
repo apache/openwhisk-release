@@ -18,10 +18,27 @@
 
 set -e
 
-echo "Upload release candidates to staging."
-
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
+SCRIPTNAME=$(basename "$0")
+
+if [ $# -lt 1 ]; then
+  echo "Usage: $SCRIPTNAME <config-file>"
+  exit -1
+fi
+
+if [ ! -f "$1" ]; then
+  echo "Error: config file '$1' does not exist"
+  exit -1
+fi
+
+echo "Upload release candidates to staging."
 source "$SCRIPTDIR/load_config.sh" $1
+
+if [ ! -d "$STAGE_SVN_DIR" ]; then
+    echo "Error: svn staging directory '$STAGE_SVN_DIR' not found."
+    echo "       Try running '$SCRIPTDIR/checkout_svn.sh' to setup your svn."
+    exit -1
+fi
 
 cd "$STAGE_SVN_DIR"
 
