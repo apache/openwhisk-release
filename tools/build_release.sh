@@ -19,6 +19,17 @@
 set -e
 
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
+SCRIPTNAME=$(basename "$0")
+
+if [ $# -lt 1 ]; then
+  echo "Usage: $SCRIPTNAME <config-file>"
+  exit -1
+fi
+
+if [ ! -f "$1" ]; then
+  echo "Error: config file '$1' does not exist"
+  exit -1
+fi
 
 "$SCRIPTDIR"/download_source_code.sh $@
 "$SCRIPTDIR"/package_source_code.sh $@
