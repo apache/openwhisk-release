@@ -48,10 +48,7 @@ def parseArgsAndConfig():
     args = parser.parse_args()
 
     args.rcConfig = json.load(args.rc_conf)
-    if not args.dryrun:
-      if 'mail_conf' not in args:
-        parser.error("--mail-config required except for a dryrun.")
-
+    if not args.dryrun and 'mail_conf' in args and args.mail_conf is not None:
       args.mailConfig = yaml.load(args.mail_conf, Loader=yaml.FullLoader)
       if 'mail' not in args.mailConfig:
         print('Error: bad configuration, need "mail" properties.')
@@ -59,7 +56,7 @@ def parseArgsAndConfig():
       else:
         args.mailConfig = args.mailConfig['mail']
     else:
-        args.mailConfig = None
+      args.mailConfig = None
     return args
 
 def componentList(config, version):
@@ -152,7 +149,7 @@ This majority vote is open for at least 72 hours.
         rcverifies = rcverify(components, version),
         signature = ("\n%s" % signature) if signature else "")
 
-    if (dryrun):
+    if (dryrun or mailConfig is None):
       print(subject)
       print(content)
       return
