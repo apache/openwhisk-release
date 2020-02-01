@@ -145,6 +145,9 @@ If the release candidates pass all checks, commit them to the staging svn:
 Initiate a release vote on the dev list.
 Use the [gen-release-vote.py](../tools/gen-release-vote.py)
 script to create the body of the voting email.
+```
+./gen-release-vote.py ../release-configs/<MY_RELEASE_CONFIG>.json
+```
 
 ### Report Vote Result
 
