@@ -52,7 +52,7 @@ def parseArgsAndConfig():
       if 'mail_conf' not in args:
         parser.error("--mail-config required except for a dryrun.")
 
-      args.mailConfig = yaml.load(args.mail_conf)
+      args.mailConfig = yaml.load(args.mail_conf, Loader=yaml.FullLoader)
       if 'mail' not in args.mailConfig:
         print('Error: bad configuration, need "mail" properties.')
         return
