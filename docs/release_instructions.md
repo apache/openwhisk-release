@@ -145,6 +145,17 @@ If the release candidates pass all checks, commit them to the staging svn:
 Initiate a release vote on the dev list.
 Use the [gen-release-vote.py](../tools/gen-release-vote.py)
 script to create the body of the voting email.
+```
+./gen-release-vote.py ../release-configs/<MY_RELEASE_CONFIG>.json
+```
+
+This script accepts a [mailer configuration file](https://github.com/apache/openwhisk-release/blob/master/tools/mail-config-template.yaml) which you can use
+to also send the vote email directly to the mailing list. _You should dry run this command with `-n` to sanity check the vote notice before it is sent._
+
+```
+./gen-release-vote.py ../release-configs/<MY_RELEASE_CONFIG>.json -mc <MY_MAILER_CONFIG>.yaml
+```
+
 
 ### Report Vote Result
 

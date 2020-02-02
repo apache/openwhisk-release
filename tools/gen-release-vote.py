@@ -38,9 +38,9 @@ def parseArgsAndConfig():
     parser.add_argument('-v', '--verbose', help='verbose output', action='store_true')
     parser.add_argument('-n', '--dryrun', help='verbose output', action='store_true')
     parser.add_argument('-mc', '--mail-conf', help='YAML configuration file for mailer', metavar='YAML', type=argparse.FileType('r'), required=False)
-    parser.add_argument('-rc', '--rc-conf', help='JSON configuration file for release candidate', metavar='JSON', type=argparse.FileType('r'), required=True)
     parser.add_argument('-s', '--subject', help='Component name for subject line', metavar='NAME')
     parser.add_argument('-i', '--signature', help='Signature line to conclude email', metavar='SIGNATURE')
+    parser.add_argument('rc-conf', help='JSON configuration file for release candidate', metavar='release-config-file', type=argparse.FileType('r'))
 
     if argcomplete:
         argcomplete.autocomplete(parser)
@@ -48,18 +48,15 @@ def parseArgsAndConfig():
     args = parser.parse_args()
 
     args.rcConfig = json.load(args.rc_conf)
-    if not args.dryrun:
-      if 'mail_conf' not in args:
-        parser.error("--mail-config required except for a dryrun.")
-
-      args.mailConfig = yaml.load(args.mail_conf)
+    if not args.dryrun and 'mail_conf' in args and args.mail_conf is not None:
+      args.mailConfig = yaml.load(args.mail_conf, Loader=yaml.FullLoader)
       if 'mail' not in args.mailConfig:
         print('Error: bad configuration, need "mail" properties.')
         return
       else:
         args.mailConfig = args.mailConfig['mail']
     else:
-        args.mailConfig = None
+      args.mailConfig = None
     return args
 
 def componentList(config, version):
@@ -152,7 +149,7 @@ This majority vote is open for at least 72 hours.
         rcverifies = rcverify(components, version),
         signature = ("\n%s" % signature) if signature else "")
 
-    if (dryrun):
+    if (dryrun or mailConfig is None):
       print(subject)
       print(content)
       return
