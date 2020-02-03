@@ -22,7 +22,7 @@ SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
 SCRIPTNAME=$(basename "$0")
 
 if [ $# -lt 1 ]; then
-  echo "Usage: $SCRIPTNAME <config-file>"
+  echo "Usage: $SCRIPTNAME <config-file> [gpg-key-id]"
   exit -1
 fi
 
@@ -31,6 +31,6 @@ if [ ! -f "$1" ]; then
   exit -1
 fi
 
-"$SCRIPTDIR"/download_source_code.sh $@
-"$SCRIPTDIR"/package_source_code.sh $@
-"$SCRIPTDIR"/sign_artifacts.sh $@
+"$SCRIPTDIR"/download_source_code.sh $1
+"$SCRIPTDIR"/package_source_code.sh $1
+"$SCRIPTDIR"/sign_artifacts.sh $1 $2

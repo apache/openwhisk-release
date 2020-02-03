@@ -123,8 +123,11 @@ Using ../stagingArea as scratch space, this script will clone the
 source repositories, package them into compressed tarballs, and create
 the checksum and detached PGP signature files.
 ```
-./build_release.sh ../release-configs/<MY_RELEASE_CONFIG>.json
+./build_release.sh ../release-configs/<MY_RELEASE_CONFIG>.json [<MY_APACHE_GPG_KEY_ID>]
 ```
+
+*Note:* `build_release.sh` uses your system default GPG key to sign the release. To use an alternate key,
+specify the _key id_ as a second argument. Omit this value to use the default key.
 
 Next, verify the release artifacts by running [local_verify.sh](../tools/local_verify.sh). This
 script will run rcverify.sh against your local artifacts.

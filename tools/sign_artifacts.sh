@@ -23,6 +23,11 @@ echo "Sign the artifacts with PGP."
 SCRIPTDIR="$(cd $(dirname "$0")/ && pwd)"
 source "$SCRIPTDIR/load_config.sh" "$1"
 
+if [ $# -eq 2 ]; then
+  echo "Using key id $2 to sign release."
+  PGP_SIGNING_KEY_ID="--default-key $2"
+fi
+
 # Sign all the artifacts with the PGP key.
 export GPG_TTY=$(tty)
 sysOS=`uname -s`
@@ -36,7 +41,7 @@ echo "Sign the artifacts with the private key."
 for artifact in *.tar.gz *.zip *.tgz; do
     if [ "${artifact}" != "*.tar.gz" ] && [ "${artifact}" != "*.zip" ] && [ "${artifact}" != "*.tgz" ] ; then
         gpg --print-md SHA512 ${artifact} > ${artifact}.sha512
-        gpg --yes --armor --output ${artifact}.asc --detach-sig ${artifact}
+        gpg --yes --armor $PGP_SIGNING_KEY_ID --output ${artifact}.asc --detach-sig ${artifact}
     fi
 done
 
