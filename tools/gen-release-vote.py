@@ -40,7 +40,7 @@ def parseArgsAndConfig():
     parser.add_argument('-mc', '--mail-conf', help='YAML configuration file for mailer', metavar='YAML', type=argparse.FileType('r'), required=False)
     parser.add_argument('-s', '--subject', help='Component name for subject line', metavar='NAME')
     parser.add_argument('-i', '--signature', help='Signature line to conclude email', metavar='SIGNATURE')
-    parser.add_argument('rc-conf', help='JSON configuration file for release candidate', metavar='release-config-file', type=argparse.FileType('r'))
+    parser.add_argument('rc_conf', help='JSON configuration file for release candidate', metavar='release-config-file', type=argparse.FileType('r'))
 
     if argcomplete:
         argcomplete.autocomplete(parser)
