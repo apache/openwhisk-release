@@ -206,10 +206,10 @@ printf "scanning for packages..."
 EXE=$(find "$DIR/$BASE" -type d -name "node_modules" -o -name ".gradle")
 validate "$EXE" "" "$EXE"
 
-printf "scanning package.json for version mismatch..."
+printf "scanning package.json for version match..."
 packageJsonCheckVersion "$DIR/$BASE/package.json" $V
 
-printf "scanning package-lock.json for version mismatch..."
+printf "scanning package-lock.json for version match..."
 packageJsonCheckVersion "$DIR/$BASE/package-lock.json" $V
 
 echo $(tput setaf 6)
