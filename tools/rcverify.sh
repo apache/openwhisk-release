@@ -115,6 +115,26 @@ function validate() {
   fi
 }
 
+## checks if the rc has a pakage.json file containing a version field matching the rc
+## the first parameter is a path to the file to check e.g., package.json or package-lock.json
+## the second parameter is the version to confirm
+function packageJsonCheckVersion() {
+    PJSON=$1
+    EXPECTED_VERSION=$2
+
+    if [ -f "$PJSON" ]; then
+        JQ=$(command -v jq)
+        if [ "$JQ" != "" ]; then
+            PKG_VERSION=$(cat "$PJSON" | $JQ -r .version)
+            validate "$PKG_VERSION" "$EXPECTED_VERSION" "expected $EXPECTED_VERSION in '$PJSON'."
+        else
+            validate 0 1 "jq not found, check that version in '$PJSON' is $EXPECTED_VERSION."
+        fi
+    else
+        validate 0 0 "" "none detected"
+    fi
+}
+
 echo "unpacking tar ball"
 tar zxf "$DIR/$TGZ" -C "$DIR"
 
@@ -161,7 +181,7 @@ CMP=$(eval "$CMD")
 validate $? 0 "$CMD"
 
 printf "verifying sources have proper headers..."
-if [ -f '$DIR/$BASE/tools/travis/scancodeExlusions' ]; then
+if [ -f "$DIR/$BASE/tools/travis/scancodeExlusions" ]; then
     SCANCODE_EXTRA_ARGS="--gitignore '$DIR/$BASE/tools/travis/scancodeExclusions'"
 else
     SCANCODE_EXTRA_ARGS=""
@@ -185,6 +205,12 @@ validate "$EXE" "" "$EXE"
 printf "scanning for packages..."
 EXE=$(find "$DIR/$BASE" -type d -name "node_modules" -o -name ".gradle")
 validate "$EXE" "" "$EXE"
+
+printf "scanning package.json for version mismatch..."
+packageJsonCheckVersion "$DIR/$BASE/package.json" $V
+
+printf "scanning package-lock.json for version mismatch..."
+packageJsonCheckVersion "$DIR/$BASE/package-lock.json" $V
 
 echo $(tput setaf 6)
 echo run the following command to remove the scratch space:
