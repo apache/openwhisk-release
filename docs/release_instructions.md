@@ -114,12 +114,19 @@ provide historical documentation of project releases.
      - repository: URL of the repository
      - branch: git branch being released (`master` or a release branch name)
 
+**Important Note:** If you are releasing a Node.js package which
+contains a `package.json`, you should make sure the `version`
+specified in `package.json` matches your release version. If you
+also have a `package-lock.json` file, it too must have a matching
+`version` property. See additional tips for [releasing npm
+packages](#publishing-to-npm).
+
 ### Create Release Candidates
 
 From the [tools directory](../tools), execute the script
 [build_release.sh](../tools/build_release.sh)
 providing the config.json file as an argument.
-Using ../stagingArea as scratch space, this script will clone the
+Using `../stagingArea` as scratch space, this script will clone the
 source repositories, package them into compressed tarballs, and create
 the checksum and detached PGP signature files.
 ```
@@ -282,6 +289,16 @@ packages built from each source release.  The Release Manager should
 build and publish these packages manually using the openwhisk-bot
 credentials found in the npmjs.txt file in the accounts subdir of the
 PMC private svn.
+
+Some tips:
+* Login as the openwhisk-bot using `npm login`.
+* The `version` specified in `package.json` (and `package-lock.json`
+if it exists) should match the release version. If they don't you need
+to fix the release.
+* Confirm that `npm pack` does not report any errors. Then delete the
+generated `.tgz` file.
+* Confirm the list of files that will bundled using `npm publish --dry-run`.
+* To publish the distribution, use `npm publish --public`.
 
 If you are releasing a new version of the openwhisk-client-js package,
 then after the new version of the `openwhisk` package is published on
