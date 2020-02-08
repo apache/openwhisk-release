@@ -85,7 +85,9 @@ def artifactLinks(name, version, rc):
     })
 
 def currentGitHead():
-    return subprocess.check_output(['git', 'show-ref', '--hash', '--abbrev', '--', 'refs/remotes/upstream/master']).strip()
+    res = subprocess.check_output(['git', 'show-ref', '--hash', '--abbrev', '--', 'refs/remotes/upstream/master'])
+    res = res.decode('ascii')
+    return res.strip()
 
 def gitHashes(components):
     s = map(lambda r: "* %s: %s\n  %s/commits/%s\n  %s\n  %s\n  %s\n" % (r.name, r.hash, r.url, r.hash, r.artifacts.tgz, r.artifacts.asc, r.artifacts.sha), components)
