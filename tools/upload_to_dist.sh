@@ -31,7 +31,8 @@ svn update
 
 cd "$RELEASE_SVN_DIR"
 
-for artifact in `ls "$STAGE_SVN_DIR/$pre_release_version"`; do
+for artifact in `find "$STAGE_SVN_DIR/$pre_release_version" -name "*${version}*"`; do
+    artifact=$(basename -- "$artifact")
     cp "$STAGE_SVN_DIR/$pre_release_version/$artifact" $artifact
     svn add $artifact
 done
