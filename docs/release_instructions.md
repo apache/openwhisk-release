@@ -282,6 +282,12 @@ The current list of actionloop based Dockerfiles is:
 + openwhisk-runtime-swift/core/swift42Action/Dockerfile
 + openwhisk-runtime-swift/core/swift51Action/Dockerfile
 
+If you released a new version of openwhisk-runtime-docker, then you need
+to update tag information in the Dockerfiles of openwhisk-runtime-python.
+To support reproducible builds, we always use a fixed-tag
+(and almost always a release tag) when pulling code from openwhisk-runtime-docker
+into other runtime projects to build their images.
+
 ### Publishing to npm
 
 The openwhisk-client-js and openwhisk-composer project release npm
