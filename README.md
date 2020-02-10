@@ -197,6 +197,13 @@ The following table can be used by Release Managers to check the status of all p
 <td><a href="https://github.com/apache/openwhisk-runtime-ruby/blob/master/tools/travis/build.sh">build.sh</a></td>
 </tr>
 <tr align="left">
+<td><a href="https://github.com/apache/openwhisk-runtime-rust">openwhisk-runtime-rust</a></td>
+<td><a href="https://travis-ci.org/apache/openwhisk-runtime-rust/branches"><img src="https://travis-ci.org/apache/openwhisk-runtime-rust.svg?branch=master" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-runtime-rust/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-runtime-rust/blob/master/NOTICE.txt">NOTICE</a></td>
+<td><a href="https://github.com/apache/openwhisk-runtime-rust/blob/master/tools/travis/build.sh">build.sh</a></td>
+</tr>
+<tr align="left">
 <td><a href="https://github.com/apache/openwhisk-runtime-swift"> openwhisk-runtime-swift</a></td>
 <td align="left"><a href="https://travis-ci.org/apache/openwhisk-runtime-swift/branches"><img src="https://travis-ci.org/apache/openwhisk-runtime-swift.svg?branch=master" alt="" /></a></td>
 <td><a href="https://github.com/apache/openwhisk-runtime-swift/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
