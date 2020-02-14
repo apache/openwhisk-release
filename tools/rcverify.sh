@@ -203,7 +203,7 @@ EXE=$(find "$DIR/$BASE" -type f -name "*.tar" -name "*.tgz" -o -name "*.gz" -o -
 validate "$EXE" "" "$EXE"
 
 printf "scanning for packages..."
-EXE=$(find "$DIR/$BASE" -type d -name "node_modules" -o -name ".gradle")
+EXE=$(find "$DIR/$BASE" -type d -name "node_modules" -o -name ".gradle" | grep -v tests/dat/actions/nodejs-test)
 validate "$EXE" "" "$EXE"
 
 printf "scanning package.json for version match..."
