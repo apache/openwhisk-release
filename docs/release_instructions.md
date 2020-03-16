@@ -290,11 +290,11 @@ into other runtime projects to build their images.
 
 ### Publishing to npm
 
-The openwhisk-client-js and openwhisk-composer project release npm
-packages built from each source release.  The Release Manager should
-build and publish these packages manually using the openwhisk-bot
-credentials found in the npmjs.txt file in the accounts subdir of the
-PMC private svn.
+The openwhisk-client-js, openwhisk-composer, and openwhisk-wskdebug
+project release npm packages built from each source release.  The
+Release Manager should build and publish these packages manually using
+the openwhisk-bot credentials found in the npmjs.txt file in the
+accounts subdir of the PMC private svn.
 
 Some tips:
 * Login as the openwhisk-bot using `npm login`.
@@ -309,8 +309,8 @@ generated `.tgz` file.
 If you are releasing a new version of the openwhisk-client-js package,
 then after the new version of the `openwhisk` package is published on
 npm, submit PRs to update the version number for the openwhisk package
-in the package.json files found in the openwhisk, openwhisk-composer
-and openwhisk-runtime-nodejs git repos.  The command
+in the package.json files found in the openwhisk, openwhisk-composer,
+openwhisk-wskdebug, and openwhisk-runtime-nodejs git repos.  The command
 `find . -name package.json -exec grep -l \"openwhisk\": {} \;`
 can help you find all the places to change.
 

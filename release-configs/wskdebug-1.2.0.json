@@ -1,0 +1,15 @@
+{
+  "versioning": {
+    "version": "1.2.0",
+    "pre_release_version": "rc1"
+  },
+  "RepoList": [
+    "openwhisk-wskdebug"
+  ],
+  "openwhisk_wskdebug": {
+    "name": "OpenWhisk wskdebug",
+    "hash": "e8ab400e9ed793f9a22f01eb43cce5bc7d3c045f",
+    "repository": "https://github.com/apache/openwhisk-wskdebug.git",
+    "branch": "master"
+  }
+}
