@@ -211,6 +211,13 @@ The following table can be used by Release Managers to check the status of all p
 <td><a href="https://github.com/apache/openwhisk-runtime-swift/blob/master/tools/travis/build.sh">build.sh</a></td>
 </tr>
 <tr align="left">
+<td><a href="https://github.com/apache/openwhisk-wskdebug">openwhisk-wskdebug</a></td>
+<td><a href="https://travis-ci.org/apache/openwhisk-wskdebug"><img src="https://travis-ci.com/apache/openwhisk-wskdebug.svg?branch=master" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-wskdebug/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-wskdebug/blob/master/NOTICE.txt">NOTICE</a></td>
+<td><a href="https://github.com/apache/openwhisk-wskdebug/blob/master/travis/scancode.sh">scancode.sh</a></td>
+</tr>
+<tr align="left">
 <td><a href="https://github.com/apache/openwhisk-wskdeploy">openwhisk-wskdeploy</a></td>
 <td><a href="https://travis-ci.org/apache/openwhisk-wskdeploy/branches"><img src="https://travis-ci.org/apache/openwhisk-wskdeploy.svg?branch=master" alt="" /></a></td>
 <td><a href="https://github.com/apache/openwhisk-wskdeploy/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
