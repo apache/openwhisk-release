@@ -71,6 +71,8 @@ Currently ASF recommends using a 4096 bit RSA key to sign releases.
 
 ### Publish your public key to the project KEYS file.
 
+**Only a PMC member can commit changes to the KEYS file**
+
 Once you have your PGP key pair, append your public key to our
 [KEYS file](https://dist.apache.org/repos/dist/release/openwhisk/KEYS)
 in your local svn clone and commit the change.

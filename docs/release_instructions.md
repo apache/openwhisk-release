@@ -19,6 +19,24 @@
 
 # Instructions for Release Managers
 
+## Release Manager Initial Setup
+
+If you have never served as a Release Manager (or it has been a while
+since you have done it), first read the
+[Release Manager Setup](release_manager_setup.md) instructions.
+We have scripts that automate many of the tasks a Release Manager must
+perform, but these scripts assume you have followed the instructions
+in the Release Manager Setup before you start executing them.
+
+## Non-PMC Release Managers
+
+Actually publishing a release is an official act of the OpenWhisk
+Project Management Committee (PMC).  If you an OpenWhisk Committer,
+but not an OpenWhisk PMC member, you will need to pair-up with a PMC member to
+accomplish some of the steps.  In brief, any step that adds or removes
+an artifact from a public distributions channel must be executed by
+an OpenWhisk  PMC member.
+
 ## Background Information
 
 If you are acting as a Release Manager, you should be familiar with
@@ -142,8 +160,13 @@ script will run rcverify.sh against your local artifacts.
 ./local_verify.sh ../release-configs/<MY_RELEASE_CONFIG>.json
 ```
 
-TODO:  We should also run Apache Rat as part of local_verify.sh; for now it is
-a recommended best practice to run Apache Rat by hand on each of your .tar.gz files.
+TODO:  We should also run Apache Rat (https://creadur.apache.org/rat/)
+as part of local_verify.sh; for now it is a recommended best practice
+to run Apache Rat by hand on each of your .tar.gz files. Download RAT
+and invoke it on the .tar.gz file like:
+```
+java -jar apache-rat-0.13.jar stagingArea/artifacts/<release-name>.tar.gz
+```
 
 If the release candidates pass all checks, commit them to the staging svn:
 ```
@@ -166,7 +189,6 @@ to also send the vote email directly to the mailing list. _You should dry run th
 ./gen-release-vote.py ../release-configs/<MY_RELEASE_CONFIG>.json -mc <MY_MAILER_CONFIG>.yaml
 ```
 
-
 ### Report Vote Result
 
 When the vote can be closed (at least 72 hours and minimum number of
@@ -185,6 +207,8 @@ restart the process with new candidate releases.  Update your
 hashes.
 
 ### Publishing a Successful Release to Apache Dist Servers
+
+**Only a PMC member can perform this step**
 
 After a successful vote, the release manager will commit the artifacts
 being released to the `openwhisk` subdir of the Apache dist svn.
@@ -250,6 +274,8 @@ information into the release description.
 
 ### Dockerhub updates
 
+**Only a PMC member can push images to the openwhisk organization on dockerhub**
+
 If the components you released build docker images, then you should
 build the docker images locally, tag them with the release version
 (following the naming scheme for the repo), push the new images to
@@ -257,7 +283,8 @@ dockerhub using the whiskbot dockerhub id, and update the `latest`
 tag to point to the new images.
 
 If you have published new images to dockerhub, submit PRs to
-[openwhisk-deploy-kube](https://github.com/apache/openwhisk-deploy-kube) and [openwhisk-devtools (docker-compose)](https://github.com/apache/openwhisk-devtools) to use the new images.
+[openwhisk-deploy-kube](https://github.com/apache/openwhisk-deploy-kube)
+to use the new images.
 
 ### Rippling changes for openwhisk-runtime-* releases
 
@@ -289,6 +316,8 @@ To support reproducible builds, we always use a fixed-tag
 into other runtime projects to build their images.
 
 ### Publishing to npm
+
+**Only a PMC member can publish to npm**
 
 The openwhisk-client-js, openwhisk-composer, and openwhisk-wskdebug
 project release npm packages built from each source release.  The
