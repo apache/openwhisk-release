@@ -161,7 +161,7 @@ script will run rcverify.sh against your local artifacts.
 ```
 
 TODO:  We should also run Apache Rat (https://creadur.apache.org/rat/)
-as part of local_verify.sh; for now it is a recommended best practice
+as part of `local_verify.sh`; for now it is a recommended best practice
 to run Apache Rat by hand on each of your .tar.gz files. Download RAT
 and invoke it on the .tar.gz file like:
 ```
