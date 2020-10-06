@@ -38,7 +38,8 @@ V=${3?"missing version e.g., '3.19.0'"}
 # the release candidate, usualy 'rc1'
 RC=${4:-rc1}
 
-REMOVE_DIR=${5:-true}
+# the last argument is optional and if set to 'cleanup', the script deletes the scratch space at completion
+REMOVE_DIR=${5:-cleanup}
 
 # set to non-zero to download the artifacts to verify, this is the default
 DL=${DL:-1}
@@ -214,7 +215,7 @@ packageJsonCheckVersion "$DIR/$BASE/package.json" $V
 printf "scanning package-lock.json for version match..."
 packageJsonCheckVersion "$DIR/$BASE/package-lock.json" $V
 
-if [ "$REMOVE_DIR" = true ]; then
+if [ "$REMOVE_DIR" = "cleanup" ]; then
   echo "the flag to remove the working directory is enabled"
   printf "removing the scratch space($(tput setaf 6)$DIR$(tput sgr0))..."
   rm -rf $DIR
