@@ -214,13 +214,15 @@ packageJsonCheckVersion "$DIR/$BASE/package.json" $V
 printf "scanning package-lock.json for version match..."
 packageJsonCheckVersion "$DIR/$BASE/package-lock.json" $V
 
-echo $(tput setaf 6)
-echo run the following command to remove the scratch space:
-echo "  rm -rf '$DIR'"
-echo $(tput sgr0)
-
 if [ "$REMOVE_DIR" = true ]; then
-  printf "removing the scratch space..."
+  echo "the flag to remove the working directory is enabled"
+  printf "removing the scratch space($(tput setaf 6)$DIR$(tput sgr0))..."
   rm -rf $DIR
   printf " $(tput setaf 2)done\n$(tput sgr0)"
+else
+  echo "the flag to remove the working directory is disabled"
+  echo $(tput setaf 6)
+  echo run the following command to remove the scratch space:
+  echo "  rm -rf '$DIR'"
+  echo $(tput sgr0)
 fi
