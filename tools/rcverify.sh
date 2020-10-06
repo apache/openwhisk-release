@@ -38,6 +38,8 @@ V=${3?"missing version e.g., '3.19.0'"}
 # the release candidate, usualy 'rc1'
 RC=${4:-rc1}
 
+REMOVE_DIR=${5:-true}
+
 # set to non-zero to download the artifacts to verify, this is the default
 DL=${DL:-1}
 
@@ -216,3 +218,9 @@ echo $(tput setaf 6)
 echo run the following command to remove the scratch space:
 echo "  rm -rf '$DIR'"
 echo $(tput sgr0)
+
+if [ "$REMOVE_DIR" = true ]; then
+  printf "removing the scratch space..."
+  rm -rf $DIR
+  printf " $(tput setaf 2)done\n$(tput sgr0)"
+fi
