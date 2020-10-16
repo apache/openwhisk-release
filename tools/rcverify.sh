@@ -50,6 +50,16 @@ DL=${DL:-1}
 # set to non-zero to import the release keys, this is the default
 IMPORT=${IMPORT:-1}
 
+# this is the curl command that will run for fetching files from the web
+CURL="curl --fail -s"
+
+# a variable to register errors
+ERROR=0
+
+# gpg import regex to parse output
+GPG_PROCESSED_REGEX='^.*gpg: Total number processed: +([0-9]+).*$'
+GPG_UNCHANGED_REGEX='^.*gpg: +unchanged: +([0-9]+).*$'
+
 # this is the construct name of the artifact
 BASE=$NAME-$V
 TGZ=$NAME-$V-sources.tar.gz
@@ -73,33 +83,10 @@ DIR=$(mktemp -d)
 echo working in the following directory:
 echo "$(tput setaf 6)$DIR$(tput sgr0)"
 
-if [ $DL -ne 0 ]; then
-  SRC=$RC_DIST/$RC
-  echo fetching tarball and signatures from $SRC
-
-  echo fetching $TGZ
-  curl $SRC/$TGZ -s -o "$DIR/$TGZ"
-
-  echo fetching $TGZ.asc
-  curl $SRC/$TGZ.asc -s -o "$DIR/$TGZ.asc"
-
-  echo fetching $TGZ.sha512
-  curl $SRC/$TGZ.sha512 -s -o "$DIR/$TGZ.sha512"
-else
-  echo copying from $LOCAL_DIR
-  cp "$LOCAL_DIR/$TGZ" "$DIR/$TGZ" || exit 1
-  cp "$LOCAL_DIR/$TGZ.asc" "$DIR/$TGZ.asc" || exit 1
-  cp "$LOCAL_DIR/$TGZ.sha512" "$DIR/$TGZ.sha512" || exit 1
-fi
-
-if [ $IMPORT -ne 0 ]; then
-  echo fetching release keys
-  curl $KEYS_DIST/KEYS -s -o "$DIR/$KEYS"
-
-  echo importing keys
-  gpg --import "$DIR/$KEYS"
-fi
-
+## compares the first two arguments and prints 'passed' if they
+## are equal, followed by the fourth argument if it is present;
+## if the two arguments are not equal, prints 'failed' and the
+## third argument if present
 function validate() {
   if [[ $1 == $2 ]]; then
     printf " $(tput setaf 2)passed$(tput sgr0)"
@@ -109,12 +96,52 @@ function validate() {
       printf "\n"
     fi
   else
+    ERROR=1
     printf " $(tput setaf 1)failed$(tput sgr0)"
     if [[ $3 != "" ]]; then
       echo " ($3)"
     else
       printf "\n"
     fi
+  fi
+}
+
+## compares the status of a shell command (first arg) to 0
+## and prints 'ok' if they match followed by an optional
+## third argument, else prints 'error' followed by
+## optional second argument and exists the script
+function statusok() {
+  if [[ $1 -eq 0 ]]; then
+    printf " $(tput setaf 2)ok$(tput sgr0)"
+    if [[ $3 != "" ]]; then
+      echo " ($3)"
+    else
+      printf "\n"
+    fi
+  else
+    ERROR=1
+    printf " $(tput setaf 1)error$(tput sgr0)"
+    if [[ $2 != "" ]]; then
+      printf "\n$(tput setaf 1)$2$(tput sgr0)"
+    else
+      printf "\n"
+    fi
+    finish
+  fi
+}
+
+function finish() {
+  if [[ $ERROR -eq 0 && "$REMOVE_DIR" == "cleanup" ]]; then
+    printf "removing the scratch space ($(tput setaf 6)$DIR$(tput sgr0))..."
+    rm -rf "$DIR"
+    printf " $(tput setaf 2)ok\n$(tput sgr0)"
+    exit 0
+  else
+    echo $(tput setaf 6)
+    echo run the following command to remove the scratch space:
+    echo "  rm -rf '$DIR'"
+    echo $(tput sgr0)
+    exit 1
   fi
 }
 
@@ -138,30 +165,93 @@ function packageJsonCheckVersion() {
     fi
 }
 
-echo "unpacking tar ball"
-tar zxf "$DIR/$TGZ" -C "$DIR"
+function analyzeKeyImport() {
+    output=$1
+    processed=''
+    unchanged=''
+    if [[ "$output" =~ $GPG_PROCESSED_REGEX ]]; then
+        processed=${BASH_REMATCH[1]}
+    fi
+    if [[ "$output" =~ $GPG_UNCHANGED_REGEX ]]; then
+        unchanged=${BASH_REMATCH[1]}
+    fi
 
-echo "cloning scancode"
-cd "$DIR" && git clone https://github.com/apache/openwhisk-utilities.git --depth 1
+    if [[ $processed != '' && $processed == $unchanged ]]; then
+        echo "keys already imported (processed $processed unchanged $unchanged)"
+    else
+        echo "new keys imported (processed $processed unchanged $unchanged)"
+    fi
+}
 
-echo "computing sha512 for $TGZ"
+if [ $DL -ne 0 ]; then
+  SRC=$RC_DIST/$RC
+  echo fetching tarball and signatures from $SRC
+
+  printf "fetching $TGZ..."
+  RESULT=$($CURL $SRC/$TGZ -o "$DIR/$TGZ" 2>&1)
+  statusok $? "$RESULT"
+
+  printf "fetching $TGZ.asc..."
+  RESULT=$($CURL $SRC/$TGZ.asc -o "$DIR/$TGZ.asc" 2>&1)
+  statusok $? "$RESULT"
+
+  printf "fetching $TGZ.sha512..."
+  RESULT=$($CURL $SRC/$TGZ.sha512 -o "$DIR/$TGZ.sha512" 2>&1)
+  statusok $? "$RESULT"
+
+  printf "fetching apache license..."
+  RESULT=$($CURL http://www.apache.org/licenses/LICENSE-2.0 -o "$DIR/LICENSE-2.0" 2>&1)
+  statusok $? "$RESULT"
+else
+  echo copying from $LOCAL_DIR
+  cp "$LOCAL_DIR/$TGZ" "$DIR/$TGZ" || exit 1
+  cp "$LOCAL_DIR/$TGZ.asc" "$DIR/$TGZ.asc" || exit 1
+  cp "$LOCAL_DIR/$TGZ.sha512" "$DIR/$TGZ.sha512" || exit 1
+fi
+
+if [ $IMPORT -ne 0 ]; then
+  printf "fetching release keys..."
+  RESULT=$($CURL $KEYS_DIST/KEYS -s -o "$DIR/$KEYS" 2>&1)
+  statusok $? "$RESULT"
+
+  printf "importing keys..."
+  RESULT=$(gpg --import "$DIR/$KEYS" 2>&1)
+  STATUS=$?
+  DELTA=$(analyzeKeyImport "$RESULT")
+  statusok $STATUS "$RESULT" "$DELTA"
+  if [[ "$DELTA" =~ "new keys imported" ]]; then
+      echo "$RESULT"
+  fi
+fi
+
+printf "unpacking tar ball..."
+RESULT=$(tar zxf "$DIR/$TGZ" -C "$DIR" 2>&1)
+statusok $? "$RESULT"
+
+printf "cloning scancode..."
+RESULT=$(cd "$DIR" && git clone https://github.com/apache/openwhisk-utilities.git --depth 1 2>&1)
+statusok $? "$RESULT"
+
+printf "computing sha512 for $TGZ..."
 EXPECTED=$(cat "$DIR/$TGZ.sha512")
 CMD="cd $DIR && gpg --print-md SHA512 '$TGZ'"
 SHA=$(eval $CMD)
-echo "SHA512: $(tput setaf 6)$SHA$(tput sgr0)"
+statusok $? "$SHA"
+
+echo "$(tput setaf 6)$SHA$(tput sgr0)"
 printf "validating sha512..."
 validate "$EXPECTED" "$SHA" "$CMD"
 
 printf "verifying asc..."  
 CMD="gpg --verify '$DIR/$TGZ.asc' '$DIR/$TGZ'"
 ASC=$(eval $CMD 2>&1)
-RES=$?
+STATUS=$?
 if [[ $ASC =~ ^.*\"(.*)\".*$ ]]; then
   SIGNER=${BASH_REMATCH[1]}
 else
   SIGNER="$(tput setaf 1)???$(tput sgr0)"
 fi
-validate $RES 0 "$CMD" "signed-by: $SIGNER"
+validate $STATUS 0 "$CMD" "signed-by: $SIGNER"
 
 printf "verifying notice..."
 NTXT=$(cat "$DIR/$BASE/NOTICE.txt")
@@ -177,7 +267,6 @@ validate $? 1 "$CMD"
 # Therefore only enforce a prefix match between the project's
 # LICENSE.txt and the official text of the Apache LICENSE-2.0.
 printf "verifying license..."
-curl http://www.apache.org/licenses/LICENSE-2.0 -s -o "$DIR/LICENSE-2.0"
 LICENSE_LEN=$(wc -c "$DIR/LICENSE-2.0" | awk '{print $1}')
 CMD="cmp -n $LICENSE_LEN '$DIR/LICENSE-2.0' '$DIR/$BASE/LICENSE.txt'"
 CMP=$(eval "$CMD")
@@ -215,15 +304,4 @@ packageJsonCheckVersion "$DIR/$BASE/package.json" $V
 printf "scanning package-lock.json for version match..."
 packageJsonCheckVersion "$DIR/$BASE/package-lock.json" $V
 
-if [ "$REMOVE_DIR" = "cleanup" ]; then
-  echo "the flag to remove the working directory is enabled"
-  printf "removing the scratch space($(tput setaf 6)$DIR$(tput sgr0))..."
-  rm -rf $DIR
-  printf " $(tput setaf 2)done\n$(tput sgr0)"
-else
-  echo "the flag to remove the working directory is disabled"
-  echo $(tput setaf 6)
-  echo run the following command to remove the scratch space:
-  echo "  rm -rf '$DIR'"
-  echo $(tput sgr0)
-fi
+finish
