@@ -39,6 +39,8 @@ do
     repo_name=$(echo "$repo" | sed -e 's/^"//' -e 's/"$//')
     project_name="$repo_name"
     rm -rf $OPENWHISK_CLEANED_SOURCE_DIR/$project_name/.git
+    # Inject generic info from release-docs into release
+    cp "$PARENTDIR"/release-docs/BUILDING_FROM_SOURCE.md $OPENWHISK_CLEANED_SOURCE_DIR/$project_name/
     cd $OPENWHISK_CLEANED_SOURCE_DIR
     # Rename the directory by adding the version number
     mv $project_name $project_name-$version
