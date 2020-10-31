@@ -207,6 +207,10 @@ else
   cp "$LOCAL_DIR/$TGZ" "$DIR/$TGZ" || exit 1
   cp "$LOCAL_DIR/$TGZ.asc" "$DIR/$TGZ.asc" || exit 1
   cp "$LOCAL_DIR/$TGZ.sha512" "$DIR/$TGZ.sha512" || exit 1
+
+  printf "fetching apache license..."
+  RESULT=$($CURL http://www.apache.org/licenses/LICENSE-2.0 -o "$DIR/LICENSE-2.0" 2>&1)
+  statusok $? "$RESULT"
 fi
 
 if [ $IMPORT -ne 0 ]; then
