@@ -176,7 +176,7 @@ packages](#publishing-to-npm).
 
 **Important Note2:** If you are releasing the `openwhisk` or `openwhisk-deploy-kube` repositories, 
 the branch and commit hash in the release contents should be the release branch and the latest commit hash in the release branch.
-Please be especially noted that they are not from the `master` branch.
+Please be careful not to use the `master` branch.
  
 
 ### Create Release Candidates
