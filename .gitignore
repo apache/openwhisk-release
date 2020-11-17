@@ -3,3 +3,4 @@
 openwhisk_release/
 stagingArea/
 tools/mail-config.yaml
+.idea
