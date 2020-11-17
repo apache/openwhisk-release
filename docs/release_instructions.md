@@ -167,7 +167,7 @@ provide historical documentation of project releases.
      - repository: URL of the repository
      - branch: git branch being released (`master` or a release branch name)
 
-**Important Note1:** If you are releasing a Node.js package which
+**Important Note 1:** If you are releasing a Node.js package which
 contains a `package.json`, you should make sure the `version`
 specified in `package.json` matches your release version. If you
 also have a `package-lock.json` file, it too must have a matching
