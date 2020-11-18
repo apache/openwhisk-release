@@ -91,6 +91,41 @@ Before creating release artifacts, the Release Manager should initiate a communi
   3. If a component being released includes a changelog or release notes file, make sure they are up-to-date.
   4. If you are releasing either the `openwhisk` or `openwhisk-deploy-kube` repositories create a release branch in the Apache git repo.  Then submit a PR to that release branch to change all uses of the `nightly` tag to fixed tags (eg `1.14.0` or `8eb922f`).
 
+### (Optional) Make a branch to create a Release
+
+This step is only required when making a release for the `openwhisk` or `openwhisk-deploy-kube` repositories.
+
+1. Create a Release branch with the version name in the upstream repository.
+
+Please be noted that the branch should be created in the upstream repository, not a forked repository.
+This branch would not be merged into the master branch and stay as a standalone branch.
+
+```bash
+$ git checkout -b 1.0.0
+$ git push upstream 1.0.0
+```
+
+2. Add commits to this branch to make a Release.
+
+Sometimes, it is required to add a release specific commit. For example, the Docker image tag for runtimes should be updated to other than `nightly`.
+The Release Manager is supposed to open relevant PRs directly against the release branch and merge them.
+
+3. Open a PR with the release branch.
+
+You can make sure the branch passes all CI tests whenever the branch changes.
+
+
+4. Trigger the Jenkins job to build Docker images.
+
+Docker images built with the release version is required to run the standalone OpenWhisk without any local build.
+
+The following job is intended to build a release branch and publish images to the Docker hub.
+The Release Manager should update the branch specifier in the Jenkins job.
+
+https://ci-builds.apache.org/job/OpenWhisk/job/OpenWhisk-DockerHub-ReleaseBranch/
+
+This job is supposed to be disabled after the release process is over.  
+
 ### Defining the Release Contents
 
 The contents of a release are defined by a JSON configuration file.
@@ -132,12 +167,17 @@ provide historical documentation of project releases.
      - repository: URL of the repository
      - branch: git branch being released (`master` or a release branch name)
 
-**Important Note:** If you are releasing a Node.js package which
+**Important Note 1:** If you are releasing a Node.js package which
 contains a `package.json`, you should make sure the `version`
 specified in `package.json` matches your release version. If you
 also have a `package-lock.json` file, it too must have a matching
 `version` property. See additional tips for [releasing npm
 packages](#publishing-to-npm).
+
+**Important Note 2:** If you are releasing the `openwhisk` or `openwhisk-deploy-kube` repositories, 
+the branch and commit hash in the release contents should be the release branch and the latest commit hash in the release branch.
+Please be careful not to use the `master` branch.
+ 
 
 ### Create Release Candidates
 
@@ -375,3 +415,5 @@ of the release manager.
 2. If there is a prior release, remove it from the release svn
 (all releases are automatically archived, removing an old release
 from dist does not remove it from the archive).
+3. Disable the Jenkins job to build and push Docker images to Docker hub if you released the `openwhisk` or `openwhisk-deploy-kube` repositories.
+4. Close the PR for the release branch if you released the `openwhisk` or `openwhisk-deploy-kube` repositories.

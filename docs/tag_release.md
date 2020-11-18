@@ -33,7 +33,7 @@ git push <remote_url_var> <tag>
 
 Replace the notation \<tag\> with the tag name for the release of the current project. As a release manager, you should be
 familiar with the tag's naming convention for the module to be released. Take the Nodejs runtime as example, you need to use
-the tag like \<node kind\>@\<version\>-\<pre_release_version\>. The nonation \<node kind\> should be 8 or 10 for a specific
+the tag like \<node kind\>@\<version\>-\<pre_release_version\>. The notation \<node kind\> should be 8 or 10 for a specific
 Nodejs version, but for OpenWhisk, you can directly use \<version\>-\<pre_release_version\> as the tag. Please make sure
 you use the correct format of tags, when you release OpenWhisk modules. If you are not sure how to name the tag, ask the
 OpenWhisk community.
