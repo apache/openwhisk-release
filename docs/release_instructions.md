@@ -34,7 +34,7 @@ Actually publishing a release is an official act of the OpenWhisk
 Project Management Committee (PMC).  If you are an OpenWhisk Committer,
 but not an OpenWhisk PMC member, you will need to pair-up with a PMC member to
 accomplish some of the steps.  In brief, any step that adds or removes
-an artifact from a public distributions channel must be executed by
+an artifact from a public distribution channel must be executed by
 an OpenWhisk PMC member.
 
 ## Background Information
