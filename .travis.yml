@@ -29,4 +29,5 @@ notifications:
 
 
 script:
- - echo "nothing to do..."
+ - echo "intentionally fail..." && exit 1
+ 
