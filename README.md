@@ -24,7 +24,7 @@
 
 This project provides the Apache OpenWhisk project's Release Managers with the instructions and automation needed to ensure that project releases comply with both the Apache Software Foundation's (ASF) [Release Creation Process](http://www.apache.org/dev/release-publishing.html) and [Release Policy](http://www.apache.org/legal/release-policy.html).
 
-Specifically, this project documents the steps a Release Manager must take to make a release of an OpenWhisk software component and where possible provides scripts and tool support to reduce the number of manual steps and potential for human error during the process. Script support is provided for:
+Specifically, this project documents the steps a Release Manager must take to make a release of an OpenWhisk software component and provides scripts and tool support to reduce the number of manual steps and potential for human error during the release process. Script support is provided for:
 - Packaging and signing source code (compressed archives)
 - Verification of LICENSE and NOTICE files, source code license headers, and other formal aspects of a release candidate
 - Publishing release artifacts to the proper staging and release Apache distribution servers
