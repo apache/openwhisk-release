@@ -388,6 +388,20 @@ can help you find all the places to change.
 If you released a new version of openwhisk-cli, then submit a PR
 to Homebrew to publish the new cli version.
 
+### Helm Repository
+
+If you released openwhisk-deploy-kube, you need to update the Helm
+repository we provide at https://openwhisk.apache.org/charts.
+Perform the following steps:
+1. On the release branch of openwhisk-deploy-kube `helm package helm/openwhisk`.
+2. Add the resulting openwhisk.tgz to the GitHub release for openwhisk-deploy-kube
+3. In openwhisk-website, submit a PR to update charts/index.yaml to include
+   the new chart version.  This will take a little care, since `helm repo index`
+   defaults to assuming that the `.tgz` files are in the same directory as
+   the index.yaml, and we are hosting them elsewhere. Be sure to just add a stanza
+   for the new release with a URL to the GitHub release download and to not
+   remove any of the existing stanzas for previous release.
+
 ### Update Downloads Page
 
 Submit a PR to [openwhisk-website](https://github.com/apache/openwhisk-website) to update the Downloads page to
