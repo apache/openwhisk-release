@@ -390,15 +390,15 @@ to Homebrew to publish the new cli version.
 
 ### Helm Repository
 
-If you released openwhisk-deploy-kube, you need to update the Helm
+If you released [openwhisk-deploy-kube](https://github.com/apache/openwhisk-deploy-kube/), you need to update the Helm
 repository we provide at https://openwhisk.apache.org/charts.
 Perform the following steps:
-1. On the release branch of openwhisk-deploy-kube `helm package helm/openwhisk`.
-2. Add the resulting openwhisk.tgz to the GitHub release for openwhisk-deploy-kube
-3. In openwhisk-website, submit a PR to update charts/index.yaml to include
+1. On the release branch of openwhisk-deploy-kube, run `helm package helm/openwhisk`.
+2. Add the resulting `openwhisk.tgz` to the GitHub release for openwhisk-deploy-kube
+3. In [openwhisk-website](https://github.com/apache/openwhisk-website/), submit a PR to update [charts/index.yaml](https://github.com/apache/openwhisk-website/tree/master/charts) to include
    the new chart version.  This will take a little care, since `helm repo index`
    defaults to assuming that the `.tgz` files are in the same directory as
-   the index.yaml, and we are hosting them elsewhere. Be sure to just add a stanza
+   the `index.yaml`, and we are hosting them elsewhere. Be sure to just add a stanza
    for the new release with a URL to the GitHub release download and to not
    remove any of the existing stanzas for previous release.
 
