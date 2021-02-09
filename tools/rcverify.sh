@@ -69,7 +69,7 @@ KEYS=$RC-$V-KEYS
 
 NOTICE=$(cat << END
 Apache $DESCRIPTION
-Copyright 2016-2020 The Apache Software Foundation
+Copyright 2016-2021 The Apache Software Foundation
 
 This product includes software developed at
 The Apache Software Foundation (http://www.apache.org/).
