@@ -322,10 +322,6 @@ build the docker images locally, tag them with the release version
 dockerhub using the whiskbot dockerhub id, and update the `latest`
 tag to point to the new images.
 
-If you have published new images to dockerhub, submit PRs to
-[openwhisk-deploy-kube](https://github.com/apache/openwhisk-deploy-kube)
-to use the new images.
-
 ### Rippling changes for openwhisk-runtime-* releases
 
 If you are releasing a new version of an openwhisk-runtime, then
@@ -341,13 +337,17 @@ from openwhisk-runtime-go into other runtime projects to build the
 actionloop go proxy.
 The current list of actionloop based Dockerfiles is:
 + openwhisk-runtime-java/core/java8actionloop/Dockerfile
-+ openwhisk-runtime-php/core/php7.4Action/Dockerfile
 + openwhisk-runtime-php/core/php7.3Action/Dockerfile
-+ openwhisk-runtime-python/core/pythonActionLoop/Dockerfile
++ openwhisk-runtime-php/core/php7.4Action/Dockerfile
++ openwhisk-runtime-php/core/php8.0Action/Dockerfile
++ openwhisk-runtime-python/core/python2ActionLoop/Dockerfile
++ openwhisk-runtime-python/core/python3ActionLoop/Dockerfile
++ openwhisk-runtime-python/core/python3AiActionLoop/Dockerfile
 + openwhisk-runtime-ruby/core/ruby2.6ActionLoop/Dockerfile
-+ openwhisk-runtime-rust/rust1.34/Dockerfile
++ openwhisk-runtime-rust/core/rust1.34/Dockerfile
 + openwhisk-runtime-swift/core/swift42Action/Dockerfile
 + openwhisk-runtime-swift/core/swift51Action/Dockerfile
++ openwhisk-runtime-swift/core/swift53Action/Dockerfile
 
 If you released a new version of openwhisk-runtime-docker, then you need
 to update tag information in the Dockerfiles of openwhisk-runtime-python.
