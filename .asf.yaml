@@ -31,8 +31,7 @@ github:
       required_status_checks:
         strict: false
         contexts:
-          - Travis CI / Travis CI - Pull Request
-          - continuous-integration/travis-ci
+          - Travis CI - Pull Request
   enabled_merge_buttons:
     merge: false
     squash: true
