@@ -30,8 +30,8 @@ github:
     asf-yaml-experiments:
       required_status_checks:
         strict: true
-       contexts:
-       - continuous-integration/travis-ci
+        contexts:
+        - continuous-integration/travis-ci
   enabled_merge_buttons:
     merge: false
     squash: true
