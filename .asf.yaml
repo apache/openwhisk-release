@@ -29,7 +29,7 @@ github:
         required_appoving_review_count: 1
     asf-yaml-experiments:
       required_status_checks:
-        strict: true
+        strict: false
         contexts:
         - continuous-integration/travis-ci
   enabled_merge_buttons:
