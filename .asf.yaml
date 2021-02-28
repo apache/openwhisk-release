@@ -27,6 +27,9 @@ github:
         strict: true
       required_pull_request_reviews:
         required_appoving_review_count: 1
+    asf-yaml-experiments:
+      required_status_checks:
+        strict: true
   enabled_merge_buttons:
     merge: false
     squash: true
