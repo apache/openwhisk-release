@@ -29,5 +29,5 @@ notifications:
 
 
 script:
- - echo "intentionally fail..." && exit 1
+ - echo "foolishly succeed..." && exit 0
  
