@@ -21,7 +21,7 @@
 
 For convenience, the following tables provide listings of each project repository's files that have been excluded from having Apache license headers and from license scanning utilities that are part of the release process.
 
-In additon, the specific rationale for the exclusion, in accordance with Apache release policies, is indicated as well. Rationales that are indicated by a TAG are fully described on the [license_compliance.md](license_compliance.md) page.
+In addition, the specific rationale for the exclusion, in accordance with Apache release policies, is indicated as well. Rationales that are indicated by a TAG are fully described on the [license_compliance.md](license_compliance.md) page.
 
 **NOTE: This listings are not intended to be complete or canonical**
 
