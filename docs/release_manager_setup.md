@@ -17,7 +17,7 @@
 #
 -->
 
-# Preparing to be a Release Mananger
+# Preparing to be a Release Manager
 
 ## Platform and Prerequisites
 
@@ -41,11 +41,11 @@ which you contribute.
 The scripts/automation in this project assume a local clone and
 create/use working directories and staging areas within that clone.
 Staging areas are listed in the `.gitignore` for the repository to
-avoid accidential commits of generated artifacts.
+avoid accidental commits of generated artifacts.
 
 ## Get a local svn checkout of our distribution directories
 
-The Apache distribution servers are managed by commiting/removing
+The Apache distribution servers are managed by committing/removing
 files from project-specific directory trees in an svn repository.
 
 You can run the script [tools/checkout_svn.sh](../tools/checkout_svn.sh)

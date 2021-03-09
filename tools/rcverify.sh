@@ -35,7 +35,7 @@ DESCRIPTION=${2?"missing project description e.g., 'OpenWhisk JavaScript Client 
 # the version of the release artifact
 V=${3?"missing version e.g., '3.19.0'"}
 
-# the release candidate, usualy 'rc1'
+# the release candidate, usually 'rc1'
 RC=${4:-rc1}
 
 # the last argument is optional and if set to 'cleanup', the script deletes the scratch space at completion
@@ -145,7 +145,7 @@ function finish() {
   fi
 }
 
-## checks if the rc has a pakage.json file containing a version field matching the rc
+## checks if the rc has a package.json file containing a version field matching the rc
 ## the first parameter is a path to the file to check e.g., package.json or package-lock.json
 ## the second parameter is the version to confirm
 function packageJsonCheckVersion() {
@@ -277,7 +277,7 @@ CMP=$(eval "$CMD")
 validate $? 0 "$CMD"
 
 printf "verifying sources have proper headers..."
-if [ -f "$DIR/$BASE/tools/travis/scancodeExlusions" ]; then
+if [ -f "$DIR/$BASE/tools/travis/scancodeExclusions" ]; then
     SCANCODE_EXTRA_ARGS="--gitignore '$DIR/$BASE/tools/travis/scancodeExclusions'"
 else
     SCANCODE_EXTRA_ARGS=""
