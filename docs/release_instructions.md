@@ -163,8 +163,7 @@ After creating your config, commit it to [../release-configs](../release-configs
 
 ### Create Release Candidates
 
-From the [tools directory](../tools), execute the script [build_release.sh](../tools/build_release.sh)
-providing the config.json file as an argument.
+From the [tools directory](../tools), execute the script [build_release.sh](../tools/build_release.sh) providing the config.json file as an argument.
 
 Using `../stagingArea` as scratch space, this script will clone the source repositories, package them into compressed tarballs, and create the checksum and detached PGP signature files.
 
