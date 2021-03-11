@@ -102,7 +102,7 @@ The commands to export your key and append it (depending on your PGP client) can
 
 #### GPG Example (recommended)
 
-Apache recommends [GNU Privacy Guard (GnuPG)](https://www.gnupg.org/), an open-source, OpenPGP compatible implementation
+Apache recommends [GNU Privacy Guard (GnuPG)](https://www.gnupg.org/), an open-source, OpenPGP compatible implementation.
 
 You can show your key's signature with this command:
 
