@@ -174,8 +174,11 @@ $ ./build_release.sh ../release-configs/<MY_RELEASE_CONFIG>.json [<MY_APACHE_GPG
 
 > **Important Note:** the `build_release.sh` script uses your system default GPG key to sign the release. To use an alternate key, specify the `MY_APACHE_GPG_KEY_ID` as a second argument. Omit this value to use the default key.
 
-Next, verify the release artifacts by running [local_verify.sh](../tools/local_verify.sh). This
-script will run rcverify.sh against your local artifacts.
+If successful, your built release artifacts should be in the `../stagingArea.artifacts` folder.
+
+### Verify the release artifacts
+
+Next, verify the release artifacts by running [local_verify.sh](../tools/local_verify.sh). This script will run `rcverify.sh` against your local artifacts.
 
 ```sh
 ./local_verify.sh ../release-configs/<MY_RELEASE_CONFIG>.json
