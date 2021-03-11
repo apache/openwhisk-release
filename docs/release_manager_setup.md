@@ -34,14 +34,11 @@ In addition to all the tools assumed to be installed for building OpenWhisk, you
 
 ## Clone this repository
 
-You may want to fork the repo and then clone your fork.  Setup to use
-the same GitHub workflows you use for other OpenWhisk repositories to
-which you contribute.
+You will need to fork this `openwhisk-release` repository and then clone your fork.  Setup to use the same GitHub workflows you use for other OpenWhisk repositories to which you contribute.
 
-The scripts/automation in this project assume a local clone and
-create/use working directories and staging areas within that clone.
-Staging areas are listed in the `.gitignore` for the repository to
-avoid accidental commits of generated artifacts.
+The scripts/automation in this project assume a local clone and create/use working directories and staging areas within that clone.
+
+> Note: Staging areas are listed in the `.gitignore` for the repository to avoid accidental commits of generated artifacts.
 
 ## Get a local svn checkout of our distribution directories
 
@@ -53,19 +50,32 @@ You can run the script [tools/checkout_svn.sh](../tools/checkout_svn.sh) to crea
 
 All release artifacts are accompanied by cryptographic signatures according to Apache release policy.
 
+The ASF requires you to use a PGP key pair that:
+
+- uses the `RSA` algorithm,
+- has your `username@apache.org` email address as one of its associated identifiers,
+- `does not expire` and
+- has the recommended key length of `4096`.
+
+See https://www.apache.org/dev/release-signing.html for a full explanation and list of technical requirements.
+
 ### Create a PGP key pair
 
-You will need a PGP key pair. The key must have your username@apache.org as one of its associated user ids.
+#### GPG Example
 
-See https://www.apache.org/dev/release-signing.html for the technical requirements for your signing key and instructions on creating one if you don't already have an acceptable one.
+The following command will prompt you for to supply all the values needed by the ASF and override defaults:
 
-Currently ASF recommends using a 4096 bit RSA key to sign releases.
+```sh
+$ gpg --full-gen-key
+```
+
+> Note: You do not need to supply a `comment` as part of the signature.
 
 ### Publish your public key to the project KEYS file
 
 The KEYS file is a plain-text file containing the public key signatures of the release managers (and optionally other committers) for the project.
 
-Each signature in the KEYS file is comprised of the key's fingerprint followed by the ASCII-armored, exported copy of it.
+Each signature in the KEYS file is comprised of the key's signature followed by the ASCII-armored, exported copy of it.
 
 > **Only a PMC member can commit changes to the KEYS file**
 
@@ -92,6 +102,8 @@ where `<your name>` is the one entered when generating the key.
 ```sh
 $ gpg --armor --export <your name>
 ```
+
+Append both your key's signature and ASCII-armored public key to the KEYS file:
 
 ```sh
 (gpg --list-sigs <your name> && gpg --armor --export <your name>) >> KEYS
