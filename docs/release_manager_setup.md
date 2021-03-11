@@ -28,7 +28,7 @@ platforms.
 In addition to all the tools assumed to be installed for building OpenWhisk, you will also need the following packages installed:
 
 - [Subversion](https://subversion.apache.org/packages.html) (svn) - client for Apache's source code management system
-- [GnuPG](https://www.gnupg.org/) (gpg) *or an OpenPGP-compatible equivalent- - for generating and managing signing keys and sign release artifacts
+- [GnuPG](https://www.gnupg.org/) (gpg) *or an OpenPGP-compatible equivalent* - for generating and managing signing keys and sign release artifacts
 - [jq](https://stedolan.github.io/jq/) (jq) - a lightweight JSON processor
 - [expect](https://en.wikipedia.org/wiki/Expect) - automates release scripts that expect user input
 
@@ -70,7 +70,7 @@ The ASF requires you to use a PGP key pair that:
 - uses the `RSA` algorithm,
 - has your `username@apache.org` email address as one of its associated identifiers,
 - `does not expire` and
-- has the recommended key length of `4096`.
+- has the recommended key length of `4096` bits.
 
 See https://www.apache.org/dev/release-signing.html for a full explanation and list of technical requirements.
 
@@ -112,7 +112,7 @@ $ gpg --list-sigs <your name>
 
 where `<your name>` is the one entered when generating the key.
 
- In order to submit your public key to a public key server, you first have to produce an ASCII-armored copy of it:
+In order to submit your public key to a public key server, you first have to produce an ASCII-armored copy of it:
 
 ```sh
 $ gpg --armor --export <your name>
@@ -134,7 +134,7 @@ You can show your key's fingerprint (i.e., signature) with this command:
 $ pgpk -ll
 ```
 
- In order to submit your public key to a public key server, you first have to produce an ASCII-armored copy of it:
+In order to submit your public key to a public key server, you first have to produce an ASCII-armored copy of it:
 
 ```sh
 pgpk -xa smith
