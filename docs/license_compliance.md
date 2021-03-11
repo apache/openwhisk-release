@@ -28,10 +28,12 @@ This document describes how the Apache OpenWhisk project's source code and relea
 ## Policies and rules
 
 The Apache OpenWhisk project repositories MUST follow [Apache Release Policy](http://www.apache.org/legal/release-policy.html#licensing). every artifact distributed MUST contain only appropriately licensed code per Apache Licensing Policy. It includes two check points:
+
 - Each project repository MUST provide a LICENSE file and a NOTICE file.
 - With a few exceptions, source files consisting of works submitted directly to the ASF by the copyright owner or owner's agent must contain the appropriate ASF license header. Here are the exceptions:
-  + Files without any degree of creativity don't require a license header.
-  + Sometimes shorter form of ASF license header can be used if the recommended Apache source header is not appropriate.
+
+  - Files without any degree of creativity don't require a license header.
+  - Sometimes shorter form of ASF license header can be used if the recommended Apache source header is not appropriate.
 
 ## Project specific rules
 
@@ -67,7 +69,6 @@ In addition, the recommended type of approved ASF license header (i.e., "full" o
 #### Notes
 - Full ASF License headers are always accepted regardless if a "Mini" header is recommended as best practice.
 - Action source files used in performance testing may be added to "[Known exclusions](#known-exclusions)" when justified.
-
 
 ## General Exclusions
 
