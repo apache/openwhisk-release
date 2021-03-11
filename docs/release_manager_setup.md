@@ -28,7 +28,7 @@ platforms.
 In addition to all the tools assumed to be installed for building OpenWhisk, you will also need the following packages installed:
 
 - [Subversion](https://subversion.apache.org/packages.html) (svn) - client for Apache's source code management system
-- [GnuPG](https://www.gnupg.org/) (gpg) *or an OpenPGP-compatible equivalent* - for generating and managing signing keys and sign release artifacts
+- [GnuPG](https://www.gnupg.org/) (gpg) *or an OpenPGP-compatible equivalent- - for generating and managing signing keys and sign release artifacts
 - [jq](https://stedolan.github.io/jq/) (jq) - a lightweight JSON processor
 - [expect](https://en.wikipedia.org/wiki/Expect) - automates release scripts that expect user input
 
@@ -124,7 +124,7 @@ Append both your key's signature and ASCII-armored public key to the KEYS file:
 (gpg --list-sigs <your name> && gpg --armor --export <your name>) >> KEYS
 ```
 
-> *In recent releases of GnuPG, the* `gpg` and `gpg2` *commands utilize the same code and should be viewed as equivalent in any legacy instructions.*
+> *In recent releases of GnuPG, the- `gpg` and `gpg2` *commands utilize the same code and should be viewed as equivalent in any legacy instructions.*
 
 #### PGPK Example
 
