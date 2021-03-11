@@ -84,7 +84,7 @@ This step is only required when making a release for the `openwhisk` or `openwhi
 
 1. Create a Release branch with the version name in the upstream repository.
 
-    >  **Important Note:*- the release branch should be created in the upstream repository, *not a forked repository*.
+    >  **Important Note:** the release branch should be created in the upstream repository, *not a forked repository*.
 
     This branch would not be merged into the master branch and stay as a standalone branch.
 
@@ -163,16 +163,17 @@ After creating your config, commit it to [../release-configs](../release-configs
 
 ### Create Release Candidates
 
-From the [tools directory](../tools), execute the script
-[build_release.sh](../tools/build_release.sh)
+From the [tools directory](../tools), execute the script [build_release.sh](../tools/build_release.sh)
 providing the config.json file as an argument.
+
 Using `../stagingArea` as scratch space, this script will clone the source repositories, package them into compressed tarballs, and create the checksum and detached PGP signature files.
 
 ```sh
-./build_release.sh ../release-configs/<MY_RELEASE_CONFIG>.json [<MY_APACHE_GPG_KEY_ID>]
+$ cd tools
+$ ./build_release.sh ../release-configs/<MY_RELEASE_CONFIG>.json [<MY_APACHE_GPG_KEY_ID>]
 ```
 
-> **Important Note:*- the `build_release.sh` script uses your system default GPG key to sign the release. To use an alternate key, specify the `MY_APACHE_GPG_KEY_ID` as a second argument. Omit this value to use the default key.
+> **Important Note:** the `build_release.sh` script uses your system default GPG key to sign the release. To use an alternate key, specify the `MY_APACHE_GPG_KEY_ID` as a second argument. Omit this value to use the default key.
 
 Next, verify the release artifacts by running [local_verify.sh](../tools/local_verify.sh). This
 script will run rcverify.sh against your local artifacts.
