@@ -46,6 +46,21 @@ The Apache distribution servers are managed by committing/removing files from pr
 
 You can run the script [tools/checkout_svn.sh](../tools/checkout_svn.sh) to create a local checkout of these repositories at the path expected by the rest of the scripts.
 
+For example, run the script from within the root of your local clone of the `openwhisk-release` repository:
+
+```sh
+$ ./tools/checkout_svn.sh
+
+Checkout staging and release SVN to the working directory.
+Checked out revision 46582.
+A    stagingArea/svn_staging/rc1
+A    stagingArea/svn_release/20.11
+A    stagingArea/svn_release/20.11/openwhisk-package-alarms-2.2.0-sources.tar.gz
+A    stagingArea/svn_release/openwhisk-runtime-php-1.16.0-sources.tar.gz
+A    stagingArea/svn_release/openwhisk-runtime-php-1.16.0-sources.tar.gz.asc
+...
+```
+
 ## Signing Keys
 
 All release artifacts are accompanied by cryptographic signatures according to Apache release policy.
