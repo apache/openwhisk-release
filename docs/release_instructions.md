@@ -174,7 +174,7 @@ $ ./build_release.sh ../release-configs/<MY_RELEASE_CONFIG>.json [<MY_APACHE_GPG
 
 > **Important Note:** the `build_release.sh` script uses your system default GPG key to sign the release. To use an alternate key, specify the `MY_APACHE_GPG_KEY_ID` as a second argument. Omit this value to use the default key.
 
-If successful, your built release artifacts should be in the `../stagingArea.artifacts` folder.
+If successful, your release artifacts (i.e., `.tar.gz`,`tar.gz.asc`, and `.tar.gz.sha512`) should be in the `../stagingArea/artifacts` folder.
 
 ### Verify the release artifacts
 
@@ -193,6 +193,8 @@ Download RAT and invoke it on the `.tar.gz` file like:
 ```sh
 java -jar apache-rat-0.13.jar stagingArea/artifacts/<release-name>.tar.gz
 ```
+
+### Commit release artifacts to staging
 
 If the release candidates pass all checks, commit them to the staging svn:
 
