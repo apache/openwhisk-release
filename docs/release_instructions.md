@@ -40,8 +40,7 @@ The detailed instructions and scripts we provide for Release Managers are design
 
 ### Licensing requirements
 
-All released source code has to be compliant with Apache Licensing Policy. In part this is done by adding the LICENSE file and NOTICE file to each git repository and by adding Licensing headers to each source code
-file.  Please see [License Compliance] (license_compliance.md) for detailed information on Apache OpenWhisk project policies, rules and guidelines.
+All released source code has to be compliant with Apache Licensing Policy. In part this is done by adding the LICENSE file and NOTICE file to each git repository and by adding Licensing headers to each source code file.  Please see [License Compliance] (license_compliance.md) for detailed information on Apache OpenWhisk project policies, rules and guidelines.
 
 ### Artifact requirements
 
@@ -75,9 +74,9 @@ which is configured to redirect download requests to Apache dist mirrors or othe
 Before creating release artifacts, the Release Manager should initiate a community discussion to confirm that we are ready to release the component(s). It is also good practice to do a quick check of the repositories to confirm they are release-ready to reduce the odds of needing multiple release candidates.
 
 1. Start a [DISCUSS] thread on the dev list proposing the release.  Allow at least 24 hours for feedback.
-2. Make sure all unit and integration tests are passing in the repositories that are being released. Check the [project status list](../README.md#project-status).
-3. If a component being released includes a changelog or release notes file, make sure they are up-to-date.
-4. If you are releasing either the `openwhisk` or `openwhisk-deploy-kube` repositories create a release branch in the Apache git repo.  Then submit a PR to that release branch to change all uses of the `nightly` tag to fixed tags (eg `1.14.0` or `8eb922f`).
+1. Make sure all unit and integration tests are passing in the repositories that are being released. Check the [project status list](../README.md#project-status).
+1. If a component being released includes a changelog or release notes file, make sure they are up-to-date.
+1. If you are releasing either the `openwhisk` or `openwhisk-deploy-kube` repositories create a release branch in the Apache git repo.  Then submit a PR to that release branch to change all uses of the `nightly` tag to fixed tags (eg `1.14.0` or `8eb922f`).
 
 ### (Optional) Make a branch to create a Release
 
