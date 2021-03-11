@@ -1,0 +1,15 @@
+{
+  "versioning": {
+    "version": "1.2.0",
+    "pre_release_version": "rc1"
+  },
+  "RepoList": [
+    "openwhisk-client-go"
+  ],
+  "openwhisk_client_go": {
+    "name": "OpenWhisk Client Go",
+    "hash": "87edc23647174648fe52939201ebb276e0899f83",
+    "repository": "https://github.com/apache/openwhisk-client-go.git",
+    "branch": "master"
+  }
+}

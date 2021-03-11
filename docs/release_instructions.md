@@ -202,6 +202,10 @@ If the release candidates pass all checks, commit them to the staging svn:
 ./upload_to_staging.sh ../release-configs/<MY_RELEASE_CONFIG>.json
 ```
 
+You can verify the files were committed under the directory specified in your `<MY_RELEASE_CONFIG>.json` file's `pre_release_version` key's value (e.g., `rc1`) here:
+
+- https://dist.apache.org/repos/dist/dev/openwhisk/
+
 ### Initiate a Release Vote
 
 Initiate a release vote on the dev list.
