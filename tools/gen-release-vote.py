@@ -90,7 +90,7 @@ def currentGitHead():
     return res.strip()
 
 def gitHashes(components):
-    s = map(lambda r: "* %s: %s\n  %s/commits/%s\n  %s\n  %s\n  %s\n" % (r.name, r.hash, r.url, r.hash, r.artifacts.tgz, r.artifacts.asc, r.artifacts.sha), components)
+    s = map(lambda r: "* %s: %s\n  %s/commit/%s\n  %s\n  %s\n  %s\n" % (r.name, r.hash, r.url, r.hash, r.artifacts.tgz, r.artifacts.asc, r.artifacts.sha), components)
     return '\n'.join(list(s))
 
 def rcverify(components, version):
