@@ -342,7 +342,18 @@ where `<remote_url_var>` is typically set to `upstream` for a project Committer.
 
 > You can attempt to use the force `-f` flag if a normal `push` fails
 
-#### Automated build of tagged binary release artifacts
+#### Syncing release tags
+
+If your fork's tags do not match those in the Apache project repository, you can sync them much like rebasing
+
+```sh
+git fetch --tags upstream
+git push -f --tags origin master
+```
+
+where `upstream` is the remote label for the Apache project repo. and `origin` is the remote label for your fork.
+
+### Automated build of tagged binary release artifacts
 
 Many of the GitHub repositories are configured to build binary artifacts in response to new tags being committed.  Monitor the build process and ensure that all expected artifacts are created for each tag you commit.
 
