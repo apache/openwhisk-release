@@ -17,45 +17,6 @@
 #
 -->
 
-## Tag releases using specified project commit hashes
-
-Tag each released project using the same hash values specified in the release configuration file (i.e., `openwhisk-release/release-configs/<release config>.json`) and was approved by member email `[VOTE]`.
-
-Open a terminal, go the home directory of the OpenWhisk project to be released and run the following commands:
-
-```sh
-git tag <tag> <commit ID>
-git push <remote_url_var> <tag>
-```
-
-- Replace `<tag>` with the tag name for the release of the current project (e.g., 1.1.0).
-- Replace `<commit ID>` with the commit hash (ID) you designated for the release of the current project. This can either be the full commit hash or the first 8 letters of the hash (to assure unique lookup).
-- Replace <remote_url_var> to the remote repository label of the OpenWhisk project which is typically set to `upstream` for a project Committer and maps to the full GitHub URL (e.g., `git@github.com:apache/<project name>`)
-
-### Removing a tag
-
-If a mistake is made, you can remove the undesired tags:
-
-```sh
-git tag -d <tag>
-```
-
-Run the following command to remove a remote tag:
-
-```sh
-git push --delete <remote_url_var> <tag>
-```
-
-or:
-
-```sh
-git push <remote_url_var> :refs/tags/<tag>
-```
-
-where `<remote_url_var>` is typically set to `upstream` for a project Committer.
-
-> You can attempt to use the force `-f` flag if a normal push fails
-
 ## Verifying release binaries
 
 ### Verify Travis builds succeed after tagging

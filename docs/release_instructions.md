@@ -275,17 +275,29 @@ and add your release data (version and date) to the database.
 
 Please follow the link and perform the update; this information is quite useful for drafting our periodic reports to the ASF Board.
 
-### Tag GitHub repos
+### Tag GitHub repositories
 
-Each GitHub repository needs to be tagged. Unfortunately, the naming conventions for tagging vary across the OpenWhisk project repositories and therefore we have not yet attempted to automate this step.
+Each GitHub repository needs to be tagged.
 
-For each released repository, the Release Manager should examine the existing set of tags (`git tag`) and then add a new tag following the same convention using the git commit hash from <MY_RELEASE_CONFIG>.json.  After tagging a repo, push the tag.
+> **Note** Some naming conventions for tagging vary across the OpenWhisk project repositories and therefore we have not yet attempted to automate this step.
 
-It is good practice to sign your tagged releases using your GPG key.  For example:
+For each released repository, the Release Manager should tag each released project using the same hash values specified in the release configuration file (i.e., `openwhisk-release/release-configs/<release config>.json`) and  approved by member email `[VOTE]`.
+
+Open a terminal, go the home directory of the OpenWhisk project to be released and run the following commands:
 
 ```sh
-git tag -s -a x.y.z -m "OpenWhisk <project name> x.y.z" <commit hash>
+git tag -s -a <tag> -m "OpenWhisk <project name> v<tag>" <commit hash>
+git push <remote_url_var> <tag>
 ```
+
+- *Optional* It is good practice to sign release tags using your GPG key by adding the `-s` flag.
+  - See [Signing tags using GPG keys](#signing-tags-using-gpg-keys) below.
+- Replace `<tag>` with the tag name for the release of the current project (e.g., 1.1.0).
+- Update the commit message, `-m` to reflect the project name and version which should match the release tag
+- Replace `<commit hash>` with the commit hash (ID) you designated for the release of the current project. This can either be the full commit hash or the first 8 letters of the hash (to assure unique lookup).
+- Replace `<remote_url_var>` to the remote repository label of the OpenWhisk project which is typically set to `upstream` for a project Committer and maps to the full GitHub URL (e.g., `git@github.com:apache/<project name>`)
+
+### Signing tags using GPG keys
 
 First [add your public GPG key to your GitHub Settings](https://docs.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key) and also [verify your key's associated `apache.org` email](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/adding-an-email-address-to-your-github-account). Then add it to your repository's local `git` configuration:
 
@@ -306,7 +318,31 @@ You can verify your configuration by examining your local repository's `.git/con
 git config --list
 ```
 
-#### Binary release artifacts
+#### Deleting a tag
+
+If a mistake is made, you can delete the undesired tags and start over:
+
+```sh
+git tag -d <tag>
+```
+
+Run the following command to remove a remote tag:
+
+```sh
+git push --delete <remote_url_var> <tag>
+```
+
+or try:
+
+```sh
+git push <remote_url_var> :refs/tags/<tag>
+```
+
+where `<remote_url_var>` is typically set to `upstream` for a project Committer.
+
+> You can attempt to use the force `-f` flag if a normal `push` fails
+
+#### Automated build of tagged binary release artifacts
 
 Many of the GitHub repositories are configured to build binary artifacts in response to new tags being committed.  Monitor the build process and ensure that all expected artifacts are created for each tag you commit.
 
@@ -316,9 +352,8 @@ There are some slightly dated, but much more detailed comments on [Verifying rel
 
 After pushing the tags, you should go to the GitHub Releases for each released project and "Draft a new release" using the tag you just pushed.
 
-Update the project's:
-
-- `CHANGELOG` or `RELEASENOTES` to include the release versions, description and a list of all commits since the last release. Copy that information into the release description.
+- If you have not already done so prior to voting on the release, update the project's `CHANGELOG` or `RELEASENOTES` to include the release versions, description and a list of all commits since the last release.
+- Copy that same information information into the release description in GitHub.
 
 ### Dockerhub updates
 
