@@ -124,7 +124,7 @@ Append both your key's signature and ASCII-armored public key to the KEYS file:
 (gpg --list-sigs <your name> && gpg --armor --export <your name>) >> KEYS
 ```
 
-> *In recent releases of GnuPG, the- `gpg` and `gpg2` *commands utilize the same code and should be viewed as equivalent in any legacy instructions.*
+> *In recent releases of GnuPG, the `gpg` and `gpg2` commands utilize the same code and should be viewed as equivalent in any legacy instructions.*
 
 #### PGPK Example
 

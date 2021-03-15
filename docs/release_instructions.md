@@ -217,7 +217,7 @@ Use the [gen-release-vote.py](../tools/gen-release-vote.py) script to create the
 
 This script accepts a [mailer configuration file](https://github.com/apache/openwhisk-release/blob/master/tools/mail-config-template.yaml) which you can use to also send the vote email directly to the mailing list. _You should dry run this command with `-n` to sanity check the vote notice before it is sent._
 
-```
+```sh
 ./gen-release-vote.py ../release-configs/<MY_RELEASE_CONFIG>.json -mc <MY_MAILER_CONFIG>.yaml
 ```
 
@@ -246,9 +246,14 @@ If this is not true (e.g., multiple parallel release votes), then the upload mus
 ```
 
 Assuming the expected set of files were added, commit them:
-```
+
+```sh
 cd ../stagingArea/svn_release && svn commit -m  "Apache OpenWhisk X.Y.Z release of <Component Description>"
 ```
+
+You can verify your commit to the Apache OpenWhisk official release folder:
+
+- https://dist.apache.org/repos/dist/release/openwhisk/
 
 Relatively soon after doing the svn commit, you should receive an email like the one shown below from reporter.apache.org asking you to add release data to its database information.
 
@@ -275,6 +280,19 @@ Please follow the link and perform the update; this information is quite useful 
 Each GitHub repository needs to be tagged. Unfortunately, the naming conventions for tagging vary across the OpenWhisk project repositories and therefore we have not yet attempted to automate this step.
 
 For each released repository, the Release Manager should examine the existing set of tags (`git tag`) and then add a new tag following the same convention using the git commit hash from <MY_RELEASE_CONFIG>.json.  After tagging a repo, push the tag.
+
+It is good practice to sign your tagged releases using your GPG key.  For example:
+
+```sh
+git tag -s -a x.y.z -m "OpenWhisk <project name> x.y.z" efe99f83
+```
+
+You can add it to your github configuration as follows:
+
+```sh
+gpg --list-keys <your name>
+git config --global user.signingkey 0A46826B
+```
 
 Many of the GitHub repositories are configured to build binary artifacts in response to new tags being committed.  Monitor the build process and ensure that all expected artifacts are created for each tag you commit.
 
