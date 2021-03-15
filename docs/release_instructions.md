@@ -294,7 +294,7 @@ gpg --list-secret-keys --keyid-format LONG
 git config --global user.signingkey <your GPG key ID>
 ```
 
-Assure your repository's local `git` email is set to your `apache.org` email that matches your GPG key:
+Assure your repository's local `git` email is set to your `apache.org` email which matches your GPG key:
 
 ```sh
 git config user.email <Apache username>@apache.org
