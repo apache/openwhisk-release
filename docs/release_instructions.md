@@ -294,11 +294,11 @@ gpg --list-secret-keys --keyid-format LONG
 git config --global user.signingkey <your GPG key ID>
 ```
 
-<!-- Assure your repositories email is set to Apache.org:
+Assure your repository's local `git` email is set to your `apache.org` email that matches your GPG key:
 
 ```sh
-
-``` -->
+git config user.email <Apache username>@apache.org
+```
 
 Many of the GitHub repositories are configured to build binary artifacts in response to new tags being committed.  Monitor the build process and ensure that all expected artifacts are created for each tag you commit.
 
