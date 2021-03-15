@@ -290,7 +290,7 @@ git tag -s -a <tag> -m "OpenWhisk <project name> v<tag>" <commit hash>
 git push <remote_url_var> <tag>
 ```
 
-- *Optional* It is good practice to sign release tags using your GPG key by adding the `-s` flag.
+- [*Optional*] It is good practice to sign release tags using your GPG key by adding the `-s` flag which will use your system default key from your operating system keychain.
   - See [Signing tags using GPG keys](#signing-tags-using-gpg-keys) below.
 - Replace `<tag>` with the tag name for the release of the current project (e.g., 1.1.0).
 - Update the commit message, `-m` to reflect the project name and version which should match the release tag
@@ -344,7 +344,7 @@ where `<remote_url_var>` is typically set to `upstream` for a project Committer.
 
 #### Syncing release tags
 
-If your fork's tags do not match those in the Apache project repository, you can sync them much like rebasing
+If your fork's tags do not match those in the Apache project repository, you can sync them much like rebasing:
 
 ```sh
 git fetch --tags upstream
