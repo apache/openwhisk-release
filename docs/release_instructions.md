@@ -291,7 +291,7 @@ First [add your public GPG key to your GitHub Settings](https://docs.github.com/
 
 ```sh
 gpg --list-secret-keys --keyid-format LONG
-git config --global user.signingkey <your GPG key ID>
+git config user.signingkey <your GPG key ID>
 ```
 
 Assure your repository's local `git` email is set to your `apache.org` email which matches your GPG key:
