@@ -284,14 +284,14 @@ For each released repository, the Release Manager should examine the existing se
 It is good practice to sign your tagged releases using your GPG key.  For example:
 
 ```sh
-git tag -s -a x.y.z -m "OpenWhisk <project name> x.y.z" efe99f83
+git tag -s -a x.y.z -m "OpenWhisk <project name> x.y.z" <commit hash>
 ```
 
 First add your public key to your GitHub Settings and verify your key's associated email;  then add it to your client github configuration as follows:
 
 ```sh
 gpg --list-keys <your name>
-git config --global user.signingkey 0A46826B
+git config --global user.signingkey <your key ID>
 ```
 
 Many of the GitHub repositories are configured to build binary artifacts in response to new tags being committed.  Monitor the build process and ensure that all expected artifacts are created for each tag you commit.
