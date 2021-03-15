@@ -287,12 +287,18 @@ It is good practice to sign your tagged releases using your GPG key.  For exampl
 git tag -s -a x.y.z -m "OpenWhisk <project name> x.y.z" <commit hash>
 ```
 
-First add your public key to your GitHub Settings and verify your key's associated email;  then add it to your client github configuration as follows:
+First [add your public GPG key to your GitHub Settings](https://docs.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key) and also [verify your key's associated `apache.org` email](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/adding-an-email-address-to-your-github-account). Then add it to your client github configuration:
 
 ```sh
-gpg --list-keys <your name>
-git config --global user.signingkey <your key ID>
+gpg --list-secret-keys --keyid-format LONG
+git config --global user.signingkey <your GPG key ID>
 ```
+
+<!-- Assure your repositories email is set to Apache.org:
+
+```sh
+
+``` -->
 
 Many of the GitHub repositories are configured to build binary artifacts in response to new tags being committed.  Monitor the build process and ensure that all expected artifacts are created for each tag you commit.
 
