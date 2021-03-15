@@ -287,7 +287,7 @@ It is good practice to sign your tagged releases using your GPG key.  For exampl
 git tag -s -a x.y.z -m "OpenWhisk <project name> x.y.z" <commit hash>
 ```
 
-First [add your public GPG key to your GitHub Settings](https://docs.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key) and also [verify your key's associated `apache.org` email](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/adding-an-email-address-to-your-github-account). Then add it to your repository's github configuration:
+First [add your public GPG key to your GitHub Settings](https://docs.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key) and also [verify your key's associated `apache.org` email](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/adding-an-email-address-to-your-github-account). Then add it to your repository's local `git` configuration:
 
 ```sh
 gpg --list-secret-keys --keyid-format LONG
@@ -300,9 +300,17 @@ Assure your repository's local `git` email is set to your `apache.org` email whi
 git config user.email <Apache username>@apache.org
 ```
 
+You can verify your configuration by examining your local repository's `.git/config` file either manually or with:
+
+```sh
+git config --list
+```
+
+#### Binary release artifacts
+
 Many of the GitHub repositories are configured to build binary artifacts in response to new tags being committed.  Monitor the build process and ensure that all expected artifacts are created for each tag you commit.
 
-There are some slightly outdated, but much more detailed comments on [release tagging](tag_release.md) available if you need a reminder of the git commands to use.
+There are some slightly dated, but much more detailed comments on [Verifying release binaries](tag_release.md#verifying-release-binaries) available if you need a reminder of the git commands to use.
 
 ### Create GitHub releases
 
@@ -320,7 +328,7 @@ If the components you released build docker images, then you should build the do
 
 Push the new images to the [openwhisk dockerhub](https://hub.docker.com/u/openwhisk) using the whiskbot dockerhub id, and update the `latest` tag to point to the new images.
 
-### Rippling changes for openwhisk-runtime-- releases
+### Rippling changes for `openwhisk-runtime-xxx` releases
 
 If you are releasing a new version of an openwhisk runtime (e.g., `openwhisk-runtime-python`), then once the updated images are available on [dockerhub](https://hub.docker.com/u/openwhisk) you should submit a PR to openwhisk-deploy-kube to update the docker imageTags in that project's `helm/openwhisk/runtimes.json`.
 
