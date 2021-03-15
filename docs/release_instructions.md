@@ -287,7 +287,7 @@ It is good practice to sign your tagged releases using your GPG key.  For exampl
 git tag -s -a x.y.z -m "OpenWhisk <project name> x.y.z" <commit hash>
 ```
 
-First [add your public GPG key to your GitHub Settings](https://docs.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key) and also [verify your key's associated `apache.org` email](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/adding-an-email-address-to-your-github-account). Then add it to your client github configuration:
+First [add your public GPG key to your GitHub Settings](https://docs.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key) and also [verify your key's associated `apache.org` email](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/adding-an-email-address-to-your-github-account). Then add it to your repository's github configuration:
 
 ```sh
 gpg --list-secret-keys --keyid-format LONG
