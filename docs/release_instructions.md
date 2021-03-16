@@ -217,7 +217,7 @@ Use the [gen-release-vote.py](../tools/gen-release-vote.py) script to create the
 
 This script accepts a [mailer configuration file](https://github.com/apache/openwhisk-release/blob/master/tools/mail-config-template.yaml) which you can use to also send the vote email directly to the mailing list. _You should dry run this command with `-n` to sanity check the vote notice before it is sent._
 
-```
+```sh
 ./gen-release-vote.py ../release-configs/<MY_RELEASE_CONFIG>.json -mc <MY_MAILER_CONFIG>.yaml
 ```
 
@@ -246,9 +246,14 @@ If this is not true (e.g., multiple parallel release votes), then the upload mus
 ```
 
 Assuming the expected set of files were added, commit them:
-```
+
+```sh
 cd ../stagingArea/svn_release && svn commit -m  "Apache OpenWhisk X.Y.Z release of <Component Description>"
 ```
+
+You can verify your commit to the Apache OpenWhisk official release folder:
+
+- https://dist.apache.org/repos/dist/release/openwhisk/
 
 Relatively soon after doing the svn commit, you should receive an email like the one shown below from reporter.apache.org asking you to add release data to its database information.
 
@@ -270,23 +275,96 @@ and add your release data (version and date) to the database.
 
 Please follow the link and perform the update; this information is quite useful for drafting our periodic reports to the ASF Board.
 
-### Tag GitHub repos
+### Tag GitHub repositories
 
-Each GitHub repository needs to be tagged. Unfortunately, the naming conventions for tagging vary across the OpenWhisk project repositories and therefore we have not yet attempted to automate this step.
+Each GitHub repository needs to be tagged.
 
-For each released repository, the Release Manager should examine the existing set of tags (`git tag`) and then add a new tag following the same convention using the git commit hash from <MY_RELEASE_CONFIG>.json.  After tagging a repo, push the tag.
+> **Note** Some naming conventions for tagging vary across the OpenWhisk project repositories and therefore we have not yet attempted to automate this step.
+
+For each released repository, the Release Manager should tag each released project using the same hash values specified in the release configuration file (i.e., `openwhisk-release/release-configs/<release config>.json`) and  approved by member email `[VOTE]`.
+
+Open a terminal, go the home directory of the OpenWhisk project to be released and run the following commands:
+
+```sh
+git tag -s -a <tag> -m "OpenWhisk <project name> v<tag>" <commit hash>
+git push <remote_url_var> <tag>
+```
+
+- [*Optional*] It is good practice to sign release tags using your GPG key by adding the `-s` flag which will use your system default key from your operating system keychain.
+  - See [Signing tags using GPG keys](#signing-tags-using-gpg-keys) below.
+- Replace `<tag>` with the tag name for the release of the current project (e.g., 1.1.0).
+- Update the commit message, `-m` to reflect the project name and version which should match the release tag
+- Replace `<commit hash>` with the commit hash (ID) you designated for the release of the current project. This can either be the full commit hash or the first 8 letters of the hash (to assure unique lookup).
+- Replace `<remote_url_var>` to the remote repository label of the OpenWhisk project which is typically set to `upstream` for a project Committer and maps to the full GitHub URL (e.g., `git@github.com:apache/<project name>`)
+
+### Signing tags using GPG keys
+
+First [add your public GPG key to your GitHub Settings](https://docs.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key) and also [verify your key's associated `apache.org` email](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/adding-an-email-address-to-your-github-account). Then add it to your repository's local `git` configuration:
+
+```sh
+gpg --list-secret-keys --keyid-format LONG
+git config user.signingkey <your GPG key ID>
+```
+
+Assure your repository's local `git` email is set to your `apache.org` email which matches your GPG key:
+
+```sh
+git config user.email <Apache username>@apache.org
+```
+
+You can verify your configuration by examining your local repository's `.git/config` file either manually or with:
+
+```sh
+git config --list
+```
+
+#### Deleting a tag
+
+If a mistake is made, you can delete the undesired tags and start over:
+
+```sh
+git tag -d <tag>
+```
+
+Run the following command to remove a remote tag:
+
+```sh
+git push --delete <remote_url_var> <tag>
+```
+
+or try:
+
+```sh
+git push <remote_url_var> :refs/tags/<tag>
+```
+
+where `<remote_url_var>` is typically set to `upstream` for a project Committer.
+
+> You can attempt to use the force `-f` flag if a normal `push` fails
+
+#### Syncing release tags
+
+If your fork's tags do not match those in the Apache project repository, you can sync them much like rebasing:
+
+```sh
+git fetch --tags upstream
+git push -f --tags origin master
+```
+
+where `upstream` is the remote label for the Apache project repo. and `origin` is the remote label for your fork.
+
+### Automated build of tagged binary release artifacts
 
 Many of the GitHub repositories are configured to build binary artifacts in response to new tags being committed.  Monitor the build process and ensure that all expected artifacts are created for each tag you commit.
 
-There are some slightly outdated, but much more detailed comments on [release tagging](tag_release.md) available if you need a reminder of the git commands to use.
+There are some slightly dated, but much more detailed comments on [Verifying release binaries](tag_release.md#verifying-release-binaries) available if you need a reminder of the git commands to use.
 
 ### Create GitHub releases
 
 After pushing the tags, you should go to the GitHub Releases for each released project and "Draft a new release" using the tag you just pushed.
 
-Update the project's:
-
-- `CHANGELOG` or `RELEASENOTES` to include the release versions, description and a list of all commits since the last release. Copy that information into the release description.
+- If you have not already done so prior to voting on the release, update the project's `CHANGELOG` or `RELEASENOTES` to include the release versions, description and a list of all commits since the last release.
+- Copy that same information information into the release description in GitHub.
 
 ### Dockerhub updates
 
@@ -296,7 +374,7 @@ If the components you released build docker images, then you should build the do
 
 Push the new images to the [openwhisk dockerhub](https://hub.docker.com/u/openwhisk) using the whiskbot dockerhub id, and update the `latest` tag to point to the new images.
 
-### Rippling changes for openwhisk-runtime-- releases
+### Rippling changes for `openwhisk-runtime-xxx` releases
 
 If you are releasing a new version of an openwhisk runtime (e.g., `openwhisk-runtime-python`), then once the updated images are available on [dockerhub](https://hub.docker.com/u/openwhisk) you should submit a PR to openwhisk-deploy-kube to update the docker imageTags in that project's `helm/openwhisk/runtimes.json`.
 
