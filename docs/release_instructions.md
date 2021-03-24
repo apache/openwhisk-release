@@ -461,12 +461,12 @@ When announcing a release, you must use the URL of the OpenWhisk Downloads page 
   for example:
 
   ```sh
-  $ svn delete openwhisk-wskdeploy-1.2.0-sources.tar.gz
-  D         openwhisk-<project>-<version)-sources.tar.gz
-  $ svn delete openwhisk-wskdeploy-1.2.0-sources.tar.gz.asc
-  D         openwhisk-<project>-<version)-sources.tar.gz.asc
-  $ svn delete openwhisk-wskdeploy-1.2.0-sources.tar.gz.sha512
-  D         openwhisk-<project>-<version)-sources.tar.gz.sha512
+  $ svn delete openwhisk-<project>-<version>-sources.tar.gz
+  D         openwhisk-<project>-<version>-sources.tar.gz
+  $ svn delete openwhisk<project>-<version>-sources.tar.gz.asc
+  D         openwhisk-<project>-<version>-sources.tar.gz.asc
+  $ svn delete openwhisk-<project>-<version>-sources.tar.gz.sha512
+  D         openwhisk-<project>-<version>-sources.tar.gz.sha512
 
   $ svn commit -m "Deleted file OpenWhisk <project> <version> staged files."
 
