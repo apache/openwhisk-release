@@ -246,7 +246,7 @@ echo "$(tput setaf 6)$SHA$(tput sgr0)"
 printf "validating sha512..."
 validate "$EXPECTED" "$SHA" "$CMD"
 
-printf "verifying asc..."  
+printf "verifying asc..."
 CMD="gpg --verify '$DIR/$TGZ.asc' '$DIR/$TGZ'"
 ASC=$(eval $CMD 2>&1)
 STATUS=$?
