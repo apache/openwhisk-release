@@ -457,6 +457,21 @@ When announcing a release, you must use the URL of the OpenWhisk Downloads page 
 ### Post-release cleanup
 
 1. Remove the release candidate files from the staging svn.
+
+  for example:
+
+  ```sh
+  $ svn delete openwhisk-<project>-<version>-sources.tar.gz
+  D         openwhisk-<project>-<version>-sources.tar.gz
+  $ svn delete openwhisk<project>-<version>-sources.tar.gz.asc
+  D         openwhisk-<project>-<version>-sources.tar.gz.asc
+  $ svn delete openwhisk-<project>-<version>-sources.tar.gz.sha512
+  D         openwhisk-<project>-<version>-sources.tar.gz.sha512
+
+  $ svn commit -m "Deleted file OpenWhisk <project> <version> staged files."
+
+  ```
+
 1. If there is a prior release, remove it from the release svn (all releases are automatically archived, removing an old release
 from dist does not remove it from the archive).
 1. Disable the Jenkins job to build and push Docker images to Docker hub if you released the `openwhisk` or `openwhisk-deploy-kube` repositories.
