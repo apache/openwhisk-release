@@ -1,0 +1,15 @@
+{
+  "versioning": {
+    "version": "1.2.0",
+    "pre_release_version": "rc1"
+  },
+  "RepoList": [
+    "openwhisk-cli"
+  ],
+  "openwhisk_cli": {
+    "name": "OpenWhisk Command-line Interface (CLI)",
+    "hash": "7c47ef1dbad550566114baf976c091b4cdd9e678",
+    "repository": "https://github.com/apache/openwhisk-cli.git",
+    "branch": "master"
+  }
+}

@@ -458,7 +458,7 @@ When announcing a release, you must use the URL of the OpenWhisk Downloads page 
 
 1. Remove the release candidate files from the staging svn.
 
-  for example:
+  for example, from the SVN `stagingArea/svn_staging/rc1` directory:
 
   ```sh
   $ svn delete openwhisk-<project>-<version>-sources.tar.gz
