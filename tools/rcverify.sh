@@ -200,7 +200,7 @@ if [ $DL -ne 0 ]; then
   statusok $? "$RESULT"
 
   printf "fetching apache license..."
-  RESULT=$($CURL http://www.apache.org/licenses/LICENSE-2.0 -o "$DIR/LICENSE-2.0" 2>&1)
+  RESULT=$($CURL https://www.apache.org/licenses/LICENSE-2.0 -o "$DIR/LICENSE-2.0" 2>&1)
   statusok $? "$RESULT"
 else
   echo copying from $LOCAL_DIR
@@ -209,7 +209,7 @@ else
   cp "$LOCAL_DIR/$TGZ.sha512" "$DIR/$TGZ.sha512" || exit 1
 
   printf "fetching apache license..."
-  RESULT=$($CURL http://www.apache.org/licenses/LICENSE-2.0 -o "$DIR/LICENSE-2.0" 2>&1)
+  RESULT=$($CURL https://www.apache.org/licenses/LICENSE-2.0 -o "$DIR/LICENSE-2.0" 2>&1)
   statusok $? "$RESULT"
 fi
 
