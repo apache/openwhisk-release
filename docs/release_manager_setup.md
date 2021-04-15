@@ -100,6 +100,22 @@ Once you have your PGP key pair, append your public key to our [KEYS file](https
 
 The commands to export your key and append it (depending on your PGP client) can be found at the very top of the [`KEYS`](https://dist.apache.org/repos/dist/release/openwhisk/KEYS) file itself, and are also replicated below:
 
+> **Steps for PMC member to amend KEYS file**
+  ```
+  # checkout svn repo if necessary
+  ./tools/checkout_svn.sh
+
+  # amend KEYS file./stagingArea/svn_release/KEYS
+  cd ./stagingArea/svn_release
+  vi KEYS # or whatever editor you prefer
+
+  # sanity check your changes
+  svn diff
+
+  # commit
+  svn commit KEYS
+  ```
+
 #### GPG Example (recommended)
 
 Apache recommends [GNU Privacy Guard (GnuPG)](https://www.gnupg.org/), an open-source, OpenPGP compatible implementation.
