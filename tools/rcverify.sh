@@ -38,7 +38,7 @@ V=${3?"missing version e.g., '3.19.0'"}
 # the release candidate, usually 'rc1'
 RC=${4:-rc1}
 
-# the year for the copyright, utually '2016-2020'
+# the year for the copyright, usually '2016-2020'
 COPYRIGHT=${5?"missing copyright year e.g., '2016-2020'"}
 
 # the last argument is optional and if set to 'cleanup', the script deletes the scratch space at completion

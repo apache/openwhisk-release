@@ -30,7 +30,7 @@ do
     NAME=$(json_by_key "$CONFIG" $NAME_KEY)
     COPYRIGHT_KEY=${repo_name//-/_}.copyright
     COPYRIGHT=$(json_by_key "$CONFIG" $COPYRIGHT_KEY)
-    if [ -n "$COPYRIGHT" ]
+    if [ ! -n "$COPYRIGHT" ]
     then
         echo "no copyright year provided, fallback to the default: 2016-2020"
         COPYRIGHT="2016-2020"
