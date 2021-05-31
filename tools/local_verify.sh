@@ -28,5 +28,12 @@ do
     repo_name=$(echo "$repo" | sed -e 's/^"//' -e 's/"$//')
     NAME_KEY=${repo_name//-/_}.name
     NAME=$(json_by_key "$CONFIG" $NAME_KEY)
-    LOCAL_DIR="$OPENWHISK_ARTIFACT_DIR" DL=0 "$SCRIPTDIR"/rcverify.sh $repo_name "$NAME" $version $pre_release_version
+    COPYRIGHT_KEY=${repo_name//-/_}.copyright
+    COPYRIGHT=$(json_by_key "$CONFIG" $COPYRIGHT_KEY)
+    if [ -n "$COPYRIGHT" ]
+    then
+        echo "no copyright year provided, fallback to the default: 2016-2020"
+        COPYRIGHT="2016-2020"
+    fi
+    LOCAL_DIR="$OPENWHISK_ARTIFACT_DIR" DL=0 "$SCRIPTDIR"/rcverify.sh $repo_name "$NAME" $version $pre_release_version "$COPYRIGHT"
 done
