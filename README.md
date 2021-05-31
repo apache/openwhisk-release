@@ -218,11 +218,18 @@ The following table can be used by Release Managers to check the status of all p
 <td><a href="https://github.com/apache/openwhisk-wskdebug/blob/master/travis/scancode.sh">scancode.sh</a></td>
 </tr>
 <tr align="left">
-<td><a href="https://github.com/apache/openwhisk-wskdeploy">openwhisk-wskdeploy</a></td>
-<td><a href="https://travis-ci.com/apache/openwhisk-wskdeploy/branches"><img src="https://travis-ci.com/apache/openwhisk-wskdeploy.svg?branch=master" alt="" /></a></td>
-<td><a href="https://github.com/apache/openwhisk-wskdeploy/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
-<td><a href="https://github.com/apache/openwhisk-wskdeploy/blob/master/NOTICE.txt">NOTICE</a></td>
-<td><a href="https://github.com/apache/openwhisk-wskdeploy/blob/master/tools/travis/scancode.sh">scancode.sh</a></td>
+<td><a href="https://github.com/apache/openwhisk-vscode-extension">openwhisk-vscode-extension</a></td>
+<td><a href="https://travis-ci.com/github/apache/openwhisk-vscode-extension/branches"><img src="https://github.com/apache/openwhisk-vscode-extension/actions/workflows/node.js.yml/badge.svg?branch=master" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-vscode-extension/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-vscode-extension/blob/master/NOTICE.txt">NOTICE</a></td>
+<td><a href="https://github.com/apache/openwhisk-vscode-extension/blob/master/travis/scancode.sh">scancode.sh</a></td>
+</tr>
+<tr align="left">
+<td><a href="https://github.com/apache/openwhisk-intellij-plugin">openwhisk-intellij-plugin</a></td>
+<td><a href="https://travis-ci.com/github/apache/openwhisk-intellij-plugin/branches"><img src="https://github.com/apache/openwhisk-intellij-plugin/actions/workflows/gradle.yml/badge.svg?branch=master" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-intellij-plugin/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="" /></a></td>
+<td><a href="https://github.com/apache/openwhisk-intellij-plugin/blob/master/NOTICE.txt">NOTICE</a></td>
+<td><a href="https://github.com/apache/openwhisk-intellij-plugin/blob/master/travis/scancode.sh">scancode.sh</a></td>
 </tr>
 </tbody>
 </table>
