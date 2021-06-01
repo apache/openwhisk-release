@@ -38,8 +38,8 @@ V=${3?"missing version e.g., '3.19.0'"}
 # the release candidate, usually 'rc1'
 RC=${4:-rc1}
 
-# the year for the copyright, usually '2016-2020'
-COPYRIGHT=${5?"missing copyright year e.g., '2016-2020'"}
+# the year for the copyright, usually '2016'
+COPYRIGHT=${5?"missing copyright starting year e.g., '2016"}
 
 # the last argument is optional and if set to 'cleanup', the script deletes the scratch space at completion
 REMOVE_DIR=${6:-cleanup}
@@ -72,7 +72,7 @@ KEYS=$RC-$V-KEYS
 
 NOTICE=$(cat << END
 Apache $DESCRIPTION
-Copyright $COPYRIGHT The Apache Software Foundation
+Copyright $COPYRIGHT-2020 The Apache Software Foundation
 
 This product includes software developed at
 The Apache Software Foundation (http://www.apache.org/).

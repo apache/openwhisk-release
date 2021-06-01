@@ -32,8 +32,8 @@ do
     COPYRIGHT=$(json_by_key "$CONFIG" $COPYRIGHT_KEY)
     if [ ! -n "$COPYRIGHT" ]
     then
-        echo "no copyright year provided, fallback to the default: 2016-2020"
-        COPYRIGHT="2016-2020"
+        echo "no copyright starting year provided, fallback to the default: 2016"
+        COPYRIGHT="2016"
     fi
     LOCAL_DIR="$OPENWHISK_ARTIFACT_DIR" DL=0 "$SCRIPTDIR"/rcverify.sh $repo_name "$NAME" $version $pre_release_version "$COPYRIGHT"
 done
