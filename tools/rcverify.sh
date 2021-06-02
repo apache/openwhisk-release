@@ -64,7 +64,11 @@ TGZ=$NAME-$V-sources.tar.gz
 # this is a constructed name for the keys file
 KEYS=$RC-$V-KEYS
 
-NOTICE_REGEX='Apache .+\nCopyright \d{4}-2020 The Apache Software Foundation\n\nThis product includes software developed at\nThe Apache Software Foundation \(http:\/\/www\.apache\.org\/\)\.'
+NOTICE_REGEX='^Apache .+
+Copyright [0-9]{4}-2021 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation \(http:\/\/www\.apache\.org\/\)\.$'
 
 echo "$(basename $0) (script SHA1: $(gpg --print-md SHA1 $0 | cut -d' ' -f2-))"
 
@@ -175,15 +179,16 @@ function analyzeKeyImport() {
 
 function validateNotice() {
     output=$1
-    result=''
     if [[ "$output" =~ $NOTICE_REGEX ]]; then
-        result=${BASH_REMATCH[0]}
-    fi
-
-    if [[ result != '' && $processed == $unchanged ]]; then
-        echo "validated"
+        printf " $(tput setaf 2)passed$(tput sgr0)\n"
     else
-        echo "unvalidated"
+        ERROR=1
+        printf " $(tput setaf 1)failed$(tput sgr0)"
+        if [[ $2 != "" ]]; then
+          echo " ($2)"
+        else
+          printf "\n"
+        fi
     fi
 }
 
@@ -263,7 +268,7 @@ validate $STATUS 0 "$CMD" "signed-by: $SIGNER"
 
 printf "verifying notice..."
 NOTICE=$(cat "$DIR/$BASE/NOTICE.txt")
-validateNotice "$NOTICE"
+validateNotice "$NOTICE" "cat '$DIR/$BASE/NOTICE.txt'"
 
 printf "verifying absence of DISCLAIMER.txt"
 CMD="test -f '$DIR/$BASE/DISCLAIMER.txt'"
