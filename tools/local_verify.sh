@@ -26,14 +26,10 @@ source "$SCRIPTDIR/load_config.sh" "$1"
 for repo in $(echo $repos | sed "s/,/ /g")
 do
     repo_name=$(echo "$repo" | sed -e 's/^"//' -e 's/"$//')
-    NAME_KEY=${repo_name//-/_}.name
-    NAME=$(json_by_key "$CONFIG" $NAME_KEY)
-    COPYRIGHT_KEY=${repo_name//-/_}.copyright
-    COPYRIGHT=$(json_by_key "$CONFIG" $COPYRIGHT_KEY)
     if [ ! -n "$COPYRIGHT" ]
     then
         echo "no copyright starting year provided, fallback to the default: 2016"
         COPYRIGHT="2016"
     fi
-    LOCAL_DIR="$OPENWHISK_ARTIFACT_DIR" DL=0 "$SCRIPTDIR"/rcverify.sh $repo_name "$NAME" $version $pre_release_version "$COPYRIGHT"
+    LOCAL_DIR="$OPENWHISK_ARTIFACT_DIR" DL=0 "$SCRIPTDIR"/rcverify.sh $repo_name $version $pre_release_version
 done

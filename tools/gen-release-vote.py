@@ -65,12 +65,10 @@ def componentList(config, version):
         hash = config[key]['hash']
         name = config[key]['name'] if 'name' in config[key] else '???'
         repo = config[key]['repository']
-        copyright = config[key]['copyright']
         yield objectify({
                 'id': r,
                 'hash': hash,
                 'name': name,
-                'copyright': copyright,
                 'url': repo[0:-4],
                 'artifacts': artifactLinks(r, version.v, version.rc)
         })
@@ -96,7 +94,7 @@ def gitHashes(components):
     return '\n'.join(list(s))
 
 def rcverify(components, version):
-    s = map(lambda r: "./rcverify.sh %s '%s' %s %s %s" % (r.id, r.name, version.v, version.rc, r.copyright), components)
+    s = map(lambda r: "./rcverify.sh %s %s %s" % (r.id, version.v, version.rc), components)
     return '\n'.join(list(s))
 
 def releaseVersion(config):
