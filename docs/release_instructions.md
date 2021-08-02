@@ -388,13 +388,15 @@ The current list of "actionloop" based Dockerfiles is:
 - openwhisk-runtime-php/core/php7.3Action/Dockerfile
 - openwhisk-runtime-php/core/php7.4Action/Dockerfile
 - openwhisk-runtime-php/core/php8.0Action/Dockerfile
-- openwhisk-runtime-python/core/python3ActionLoop/Dockerfile
-- openwhisk-runtime-python/core/python3AiActionLoop/Dockerfile
+- openwhisk-runtime-python/core/python36AiAction/Dockerfile
+- openwhisk-runtime-python/core/python39Action/Dockerfile
+- openwhisk-runtime-python/core/python3Action/Dockerfile
 - openwhisk-runtime-ruby/core/ruby2.6ActionLoop/Dockerfile
 - openwhisk-runtime-rust/core/rust1.34/Dockerfile
 - openwhisk-runtime-swift/core/swift42Action/Dockerfile
 - openwhisk-runtime-swift/core/swift51Action/Dockerfile
 - openwhisk-runtime-swift/core/swift53Action/Dockerfile
+- openwhisk-runtime-swift/core/swift54Action/Dockerfile
 
 If you released a new version of `openwhisk-runtime-docker`, then you need to update tag information in the Dockerfiles of `openwhisk-runtime-python`.
 
