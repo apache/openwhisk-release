@@ -300,7 +300,7 @@ EXE=$(find "$DIR/$BASE" -type f ! -name "*.sh" ! -name "*.sh" ! -name "*.py" ! -
 validate "$EXE" "" "$EXE"
 
 printf "scanning for unexpected file types..."
-EXE=$(find "$DIR/$BASE" -type f -and -not -empty -exec file --mime {} \; | grep -v ": text/" | grep -v ": image/" | grep -v ": application/json")
+EXE=$(find "$DIR/$BASE" -type f -and -not -empty -exec file --mime {} \; | grep -v ": text/" | grep -v ": image/" | grep -v ": application/json" | grep -v ": application/javascript")
 validate "$EXE" "" "$EXE"
 
 printf "scanning for archives..."
