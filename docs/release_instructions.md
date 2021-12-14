@@ -448,7 +448,9 @@ refer to the newly released versions.
 
 ### Announcing the Release
 
-For all normal releases you should wait at least 24 hours before announcing the release to allow time for Apache Dist mirrors to be updated with the newly released artifacts.  You must also wait until the PR to update the website has been merged and the change appears on the website (successful Jenkins job to rebuild website).
+You must wait until the PR to update the website has been merged and the change appears on the website (successful Jenkins job to rebuild website) before announcing the release.
+
+Apache releases are now distributed via a content delivery network (CDN).  The expected lag from committing to svn to an artifact appearing on the CDN is about 15 minutes. So, in practice, once the updated Downloads page appears on the OpenWhisk website you can announce the release.
 
 When announcing a release, you must use the URL of the OpenWhisk Downloads page (or some other URL that supports mirroring).  Do not include a direct link to the dist.apache.org svn server.
 
