@@ -411,7 +411,7 @@ The `openwhisk-client-js`, `openwhisk-composer`, and `openwhisk-wskdebug` projec
 
 Some tips:
 
-- Login as the openwhisk-bot using `npm login`.
+- Set NPM_TOKEN in your environment to the token in npmjs account info.
 - The `version` specified in `package.json` (and `package-lock.json`
 if it exists) should match the release version. If they don't you need
 to fix the release.
