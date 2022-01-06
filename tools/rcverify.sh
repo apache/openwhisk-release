@@ -82,7 +82,7 @@ echo "$(tput setaf 6)$DIR$(tput sgr0)"
 ## if the two arguments are not equal, prints 'failed' and the
 ## third argument if present
 function validate() {
-  if [[ $1 == $2 ]]; then
+  if [[ "$(echo "$1" | tr -d '[:space:]')" == "$(echo "$2" | tr -d '[:space:]')" ]]; then
     printf " $(tput setaf 2)passed$(tput sgr0)"
     if [[ $4 != "" ]]; then
       echo " ($4)"
