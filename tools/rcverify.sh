@@ -65,7 +65,7 @@ TGZ=$NAME-$V-sources.tar.gz
 KEYS=$RC-$V-KEYS
 
 NOTICE_REGEX='^Apache .+
-Copyright [0-9]{4}-2021 The Apache Software Foundation
+Copyright [0-9]{4}-2022 The Apache Software Foundation
 
 This product includes software developed at
 The Apache Software Foundation \(http:\/\/www\.apache\.org\/\)\.$'
