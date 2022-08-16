@@ -389,6 +389,7 @@ The current list of "actionloop" based Dockerfiles is:
 - openwhisk-runtime-php/core/php8.0Action/Dockerfile
 - openwhisk-runtime-python/core/python36AiAction/Dockerfile
 - openwhisk-runtime-python/core/python39Action/Dockerfile
+- openwhisk-runtime-python/core/python310Action/Dockerfile
 - openwhisk-runtime-python/core/python3Action/Dockerfile
 - openwhisk-runtime-ruby/core/ruby2.6ActionLoop/Dockerfile
 - openwhisk-runtime-rust/core/rust1.34/Dockerfile
