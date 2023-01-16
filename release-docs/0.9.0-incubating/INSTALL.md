@@ -80,7 +80,7 @@ Download the [signature](https://www-us.apache.org/dist/incubator/openwhisk/apac
 gpg --verify openwhisk-0.9.0-incubating-sources.tar.gz.asc openwhisk-0.9.0-incubating-sources.tar.gz
 ```
 
-As you may notice, if each OpenWhisk module is named <artifact>, the naming convention for the SHA512 checksum is <artifact>.sha512 and for the signature is <artifact>.sha512.asc. 
+As you may notice, if each OpenWhisk module is named <artifact>, the naming convention for the SHA512 checksum is <artifact>.sha512 and for the signature is <artifact>.sha512.asc.
 The download link for its SHA512 checksum is https://dist.apache.org/repos/dist/dev/incubator/openwhisk/apache-openwhisk-0.9.0-incubating-rc1/<artifact>.sha512
 and for its signature is https://dist.apache.org/repos/dist/dev/incubator/openwhisk/apache-openwhisk-0.9.0-incubating-rc1/<artifact>.sha512.asc.
 
@@ -105,7 +105,7 @@ Once you have verified the artifact checksums, unzip and extract the source code
 You can use the following command to untar the package:
 
 ```
-tar -xvzf openwhisk-0.9.0-incubating-sources.tar.gz 
+tar -xvzf openwhisk-0.9.0-incubating-sources.tar.gz
 ```
 
 You may need to change the name of the artifact based on the module to be unzipped and extracted.
@@ -259,7 +259,7 @@ ansible-playbook -i environments/local apigateway.yml
 If you would like to use the CLI from your local build, please run the following command for the playbook of openwhisk.yml:
 
 ```
-ansible-playbook -i environments/local openwhisk.yml -e cli_installation_mode=local -e openwhisk_cli_home=$OPENWHISK_HOME_CLI 
+ansible-playbook -i environments/local openwhisk.yml -e cli_installation_mode=local -e openwhisk_cli_home=$OPENWHISK_HOME_CLI
 ```
 
 instead of
