@@ -118,10 +118,10 @@ This is a call to vote on releasing version {version} release candidate {rc} of 
 This release is comprised of source code distribution only.
 
 You can use this UNIX script to download the release and verify the checklist below:
-https://gitbox.apache.org/repos/asf?p=openwhisk-release.git;a=blob_plain;f=tools/rcverify.sh;hb={HEAD}
+https://github.com/apache/openwhisk-release/blob/{HEAD}/tools/rcverify.sh
 
 Usage:
-curl -s "https://gitbox.apache.org/repos/asf?p=openwhisk-release.git;a=blob_plain;f=tools/rcverify.sh;hb={HEAD}" -o rcverify.sh
+curl -s "https://raw.githubusercontent.com/apache/openwhisk-release/{HEAD}/tools/rcverify.sh" -o rcverify.sh
 chmod +x rcverify.sh
 {rcverifies}
 
