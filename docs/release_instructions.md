@@ -383,9 +383,9 @@ To support reproducible builds, we always use a fixed-tag (and almost always a r
 The current list of "actionloop" based Dockerfiles is:
 
 - openwhisk-runtime-java/core/java8actionloop/Dockerfile
-- openwhisk-runtime-php/core/php7.4Action/Dockerfile
 - openwhisk-runtime-php/core/php8.0Action/Dockerfile
 - openwhisk-runtime-php/core/php8.1Action/Dockerfile
+- openwhisk-runtime-php/core/php8.2Action/Dockerfile
 - openwhisk-runtime-python/core/python39Action/Dockerfile
 - openwhisk-runtime-python/core/python310Action/Dockerfile
 - openwhisk-runtime-python/core/python311Action/Dockerfile
@@ -394,6 +394,7 @@ The current list of "actionloop" based Dockerfiles is:
 - openwhisk-runtime-swift/core/swift51Action/Dockerfile
 - openwhisk-runtime-swift/core/swift53Action/Dockerfile
 - openwhisk-runtime-swift/core/swift54Action/Dockerfile
+- openwhisk-runtime-swift/core/swift57Action/Dockerfile
 
 To support reproducible builds, we always use a fixed-tag
 (and almost always a release tag) when pulling code from `openwhisk-runtime-go` into other runtime projects to build their images.
